@@ -6,12 +6,12 @@ public class ApexYAxis {
     String seriesName;
     Boolean opposite;
     Boolean logarithmic;
-    Number tickAmount;
+    double tickAmount;
     Boolean forceNiceScale;
-    Number min;
-    Number max;
+    double min;
+    double max;
     Boolean floating;
-    Number decimalsInFloat;
+    double decimalsInFloat;
     Labels labels;
     AxisBorder axisBorder;
     AxisTicks axisTicks;

@@ -8,9 +8,9 @@ class AnnotationStyle {
     Padding padding;
 
     class Padding {
-        Number left;
-        Number right;
-        Number top;
-        Number bottom;
+        double left;
+        double right;
+        double top;
+        double bottom;
     }
 }

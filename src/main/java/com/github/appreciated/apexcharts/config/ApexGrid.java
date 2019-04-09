@@ -3,7 +3,7 @@ package com.github.appreciated.apexcharts.config;
 public class ApexGrid {
     Boolean show;
     String borderColor;
-    Number strokeDashArray;
+    double strokeDashArray;
     Position position;
     Xaxis xaxis;
     Yaxis yaxis;
@@ -26,8 +26,8 @@ public class ApexGrid {
 
         class Lines {
             Boolean show;
-            Number offsetX;
-            Number offsetY;
+            double offsetX;
+            double offsetY;
         }
     }
 
@@ -36,25 +36,25 @@ public class ApexGrid {
 
         class Lines {
             Boolean show;
-            Number offsetX;
-            Number offsetY;
+            double offsetX;
+            double offsetY;
         }
     }
 
     class Row {
         String[] colors;
-        Number opacity;
+        double opacity;
     }
 
     class Column {
         String[] colors;
-        Number opacity;
+        double opacity;
     }
 
     class Padding {
-        Number top;
-        Number right;
-        Number bottom;
-        Number left;
+        double top;
+        double right;
+        double bottom;
+        double left;
     }
 }

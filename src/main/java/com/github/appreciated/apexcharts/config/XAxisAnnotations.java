@@ -1,25 +1,25 @@
 package com.github.appreciated.apexcharts.config;
 
 class XAxisAnnotations {
-    Number x;
-    Number x2;
-    Number strokeDashArray;
+    double x;
+    double x2;
+    double strokeDashArray;
     String fillColor;
     String borderColor;
-    Number opacity;
-    Number offsetX;
-    Number offsetY;
+    double opacity;
+    double offsetX;
+    double offsetY;
     Label label;
 
     class Label {
         String borderColor;
-        Number borderWidth;
+        double borderWidth;
         String text;
         String textAnchor;
         String position;
         String orientation;
-        Number offsetX;
-        Number offsetY;
+        double offsetX;
+        double offsetY;
         AnnotationStyle style;
     }
 }

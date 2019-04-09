@@ -1,14 +1,14 @@
 package com.github.appreciated.apexcharts.config.plotoptions;
 
 class Hollow {
-    Number margin;
+    double margin;
     String size;
     String background;
     String image;
-    Number width;
-    Number height;
-    Number offsetX;
-    Number offsetY;
+    double width;
+    double height;
+    double offsetX;
+    double offsetY;
     Boolean clipped;
     Position position;
 

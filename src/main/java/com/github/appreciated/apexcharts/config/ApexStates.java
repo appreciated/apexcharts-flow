@@ -6,7 +6,7 @@ public class ApexStates {
         Filter filter;
         class Filter {
             String type;
-            Number value;
+            double value;
         }
     }
     Hover hover;
@@ -14,7 +14,7 @@ public class ApexStates {
         Filter filter;
         class Filter {
             String type;
-            Number value;
+            double value;
         }
     }
     Active active;
@@ -23,7 +23,7 @@ public class ApexStates {
         Filter filter;
         class Filter {
             String type;
-            Number value;
+            double value;
         }
     }
 }

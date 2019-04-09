@@ -2,11 +2,11 @@ package com.github.appreciated.apexcharts.config;
 
 public class ApexDataLabels {
     Boolean enabled;
-    Number[] enabledOnSeries;
+    double[] enabledOnSeries;
     String formatter;
     TextAnchor textAnchor;
-    Number offsetX;
-    Number offsetY;
+    double offsetX;
+    double offsetY;
     Style style;
     DropShadow dropShadow;
 
@@ -29,9 +29,9 @@ public class ApexDataLabels {
 
     class DropShadow {
         Boolean enable;
-        Number top;
-        Number left;
-        Number blur;
-        Number opacity;
+        double top;
+        double left;
+        double blur;
+        double opacity;
     }
 }

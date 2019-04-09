@@ -22,8 +22,8 @@ public class ApexNoData {
             this.name = name;
         }
     }
-    Number offsetX;
-    Number offsetY;
+    double offsetX;
+    double offsetY;
     Style style;
     class Style {
         String color;

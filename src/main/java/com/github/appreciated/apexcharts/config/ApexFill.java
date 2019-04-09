@@ -2,7 +2,7 @@ package com.github.appreciated.apexcharts.config;
 
 public class ApexFill {
     String[] colors;
-    Number opacity;
+    double opacity;
     String type;
     Gradient gradient;
     Image image;
@@ -11,24 +11,24 @@ public class ApexFill {
     class Gradient {
         String shade;
         String type;
-        Number shadeIntensity;
+        double shadeIntensity;
         String[] gradientToColors;
         Boolean inverseColors;
-        Number opacityFrom;
-        Number opacityTo;
-        Number[] stops;
+        double opacityFrom;
+        double opacityTo;
+        double[] stops;
     }
 
     class Image {
         String[] src;
-        Number width;
-        Number height;
+        double width;
+        double height;
     }
 
     class Pattern {
         String style;
-        Number width;
-        Number height;
-        Number strokeWidth;
+        double width;
+        double height;
+        double strokeWidth;
     }
 }

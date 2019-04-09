@@ -12,10 +12,10 @@ public class ApexLegend {
     HorizontalAlign horizontalAlign;
     String fontSize;
     String fontFamily;
-    Number width;
-    Number height;
-    Number offsetX;
-    Number offsetY;
+    double width;
+    double height;
+    double offsetX;
+    double offsetY;
     Markers markers;
     ItemMargin itemMargin;
     ContainerMargin containerMargin;

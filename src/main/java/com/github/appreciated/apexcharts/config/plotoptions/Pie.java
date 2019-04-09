@@ -1,10 +1,10 @@
 package com.github.appreciated.apexcharts.config.plotoptions;
 
 public class Pie {
-    Number size;
-    Number customScale;
-    Number offsetX;
-    Number offsetY;
+    double size;
+    double customScale;
+    double offsetX;
+    double offsetY;
     Boolean expandOnClick;
     DataLabels dataLabels;
     Donut donut;
@@ -25,7 +25,7 @@ public class Pie {
                 String fontSize;
                 String fontFamily;
                 String color;
-                Number offsetY;
+                double offsetY;
             }
 
             class Value {
@@ -33,7 +33,7 @@ public class Pie {
                 String fontSize;
                 String fontFamily;
                 String color;
-                Number offsetY;
+                double offsetY;
 
                 String formatter;
             }

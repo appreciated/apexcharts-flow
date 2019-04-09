@@ -1,9 +1,9 @@
 package com.github.appreciated.apexcharts.config;
 
 class ApexDiscretePoint {
-    Number seriesIndex;
-    Number dataPointIndex;
+    double seriesIndex;
+    double dataPointIndex;
     String fillColor;
     String strokeColor;
-    Number size;
+    double size;
 }

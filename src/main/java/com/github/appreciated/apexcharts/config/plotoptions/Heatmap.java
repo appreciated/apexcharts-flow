@@ -1,23 +1,49 @@
 package com.github.appreciated.apexcharts.config.plotoptions;
 
 public class Heatmap {
-    Number radius;
+    double radius;
     Boolean enableShades;
-    Number shadeIntensity;
+    double shadeIntensity;
     Boolean distributed;
     ColorScale colorScale;
 
-    class ColorScale {
-        ColorScale.Ranges ranges;
-        Boolean inverse;
-        Number min;
-        Number max;
+    public double getRadius() {
+        return radius;
+    }
 
-        class Ranges {
-            Number from;
-            Number to;
-            String color;
-            String name;
-        }
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
+
+    public Boolean getEnableShades() {
+        return enableShades;
+    }
+
+    public void setEnableShades(Boolean enableShades) {
+        this.enableShades = enableShades;
+    }
+
+    public double getShadeIntensity() {
+        return shadeIntensity;
+    }
+
+    public void setShadeIntensity(double shadeIntensity) {
+        this.shadeIntensity = shadeIntensity;
+    }
+
+    public Boolean getDistributed() {
+        return distributed;
+    }
+
+    public void setDistributed(Boolean distributed) {
+        this.distributed = distributed;
+    }
+
+    public ColorScale getColorScale() {
+        return colorScale;
+    }
+
+    public void setColorScale(ColorScale colorScale) {
+        this.colorScale = colorScale;
     }
 }

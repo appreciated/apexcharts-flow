@@ -1,13 +1,13 @@
 package com.github.appreciated.apexcharts.config.legend;
 
 public class Markers {
-    Number width;
-    Number height;
+    double width;
+    double height;
     String strokeColor;
-    Number strokeWidth;
-    Number offsetX;
-    Number offsetY;
-    Number radius;
+    double strokeWidth;
+    double offsetX;
+    double offsetY;
+    double radius;
     Shape shape;
     String customHTML;
 

@@ -1,12 +1,12 @@
 package com.github.appreciated.apexcharts.config;
 
 public class ApexMarkers {
-    Number size;
+    double size;
     String[] colors;
     String strokeColor;
-    Number strokeWidth;
-    Number strokeOpacity;
-    Number fillOpacity;
+    double strokeWidth;
+    double strokeOpacity;
+    double fillOpacity;
     ApexDiscretePoint[] discrete;
     Shape shape;
     enum Shape {
@@ -17,12 +17,12 @@ public class ApexMarkers {
             this.name = name;
         }
     }
-    Number radius;
-    Number offsetX;
-    Number offsetY;
+    double radius;
+    double offsetX;
+    double offsetY;
     Hover hover;
     class Hover {
-        Number size;
-        Number sizeOffset;
+        double size;
+        double sizeOffset;
     }
 }

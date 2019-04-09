@@ -2,13 +2,13 @@ package com.github.appreciated.apexcharts.config.yaxis;
 
 class Labels {
     Boolean show;
-    Number minWidth;
-    Number maxWidth;
-    Number offsetX;
-    Number offsetY;
-    Number rotate;
+    double minWidth;
+    double maxWidth;
+    double offsetX;
+    double offsetY;
+    double rotate;
     Align align;
-    Number padding;
+    double padding;
     Style style;
     String formatter;
 

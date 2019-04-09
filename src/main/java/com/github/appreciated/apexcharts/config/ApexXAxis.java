@@ -2,14 +2,14 @@ package com.github.appreciated.apexcharts.config;
 
 public class ApexXAxis {
     Type type;
-    Number[] categories;
+    double[] categories;
     String[] labels;
     AxisBorder axisBorder;
     AxisTicks axisTicks;
-    Number tickAmount;
-    Number min;
-    Number max;
-    Number range;
+    double tickAmount;
+    double min;
+    double max;
+    double range;
     Boolean floating;
     String position;
     Title title;
@@ -29,16 +29,16 @@ public class ApexXAxis {
 
     class Labels {
         Boolean show;
-        Number rotate;
+        double rotate;
         Boolean rotateAlways;
         Boolean hideOverlappingLabels;
         Boolean showDuplicates;
         Boolean trim;
-        Number minHeight;
-        Number maxHeight;
+        double minHeight;
+        double maxHeight;
         Style style;
-        Number offsetX;
-        Number offsetY;
+        double offsetX;
+        double offsetY;
         String format;
 
         String formatter;
@@ -63,24 +63,24 @@ public class ApexXAxis {
     class AxisBorder {
         Boolean show;
         String color;
-        Number offsetX;
-        Number offsetY;
-        Number strokeWidth;
+        double offsetX;
+        double offsetY;
+        double strokeWidth;
     }
 
     class AxisTicks {
         Boolean show;
         String borderType;
         String color;
-        Number height;
-        Number offsetX;
-        Number offsetY;
+        double height;
+        double offsetX;
+        double offsetY;
     }
 
     class Title {
         String text;
-        Number offsetX;
-        Number offsetY;
+        double offsetX;
+        double offsetY;
         Style style;
 
         class Style {
@@ -94,15 +94,15 @@ public class ApexXAxis {
         Boolean show;
         String width;
         String position;
-        Number opacity;
+        double opacity;
         Stroke stroke;
         Fill fill;
         DropShadow dropShadow;
 
         class Stroke {
             String color;
-            Number width;
-            Number dashArray;
+            double width;
+            double dashArray;
         }
 
         class Fill {
@@ -113,23 +113,23 @@ public class ApexXAxis {
             class Gradient {
                 String colorFrom;
                 String colorTo;
-                Number[] stops;
-                Number opacityFrom;
-                Number opacityTo;
+                double[] stops;
+                double opacityFrom;
+                double opacityTo;
             }
         }
 
         class DropShadow {
             Boolean enabled;
-            Number top;
-            Number left;
-            Number blur;
-            Number opacity;
+            double top;
+            double left;
+            double blur;
+            double opacity;
         }
     }
 
     class Tooltip {
         Boolean enabled;
-        Number offsetY;
+        double offsetY;
     }
 }

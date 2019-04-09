@@ -12,10 +12,10 @@ public class ApexTitleSubtitle {
             this.name = name;
         }
     }
-    Number margin;
-    Number offsetX;
-    Number offsetY;
-    Number floating;
+    double margin;
+    double offsetX;
+    double offsetY;
+    double floating;
     Style style;
     class Style {
         String fontSize;

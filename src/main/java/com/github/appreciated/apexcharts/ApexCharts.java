@@ -6,13 +6,12 @@ import com.vaadin.flow.component.HasSize;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.HtmlImport;
 import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
-import com.vaadin.flow.templatemodel.TemplateModel;
 
 import java.util.Map;
 
 @Tag("apex-charts-wrapper")
 @HtmlImport("frontend://com/github/appreciated/apexcharts/apexcharts-wrapper.html")
-public class ApexCharts extends PolymerTemplate<ApexCharts.ApexChartModel> implements HasSize {
+public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasSize {
 
     public ApexCharts() {
         setWidth("300px");
@@ -80,7 +79,7 @@ public class ApexCharts extends PolymerTemplate<ApexCharts.ApexChartModel> imple
     }
 
     public ApexCharts withSeries(double... series) {
-        getModel().setDoubleChartSeries(series);
+        //getModel().setDoubleChartSeries(series);
         return this;
     }
 
@@ -129,98 +128,5 @@ public class ApexCharts extends PolymerTemplate<ApexCharts.ApexChartModel> imple
         return this;
     }
 
-    public interface ApexChartModel extends TemplateModel {
-        ApexAnnotations getAnnotations();
-
-        void setAnnotations(ApexAnnotations annotations);
-
-        ApexChart getChart();
-
-        void setChart(ApexChart chart);
-
-        String[] getColors();
-
-        void setColors(String[] colors);
-
-        ApexDataLabels getDataLabels();
-
-        void setDataLabels(ApexDataLabels dataLabels);
-
-        ApexFill getFill();
-
-        void setFill(ApexFill fill);
-
-        ApexGrid getGrid();
-
-        void setGrid(ApexGrid grid);
-
-        String[] getLabels();
-
-        void setLabels(String[] labels);
-
-        ApexLegend getLegend();
-
-        void setLegend(ApexLegend legend);
-
-        ApexMarkers getMarkers();
-
-        void setMarkers(ApexMarkers markers);
-
-        ApexNoData getNoData();
-
-        void setNoData(ApexNoData noData);
-
-        ApexPlotOptions getPlotOptions();
-
-        void setPlotOptions(ApexPlotOptions plotOptions);
-
-        ApexResponsive[] getResponsive();
-
-        void setResponsive(ApexResponsive[] responsive);
-
-        ApexAxisChartSeries getSeries();
-
-        void setSeries(ApexAxisChartSeries series);
-
-        ApexStates getStates();
-
-        void setStates(ApexStates states);
-
-        ApexStroke getStroke();
-
-        void setStroke(ApexStroke stroke);
-
-        ApexTitleSubtitle getSubtitle();
-
-        void setSubtitle(ApexTitleSubtitle subtitle);
-
-        ApexTheme getTheme();
-
-        void setTheme(ApexTheme theme);
-
-        ApexTitleSubtitle getTitle();
-
-        void setTitle(ApexTitleSubtitle title);
-
-        ApexTooltip getTooltip();
-
-        void setTooltip(ApexTooltip tooltip);
-
-        ApexXAxis getXaxis();
-
-        void setXaxis(ApexXAxis xaxis);
-
-        ApexYAxis[] getYaxis();
-
-        void setYaxis(ApexYAxis[] yaxis);
-
-        double[] getDoubleChartSeries();
-
-        void setDoubleChartSeries(double[] doubleChartSeries);
-
-        Map<String, Double> getMapChartSeries();
-
-        void setMapChartSeries(Map<String, Double> mapChartSeries);
-    }
 }
 

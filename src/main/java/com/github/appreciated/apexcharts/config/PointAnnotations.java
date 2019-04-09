@@ -1,22 +1,22 @@
 package com.github.appreciated.apexcharts.config;
 
 class PointAnnotations {
-    Number x;
-    Number y;
-    Number yAxisIndex;
-    Number seriesIndex;
+    double x;
+    double y;
+    double yAxisIndex;
+    double seriesIndex;
     Marker marker;
     AnnotationLabel label;
 
     class Marker {
-        Number size;
+        double size;
         String fillColor;
         String strokeColor;
-        Number strokeWidth;
+        double strokeWidth;
         String shape;
-        Number offsetX;
-        Number offsetY;
-        Number radius;
+        double offsetX;
+        double offsetY;
+        double radius;
         String cssClass;
     }
 }

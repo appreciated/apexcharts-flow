@@ -60,7 +60,7 @@ public class ApexTooltip {
     class Fixed {
         Boolean enabled;
         String position;
-        Number offsetX;
-        Number offsetY;
+        double offsetX;
+        double offsetY;
     }
 }

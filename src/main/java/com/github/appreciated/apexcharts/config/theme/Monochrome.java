@@ -4,7 +4,7 @@ public class Monochrome {
     Boolean enabled;
     String color;
     ShadeTo shadeTo;
-    Number shadeIntensity;
+    double shadeIntensity;
 
     enum ShadeTo {
         light("light"),

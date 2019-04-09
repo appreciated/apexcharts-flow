@@ -8,8 +8,8 @@ public class ApexChart {
     String foreColor;
     String fontFamily;
     String background;
-    Number offsetX;
-    Number offsetY;
+    double offsetX;
+    double offsetY;
     DropShadow dropShadow;
     Brush brush;
     String id;
@@ -43,12 +43,12 @@ public class ApexChart {
         return this;
     }
 
-    public ApexChart withOffsetX(Number offsetX) {
+    public ApexChart withOffsetX(double offsetX) {
         this.offsetX = offsetX;
         return this;
     }
 
-    public ApexChart withOffsetY(Number offsetY) {
+    public ApexChart withOffsetY(double offsetY) {
         this.offsetY = offsetY;
         return this;
     }
