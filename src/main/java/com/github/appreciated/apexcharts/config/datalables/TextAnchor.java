@@ -1,5 +1,6 @@
 package com.github.appreciated.apexcharts.config.datalables;
 
+
 public enum TextAnchor {
     start("start"),
     middle("middle"),

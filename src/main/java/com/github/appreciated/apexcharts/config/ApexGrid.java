@@ -1,5 +1,7 @@
 package com.github.appreciated.apexcharts.config;
 
+import com.github.appreciated.apexcharts.config.grid.*;
+
 public class ApexGrid {
     Boolean show;
     String borderColor;
@@ -11,50 +13,75 @@ public class ApexGrid {
     Column column;
     Padding padding;
 
-    enum Position {
-        front("front"),
-        back("back");
-        private String name;
-
-        Position(String name) {
-            this.name = name;
-        }
+    public Boolean getShow() {
+        return show;
     }
 
-    class Xaxis {
-        Lines lines;
-
-        class Lines {
-            Boolean show;
-            double offsetX;
-            double offsetY;
-        }
+    public void setShow(Boolean show) {
+        this.show = show;
     }
 
-    class Yaxis {
-        Lines lines;
-
-        class Lines {
-            Boolean show;
-            double offsetX;
-            double offsetY;
-        }
+    public String getBorderColor() {
+        return borderColor;
     }
 
-    class Row {
-        String[] colors;
-        double opacity;
+    public void setBorderColor(String borderColor) {
+        this.borderColor = borderColor;
     }
 
-    class Column {
-        String[] colors;
-        double opacity;
+    public double getStrokeDashArray() {
+        return strokeDashArray;
     }
 
-    class Padding {
-        double top;
-        double right;
-        double bottom;
-        double left;
+    public void setStrokeDashArray(double strokeDashArray) {
+        this.strokeDashArray = strokeDashArray;
+    }
+
+    public Position getPosition() {
+        return position;
+    }
+
+    public void setPosition(Position position) {
+        this.position = position;
+    }
+
+    public Xaxis getXaxis() {
+        return xaxis;
+    }
+
+    public void setXaxis(Xaxis xaxis) {
+        this.xaxis = xaxis;
+    }
+
+    public Yaxis getYaxis() {
+        return yaxis;
+    }
+
+    public void setYaxis(Yaxis yaxis) {
+        this.yaxis = yaxis;
+    }
+
+    public Row getRow() {
+        return row;
+    }
+
+    public void setRow(Row row) {
+        this.row = row;
+    }
+
+    public Column getColumn() {
+        return column;
+    }
+
+    public void setColumn(Column column) {
+        this.column = column;
+    }
+
+    public Padding getPadding() {
+        return padding;
+    }
+
+    public void setPadding(Padding padding) {
+        this.padding = padding;
     }
 }

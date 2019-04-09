@@ -2,11 +2,11 @@ package com.github.appreciated.apexcharts.config.annotations;
 
 public class AnnotationLabel {
     String borderColor;
-    Number borderWidth;
+    double borderWidth;
     String text;
     String textAnchor;
-    Number offsetX;
-    Number offsetY;
+    double offsetX;
+    double offsetY;
     AnnotationStyle style;
     String position;
     String orientation;
@@ -19,11 +19,11 @@ public class AnnotationLabel {
         this.borderColor = borderColor;
     }
 
-    public Number getBorderWidth() {
+    public double getBorderWidth() {
         return borderWidth;
     }
 
-    public void setBorderWidth(Number borderWidth) {
+    public void setBorderWidth(double borderWidth) {
         this.borderWidth = borderWidth;
     }
 
@@ -43,19 +43,19 @@ public class AnnotationLabel {
         this.textAnchor = textAnchor;
     }
 
-    public Number getOffsetX() {
+    public double getOffsetX() {
         return offsetX;
     }
 
-    public void setOffsetX(Number offsetX) {
+    public void setOffsetX(double offsetX) {
         this.offsetX = offsetX;
     }
 
-    public Number getOffsetY() {
+    public double getOffsetY() {
         return offsetY;
     }
 
-    public void setOffsetY(Number offsetY) {
+    public void setOffsetY(double offsetY) {
         this.offsetY = offsetY;
     }
 

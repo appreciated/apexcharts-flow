@@ -6,6 +6,7 @@ import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.HtmlImport;
 import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
 
+import java.util.Arrays;
 import java.util.Map;
 
 @Tag("apex-charts-wrapper")
@@ -48,7 +49,7 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
     }
 
     public ApexCharts withLabels(String... labels) {
-        getModel().setLabels(labels);
+        getModel().setLabels(Arrays.asList(labels));
         return this;
     }
 
@@ -73,7 +74,7 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
     }
 
     public ApexCharts withResponsive(ApexResponsive... responsive) {
-        getModel().setResponsive(responsive);
+        getModel().setResponsive(Arrays.asList(responsive));
         return this;
     }
 
@@ -122,8 +123,8 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
         return this;
     }
 
-    public ApexCharts withYaxis(ApexYAxis[] yaxis) {
-        getModel().setYaxis(yaxis);
+    public ApexCharts withYaxis(ApexYAxis... yaxis) {
+        getModel().setYaxis(Arrays.asList(yaxis));
         return this;
     }
 

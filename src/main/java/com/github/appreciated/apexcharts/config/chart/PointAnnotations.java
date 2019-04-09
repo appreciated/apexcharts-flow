@@ -10,15 +10,51 @@ public class PointAnnotations {
     Marker marker;
     AnnotationLabel label;
 
-    class Marker {
-        double size;
-        String fillColor;
-        String strokeColor;
-        double strokeWidth;
-        String shape;
-        double offsetX;
-        double offsetY;
-        double radius;
-        String cssClass;
+    public double getX() {
+        return x;
+    }
+
+    public void setX(double x) {
+        this.x = x;
+    }
+
+    public double getY() {
+        return y;
+    }
+
+    public void setY(double y) {
+        this.y = y;
+    }
+
+    public double getyAxisIndex() {
+        return yAxisIndex;
+    }
+
+    public void setyAxisIndex(double yAxisIndex) {
+        this.yAxisIndex = yAxisIndex;
+    }
+
+    public double getSeriesIndex() {
+        return seriesIndex;
+    }
+
+    public void setSeriesIndex(double seriesIndex) {
+        this.seriesIndex = seriesIndex;
+    }
+
+    public Marker getMarker() {
+        return marker;
+    }
+
+    public void setMarker(Marker marker) {
+        this.marker = marker;
+    }
+
+    public AnnotationLabel getLabel() {
+        return label;
+    }
+
+    public void setLabel(AnnotationLabel label) {
+        this.label = label;
     }
 }

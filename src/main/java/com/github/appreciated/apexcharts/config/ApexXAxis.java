@@ -1,5 +1,7 @@
 package com.github.appreciated.apexcharts.config;
 
+import com.github.appreciated.apexcharts.config.xaxis.*;
+
 public class ApexXAxis {
     Type type;
     double[] categories;
@@ -16,120 +18,115 @@ public class ApexXAxis {
     Crosshairs crosshairs;
     Tooltip tooltip;
 
-    enum Type {
-        categories("categories"),
-        datetime("datetime"),
-        numeric("numeric");
-        private String name;
-
-        Type(String name) {
-            this.name = name;
-        }
+    public Type getType() {
+        return type;
     }
 
-    class Labels {
-        Boolean show;
-        double rotate;
-        Boolean rotateAlways;
-        Boolean hideOverlappingLabels;
-        Boolean showDuplicates;
-        Boolean trim;
-        double minHeight;
-        double maxHeight;
-        Style style;
-        double offsetX;
-        double offsetY;
-        String format;
-
-        String formatter;
-        DatetimeFormatter datetimeFormatter;
-
-        class DatetimeFormatter {
-            String year;
-            String month;
-            String day;
-            String hour;
-            String minute;
-        }
-
-        class Style {
-            String[] colors;
-            String fontSize;
-            String fontFamily;
-            String cssClass;
-        }
+    public void setType(Type type) {
+        this.type = type;
     }
 
-    class AxisBorder {
-        Boolean show;
-        String color;
-        double offsetX;
-        double offsetY;
-        double strokeWidth;
+    public double[] getCategories() {
+        return categories;
     }
 
-    class AxisTicks {
-        Boolean show;
-        String borderType;
-        String color;
-        double height;
-        double offsetX;
-        double offsetY;
+    public void setCategories(double[] categories) {
+        this.categories = categories;
     }
 
-    class Title {
-        String text;
-        double offsetX;
-        double offsetY;
-        Style style;
-
-        class Style {
-            String color;
-            String fontSize;
-            String cssClass;
-        }
+    public String[] getLabels() {
+        return labels;
     }
 
-    class Crosshairs {
-        Boolean show;
-        String width;
-        String position;
-        double opacity;
-        Stroke stroke;
-        Fill fill;
-        DropShadow dropShadow;
-
-        class Stroke {
-            String color;
-            double width;
-            double dashArray;
-        }
-
-        class Fill {
-            String type;
-            String color;
-            Gradient gradient;
-
-            class Gradient {
-                String colorFrom;
-                String colorTo;
-                double[] stops;
-                double opacityFrom;
-                double opacityTo;
-            }
-        }
-
-        class DropShadow {
-            Boolean enabled;
-            double top;
-            double left;
-            double blur;
-            double opacity;
-        }
+    public void setLabels(String[] labels) {
+        this.labels = labels;
     }
 
-    class Tooltip {
-        Boolean enabled;
-        double offsetY;
+    public AxisBorder getAxisBorder() {
+        return axisBorder;
+    }
+
+    public void setAxisBorder(AxisBorder axisBorder) {
+        this.axisBorder = axisBorder;
+    }
+
+    public AxisTicks getAxisTicks() {
+        return axisTicks;
+    }
+
+    public void setAxisTicks(AxisTicks axisTicks) {
+        this.axisTicks = axisTicks;
+    }
+
+    public double getTickAmount() {
+        return tickAmount;
+    }
+
+    public void setTickAmount(double tickAmount) {
+        this.tickAmount = tickAmount;
+    }
+
+    public double getMin() {
+        return min;
+    }
+
+    public void setMin(double min) {
+        this.min = min;
+    }
+
+    public double getMax() {
+        return max;
+    }
+
+    public void setMax(double max) {
+        this.max = max;
+    }
+
+    public double getRange() {
+        return range;
+    }
+
+    public void setRange(double range) {
+        this.range = range;
+    }
+
+    public Boolean getFloating() {
+        return floating;
+    }
+
+    public void setFloating(Boolean floating) {
+        this.floating = floating;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    public Title getTitle() {
+        return title;
+    }
+
+    public void setTitle(Title title) {
+        this.title = title;
+    }
+
+    public Crosshairs getCrosshairs() {
+        return crosshairs;
+    }
+
+    public void setCrosshairs(Crosshairs crosshairs) {
+        this.crosshairs = crosshairs;
+    }
+
+    public Tooltip getTooltip() {
+        return tooltip;
+    }
+
+    public void setTooltip(Tooltip tooltip) {
+        this.tooltip = tooltip;
     }
 }
