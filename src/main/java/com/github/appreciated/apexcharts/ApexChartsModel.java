@@ -20,9 +20,9 @@ public interface ApexChartsModel extends TemplateModel {
     //@Encode(JsonEncoder.class)
     void setChart(ApexChart chart);
 
-    String[] getColors();
+    List<String> getColors();
 
-    void setColors(String[] colors);
+    void setColors(List<String> colors);
 
     ApexDataLabels getDataLabels();
 
@@ -104,10 +104,9 @@ public interface ApexChartsModel extends TemplateModel {
     //@Encode(JsonEncoder.class)
     void setXaxis(ApexXAxis xaxis);
 
-    List<ApexYAxis> getYaxis();
+    String getYaxis();
 
-    @Encode(ApexYAxisEncoder.class)
-    void setYaxis(List<ApexYAxis> yaxis);
+    void setYaxis(String  yaxis);
 
     //double[] getDoubleChartSeries();
 

@@ -1,14 +1,16 @@
 package com.github.appreciated.apexcharts.config;
 
+import java.util.List;
+
 class ApexLocale {
     String name;
     Options options;
 
     class Options {
-        String[] months;
-        String[] shortMonths;
-        String[] days;
-        String[] shortDays;
+        List<String> months;
+        List<String> shortMonths;
+        List<String> days;
+        List<String> shortDays;
         Toolbar toolbar;
 
         class Toolbar {

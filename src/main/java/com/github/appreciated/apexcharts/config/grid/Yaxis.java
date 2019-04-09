@@ -1,11 +1,15 @@
 package com.github.appreciated.apexcharts.config.grid;
 
+import com.github.appreciated.apexcharts.config.grid.yaxis.Lines;
+
 public class Yaxis {
     Lines lines;
 
-    class Lines {
-        Boolean show;
-        double offsetX;
-        double offsetY;
+    public Lines getLines() {
+        return lines;
+    }
+
+    public void setLines(Lines lines) {
+        this.lines = lines;
     }
 }

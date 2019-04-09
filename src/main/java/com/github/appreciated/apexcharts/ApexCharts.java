@@ -29,7 +29,7 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
     }
 
     public ApexCharts withColors(String[] colors) {
-        getModel().setColors(colors);
+        getModel().setColors(Arrays.asList(colors));
         return this;
     }
 
@@ -124,7 +124,7 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
     }
 
     public ApexCharts withYaxis(ApexYAxis... yaxis) {
-        getModel().setYaxis(Arrays.asList(yaxis));
+        getModel().setYaxis(Arrays.asList(yaxis).toString());
         return this;
     }
 

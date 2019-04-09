@@ -4,9 +4,11 @@ import com.github.appreciated.apexcharts.config.datalables.DropShadow;
 import com.github.appreciated.apexcharts.config.datalables.Style;
 import com.github.appreciated.apexcharts.config.datalables.TextAnchor;
 
+import java.util.List;
+
 public class ApexDataLabels {
     Boolean enabled;
-    double[] enabledOnSeries;
+    List<Double> enabledOnSeries;
     String formatter;
     TextAnchor textAnchor;
     double offsetX;
@@ -23,11 +25,11 @@ public class ApexDataLabels {
         this.enabled = enabled;
     }
 
-    public double[] getEnabledOnSeries() {
+    public List<Double> getEnabledOnSeries() {
         return enabledOnSeries;
     }
 
-    public void setEnabledOnSeries(double[] enabledOnSeries) {
+    public void setEnabledOnSeries(List<Double> enabledOnSeries) {
         this.enabledOnSeries = enabledOnSeries;
     }
 

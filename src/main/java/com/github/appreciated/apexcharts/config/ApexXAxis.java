@@ -2,10 +2,12 @@ package com.github.appreciated.apexcharts.config;
 
 import com.github.appreciated.apexcharts.config.xaxis.*;
 
+import java.util.List;
+
 public class ApexXAxis {
     Type type;
     double[] categories;
-    String[] labels;
+    List<String> labels;
     AxisBorder axisBorder;
     AxisTicks axisTicks;
     double tickAmount;
@@ -34,11 +36,11 @@ public class ApexXAxis {
         this.categories = categories;
     }
 
-    public String[] getLabels() {
+    public List<String> getLabels() {
         return labels;
     }
 
-    public void setLabels(String[] labels) {
+    public void setLabels(List<String> labels) {
         this.labels = labels;
     }
 

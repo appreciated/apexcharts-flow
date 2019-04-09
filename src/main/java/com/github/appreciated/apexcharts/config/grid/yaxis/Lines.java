@@ -1,11 +1,9 @@
-package com.github.appreciated.apexcharts.config.xaxis;
+package com.github.appreciated.apexcharts.config.grid.yaxis;
 
-public class AxisBorder {
+public class Lines {
     Boolean show;
-    String color;
     double offsetX;
     double offsetY;
-    double strokeWidth;
 
     public Boolean getShow() {
         return show;
@@ -13,14 +11,6 @@ public class AxisBorder {
 
     public void setShow(Boolean show) {
         this.show = show;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
     }
 
     public double getOffsetX() {
@@ -37,13 +27,5 @@ public class AxisBorder {
 
     public void setOffsetY(double offsetY) {
         this.offsetY = offsetY;
-    }
-
-    public double getStrokeWidth() {
-        return strokeWidth;
-    }
-
-    public void setStrokeWidth(double strokeWidth) {
-        this.strokeWidth = strokeWidth;
     }
 }

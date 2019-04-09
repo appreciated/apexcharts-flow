@@ -1,11 +1,20 @@
-package com.github.appreciated.apexcharts.config.datalables;
+package com.github.appreciated.apexcharts.config.xaxis.labels;
 
 import java.util.List;
 
 public class Style {
+    List<String> colors;
     String fontSize;
     String fontFamily;
-    List<String> colors;
+    String cssClass;
+
+    public List<String> getColors() {
+        return colors;
+    }
+
+    public void setColors(List<String> colors) {
+        this.colors = colors;
+    }
 
     public String getFontSize() {
         return fontSize;
@@ -23,11 +32,11 @@ public class Style {
         this.fontFamily = fontFamily;
     }
 
-    public List<String> getColors() {
-        return colors;
+    public String getCssClass() {
+        return cssClass;
     }
 
-    public void setColors(List<String> colors) {
-        this.colors = colors;
+    public void setCssClass(String cssClass) {
+        this.cssClass = cssClass;
     }
 }

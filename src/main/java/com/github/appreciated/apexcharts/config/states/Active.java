@@ -1,10 +1,23 @@
 package com.github.appreciated.apexcharts.config.states;
 
+
 public class Active {
     Boolean allowMultipleDataPointsSelection;
     Filter filter;
-    class Filter {
-        String type;
-        double value;
+
+    public Boolean getAllowMultipleDataPointsSelection() {
+        return allowMultipleDataPointsSelection;
+    }
+
+    public void setAllowMultipleDataPointsSelection(Boolean allowMultipleDataPointsSelection) {
+        this.allowMultipleDataPointsSelection = allowMultipleDataPointsSelection;
+    }
+
+    public Filter getFilter() {
+        return filter;
+    }
+
+    public void setFilter(Filter filter) {
+        this.filter = filter;
     }
 }

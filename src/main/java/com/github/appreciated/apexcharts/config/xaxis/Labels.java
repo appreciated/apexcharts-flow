@@ -1,5 +1,8 @@
 package com.github.appreciated.apexcharts.config.xaxis;
 
+import com.github.appreciated.apexcharts.config.xaxis.labels.DatetimeFormatter;
+import com.github.appreciated.apexcharts.config.xaxis.labels.Style;
+
 public class Labels {
     Boolean show;
     double rotate;
@@ -17,18 +20,4 @@ public class Labels {
     String formatter;
     DatetimeFormatter datetimeFormatter;
 
-    class DatetimeFormatter {
-        String year;
-        String month;
-        String day;
-        String hour;
-        String minute;
-    }
-
-    class Style {
-        String[] colors;
-        String fontSize;
-        String fontFamily;
-        String cssClass;
-    }
 }
