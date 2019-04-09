@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.config.yaxis;
 
-class AxisTicks {
+public class AxisTicks {
     Boolean show;
     String color;
     Number width;

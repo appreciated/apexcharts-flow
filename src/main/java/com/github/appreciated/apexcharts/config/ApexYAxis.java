@@ -1,4 +1,6 @@
-package com.github.appreciated.apexcharts.config.yaxis;
+package com.github.appreciated.apexcharts.config;
+
+import com.github.appreciated.apexcharts.config.yaxis.*;
 
 public class ApexYAxis {
     Boolean show;

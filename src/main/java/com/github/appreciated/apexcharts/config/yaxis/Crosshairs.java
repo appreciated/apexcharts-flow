@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.config.yaxis;
 
-class Crosshairs {
+public class Crosshairs {
     Boolean show;
     String position;
     Stroke stroke;

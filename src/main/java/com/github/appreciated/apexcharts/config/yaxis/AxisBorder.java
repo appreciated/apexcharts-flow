@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.config.yaxis;
 
-class AxisBorder {
+public class AxisBorder {
     Boolean show;
     String color;
     Number offsetX;

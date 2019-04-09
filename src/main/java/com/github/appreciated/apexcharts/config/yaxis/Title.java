@@ -2,7 +2,7 @@ package com.github.appreciated.apexcharts.config.yaxis;
 
 import com.github.appreciated.apexcharts.config.yaxis.title.Style;
 
-class Title {
+public class Title {
     String text;
     Number rotate;
     Number offsetX;

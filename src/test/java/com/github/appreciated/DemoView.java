@@ -2,7 +2,7 @@ package com.github.appreciated;
 
 import com.github.appreciated.apexcharts.ApexCharts;
 import com.github.appreciated.apexcharts.config.ApexChart;
-import com.github.appreciated.apexcharts.config.Type;
+import com.github.appreciated.apexcharts.config.chart.Type;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.router.Route;
 

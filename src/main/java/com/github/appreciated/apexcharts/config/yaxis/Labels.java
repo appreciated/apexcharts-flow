@@ -2,7 +2,7 @@ package com.github.appreciated.apexcharts.config.yaxis;
 
 import com.github.appreciated.apexcharts.config.yaxis.labels.Style;
 
-class Labels {
+public class Labels {
     Boolean show;
     double minWidth;
     double maxWidth;
