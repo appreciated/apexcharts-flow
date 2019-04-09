@@ -1,6 +1,6 @@
 package com.github.appreciated;
 
-import com.github.appreciated.apexcharts.ApexChart;
+import com.github.appreciated.apexcharts.ApexCharts;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.router.Route;
 
@@ -8,6 +8,6 @@ import com.vaadin.flow.router.Route;
 public class DemoView extends Div {
 
     public DemoView() {
-        add(new ApexChart());
+        add(new ApexCharts());
     }
 }

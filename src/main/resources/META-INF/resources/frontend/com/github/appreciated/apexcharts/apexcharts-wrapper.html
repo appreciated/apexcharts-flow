@@ -1,0 +1,62 @@
+<link rel="import" href="../../../../bower_components/polymer/polymer-element.html">
+<script src="../../../../../webjars/apexcharts/3.6.6/dist/apexcharts.js"></script>
+<dom-module id="apex-charts-wrapper">
+    <template>
+        <style>
+            :host{
+                display: block;
+            }
+
+            ::slotted(svg) {
+                overflow: visible;
+            }
+
+            ::slotted(.progressbar-text) {
+                white-space: nowrap;
+            }
+        </style>
+        <slot></slot>
+    </template>
+    <script>
+        class ApexChartsWrapper extends Polymer.Element {
+            static get is() {
+                return 'apex-charts-wrapper'
+            }
+
+            static get properties() {
+                return {
+                    color: {
+                        type: String
+                    }
+                }
+            }
+
+            ready() {
+                super.ready();
+                var chart = new ApexCharts(
+                    this,
+                    {
+                        chart: {
+                            type: 'pie',
+                        },
+                        labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
+                        series: [44, 55, 13, 43, 22],
+                        responsive: [{
+                            breakpoint: 480,
+                            options: {
+                                chart: {
+                                    width: 200
+                                },
+                                legend: {
+                                    position: 'bottom'
+                                }
+                            }
+                        }]
+                    }
+                );
+                chart.render();
+            }
+        }
+        customElements.define(ApexChartsWrapper.is, ApexChartsWrapper);
+    </script>
+</dom-module>
