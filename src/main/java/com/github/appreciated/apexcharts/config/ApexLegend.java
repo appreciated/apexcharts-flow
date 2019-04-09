@@ -2,7 +2,7 @@ package com.github.appreciated.apexcharts.config;
 
 import com.github.appreciated.apexcharts.config.legend.*;
 
-class ApexLegend {
+public class ApexLegend {
     Boolean show;
     Boolean showForSingleSeries;
     Boolean showForNullSeries;

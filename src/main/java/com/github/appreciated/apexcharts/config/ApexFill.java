@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.config;
 
-class ApexFill {
+public class ApexFill {
     String[] colors;
     Number opacity;
     String type;

@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.config;
 
-class ApexDataLabels {
+public class ApexDataLabels {
     Boolean enabled;
     Number[] enabledOnSeries;
     String formatter;

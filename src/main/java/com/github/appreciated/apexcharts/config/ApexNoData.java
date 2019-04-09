@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.config;
 
-class ApexNoData {
+public class ApexNoData {
     String text;
     Align align;
     enum Align {

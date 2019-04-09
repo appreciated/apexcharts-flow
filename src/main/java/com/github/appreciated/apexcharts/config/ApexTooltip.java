@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.config;
 
-class ApexTooltip {
+public class ApexTooltip {
     Boolean enabled;
     Boolean shared;
     Boolean followCursor;

@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.config;
 
-class ApexGrid {
+public class ApexGrid {
     Boolean show;
     String borderColor;
     Number strokeDashArray;

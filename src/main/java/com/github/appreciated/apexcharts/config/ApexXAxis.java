@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.config;
 
-class ApexXAxis {
+public class ApexXAxis {
     Type type;
     Number[] categories;
     String[] labels;

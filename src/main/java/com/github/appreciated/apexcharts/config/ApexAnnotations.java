@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.config;
 
-class ApexAnnotations {
+public class ApexAnnotations {
     String position;
     YAxisAnnotations[] yaxis;
     XAxisAnnotations[] xaxis;

@@ -1,6 +1,7 @@
 package com.github.appreciated.apexcharts.config;
 
-class ApexResponsive {
+public class ApexResponsive {
     Number breakpoint;
     String options; //TODO
+
 }

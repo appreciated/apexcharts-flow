@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.config.yaxis;
 
-class ApexYAxis {
+public class ApexYAxis {
     Boolean show;
     Boolean showAlways;
     String seriesName;

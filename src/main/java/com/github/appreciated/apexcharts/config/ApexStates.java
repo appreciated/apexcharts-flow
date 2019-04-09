@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.config;
 
-class ApexStates {
+public class ApexStates {
     Normal normal;
     class Normal {
         Filter filter;

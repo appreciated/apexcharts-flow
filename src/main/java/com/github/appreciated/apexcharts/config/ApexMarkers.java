@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.config;
 
-class ApexMarkers {
+public class ApexMarkers {
     Number size;
     String[] colors;
     String strokeColor;
