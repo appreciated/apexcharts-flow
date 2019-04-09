@@ -1,7 +1,7 @@
 package com.github.appreciated.apexcharts;
 
-import com.github.appreciated.apexcharts.config.chart.*;
-import com.github.appreciated.apexcharts.config.chart.yaxis.ApexYAxis;
+import com.github.appreciated.apexcharts.config.*;
+import com.github.appreciated.apexcharts.config.yaxis.ApexYAxis;
 import com.vaadin.flow.component.HasSize;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.HtmlImport;
