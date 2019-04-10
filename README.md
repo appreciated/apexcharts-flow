@@ -1,6 +1,4 @@
-# apexcharts
-
-Vaadin 10 Java integration of https://github.com/apexcharts/apexcharts.js
+Vaadin Platform wrapper for ApexCharts to build interactive visualizations in Vaadin.
 
 ## Development instructions
 
