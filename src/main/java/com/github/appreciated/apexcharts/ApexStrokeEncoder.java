@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts;
 
-import com.github.appreciated.apexcharts.config.ApexStroke;
+import com.github.appreciated.apexcharts.config.Stroke;
 
-public class ApexStrokeEncoder extends JsonEncoder<ApexStroke> {
+public class ApexStrokeEncoder extends JsonEncoder<Stroke> {
 }

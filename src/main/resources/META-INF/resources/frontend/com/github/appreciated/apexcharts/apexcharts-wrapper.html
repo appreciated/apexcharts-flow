@@ -3,7 +3,7 @@
 <dom-module id="apex-charts-wrapper">
     <template>
         <style>
-            :host{
+            :host {
                 display: block;
             }
 
@@ -22,6 +22,7 @@
             static get is() {
                 return 'apex-charts-wrapper'
             }
+
             static get properties() {
                 return {
                     annotations: {
@@ -92,34 +93,76 @@
 
             ready() {
                 super.ready();
-                var config = {
-                    //annotations: this.annotations,  // ApexAnnotations
-                    chart: JSON.parse(this.chart),  // ApexChart
-                    series: JSON.parse(this.series),  // ApexAxisChartSeries | ApexNonAxisChartSeries
-                    labels: this.labels,  // string[]
-                    /*colors: this.colors,  // string[]
-                    dataLabels: this.dataLabels,  // ApexDataLabels
-                    fill: this.fill,  // ApexFill
-                    grid: this.grid,  // ApexGrid
-                    legend: this.legend,  // ApexLegend
-                    markers: this.markers,  // ApexMarkers
-                    noData: this.noData,  // ApexNoData
-                    plotOptions: this.plotOptions,  // ApexPlotOptions
-                    responsive: this.responsive,  // ApexResponsive[]
-                    states: this.states,  // ApexStates
-                    stroke: this.stroke,  // ApexStroke
-                    subtitle: this.subtitle,  // ApexTitleSubtitle
-                    theme: this.theme,  // ApexTheme
-                    title: this.title,  // ApexTitleSubtitle
-                    tooltip: this.tooltip,  // ApexTooltip
-                    xaxis: this.xaxis,  // ApexXAxis
-                    yaxis: this.yaxis  // ApexYAxis | ApexYAxis[]*/
-                };
+                var config = {};
+                if (this.annotations) {
+                    config.annotations = this.annotations;
+                }
+                if (this.chart) {
+                    config.chart = JSON.parse(this.chart);
+                }
+                if (this.series) {
+                    config.series = JSON.parse(this.series);
+                }
+                if (this.labels) {
+                    config.labels = this.labels;
+                }
+                if (this.colors) {
+                    config.colors = JSON.parse(this.colors);
+                }
+                if (this.dataLabels) {
+                    config.dataLabels = this.dataLabels;
+                }
+                if (this.fill) {
+                    config.fill = this.fill;
+                }
+                if (this.grid) {
+                    config.grid = JSON.parse(this.grid);
+                }
+                if (this.legend) {
+                    config.legend = this.legend;
+                }
+                if (this.markers) {
+                    config.markers = this.markers;
+                }
+                if (this.noData) {
+                    config.noData = this.noData;
+                }
+                if (this.plotOptions) {
+                    config.plotOptions = this.plotOptions;
+                }
+                if (this.responsive) {
+                    config.responsive = this.responsive;
+                }
+                if (this.states) {
+                    config.states = this.states;
+                }
+                if (this.stroke) {
+                    config.stroke = JSON.parse(this.stroke);
+                }
+                if (this.subtitle) {
+                    config.subtitle = this.subtitle;
+                }
+                if (this.theme) {
+                    config.theme = this.theme;
+                }
+                if (this.title) {
+                    config.title = this.title;
+                }
+                if (this.tooltip) {
+                    config.tooltip = this.tooltip;
+                }
+                if (this.xaxis) {
+                    config.xaxis = JSON.parse(this.xaxis);
+                }
+                if (this.yaxis) {
+                    config.yaxis = this.yaxis;
+                }
                 console.log(config);
-                var chart = new ApexCharts(this,config);
+                var chart = new ApexCharts(this, config);
                 chart.render();
             }
         }
+
         customElements.define(ApexChartsWrapper.is, ApexChartsWrapper);
     </script>
 </dom-module>

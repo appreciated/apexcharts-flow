@@ -1,7 +1,7 @@
 package com.github.appreciated.apexcharts;
 
 import com.github.appreciated.apexcharts.config.*;
-import com.github.appreciated.apexcharts.config.encoders.*;
+import com.github.appreciated.apexcharts.encoders.*;
 import com.vaadin.flow.templatemodel.Encode;
 import com.vaadin.flow.templatemodel.TemplateModel;
 
@@ -9,97 +9,101 @@ import java.util.List;
 
 public interface ApexChartsModel extends TemplateModel {
 
-    ApexAnnotations getAnnotations();
+    Annotations getAnnotations();
 
-    @Encode(ApexAnnotationsEncoder.class)
-    void setAnnotations(ApexAnnotations annotations);
+    @Encode(AnnotationsEncoder.class)
+    void setAnnotations(Annotations annotations);
 
-    ApexChart getChart();
+    Chart getChart();
 
-    @Encode(ApexChartEncoder.class)
-    void setChart(ApexChart chart);
+    @Encode(ChartEncoder.class)
+    void setChart(Chart chart);
 
-    List<String> getColors();
+    String getColors();
+    void setColors(String colors);
 
-    void setColors(List<String> colors);
+    DataLabels getDataLabels();
 
-    ApexDataLabels getDataLabels();
+    @Encode(DataLabelsEncoder.class)
+    void setDataLabels(DataLabels dataLabels);
 
-    @Encode(ApexDataLabelsEncoder.class)
-    void setDataLabels(ApexDataLabels dataLabels);
+    Fill getFill();
 
-    ApexFill getFill();
+    @Encode(FillEncoder.class)
+    void setFill(Fill fill);
 
-    @Encode(ApexFillEncoder.class)
-    void setFill(ApexFill fill);
+    Grid getGrid();
 
-    ApexGrid getGrid();
-
-    @Encode(ApexGridEncoder.class)
-    void setGrid(ApexGrid grid);
+    @Encode(GridEncoder.class)
+    void setGrid(Grid grid);
 
     List<String> getLabels();
 
     void setLabels(List<String> labels);
 
-    ApexLegend getLegend();
+    Legend getLegend();
 
-    @Encode(ApexLegendEncoder.class)
-    void setLegend(ApexLegend legend);
+    @Encode(LegendEncoder.class)
+    void setLegend(Legend legend);
 
-    ApexMarkers getMarkers();
+    Markers getMarkers();
 
-    @Encode(ApexMarkersEncoder.class)
-    void setMarkers(ApexMarkers markers);
+    @Encode(MarkersEncoder.class)
+    void setMarkers(Markers markers);
 
-    ApexNoData getNoData();
+    NoData getNoData();
 
-    @Encode(ApexNoDataEncoder.class)
-    void setNoData(ApexNoData noData);
+    @Encode(NoDataEncoder.class)
+    void setNoData(NoData noData);
 
-    ApexPlotOptions getPlotOptions();
+    PlotOptions getPlotOptions();
 
-    @Encode(ApexPlotOptionsEncoder.class)
-    void setPlotOptions(ApexPlotOptions plotOptions);
+    @Encode(PlotOptionsEncoder.class)
+    void setPlotOptions(PlotOptions plotOptions);
 
-    List<ApexResponsive> getResponsive();
+    List<Responsive> getResponsive();
 
-    void setResponsive(List<ApexResponsive> responsive);
+    void setResponsive(List<Responsive> responsive);
 
-    ApexStates getStates();
+    States getStates();
 
-    void setStates(ApexStates states);
+    void setStates(States states);
 
-    ApexStroke getStroke();
+    Stroke getStroke();
 
     @Encode(ApexStrokeEncoder.class)
-    void setStroke(ApexStroke stroke);
+    void setStroke(Stroke stroke);
 
-    ApexTitleSubtitle getSubtitle();
+    TitleSubtitle getSubtitle();
 
-    @Encode(value = ApexTitleSubtitleEncoder.class)
-    void setSubtitle(ApexTitleSubtitle subtitle);
+    @Encode(value = TitleSubtitleEncoder.class)
+    void setSubtitle(TitleSubtitle subtitle);
 
-    ApexTheme getTheme();
+    Theme getTheme();
 
-    @Encode(ApexThemeEncoder.class)
-    void setTheme(ApexTheme theme);
+    @Encode(ThemeEncoder.class)
+    void setTheme(Theme theme);
 
-    ApexTitleSubtitle getTitle();
+    TitleSubtitle getTitle();
 
-    @Encode(value = ApexTitleSubtitleEncoder.class)
-    void setTitle(ApexTitleSubtitle title);
+    @Encode(value = TitleSubtitleEncoder.class)
+    void setTitle(TitleSubtitle title);
 
-    ApexTooltip getTooltip();
+    Tooltip getTooltip();
 
-    @Encode(ApexTooltipEncoder.class)
-    void setTooltip(ApexTooltip tooltip);
+    @Encode(TooltipEncoder.class)
+    void setTooltip(Tooltip tooltip);
 
     String getYaxis();
 
-    void setYaxis(String  yaxis);
+    void setYaxis(String yaxis);
 
     String getSeries();
 
     void setSeries(String series);
+
+    @Encode(XAxisEncoder.class)
+    void setXaxis(XAxis xaxis);
+
+
 }

@@ -4,13 +4,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.appreciated.apexcharts.config.*;
+import com.github.appreciated.apexcharts.helper.MapSeries;
 import com.vaadin.flow.component.HasSize;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.HtmlImport;
 import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
 
 import java.util.Arrays;
-import java.util.Map;
 
 @Tag("apex-charts-wrapper")
 @HtmlImport("frontend://com/github/appreciated/apexcharts/apexcharts-wrapper.html")
@@ -21,32 +21,36 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
         setHeight("300px");
     }
 
-    public ApexCharts withAnnotations(ApexAnnotations annotations) {
+    public ApexCharts withAnnotations(Annotations annotations) {
         getModel().setAnnotations(annotations);
         return this;
     }
 
-    public ApexCharts withChart(ApexChart chart) {
+    public ApexCharts withChart(Chart chart) {
         getModel().setChart(chart);
         return this;
     }
 
-    public ApexCharts withColors(String[] colors) {
-        getModel().setColors(Arrays.asList(colors));
+    public ApexCharts withColors(String... colors) {
+        try {
+            getModel().setColors(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(colors));
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
         return this;
     }
 
-    public ApexCharts withDataLabels(ApexDataLabels dataLabels) {
+    public ApexCharts withDataLabels(DataLabels dataLabels) {
         getModel().setDataLabels(dataLabels);
         return this;
     }
 
-    public ApexCharts withFill(ApexFill fill) {
+    public ApexCharts withFill(Fill fill) {
         getModel().setFill(fill);
         return this;
     }
 
-    public ApexCharts withGrid(ApexGrid grid) {
+    public ApexCharts withGrid(Grid grid) {
         getModel().setGrid(grid);
         return this;
     }
@@ -56,27 +60,27 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
         return this;
     }
 
-    public ApexCharts withLegend(ApexLegend legend) {
+    public ApexCharts withLegend(Legend legend) {
         getModel().setLegend(legend);
         return this;
     }
 
-    public ApexCharts withMarkers(ApexMarkers markers) {
+    public ApexCharts withMarkers(Markers markers) {
         getModel().setMarkers(markers);
         return this;
     }
 
-    public ApexCharts withNoData(ApexNoData noData) {
+    public ApexCharts withNoData(NoData noData) {
         getModel().setNoData(noData);
         return this;
     }
 
-    public ApexCharts withPlotOptions(ApexPlotOptions plotOptions) {
+    public ApexCharts withPlotOptions(PlotOptions plotOptions) {
         getModel().setPlotOptions(plotOptions);
         return this;
     }
 
-    public ApexCharts withResponsive(ApexResponsive... responsive) {
+    public ApexCharts withResponsive(Responsive... responsive) {
         getModel().setResponsive(Arrays.asList(responsive));
         return this;
     }
@@ -90,7 +94,7 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
         return this;
     }
 
-    public ApexCharts withSeries(Map<String, Double> series) {
+    public ApexCharts withSeries(MapSeries... series) {
         try {
             getModel().setSeries(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(series));
         } catch (JsonProcessingException e) {
@@ -99,42 +103,42 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
         return this;
     }
 
-    public ApexCharts withStates(ApexStates states) {
+    public ApexCharts withStates(States states) {
         getModel().setStates(states);
         return this;
     }
 
-    public ApexCharts withStroke(ApexStroke stroke) {
+    public ApexCharts withStroke(Stroke stroke) {
         getModel().setStroke(stroke);
         return this;
     }
 
-    public ApexCharts withSubtitle(ApexTitleSubtitle subtitle) {
+    public ApexCharts withSubtitle(TitleSubtitle subtitle) {
         getModel().setSubtitle(subtitle);
         return this;
     }
 
-    public ApexCharts withTheme(ApexTheme theme) {
+    public ApexCharts withTheme(Theme theme) {
         getModel().setTheme(theme);
         return this;
     }
 
-    public ApexCharts withTitle(ApexTitleSubtitle title) {
+    public ApexCharts withTitle(TitleSubtitle title) {
         getModel().setTitle(title);
         return this;
     }
 
-    public ApexCharts withTooltip(ApexTooltip tooltip) {
+    public ApexCharts withTooltip(Tooltip tooltip) {
         getModel().setTooltip(tooltip);
         return this;
     }
 
-    public ApexCharts withXaxis(ApexXAxis xaxis) {
-       // getModel().setXaxis(xaxis);
+    public ApexCharts withXaxis(XAxis xaxis) {
+        getModel().setXaxis(xaxis);
         return this;
     }
 
-    public ApexCharts withYaxis(ApexYAxis... yaxis) {
+    public ApexCharts withYaxis(YAxis... yaxis) {
         getModel().setYaxis(Arrays.asList(yaxis).toString());
         return this;
     }
