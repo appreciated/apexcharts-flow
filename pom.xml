@@ -3,9 +3,9 @@
 
     <groupId>com.github.appreciated</groupId>
     <artifactId>apexcharts</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.1</version>
     <name>apexcharts</name>
-    <description>Integration of apexcharts.js for Vaadin platform</description>
+    <description>Integration of apexcharts.js for the Vaadin platform</description>
 
     <properties>
         <vaadin.version>13.0.3</vaadin.version>
