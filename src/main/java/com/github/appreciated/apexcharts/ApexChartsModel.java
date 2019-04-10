@@ -99,9 +99,7 @@ public interface ApexChartsModel extends TemplateModel {
 
     void setYaxis(String  yaxis);
 
-    String getMapChartSeries();
+    String getSeries();
 
-    void setMapChartSeries(String mapChartSeries);
-
-    void setDoubleChartSeries(List<Double> series);
+    void setSeries(String series);
 }

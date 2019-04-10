@@ -22,58 +22,101 @@
             static get is() {
                 return 'apex-charts-wrapper'
             }
-            /*    ApexDataLabels dataLabels;
-                 ApexFill fill;
-                 ApexGrid grid;
-                 String[] labels;
-                 ApexLegend legend;
-                 ApexMarkers markers;
-                 ApexNoData noData;
-                 ApexPlotOptions plotOptions;
-                 ApexResponsive[] responsive;
-                 ApexAxisChartSeries series; //?:  | ApexNonAxisChartSeries;
-                 ApexStates states;
-                 ApexStroke stroke;
-                 ApexTitleSubtitle subtitle;
-                 ApexTheme theme;
-                 ApexTitleSubtitle title;
-                 ApexTooltip tooltip;
-                 ApexXAxis xaxis;
-                 ApexYAxis[] yaxis;
-                 private double[] doubleChartSeries;
-                 private Map<String, Double> mapChartSeries;*/
-
             static get properties() {
                 return {
-                    color: {
-                        type: String
-                    }
+                    annotations: {
+                        type: Object
+                    }, // ApexAnnotations;
+                    chart: {
+                        type: Object
+                    }, // ApexChart;
+                    colors: {
+                        type: Object
+                    }, // string[];
+                    dataLabels: {
+                        type: Object
+                    }, // ApexDataLabels;
+                    fill: {
+                        type: Object
+                    }, // ApexFill;
+                    grid: {
+                        type: Object
+                    }, // ApexGrid;
+                    labels: {
+                        type: Object
+                    }, // string[];
+                    legend: {
+                        type: Object
+                    }, // ApexLegend;
+                    markers: {
+                        type: Object
+                    }, // ApexMarkers;
+                    noData: {
+                        type: Object
+                    }, // ApexNoData;
+                    plotOptions: {
+                        type: Object
+                    }, // ApexPlotOptions;
+                    responsive: {
+                        type: Object
+                    }, // ApexResponsive[];
+                    series: {
+                        type: Object
+                    }, // ApexAxisChartSeries | ApexNonAxisChartSeries;
+                    states: {
+                        type: Object
+                    }, // ApexStates;
+                    stroke: {
+                        type: Object
+                    }, // ApexStroke;
+                    subtitle: {
+                        type: Object
+                    }, // ApexTitleSubtitle;
+                    theme: {
+                        type: Object
+                    }, // ApexTheme;
+                    title: {
+                        type: Object
+                    }, // ApexTitleSubtitle;
+                    tooltip: {
+                        type: Object
+                    }, // ApexTooltip;
+                    xaxis: {
+                        type: Object
+                    }, // ApexXAxis;
+                    yaxis: {
+                        type: Object
+                    } // ApexYAxis | ApexYAxis[];
                 }
             }
 
             ready() {
                 super.ready();
-                var chart = new ApexCharts(
-                    this,
-                    {
-                        chart: {
-                            type: 'pie',
-                        },
-                        labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
-                        series: [44, 55, 13, 43, 22],
-                        responsive: [{
-                            breakpoint: 480,
-                            options: {
-                                chart: {
-                                    width: 200
-                                },
-                                legend: {
-                                    position: 'bottom'
-                                }
-                            }
-                        }]
-                    }
-                );
+                var config = {
+                    //annotations: this.annotations,  // ApexAnnotations
+                    chart: JSON.parse(this.chart),  // ApexChart
+                    series: JSON.parse(this.series),  // ApexAxisChartSeries | ApexNonAxisChartSeries
+                    labels: this.labels,  // string[]
+                    /*colors: this.colors,  // string[]
+                    dataLabels: this.dataLabels,  // ApexDataLabels
+                    fill: this.fill,  // ApexFill
+                    grid: this.grid,  // ApexGrid
+                    legend: this.legend,  // ApexLegend
+                    markers: this.markers,  // ApexMarkers
+                    noData: this.noData,  // ApexNoData
+                    plotOptions: this.plotOptions,  // ApexPlotOptions
+                    responsive: this.responsive,  // ApexResponsive[]
+                    states: this.states,  // ApexStates
+                    stroke: this.stroke,  // ApexStroke
+                    subtitle: this.subtitle,  // ApexTitleSubtitle
+                    theme: this.theme,  // ApexTheme
+                    title: this.title,  // ApexTitleSubtitle
+                    tooltip: this.tooltip,  // ApexTooltip
+                    xaxis: this.xaxis,  // ApexXAxis
+                    yaxis: this.yaxis  // ApexYAxis | ApexYAxis[]*/
+                };
+                console.log(config);
+                var chart = new ApexCharts(this,config);
                 chart.render();
             }
         }

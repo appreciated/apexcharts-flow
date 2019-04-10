@@ -1,5 +1,8 @@
 package com.github.appreciated.apexcharts;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.appreciated.apexcharts.config.*;
 import com.vaadin.flow.component.HasSize;
 import com.vaadin.flow.component.Tag;
@@ -79,17 +82,20 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
     }
 
     public ApexCharts withSeries(Double... series) {
-        getModel().setDoubleChartSeries(Arrays.asList(series));
-       /* try {
-            getModel().setMapChartSeries( new ObjectMapper().writeValueAsString(series));
+        try {
+            getModel().setSeries(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(series));
         } catch (JsonProcessingException e) {
             e.printStackTrace();
-        }*/
+        }
         return this;
     }
 
     public ApexCharts withSeries(Map<String, Double> series) {
-        //getModel().setMapChartSeries(series);
+        try {
+            getModel().setSeries(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(series));
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
         return this;
     }
 
