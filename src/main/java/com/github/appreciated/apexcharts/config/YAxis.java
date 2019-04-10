@@ -3,157 +3,162 @@ package com.github.appreciated.apexcharts.config;
 import com.github.appreciated.apexcharts.config.yaxis.*;
 
 public class YAxis {
-    Boolean show;
-    Boolean showAlways;
-    String seriesName;
-    Boolean opposite;
-    Boolean logarithmic;
-    Double tickAmount;
-    Boolean forceNiceScale;
-    Double min;
-    Double max;
-    Boolean floating;
-    Double decimalsInFloat;
-    Labels labels;
-    AxisBorder axisBorder;
-    AxisTicks axisTicks;
-    Title title;
-    Crosshairs crosshairs;
-    Tooltip tooltip;
+    private Boolean show;
+    private Boolean showAlways;
+    private String seriesName;
+    private Boolean opposite;
+    private Boolean logarithmic;
+    private Double tickAmount;
+    private Boolean forceNiceScale;
+    private Double min;
+    private Double max;
+    private Boolean floating;
+    private Double decimalsInFloat;
+    private Labels labels;
+    private AxisBorder axisBorder;
+    private AxisTicks axisTicks;
+    private Title title;
+    private Crosshairs crosshairs;
+    private Tooltip tooltip;
+
+
+    public YAxis() {
+    }
 
     public Boolean getShow() {
         return show;
-    }
-
-    public void setShow(Boolean show) {
-        this.show = show;
     }
 
     public Boolean getShowAlways() {
         return showAlways;
     }
 
-    public void setShowAlways(Boolean showAlways) {
-        this.showAlways = showAlways;
-    }
-
     public String getSeriesName() {
         return seriesName;
-    }
-
-    public void setSeriesName(String seriesName) {
-        this.seriesName = seriesName;
     }
 
     public Boolean getOpposite() {
         return opposite;
     }
 
-    public void setOpposite(Boolean opposite) {
-        this.opposite = opposite;
-    }
-
     public Boolean getLogarithmic() {
         return logarithmic;
-    }
-
-    public void setLogarithmic(Boolean logarithmic) {
-        this.logarithmic = logarithmic;
     }
 
     public Double getTickAmount() {
         return tickAmount;
     }
 
-    public void setTickAmount(Double tickAmount) {
-        this.tickAmount = tickAmount;
-    }
-
     public Boolean getForceNiceScale() {
         return forceNiceScale;
-    }
-
-    public void setForceNiceScale(Boolean forceNiceScale) {
-        this.forceNiceScale = forceNiceScale;
     }
 
     public Double getMin() {
         return min;
     }
 
-    public void setMin(Double min) {
-        this.min = min;
-    }
-
     public Double getMax() {
         return max;
-    }
-
-    public void setMax(Double max) {
-        this.max = max;
     }
 
     public Boolean getFloating() {
         return floating;
     }
 
-    public void setFloating(Boolean floating) {
-        this.floating = floating;
-    }
-
     public Double getDecimalsInFloat() {
         return decimalsInFloat;
-    }
-
-    public void setDecimalsInFloat(Double decimalsInFloat) {
-        this.decimalsInFloat = decimalsInFloat;
     }
 
     public Labels getLabels() {
         return labels;
     }
 
-    public void setLabels(Labels labels) {
-        this.labels = labels;
-    }
-
     public AxisBorder getAxisBorder() {
         return axisBorder;
-    }
-
-    public void setAxisBorder(AxisBorder axisBorder) {
-        this.axisBorder = axisBorder;
     }
 
     public AxisTicks getAxisTicks() {
         return axisTicks;
     }
 
-    public void setAxisTicks(AxisTicks axisTicks) {
-        this.axisTicks = axisTicks;
-    }
-
     public Title getTitle() {
         return title;
-    }
-
-    public void setTitle(Title title) {
-        this.title = title;
     }
 
     public Crosshairs getCrosshairs() {
         return crosshairs;
     }
 
-    public void setCrosshairs(Crosshairs crosshairs) {
-        this.crosshairs = crosshairs;
-    }
-
     public Tooltip getTooltip() {
         return tooltip;
+    }
+
+    public void setShow(Boolean show) {
+        this.show = show;
+    }
+
+    public void setShowAlways(Boolean showAlways) {
+        this.showAlways = showAlways;
+    }
+
+    public void setSeriesName(String seriesName) {
+        this.seriesName = seriesName;
+    }
+
+    public void setOpposite(Boolean opposite) {
+        this.opposite = opposite;
+    }
+
+    public void setLogarithmic(Boolean logarithmic) {
+        this.logarithmic = logarithmic;
+    }
+
+    public void setTickAmount(Double tickAmount) {
+        this.tickAmount = tickAmount;
+    }
+
+    public void setForceNiceScale(Boolean forceNiceScale) {
+        this.forceNiceScale = forceNiceScale;
+    }
+
+    public void setMin(Double min) {
+        this.min = min;
+    }
+
+    public void setMax(Double max) {
+        this.max = max;
+    }
+
+    public void setFloating(Boolean floating) {
+        this.floating = floating;
+    }
+
+    public void setDecimalsInFloat(Double decimalsInFloat) {
+        this.decimalsInFloat = decimalsInFloat;
+    }
+
+    public void setLabels(Labels labels) {
+        this.labels = labels;
+    }
+
+    public void setAxisBorder(AxisBorder axisBorder) {
+        this.axisBorder = axisBorder;
+    }
+
+    public void setAxisTicks(AxisTicks axisTicks) {
+        this.axisTicks = axisTicks;
+    }
+
+    public void setTitle(Title title) {
+        this.title = title;
+    }
+
+    public void setCrosshairs(Crosshairs crosshairs) {
+        this.crosshairs = crosshairs;
     }
 
     public void setTooltip(Tooltip tooltip) {
         this.tooltip = tooltip;
     }
+
 }

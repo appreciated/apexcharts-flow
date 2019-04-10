@@ -4,16 +4,16 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class MapSeries  {
+public class Series {
     String name;
     List<Double> data;
 
-    public MapSeries(String name, ArrayList<Double> data) {
+    public Series(String name, ArrayList<Double> data) {
         this.name = name;
         this.data = data;
     }
 
-    public MapSeries(String name, Double... data) {
+    public Series(String name, Double... data) {
         this.name = name;
         this.data = Arrays.asList(data);
     }

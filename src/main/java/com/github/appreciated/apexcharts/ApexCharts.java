@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.appreciated.apexcharts.config.*;
-import com.github.appreciated.apexcharts.helper.MapSeries;
+import com.github.appreciated.apexcharts.helper.Series;
 import com.vaadin.flow.component.HasSize;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.HtmlImport;
@@ -94,7 +94,7 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
         return this;
     }
 
-    public ApexCharts withSeries(MapSeries... series) {
+    public ApexCharts withSeries(Series... series) {
         try {
             getModel().setSeries(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(series));
         } catch (JsonProcessingException e) {
@@ -129,9 +129,7 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
 
     public ApexCharts withTitle(TitleSubtitle title) {
         try {
-            String stitle = new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(title);
-            System.out.println(stitle);
-            getModel().setChartTitle(stitle);
+            getModel().setChartTitle( new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(title));
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }

@@ -110,7 +110,7 @@
                     config.colors = JSON.parse(this.colors);
                 }
                 if (this.dataLabels) {
-                    config.dataLabels = this.dataLabels;
+                    config.dataLabels = JSON.parse(this.dataLabels);
                 }
                 if (this.fill) {
                     config.fill = this.fill;
@@ -119,7 +119,7 @@
                     config.grid = JSON.parse(this.grid);
                 }
                 if (this.legend) {
-                    config.legend = this.legend;
+                    config.legend = JSON.parse(this.legend);
                 }
                 if (this.markers) {
                     config.markers = this.markers;
