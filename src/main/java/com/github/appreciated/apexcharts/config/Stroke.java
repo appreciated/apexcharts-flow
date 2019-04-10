@@ -9,7 +9,7 @@ public class Stroke {
     private Boolean show;
     private Curve curve;
     private LineCap lineCap;
-    private String colors;
+    private List<String> colors;
     private Double width;
     private List<Double> dashArray;
 
@@ -29,7 +29,7 @@ public class Stroke {
         return lineCap;
     }
 
-    public String getColors() {
+    public List<String> getColors() {
         return colors;
     }
 
@@ -53,7 +53,7 @@ public class Stroke {
         this.lineCap = lineCap;
     }
 
-    public void setColors(String colors) {
+    public void setColors(List<String> colors) {
         this.colors = colors;
     }
 

@@ -4,13 +4,14 @@ import com.github.appreciated.apexcharts.config.Stroke;
 import com.github.appreciated.apexcharts.config.stroke.Curve;
 import com.github.appreciated.apexcharts.config.stroke.LineCap;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class StrokeBuilder {
     private Boolean show;
     private Curve curve;
     private LineCap lineCap;
-    private String colors;
+    private List<String> colors;
     private Double width;
     private List<Double> dashArray;
 
@@ -36,8 +37,8 @@ public class StrokeBuilder {
         return this;
     }
 
-    public StrokeBuilder withColors(String colors) {
-        this.colors = colors;
+    public StrokeBuilder withColors(String ... colors) {
+        this.colors = Arrays.asList(colors);
         return this;
     }
 

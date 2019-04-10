@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.config.plotoptions.bar;
 
-class Ranges {
+public class Ranges {
     Double from;
     Double to;
     String color;

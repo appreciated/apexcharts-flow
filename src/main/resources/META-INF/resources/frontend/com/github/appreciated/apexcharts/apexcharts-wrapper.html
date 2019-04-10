@@ -113,7 +113,7 @@
                     config.dataLabels = JSON.parse(this.dataLabels);
                 }
                 if (this.fill) {
-                    config.fill = this.fill;
+                    config.fill = JSON.parse(this.fill);
                 }
                 if (this.grid) {
                     config.grid = JSON.parse(this.grid);
@@ -128,7 +128,7 @@
                     config.noData = this.noData;
                 }
                 if (this.plotOptions) {
-                    config.plotOptions = this.plotOptions;
+                    config.plotOptions = JSON.parse(this.plotOptions);
                 }
                 if (this.responsive) {
                     config.responsive = this.responsive;
@@ -155,7 +155,7 @@
                     config.xaxis = JSON.parse(this.xaxis);
                 }
                 if (this.yaxis) {
-                    config.yaxis = this.yaxis;
+                    config.yaxis = JSON.parse(this.yaxis);
                 }
                 console.log(config);
                 var chart = new ApexCharts(this, config);
