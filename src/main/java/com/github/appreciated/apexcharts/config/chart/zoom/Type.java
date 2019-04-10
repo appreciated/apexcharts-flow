@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.config.chart.zoom;
 
-enum Type {
+public enum Type {
     x("x"),
     y("y"),
     xy("xy");

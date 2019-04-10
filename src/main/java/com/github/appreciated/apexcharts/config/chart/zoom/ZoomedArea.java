@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.config.chart.zoom;
 
-class ZoomedArea {
+public class ZoomedArea {
     Fill fill;
     Stroke stroke;
 
