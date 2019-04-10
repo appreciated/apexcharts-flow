@@ -11,11 +11,14 @@ public class DemoView extends Div {
 
     public DemoView() {
 
-        ApexCharts chart = new ApexCharts()
-                .withChart(new ApexChart().withType(Type.pie))
+        ApexChart chart = new ApexChart();
+        chart.setType(Type.pie);
+
+        ApexCharts charts = new ApexCharts()
+                .withChart(chart)
                 .withLabels("Team A", "Team B", "Team C", "Team D", "Team E")
-                .withSeries(44, 55, 13, 43, 22);
-                //.withResponsive(new ApexResponsive())
-        add(chart);
+                .withSeries(44.0, 55.0, 13.0, 43.0, 22.0);
+        //.withResponsive(new ApexResponsive())
+        add(charts);
     }
 }

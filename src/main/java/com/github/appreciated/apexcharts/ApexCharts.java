@@ -78,8 +78,13 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
         return this;
     }
 
-    public ApexCharts withSeries(double... series) {
-        //getModel().setDoubleChartSeries(series);
+    public ApexCharts withSeries(Double... series) {
+        getModel().setDoubleChartSeries(Arrays.asList(series));
+       /* try {
+            getModel().setMapChartSeries( new ObjectMapper().writeValueAsString(series));
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }*/
         return this;
     }
 

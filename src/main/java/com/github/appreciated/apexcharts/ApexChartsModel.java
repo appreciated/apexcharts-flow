@@ -54,7 +54,6 @@ public interface ApexChartsModel extends TemplateModel {
 
     ApexNoData getNoData();
 
-
     @Encode(ApexNoDataEncoder.class)
     void setNoData(ApexNoData noData);
 
@@ -69,7 +68,6 @@ public interface ApexChartsModel extends TemplateModel {
 
     ApexStates getStates();
 
-    //@Encode(JsonEncoder.class)
     void setStates(ApexStates states);
 
     ApexStroke getStroke();
@@ -97,21 +95,13 @@ public interface ApexChartsModel extends TemplateModel {
     @Encode(ApexTooltipEncoder.class)
     void setTooltip(ApexTooltip tooltip);
 
-    //ApexXAxis getXaxis();
-
-    //@Encode(ApexXAxisEncoder.class)
-    //void setXaxis(ApexXAxis xaxis);
-
     String getYaxis();
 
     void setYaxis(String  yaxis);
 
-    //double[] getDoubleChartSeries();
-
-    //void setDoubleChartSeries(double[] doubleChartSeries);
-
     String getMapChartSeries();
 
-
     void setMapChartSeries(String mapChartSeries);
+
+    void setDoubleChartSeries(List<Double> series);
 }

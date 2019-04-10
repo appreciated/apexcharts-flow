@@ -24,89 +24,140 @@ public class ApexChart {
     Selection selection;
     Animations animations;
 
-    public ApexChart withType(Type type) {
+    public Type getType() {
+        return type;
+    }
+
+    public void setType(Type type) {
         this.type = type;
-        return this;
     }
 
-    public ApexChart withForeColor(String foreColor) {
+    public String getForeColor() {
+        return foreColor;
+    }
+
+    public void setForeColor(String foreColor) {
         this.foreColor = foreColor;
-        return this;
     }
 
-    public ApexChart withFontFamily(String fontFamily) {
+    public String getFontFamily() {
+        return fontFamily;
+    }
+
+    public void setFontFamily(String fontFamily) {
         this.fontFamily = fontFamily;
-        return this;
     }
 
-    public ApexChart withBackground(String background) {
+    public String getBackground() {
+        return background;
+    }
+
+    public void setBackground(String background) {
         this.background = background;
-        return this;
     }
 
-    public ApexChart withOffsetX(double offsetX) {
+    public double getOffsetX() {
+        return offsetX;
+    }
+
+    public void setOffsetX(double offsetX) {
         this.offsetX = offsetX;
-        return this;
     }
 
-    public ApexChart withOffsetY(double offsetY) {
+    public double getOffsetY() {
+        return offsetY;
+    }
+
+    public void setOffsetY(double offsetY) {
         this.offsetY = offsetY;
-        return this;
     }
 
-    public ApexChart withDropShadow(DropShadow dropShadow) {
+    public DropShadow getDropShadow() {
+        return dropShadow;
+    }
+
+    public void setDropShadow(DropShadow dropShadow) {
         this.dropShadow = dropShadow;
-        return this;
     }
 
-    public ApexChart withBrush(Brush brush) {
+    public Brush getBrush() {
+        return brush;
+    }
+
+    public void setBrush(Brush brush) {
         this.brush = brush;
-        return this;
     }
 
-    public ApexChart withId(String id) {
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
         this.id = id;
-        return this;
     }
 
-    public ApexChart withDefaultLocale(String defaultLocale) {
+    public String getDefaultLocale() {
+        return defaultLocale;
+    }
+
+    public void setDefaultLocale(String defaultLocale) {
         this.defaultLocale = defaultLocale;
-        return this;
     }
 
-    public ApexChart withSparkline(Sparkline sparkline) {
+    public Sparkline getSparkline() {
+        return sparkline;
+    }
+
+    public void setSparkline(Sparkline sparkline) {
         this.sparkline = sparkline;
-        return this;
     }
 
-    public ApexChart withStacked(Boolean stacked) {
+    public Boolean getStacked() {
+        return stacked;
+    }
+
+    public void setStacked(Boolean stacked) {
         this.stacked = stacked;
-        return this;
     }
 
-    public ApexChart withStackType(StackType stackType) {
+    public StackType getStackType() {
+        return stackType;
+    }
+
+    public void setStackType(StackType stackType) {
         this.stackType = stackType;
-        return this;
     }
 
-    public ApexChart withToolbar(Toolbar toolbar) {
+    public Toolbar getToolbar() {
+        return toolbar;
+    }
+
+    public void setToolbar(Toolbar toolbar) {
         this.toolbar = toolbar;
-        return this;
     }
 
-    public ApexChart withZoom(Zoom zoom) {
+    public Zoom getZoom() {
+        return zoom;
+    }
+
+    public void setZoom(Zoom zoom) {
         this.zoom = zoom;
-        return this;
     }
 
-    public ApexChart withSelection(Selection selection) {
+    public Selection getSelection() {
+        return selection;
+    }
+
+    public void setSelection(Selection selection) {
         this.selection = selection;
-        return this;
     }
 
-    public ApexChart withAnimations(Animations animations) {
+    public Animations getAnimations() {
+        return animations;
+    }
+
+    public void setAnimations(Animations animations) {
         this.animations = animations;
-        return this;
     }
 }
 
