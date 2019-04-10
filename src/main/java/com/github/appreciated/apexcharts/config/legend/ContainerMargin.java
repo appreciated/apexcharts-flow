@@ -1,22 +1,22 @@
 package com.github.appreciated.apexcharts.config.legend;
 
 public class ContainerMargin {
-    double left;
-    double top;
+    Double left;
+    Double top;
 
-    public double getLeft() {
+    public Double getLeft() {
         return left;
     }
 
-    public void setLeft(double left) {
+    public void setLeft(Double left) {
         this.left = left;
     }
 
-    public double getTop() {
+    public Double getTop() {
         return top;
     }
 
-    public void setTop(double top) {
+    public void setTop(Double top) {
         this.top = top;
     }
 }

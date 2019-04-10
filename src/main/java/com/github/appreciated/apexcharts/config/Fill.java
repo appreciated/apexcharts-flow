@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Fill {
     List<String> colors;
-    double opacity;
+    Double opacity;
     String type;
     Gradient gradient;
     Image image;
@@ -22,11 +22,11 @@ public class Fill {
         this.colors = colors;
     }
 
-    public double getOpacity() {
+    public Double getOpacity() {
         return opacity;
     }
 
-    public void setOpacity(double opacity) {
+    public void setOpacity(Double opacity) {
         this.opacity = opacity;
     }
 

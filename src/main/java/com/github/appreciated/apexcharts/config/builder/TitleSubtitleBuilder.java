@@ -7,10 +7,10 @@ import com.github.appreciated.apexcharts.config.subtitle.Style;
 public class TitleSubtitleBuilder {
     private String text;
     private Align align;
-    private double margin;
-    private double offsetX;
-    private double offsetY;
-    private double floating;
+    private Double margin;
+    private Double offsetX;
+    private Double offsetY;
+    private Double floating;
     private Style style;
 
     private TitleSubtitleBuilder() {
@@ -30,22 +30,22 @@ public class TitleSubtitleBuilder {
         return this;
     }
 
-    public TitleSubtitleBuilder withMargin(double margin) {
+    public TitleSubtitleBuilder withMargin(Double margin) {
         this.margin = margin;
         return this;
     }
 
-    public TitleSubtitleBuilder withOffsetX(double offsetX) {
+    public TitleSubtitleBuilder withOffsetX(Double offsetX) {
         this.offsetX = offsetX;
         return this;
     }
 
-    public TitleSubtitleBuilder withOffsetY(double offsetY) {
+    public TitleSubtitleBuilder withOffsetY(Double offsetY) {
         this.offsetY = offsetY;
         return this;
     }
 
-    public TitleSubtitleBuilder withFloating(double floating) {
+    public TitleSubtitleBuilder withFloating(Double floating) {
         this.floating = floating;
         return this;
     }

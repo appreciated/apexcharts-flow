@@ -70,7 +70,7 @@ public class DemoView extends Div {
     private Component getLineChart() {
         ApexCharts lineChart = new ApexCharts()
                 .withChart(ChartBuilder.get()
-                        .withType(Type.pie)
+                        .withType(Type.line)
                         .withZoom(ZoomBuilder.get()
                                 .withEnabled(false)
                                 .build())
@@ -90,7 +90,6 @@ public class DemoView extends Div {
                 .withXaxis(XAxisBuilder.get()
                         .withCategories("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep")
                         .build())
-                .withLabels("Team A", "Team B", "Team C", "Team D", "Team E")
                 .withSeries(new MapSeries("Desktops", 10.0, 41.0, 35.0, 51.0, 49.0, 62.0, 69.0, 91.0, 148.0));
         return lineChart;
     }

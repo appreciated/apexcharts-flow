@@ -3,32 +3,32 @@ package com.github.appreciated.apexcharts.config.plotoptions;
 import com.github.appreciated.apexcharts.config.plotoptions.radar.Polygons;
 
 public class Radar {
-    double size;
-    double offsetX;
-    double offsetY;
+    Double size;
+    Double offsetX;
+    Double offsetY;
     Polygons polygons;
 
-    public double getSize() {
+    public Double getSize() {
         return size;
     }
 
-    public void setSize(double size) {
+    public void setSize(Double size) {
         this.size = size;
     }
 
-    public double getOffsetX() {
+    public Double getOffsetX() {
         return offsetX;
     }
 
-    public void setOffsetX(double offsetX) {
+    public void setOffsetX(Double offsetX) {
         this.offsetX = offsetX;
     }
 
-    public double getOffsetY() {
+    public Double getOffsetY() {
         return offsetY;
     }
 
-    public void setOffsetY(double offsetY) {
+    public void setOffsetY(Double offsetY) {
         this.offsetY = offsetY;
     }
 

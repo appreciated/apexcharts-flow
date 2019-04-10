@@ -13,10 +13,10 @@ public class XAxisBuilder {
     private List<String> labels;
     private AxisBorder axisBorder;
     private AxisTicks axisTicks;
-    private double tickAmount;
-    private double min;
-    private double max;
-    private double range;
+    private Double tickAmount;
+    private Double min;
+    private Double max;
+    private Double range;
     private Boolean floating;
     private String position;
     private Title title;
@@ -60,22 +60,22 @@ public class XAxisBuilder {
         return this;
     }
 
-    public XAxisBuilder withTickAmount(double tickAmount) {
+    public XAxisBuilder withTickAmount(Double tickAmount) {
         this.tickAmount = tickAmount;
         return this;
     }
 
-    public XAxisBuilder withMin(double min) {
+    public XAxisBuilder withMin(Double min) {
         this.min = min;
         return this;
     }
 
-    public XAxisBuilder withMax(double max) {
+    public XAxisBuilder withMax(Double max) {
         this.max = max;
         return this;
     }
 
-    public XAxisBuilder withRange(double range) {
+    public XAxisBuilder withRange(Double range) {
         this.range = range;
         return this;
     }

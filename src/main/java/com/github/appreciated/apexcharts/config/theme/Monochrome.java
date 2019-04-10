@@ -4,6 +4,6 @@ public class Monochrome {
     Boolean enabled;
     String color;
     ShadeTo shadeTo;
-    double shadeIntensity;
+    Double shadeIntensity;
 
 }

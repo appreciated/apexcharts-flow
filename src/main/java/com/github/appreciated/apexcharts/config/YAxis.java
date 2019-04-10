@@ -8,12 +8,12 @@ public class YAxis {
     String seriesName;
     Boolean opposite;
     Boolean logarithmic;
-    double tickAmount;
+    Double tickAmount;
     Boolean forceNiceScale;
-    double min;
-    double max;
+    Double min;
+    Double max;
     Boolean floating;
-    double decimalsInFloat;
+    Double decimalsInFloat;
     Labels labels;
     AxisBorder axisBorder;
     AxisTicks axisTicks;
@@ -61,11 +61,11 @@ public class YAxis {
         this.logarithmic = logarithmic;
     }
 
-    public double getTickAmount() {
+    public Double getTickAmount() {
         return tickAmount;
     }
 
-    public void setTickAmount(double tickAmount) {
+    public void setTickAmount(Double tickAmount) {
         this.tickAmount = tickAmount;
     }
 
@@ -77,19 +77,19 @@ public class YAxis {
         this.forceNiceScale = forceNiceScale;
     }
 
-    public double getMin() {
+    public Double getMin() {
         return min;
     }
 
-    public void setMin(double min) {
+    public void setMin(Double min) {
         this.min = min;
     }
 
-    public double getMax() {
+    public Double getMax() {
         return max;
     }
 
-    public void setMax(double max) {
+    public void setMax(Double max) {
         this.max = max;
     }
 
@@ -101,11 +101,11 @@ public class YAxis {
         this.floating = floating;
     }
 
-    public double getDecimalsInFloat() {
+    public Double getDecimalsInFloat() {
         return decimalsInFloat;
     }
 
-    public void setDecimalsInFloat(double decimalsInFloat) {
+    public void setDecimalsInFloat(Double decimalsInFloat) {
         this.decimalsInFloat = decimalsInFloat;
     }
 

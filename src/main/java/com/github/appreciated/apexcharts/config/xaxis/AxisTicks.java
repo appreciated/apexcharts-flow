@@ -4,9 +4,9 @@ public class AxisTicks {
     Boolean show;
     String borderType;
     String color;
-    double height;
-    double offsetX;
-    double offsetY;
+    Double height;
+    Double offsetX;
+    Double offsetY;
 
     public Boolean getShow() {
         return show;
@@ -32,27 +32,27 @@ public class AxisTicks {
         this.color = color;
     }
 
-    public double getHeight() {
+    public Double getHeight() {
         return height;
     }
 
-    public void setHeight(double height) {
+    public void setHeight(Double height) {
         this.height = height;
     }
 
-    public double getOffsetX() {
+    public Double getOffsetX() {
         return offsetX;
     }
 
-    public void setOffsetX(double offsetX) {
+    public void setOffsetX(Double offsetX) {
         this.offsetX = offsetX;
     }
 
-    public double getOffsetY() {
+    public Double getOffsetY() {
         return offsetY;
     }
 
-    public void setOffsetY(double offsetY) {
+    public void setOffsetY(Double offsetY) {
         this.offsetY = offsetY;
     }
 }

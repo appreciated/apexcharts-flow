@@ -11,7 +11,7 @@ public class StrokeBuilder {
     private Curve curve;
     private LineCap lineCap;
     private String colors;
-    private double width;
+    private Double width;
     private List<Double> dashArray;
 
     private StrokeBuilder() {
@@ -41,7 +41,7 @@ public class StrokeBuilder {
         return this;
     }
 
-    public StrokeBuilder withWidth(double width) {
+    public StrokeBuilder withWidth(Double width) {
         this.width = width;
         return this;
     }

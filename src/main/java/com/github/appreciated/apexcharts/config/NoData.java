@@ -8,7 +8,7 @@ public class NoData {
     String text;
     Align align;
     VerticalAlign verticalAlign;
-    double offsetX;
-    double offsetY;
+    Double offsetX;
+    Double offsetY;
     Style style;
 }

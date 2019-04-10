@@ -4,7 +4,7 @@ class Name {
     Boolean show;
     String fontSize;
     String color;
-    double offsetY;
+    Double offsetY;
 
     public Boolean getShow() {
         return show;
@@ -30,11 +30,11 @@ class Name {
         this.color = color;
     }
 
-    public double getOffsetY() {
+    public Double getOffsetY() {
         return offsetY;
     }
 
-    public void setOffsetY(double offsetY) {
+    public void setOffsetY(Double offsetY) {
         this.offsetY = offsetY;
     }
 }

@@ -1,23 +1,23 @@
 package com.github.appreciated.apexcharts.config.plotoptions.bar;
 
 class Ranges {
-    double from;
-    double to;
+    Double from;
+    Double to;
     String color;
 
-    public double getFrom() {
+    public Double getFrom() {
         return from;
     }
 
-    public void setFrom(double from) {
+    public void setFrom(Double from) {
         this.from = from;
     }
 
-    public double getTo() {
+    public Double getTo() {
         return to;
     }
 
-    public void setTo(double to) {
+    public void setTo(Double to) {
         this.to = to;
     }
 

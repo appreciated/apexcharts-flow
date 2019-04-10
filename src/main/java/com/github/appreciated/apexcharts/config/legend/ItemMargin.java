@@ -1,22 +1,22 @@
 package com.github.appreciated.apexcharts.config.legend;
 
 public class ItemMargin {
-    double horizontal;
-    double vertical;
+    Double horizontal;
+    Double vertical;
 
-    public double getHorizontal() {
+    public Double getHorizontal() {
         return horizontal;
     }
 
-    public void setHorizontal(double horizontal) {
+    public void setHorizontal(Double horizontal) {
         this.horizontal = horizontal;
     }
 
-    public double getVertical() {
+    public Double getVertical() {
         return vertical;
     }
 
-    public void setVertical(double vertical) {
+    public void setVertical(Double vertical) {
         this.vertical = vertical;
     }
 }

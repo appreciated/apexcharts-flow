@@ -2,8 +2,8 @@ package com.github.appreciated.apexcharts.config.grid.xaxis;
 
 public class Lines {
     Boolean show;
-    double offsetX;
-    double offsetY;
+    Double offsetX;
+    Double offsetY;
 
     public Boolean getShow() {
         return show;
@@ -13,19 +13,19 @@ public class Lines {
         this.show = show;
     }
 
-    public double getOffsetX() {
+    public Double getOffsetX() {
         return offsetX;
     }
 
-    public void setOffsetX(double offsetX) {
+    public void setOffsetX(Double offsetX) {
         this.offsetX = offsetX;
     }
 
-    public double getOffsetY() {
+    public Double getOffsetY() {
         return offsetY;
     }
 
-    public void setOffsetY(double offsetY) {
+    public void setOffsetY(Double offsetY) {
         this.offsetY = offsetY;
     }
 }

@@ -5,11 +5,11 @@ import java.util.List;
 public class Gradient {
     String shade;
     String type;
-    double shadeIntensity;
+    Double shadeIntensity;
     List<String> gradientToColors;
     Boolean inverseColors;
-    double opacityFrom;
-    double opacityTo;
+    Double opacityFrom;
+    Double opacityTo;
     List<Double> stops;
 
     public String getShade() {
@@ -28,11 +28,11 @@ public class Gradient {
         this.type = type;
     }
 
-    public double getShadeIntensity() {
+    public Double getShadeIntensity() {
         return shadeIntensity;
     }
 
-    public void setShadeIntensity(double shadeIntensity) {
+    public void setShadeIntensity(Double shadeIntensity) {
         this.shadeIntensity = shadeIntensity;
     }
 
@@ -52,19 +52,19 @@ public class Gradient {
         this.inverseColors = inverseColors;
     }
 
-    public double getOpacityFrom() {
+    public Double getOpacityFrom() {
         return opacityFrom;
     }
 
-    public void setOpacityFrom(double opacityFrom) {
+    public void setOpacityFrom(Double opacityFrom) {
         this.opacityFrom = opacityFrom;
     }
 
-    public double getOpacityTo() {
+    public Double getOpacityTo() {
         return opacityTo;
     }
 
-    public void setOpacityTo(double opacityTo) {
+    public void setOpacityTo(Double opacityTo) {
         this.opacityTo = opacityTo;
     }
 

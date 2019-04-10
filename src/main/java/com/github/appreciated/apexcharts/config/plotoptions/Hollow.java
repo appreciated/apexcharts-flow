@@ -3,22 +3,22 @@ package com.github.appreciated.apexcharts.config.plotoptions;
 import com.github.appreciated.apexcharts.config.plotoptions.hollow.Position;
 
 class Hollow {
-    double margin;
+    Double margin;
     String size;
     String background;
     String image;
-    double width;
-    double height;
-    double offsetX;
-    double offsetY;
+    Double width;
+    Double height;
+    Double offsetX;
+    Double offsetY;
     Boolean clipped;
     Position position;
 
-    public double getMargin() {
+    public Double getMargin() {
         return margin;
     }
 
-    public void setMargin(double margin) {
+    public void setMargin(Double margin) {
         this.margin = margin;
     }
 
@@ -46,35 +46,35 @@ class Hollow {
         this.image = image;
     }
 
-    public double getWidth() {
+    public Double getWidth() {
         return width;
     }
 
-    public void setWidth(double width) {
+    public void setWidth(Double width) {
         this.width = width;
     }
 
-    public double getHeight() {
+    public Double getHeight() {
         return height;
     }
 
-    public void setHeight(double height) {
+    public void setHeight(Double height) {
         this.height = height;
     }
 
-    public double getOffsetX() {
+    public Double getOffsetX() {
         return offsetX;
     }
 
-    public void setOffsetX(double offsetX) {
+    public void setOffsetX(Double offsetX) {
         this.offsetX = offsetX;
     }
 
-    public double getOffsetY() {
+    public Double getOffsetY() {
         return offsetY;
     }
 
-    public void setOffsetY(double offsetY) {
+    public void setOffsetY(Double offsetY) {
         this.offsetY = offsetY;
     }
 

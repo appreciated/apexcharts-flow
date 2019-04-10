@@ -7,7 +7,7 @@ import com.github.appreciated.apexcharts.config.chart.animations.Easing;
 public class Animations {
     Boolean enabled;
     Easing easing;
-    double speed;
+    Double speed;
     AnimateGradually animateGradually;
     DynamicAnimation dynamicAnimation;
 
@@ -27,11 +27,11 @@ public class Animations {
         this.easing = easing;
     }
 
-    public double getSpeed() {
+    public Double getSpeed() {
         return speed;
     }
 
-    public void setSpeed(double speed) {
+    public void setSpeed(Double speed) {
         this.speed = speed;
     }
 

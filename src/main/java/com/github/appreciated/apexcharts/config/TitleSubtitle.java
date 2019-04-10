@@ -6,10 +6,10 @@ import com.github.appreciated.apexcharts.config.subtitle.Style;
 public class TitleSubtitle {
     private String text;
     private Align align;
-    private double margin;
-    private double offsetX;
-    private double offsetY;
-    private double floating;
+    private Double margin;
+    private Double offsetX;
+    private Double offsetY;
+    private Double floating;
     private Style style;
 
 
@@ -24,19 +24,19 @@ public class TitleSubtitle {
         return align;
     }
 
-    public double getMargin() {
+    public Double getMargin() {
         return margin;
     }
 
-    public double getOffsetX() {
+    public Double getOffsetX() {
         return offsetX;
     }
 
-    public double getOffsetY() {
+    public Double getOffsetY() {
         return offsetY;
     }
 
-    public double getFloating() {
+    public Double getFloating() {
         return floating;
     }
 
@@ -52,19 +52,19 @@ public class TitleSubtitle {
         this.align = align;
     }
 
-    public void setMargin(double margin) {
+    public void setMargin(Double margin) {
         this.margin = margin;
     }
 
-    public void setOffsetX(double offsetX) {
+    public void setOffsetX(Double offsetX) {
         this.offsetX = offsetX;
     }
 
-    public void setOffsetY(double offsetY) {
+    public void setOffsetY(Double offsetY) {
         this.offsetY = offsetY;
     }
 
-    public void setFloating(double floating) {
+    public void setFloating(Double floating) {
         this.floating = floating;
     }
 

@@ -10,8 +10,8 @@ public class ChartBuilder {
     private String foreColor;
     private String fontFamily;
     private String background;
-    private double offsetX;
-    private double offsetY;
+    private Double offsetX;
+    private Double offsetY;
     private DropShadow dropShadow;
     private Brush brush;
     private String id;
@@ -51,12 +51,12 @@ public class ChartBuilder {
         return this;
     }
 
-    public ChartBuilder withOffsetX(double offsetX) {
+    public ChartBuilder withOffsetX(Double offsetX) {
         this.offsetX = offsetX;
         return this;
     }
 
-    public ChartBuilder withOffsetY(double offsetY) {
+    public ChartBuilder withOffsetY(Double offsetY) {
         this.offsetY = offsetY;
         return this;
     }

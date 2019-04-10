@@ -2,7 +2,7 @@ package com.github.appreciated.apexcharts.config.xaxis;
 
 public class Tooltip {
     Boolean enabled;
-    double offsetY;
+    Double offsetY;
 
     public Boolean getEnabled() {
         return enabled;
@@ -12,11 +12,11 @@ public class Tooltip {
         this.enabled = enabled;
     }
 
-    public double getOffsetY() {
+    public Double getOffsetY() {
         return offsetY;
     }
 
-    public void setOffsetY(double offsetY) {
+    public void setOffsetY(Double offsetY) {
         this.offsetY = offsetY;
     }
 }

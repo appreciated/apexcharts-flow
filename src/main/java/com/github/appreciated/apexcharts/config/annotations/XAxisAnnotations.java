@@ -1,37 +1,37 @@
 package com.github.appreciated.apexcharts.config.annotations;
 
 public class XAxisAnnotations {
-    double x;
-    double x2;
-    double strokeDashArray;
+    Double x;
+    Double x2;
+    Double strokeDashArray;
     String fillColor;
     String borderColor;
-    double opacity;
-    double offsetX;
-    double offsetY;
+    Double opacity;
+    Double offsetX;
+    Double offsetY;
     Label label;
 
-    public double getX() {
+    public Double getX() {
         return x;
     }
 
-    public void setX(double x) {
+    public void setX(Double x) {
         this.x = x;
     }
 
-    public double getX2() {
+    public Double getX2() {
         return x2;
     }
 
-    public void setX2(double x2) {
+    public void setX2(Double x2) {
         this.x2 = x2;
     }
 
-    public double getStrokeDashArray() {
+    public Double getStrokeDashArray() {
         return strokeDashArray;
     }
 
-    public void setStrokeDashArray(double strokeDashArray) {
+    public void setStrokeDashArray(Double strokeDashArray) {
         this.strokeDashArray = strokeDashArray;
     }
 
@@ -51,27 +51,27 @@ public class XAxisAnnotations {
         this.borderColor = borderColor;
     }
 
-    public double getOpacity() {
+    public Double getOpacity() {
         return opacity;
     }
 
-    public void setOpacity(double opacity) {
+    public void setOpacity(Double opacity) {
         this.opacity = opacity;
     }
 
-    public double getOffsetX() {
+    public Double getOffsetX() {
         return offsetX;
     }
 
-    public void setOffsetX(double offsetX) {
+    public void setOffsetX(Double offsetX) {
         this.offsetX = offsetX;
     }
 
-    public double getOffsetY() {
+    public Double getOffsetY() {
         return offsetY;
     }
 
-    public void setOffsetY(double offsetY) {
+    public void setOffsetY(Double offsetY) {
         this.offsetY = offsetY;
     }
 

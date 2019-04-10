@@ -4,13 +4,13 @@ import com.github.appreciated.apexcharts.config.yaxis.labels.Style;
 
 public class Labels {
     Boolean show;
-    double minWidth;
-    double maxWidth;
-    double offsetX;
-    double offsetY;
-    double rotate;
+    Double minWidth;
+    Double maxWidth;
+    Double offsetX;
+    Double offsetY;
+    Double rotate;
     Align align;
-    double padding;
+    Double padding;
     Style style;
     String formatter;
 
@@ -22,43 +22,43 @@ public class Labels {
         this.show = show;
     }
 
-    public double getMinWidth() {
+    public Double getMinWidth() {
         return minWidth;
     }
 
-    public void setMinWidth(double minWidth) {
+    public void setMinWidth(Double minWidth) {
         this.minWidth = minWidth;
     }
 
-    public double getMaxWidth() {
+    public Double getMaxWidth() {
         return maxWidth;
     }
 
-    public void setMaxWidth(double maxWidth) {
+    public void setMaxWidth(Double maxWidth) {
         this.maxWidth = maxWidth;
     }
 
-    public double getOffsetX() {
+    public Double getOffsetX() {
         return offsetX;
     }
 
-    public void setOffsetX(double offsetX) {
+    public void setOffsetX(Double offsetX) {
         this.offsetX = offsetX;
     }
 
-    public double getOffsetY() {
+    public Double getOffsetY() {
         return offsetY;
     }
 
-    public void setOffsetY(double offsetY) {
+    public void setOffsetY(Double offsetY) {
         this.offsetY = offsetY;
     }
 
-    public double getRotate() {
+    public Double getRotate() {
         return rotate;
     }
 
-    public void setRotate(double rotate) {
+    public void setRotate(Double rotate) {
         this.rotate = rotate;
     }
 
@@ -70,11 +70,11 @@ public class Labels {
         this.align = align;
     }
 
-    public double getPadding() {
+    public Double getPadding() {
         return padding;
     }
 
-    public void setPadding(double padding) {
+    public void setPadding(Double padding) {
         this.padding = padding;
     }
 

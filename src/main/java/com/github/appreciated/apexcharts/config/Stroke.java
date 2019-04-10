@@ -10,7 +10,7 @@ public class Stroke {
     private Curve curve;
     private LineCap lineCap;
     private String colors;
-    private double width;
+    private Double width;
     private List<Double> dashArray;
 
 
@@ -33,7 +33,7 @@ public class Stroke {
         return colors;
     }
 
-    public double getWidth() {
+    public Double getWidth() {
         return width;
     }
 
@@ -57,7 +57,7 @@ public class Stroke {
         this.colors = colors;
     }
 
-    public void setWidth(double width) {
+    public void setWidth(Double width) {
         this.width = width;
     }
 

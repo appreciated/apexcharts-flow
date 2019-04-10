@@ -74,20 +74,18 @@ public interface ApexChartsModel extends TemplateModel {
     @Encode(ApexStrokeEncoder.class)
     void setStroke(Stroke stroke);
 
-    TitleSubtitle getSubtitle();
+    String getSubtitle();
 
-    @Encode(value = TitleSubtitleEncoder.class)
-    void setSubtitle(TitleSubtitle subtitle);
+    void setSubtitle(String subtitle);
 
     Theme getTheme();
 
     @Encode(ThemeEncoder.class)
     void setTheme(Theme theme);
 
-    TitleSubtitle getTitle();
+    String getChartTitle();
 
-    @Encode(value = TitleSubtitleEncoder.class)
-    void setTitle(TitleSubtitle title);
+    void setChartTitle(String chartTitle);
 
     Tooltip getTooltip();
 
@@ -104,6 +102,4 @@ public interface ApexChartsModel extends TemplateModel {
 
     @Encode(XAxisEncoder.class)
     void setXaxis(XAxis xaxis);
-
-
 }

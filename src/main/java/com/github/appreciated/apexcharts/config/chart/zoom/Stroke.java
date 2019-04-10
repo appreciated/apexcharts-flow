@@ -2,8 +2,8 @@ package com.github.appreciated.apexcharts.config.chart.zoom;
 
 class Stroke {
     String color;
-    double opacity;
-    double width;
+    Double opacity;
+    Double width;
 
     public String getColor() {
         return color;
@@ -13,19 +13,19 @@ class Stroke {
         this.color = color;
     }
 
-    public double getOpacity() {
+    public Double getOpacity() {
         return opacity;
     }
 
-    public void setOpacity(double opacity) {
+    public void setOpacity(Double opacity) {
         this.opacity = opacity;
     }
 
-    public double getWidth() {
+    public Double getWidth() {
         return width;
     }
 
-    public void setWidth(double width) {
+    public void setWidth(Double width) {
         this.width = width;
     }
 }

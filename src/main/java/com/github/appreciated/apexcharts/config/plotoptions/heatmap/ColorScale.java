@@ -3,8 +3,8 @@ package com.github.appreciated.apexcharts.config.plotoptions.heatmap;
 public class ColorScale {
     Ranges ranges;
     Boolean inverse;
-    double min;
-    double max;
+    Double min;
+    Double max;
 
     public Ranges getRanges() {
         return ranges;
@@ -22,19 +22,19 @@ public class ColorScale {
         this.inverse = inverse;
     }
 
-    public double getMin() {
+    public Double getMin() {
         return min;
     }
 
-    public void setMin(double min) {
+    public void setMin(Double min) {
         this.min = min;
     }
 
-    public double getMax() {
+    public Double getMax() {
         return max;
     }
 
-    public void setMax(double max) {
+    public void setMax(Double max) {
         this.max = max;
     }
 }

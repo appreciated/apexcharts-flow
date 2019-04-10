@@ -3,17 +3,17 @@ package com.github.appreciated.apexcharts.config.plotoptions;
 import com.github.appreciated.apexcharts.config.plotoptions.heatmap.ColorScale;
 
 public class Heatmap {
-    double radius;
+    Double radius;
     Boolean enableShades;
-    double shadeIntensity;
+    Double shadeIntensity;
     Boolean distributed;
     ColorScale colorScale;
 
-    public double getRadius() {
+    public Double getRadius() {
         return radius;
     }
 
-    public void setRadius(double radius) {
+    public void setRadius(Double radius) {
         this.radius = radius;
     }
 
@@ -25,11 +25,11 @@ public class Heatmap {
         this.enableShades = enableShades;
     }
 
-    public double getShadeIntensity() {
+    public Double getShadeIntensity() {
         return shadeIntensity;
     }
 
-    public void setShadeIntensity(double shadeIntensity) {
+    public void setShadeIntensity(Double shadeIntensity) {
         this.shadeIntensity = shadeIntensity;
     }
 

@@ -3,9 +3,9 @@ package com.github.appreciated.apexcharts.config.xaxis;
 public class AxisBorder {
     Boolean show;
     String color;
-    double offsetX;
-    double offsetY;
-    double strokeWidth;
+    Double offsetX;
+    Double offsetY;
+    Double strokeWidth;
 
     public Boolean getShow() {
         return show;
@@ -23,27 +23,27 @@ public class AxisBorder {
         this.color = color;
     }
 
-    public double getOffsetX() {
+    public Double getOffsetX() {
         return offsetX;
     }
 
-    public void setOffsetX(double offsetX) {
+    public void setOffsetX(Double offsetX) {
         this.offsetX = offsetX;
     }
 
-    public double getOffsetY() {
+    public Double getOffsetY() {
         return offsetY;
     }
 
-    public void setOffsetY(double offsetY) {
+    public void setOffsetY(Double offsetY) {
         this.offsetY = offsetY;
     }
 
-    public double getStrokeWidth() {
+    public Double getStrokeWidth() {
         return strokeWidth;
     }
 
-    public void setStrokeWidth(double strokeWidth) {
+    public void setStrokeWidth(Double strokeWidth) {
         this.strokeWidth = strokeWidth;
     }
 }

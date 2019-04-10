@@ -5,7 +5,7 @@ import com.github.appreciated.apexcharts.config.grid.*;
 public class Grid {
     private Boolean show;
     private String borderColor;
-    private double strokeDashArray;
+    private Double strokeDashArray;
     private Position position;
     private Xaxis xaxis;
     private Yaxis yaxis;
@@ -25,7 +25,7 @@ public class Grid {
         return borderColor;
     }
 
-    public double getStrokeDashArray() {
+    public Double getStrokeDashArray() {
         return strokeDashArray;
     }
 
@@ -61,7 +61,7 @@ public class Grid {
         this.borderColor = borderColor;
     }
 
-    public void setStrokeDashArray(double strokeDashArray) {
+    public void setStrokeDashArray(Double strokeDashArray) {
         this.strokeDashArray = strokeDashArray;
     }
 

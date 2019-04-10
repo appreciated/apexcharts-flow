@@ -7,7 +7,7 @@ import java.util.List;
 
 public class RowBuilder {
     private List<String> colors;
-    private double opacity;
+    private Double opacity;
 
     private RowBuilder() {
     }
@@ -26,7 +26,7 @@ public class RowBuilder {
         return this;
     }
 
-    public RowBuilder withOpacity(double opacity) {
+    public RowBuilder withOpacity(Double opacity) {
         this.opacity = opacity;
         return this;
     }

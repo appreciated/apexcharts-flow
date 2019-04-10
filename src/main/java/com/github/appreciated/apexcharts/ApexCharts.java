@@ -114,7 +114,11 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
     }
 
     public ApexCharts withSubtitle(TitleSubtitle subtitle) {
-        getModel().setSubtitle(subtitle);
+        try {
+            getModel().setSubtitle(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(subtitle));
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
         return this;
     }
 
@@ -124,7 +128,13 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
     }
 
     public ApexCharts withTitle(TitleSubtitle title) {
-        getModel().setTitle(title);
+        try {
+            String stitle = new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(title);
+            System.out.println(stitle);
+            getModel().setChartTitle(stitle);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
         return this;
     }
 

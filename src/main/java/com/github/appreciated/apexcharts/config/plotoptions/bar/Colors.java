@@ -5,7 +5,7 @@ import java.util.List;
 public class Colors {
     Ranges ranges;
     List<String> backgroundBarColors;
-    double backgroundBarOpacity;
+    Double backgroundBarOpacity;
 
     public Ranges getRanges() {
         return ranges;
@@ -23,11 +23,11 @@ public class Colors {
         this.backgroundBarColors = backgroundBarColors;
     }
 
-    public double getBackgroundBarOpacity() {
+    public Double getBackgroundBarOpacity() {
         return backgroundBarOpacity;
     }
 
-    public void setBackgroundBarOpacity(double backgroundBarOpacity) {
+    public void setBackgroundBarOpacity(Double backgroundBarOpacity) {
         this.backgroundBarOpacity = backgroundBarOpacity;
     }
 }

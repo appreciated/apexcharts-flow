@@ -1,13 +1,13 @@
 package com.github.appreciated.apexcharts.config.plotoptions;
 
 class DataLabels {
-    double offset;
+    Double offset;
 
-    public double getOffset() {
+    public Double getOffset() {
         return offset;
     }
 
-    public void setOffset(double offset) {
+    public void setOffset(Double offset) {
         this.offset = offset;
     }
 }

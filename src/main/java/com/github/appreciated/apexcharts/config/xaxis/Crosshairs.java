@@ -8,7 +8,7 @@ public class Crosshairs {
     Boolean show;
     String width;
     String position;
-    double opacity;
+    Double opacity;
     Stroke stroke;
     Fill fill;
     DropShadow dropShadow;
@@ -37,11 +37,11 @@ public class Crosshairs {
         this.position = position;
     }
 
-    public double getOpacity() {
+    public Double getOpacity() {
         return opacity;
     }
 
-    public void setOpacity(double opacity) {
+    public void setOpacity(Double opacity) {
         this.opacity = opacity;
     }
 

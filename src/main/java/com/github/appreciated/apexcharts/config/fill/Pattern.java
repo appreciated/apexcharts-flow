@@ -2,9 +2,9 @@ package com.github.appreciated.apexcharts.config.fill;
 
 public class Pattern {
     String style;
-    double width;
-    double height;
-    double strokeWidth;
+    Double width;
+    Double height;
+    Double strokeWidth;
 
     public String getStyle() {
         return style;
@@ -14,27 +14,27 @@ public class Pattern {
         this.style = style;
     }
 
-    public double getWidth() {
+    public Double getWidth() {
         return width;
     }
 
-    public void setWidth(double width) {
+    public void setWidth(Double width) {
         this.width = width;
     }
 
-    public double getHeight() {
+    public Double getHeight() {
         return height;
     }
 
-    public void setHeight(double height) {
+    public void setHeight(Double height) {
         this.height = height;
     }
 
-    public double getStrokeWidth() {
+    public Double getStrokeWidth() {
         return strokeWidth;
     }
 
-    public void setStrokeWidth(double strokeWidth) {
+    public void setStrokeWidth(Double strokeWidth) {
         this.strokeWidth = strokeWidth;
     }
 }

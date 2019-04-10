@@ -4,8 +4,8 @@ import com.github.appreciated.apexcharts.config.xaxis.title.Style;
 
 public class Title {
     String text;
-    double offsetX;
-    double offsetY;
+    Double offsetX;
+    Double offsetY;
     Style style;
 
     public String getText() {
@@ -16,19 +16,19 @@ public class Title {
         this.text = text;
     }
 
-    public double getOffsetX() {
+    public Double getOffsetX() {
         return offsetX;
     }
 
-    public void setOffsetX(double offsetX) {
+    public void setOffsetX(Double offsetX) {
         this.offsetX = offsetX;
     }
 
-    public double getOffsetY() {
+    public Double getOffsetY() {
         return offsetY;
     }
 
-    public void setOffsetY(double offsetY) {
+    public void setOffsetY(Double offsetY) {
         this.offsetY = offsetY;
     }
 

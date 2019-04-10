@@ -2,7 +2,7 @@ package com.github.appreciated.apexcharts.config.states;
 
 public class Filter {
     String type;
-    double value;
+    Double value;
 
     public String getType() {
         return type;
@@ -12,11 +12,11 @@ public class Filter {
         this.type = type;
     }
 
-    public double getValue() {
+    public Double getValue() {
         return value;
     }
 
-    public void setValue(double value) {
+    public void setValue(Double value) {
         this.value = value;
     }
 }

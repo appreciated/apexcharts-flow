@@ -10,23 +10,23 @@ public class Selection {
 
     class Fill {
         String color;
-        double opacity;
+        Double opacity;
     }
 
     class Stroke {
-        double width;
+        Double width;
         String color;
-        double opacity;
-        double dashArray;
+        Double opacity;
+        Double dashArray;
     }
 
     class Xaxis {
-        double min;
-        double max;
+        Double min;
+        Double max;
     }
 
     class Yaxis {
-        double min;
-        double max;
+        Double min;
+        Double max;
     }
 }

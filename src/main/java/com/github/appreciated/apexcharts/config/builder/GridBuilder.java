@@ -6,7 +6,7 @@ import com.github.appreciated.apexcharts.config.grid.*;
 public class GridBuilder {
     private Boolean show;
     private String borderColor;
-    private double strokeDashArray;
+    private Double strokeDashArray;
     private Position position;
     private Xaxis xaxis;
     private Yaxis yaxis;
@@ -31,7 +31,7 @@ public class GridBuilder {
         return this;
     }
 
-    public GridBuilder withStrokeDashArray(double strokeDashArray) {
+    public GridBuilder withStrokeDashArray(Double strokeDashArray) {
         this.strokeDashArray = strokeDashArray;
         return this;
     }

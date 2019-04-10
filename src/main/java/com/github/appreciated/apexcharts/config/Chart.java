@@ -9,8 +9,8 @@ public class Chart  {
     private String foreColor;
     private String fontFamily;
     private String background;
-    private double offsetX;
-    private double offsetY;
+    private Double offsetX;
+    private Double offsetY;
     private DropShadow dropShadow;
     private Brush brush;
     private String id;
@@ -44,11 +44,11 @@ public class Chart  {
         return background;
     }
 
-    public double getOffsetX() {
+    public Double getOffsetX() {
         return offsetX;
     }
 
-    public double getOffsetY() {
+    public Double getOffsetY() {
         return offsetY;
     }
 
@@ -112,11 +112,11 @@ public class Chart  {
         this.background = background;
     }
 
-    public void setOffsetX(double offsetX) {
+    public void setOffsetX(Double offsetX) {
         this.offsetX = offsetX;
     }
 
-    public void setOffsetY(double offsetY) {
+    public void setOffsetY(Double offsetY) {
         this.offsetY = offsetY;
     }
 

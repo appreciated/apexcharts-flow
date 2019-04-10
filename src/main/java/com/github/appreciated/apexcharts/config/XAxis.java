@@ -10,10 +10,10 @@ public class XAxis {
     private List<String> labels;
     private AxisBorder axisBorder;
     private AxisTicks axisTicks;
-    private double tickAmount;
-    private double min;
-    private double max;
-    private double range;
+    private Double tickAmount;
+    private Double min;
+    private Double max;
+    private Double range;
     private Boolean floating;
     private String position;
     private Title title;
@@ -44,19 +44,19 @@ public class XAxis {
         return axisTicks;
     }
 
-    public double getTickAmount() {
+    public Double getTickAmount() {
         return tickAmount;
     }
 
-    public double getMin() {
+    public Double getMin() {
         return min;
     }
 
-    public double getMax() {
+    public Double getMax() {
         return max;
     }
 
-    public double getRange() {
+    public Double getRange() {
         return range;
     }
 
@@ -100,19 +100,19 @@ public class XAxis {
         this.axisTicks = axisTicks;
     }
 
-    public void setTickAmount(double tickAmount) {
+    public void setTickAmount(Double tickAmount) {
         this.tickAmount = tickAmount;
     }
 
-    public void setMin(double min) {
+    public void setMin(Double min) {
         this.min = min;
     }
 
-    public void setMax(double max) {
+    public void setMax(Double max) {
         this.max = max;
     }
 
-    public void setRange(double range) {
+    public void setRange(Double range) {
         this.range = range;
     }
 

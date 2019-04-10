@@ -76,7 +76,7 @@
                     theme: {
                         type: Object
                     }, // ApexTheme;
-                    title: {
+                    chartTitle: {
                         type: Object
                     }, // ApexTitleSubtitle;
                     tooltip: {
@@ -140,13 +140,13 @@
                     config.stroke = JSON.parse(this.stroke);
                 }
                 if (this.subtitle) {
-                    config.subtitle = this.subtitle;
+                    config.subtitle = JSON.parse(this.subtitle);
                 }
                 if (this.theme) {
                     config.theme = this.theme;
                 }
-                if (this.title) {
-                    config.title = this.title;
+                if (this.chartTitle){
+                    config.title = JSON.parse(this.chartTitle);
                 }
                 if (this.tooltip) {
                     config.tooltip = this.tooltip;

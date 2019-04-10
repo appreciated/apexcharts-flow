@@ -2,10 +2,10 @@ package com.github.appreciated.apexcharts.config.datalables;
 
 public class DropShadow {
     Boolean enable;
-    double top;
-    double left;
-    double blur;
-    double opacity;
+    Double top;
+    Double left;
+    Double blur;
+    Double opacity;
 
     public Boolean getEnable() {
         return enable;
@@ -15,35 +15,35 @@ public class DropShadow {
         this.enable = enable;
     }
 
-    public double getTop() {
+    public Double getTop() {
         return top;
     }
 
-    public void setTop(double top) {
+    public void setTop(Double top) {
         this.top = top;
     }
 
-    public double getLeft() {
+    public Double getLeft() {
         return left;
     }
 
-    public void setLeft(double left) {
+    public void setLeft(Double left) {
         this.left = left;
     }
 
-    public double getBlur() {
+    public Double getBlur() {
         return blur;
     }
 
-    public void setBlur(double blur) {
+    public void setBlur(Double blur) {
         this.blur = blur;
     }
 
-    public double getOpacity() {
+    public Double getOpacity() {
         return opacity;
     }
 
-    public void setOpacity(double opacity) {
+    public void setOpacity(Double opacity) {
         this.opacity = opacity;
     }
 }

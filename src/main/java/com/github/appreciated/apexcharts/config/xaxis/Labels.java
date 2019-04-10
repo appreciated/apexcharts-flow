@@ -5,16 +5,16 @@ import com.github.appreciated.apexcharts.config.xaxis.labels.Style;
 
 public class Labels {
     Boolean show;
-    double rotate;
+    Double rotate;
     Boolean rotateAlways;
     Boolean hideOverlappingLabels;
     Boolean showDuplicates;
     Boolean trim;
-    double minHeight;
-    double maxHeight;
+    Double minHeight;
+    Double maxHeight;
     Style style;
-    double offsetX;
-    double offsetY;
+    Double offsetX;
+    Double offsetY;
     String format;
 
     String formatter;

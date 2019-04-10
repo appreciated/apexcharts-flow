@@ -6,16 +6,16 @@ import com.github.appreciated.apexcharts.config.markers.Shape;
 import java.util.List;
 
 public class Markers {
-    double size;
+    Double size;
     List<String> colors;
     String strokeColor;
-    double strokeWidth;
-    double strokeOpacity;
-    double fillOpacity;
+    Double strokeWidth;
+    Double strokeOpacity;
+    Double fillOpacity;
     DiscretePoint[] discrete;
     Shape shape;
-    double radius;
-    double offsetX;
-    double offsetY;
+    Double radius;
+    Double offsetX;
+    Double offsetY;
     Hover hover;
 }

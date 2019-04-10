@@ -4,8 +4,8 @@ import java.util.List;
 
 public class Image {
     List<String> src;
-    double width;
-    double height;
+    Double width;
+    Double height;
 
     public List<String> getSrc() {
         return src;
@@ -15,19 +15,19 @@ public class Image {
         this.src = src;
     }
 
-    public double getWidth() {
+    public Double getWidth() {
         return width;
     }
 
-    public void setWidth(double width) {
+    public void setWidth(Double width) {
         this.width = width;
     }
 
-    public double getHeight() {
+    public Double getHeight() {
         return height;
     }
 
-    public void setHeight(double height) {
+    public void setHeight(Double height) {
         this.height = height;
     }
 }

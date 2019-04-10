@@ -4,7 +4,7 @@ class Value {
     Boolean show;
     String fontSize;
     String color;
-    double offsetY;
+    Double offsetY;
     String formatter;
 
     public Boolean getShow() {
@@ -31,11 +31,11 @@ class Value {
         this.color = color;
     }
 
-    public double getOffsetY() {
+    public Double getOffsetY() {
         return offsetY;
     }
 
-    public void setOffsetY(double offsetY) {
+    public void setOffsetY(Double offsetY) {
         this.offsetY = offsetY;
     }
 

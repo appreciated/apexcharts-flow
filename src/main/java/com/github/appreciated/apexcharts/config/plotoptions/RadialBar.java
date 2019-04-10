@@ -4,21 +4,21 @@ import com.github.appreciated.apexcharts.config.plotoptions.radialbar.DataLabels
 import com.github.appreciated.apexcharts.config.plotoptions.radialbar.Track;
 
 public class RadialBar {
-    double size;
+    Double size;
     Boolean inverseOrder;
-    double startAngle;
-    double endAngle;
-    double offsetX;
-    double offsetY;
+    Double startAngle;
+    Double endAngle;
+    Double offsetX;
+    Double offsetY;
     Hollow hollow;
     Track track;
     DataLabels dataLabels;
 
-    public double getSize() {
+    public Double getSize() {
         return size;
     }
 
-    public void setSize(double size) {
+    public void setSize(Double size) {
         this.size = size;
     }
 
@@ -30,35 +30,35 @@ public class RadialBar {
         this.inverseOrder = inverseOrder;
     }
 
-    public double getStartAngle() {
+    public Double getStartAngle() {
         return startAngle;
     }
 
-    public void setStartAngle(double startAngle) {
+    public void setStartAngle(Double startAngle) {
         this.startAngle = startAngle;
     }
 
-    public double getEndAngle() {
+    public Double getEndAngle() {
         return endAngle;
     }
 
-    public void setEndAngle(double endAngle) {
+    public void setEndAngle(Double endAngle) {
         this.endAngle = endAngle;
     }
 
-    public double getOffsetX() {
+    public Double getOffsetX() {
         return offsetX;
     }
 
-    public void setOffsetX(double offsetX) {
+    public void setOffsetX(Double offsetX) {
         this.offsetX = offsetX;
     }
 
-    public double getOffsetY() {
+    public Double getOffsetY() {
         return offsetY;
     }
 
-    public void setOffsetY(double offsetY) {
+    public void setOffsetY(Double offsetY) {
         this.offsetY = offsetY;
     }
 

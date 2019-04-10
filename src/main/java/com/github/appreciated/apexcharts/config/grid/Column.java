@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Column {
     List<String> colors;
-    double opacity;
+    Double opacity;
 
     public List<String> getColors() {
         return colors;
@@ -14,11 +14,11 @@ public class Column {
         this.colors = colors;
     }
 
-    public double getOpacity() {
+    public Double getOpacity() {
         return opacity;
     }
 
-    public void setOpacity(double opacity) {
+    public void setOpacity(Double opacity) {
         this.opacity = opacity;
     }
 }

@@ -2,12 +2,12 @@ package com.github.appreciated.apexcharts.config.plotoptions.radialbar;
 
 public class Track {
     Boolean show;
-    double startAngle;
-    double endAngle;
+    Double startAngle;
+    Double endAngle;
     String background;
     String strokeWidth;
-    double opacity;
-    double margin;
+    Double opacity;
+    Double margin;
     DropShadow dropShadow;
 
     public Boolean getShow() {
@@ -18,19 +18,19 @@ public class Track {
         this.show = show;
     }
 
-    public double getStartAngle() {
+    public Double getStartAngle() {
         return startAngle;
     }
 
-    public void setStartAngle(double startAngle) {
+    public void setStartAngle(Double startAngle) {
         this.startAngle = startAngle;
     }
 
-    public double getEndAngle() {
+    public Double getEndAngle() {
         return endAngle;
     }
 
-    public void setEndAngle(double endAngle) {
+    public void setEndAngle(Double endAngle) {
         this.endAngle = endAngle;
     }
 
@@ -50,19 +50,19 @@ public class Track {
         this.strokeWidth = strokeWidth;
     }
 
-    public double getOpacity() {
+    public Double getOpacity() {
         return opacity;
     }
 
-    public void setOpacity(double opacity) {
+    public void setOpacity(Double opacity) {
         this.opacity = opacity;
     }
 
-    public double getMargin() {
+    public Double getMargin() {
         return margin;
     }
 
-    public void setMargin(double margin) {
+    public void setMargin(Double margin) {
         this.margin = margin;
     }
 

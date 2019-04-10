@@ -3,42 +3,42 @@ package com.github.appreciated.apexcharts.config.chart;
 import com.github.appreciated.apexcharts.config.annotations.AnnotationLabel;
 
 public class PointAnnotations {
-    double x;
-    double y;
-    double yAxisIndex;
-    double seriesIndex;
+    Double x;
+    Double y;
+    Double yAxisIndex;
+    Double seriesIndex;
     Marker marker;
     AnnotationLabel label;
 
-    public double getX() {
+    public Double getX() {
         return x;
     }
 
-    public void setX(double x) {
+    public void setX(Double x) {
         this.x = x;
     }
 
-    public double getY() {
+    public Double getY() {
         return y;
     }
 
-    public void setY(double y) {
+    public void setY(Double y) {
         this.y = y;
     }
 
-    public double getyAxisIndex() {
+    public Double getyAxisIndex() {
         return yAxisIndex;
     }
 
-    public void setyAxisIndex(double yAxisIndex) {
+    public void setyAxisIndex(Double yAxisIndex) {
         this.yAxisIndex = yAxisIndex;
     }
 
-    public double getSeriesIndex() {
+    public Double getSeriesIndex() {
         return seriesIndex;
     }
 
-    public void setSeriesIndex(double seriesIndex) {
+    public void setSeriesIndex(Double seriesIndex) {
         this.seriesIndex = seriesIndex;
     }
 

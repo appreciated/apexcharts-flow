@@ -1,21 +1,21 @@
 package com.github.appreciated.apexcharts.config.chart;
 
 class Marker {
-    double size;
+    Double size;
     String fillColor;
     String strokeColor;
-    double strokeWidth;
+    Double strokeWidth;
     String shape;
-    double offsetX;
-    double offsetY;
-    double radius;
+    Double offsetX;
+    Double offsetY;
+    Double radius;
     String cssClass;
 
-    public double getSize() {
+    public Double getSize() {
         return size;
     }
 
-    public void setSize(double size) {
+    public void setSize(Double size) {
         this.size = size;
     }
 
@@ -35,11 +35,11 @@ class Marker {
         this.strokeColor = strokeColor;
     }
 
-    public double getStrokeWidth() {
+    public Double getStrokeWidth() {
         return strokeWidth;
     }
 
-    public void setStrokeWidth(double strokeWidth) {
+    public void setStrokeWidth(Double strokeWidth) {
         this.strokeWidth = strokeWidth;
     }
 
@@ -51,27 +51,27 @@ class Marker {
         this.shape = shape;
     }
 
-    public double getOffsetX() {
+    public Double getOffsetX() {
         return offsetX;
     }
 
-    public void setOffsetX(double offsetX) {
+    public void setOffsetX(Double offsetX) {
         this.offsetX = offsetX;
     }
 
-    public double getOffsetY() {
+    public Double getOffsetY() {
         return offsetY;
     }
 
-    public void setOffsetY(double offsetY) {
+    public void setOffsetY(Double offsetY) {
         this.offsetY = offsetY;
     }
 
-    public double getRadius() {
+    public Double getRadius() {
         return radius;
     }
 
-    public void setRadius(double radius) {
+    public void setRadius(Double radius) {
         this.radius = radius;
     }
 

@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Row {
     private List<String> colors;
-    private double opacity;
+    private Double opacity;
 
 
     public Row() {
@@ -14,7 +14,7 @@ public class Row {
         return colors;
     }
 
-    public double getOpacity() {
+    public Double getOpacity() {
         return opacity;
     }
 
@@ -22,7 +22,7 @@ public class Row {
         this.colors = colors;
     }
 
-    public void setOpacity(double opacity) {
+    public void setOpacity(Double opacity) {
         this.opacity = opacity;
     }
 

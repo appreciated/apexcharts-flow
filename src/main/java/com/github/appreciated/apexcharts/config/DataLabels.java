@@ -11,8 +11,8 @@ public class DataLabels {
     List<Double> enabledOnSeries;
     String formatter;
     TextAnchor textAnchor;
-    double offsetX;
-    double offsetY;
+    Double offsetX;
+    Double offsetY;
     Style style;
     DropShadow dropShadow;
 
@@ -49,19 +49,19 @@ public class DataLabels {
         this.textAnchor = textAnchor;
     }
 
-    public double getOffsetX() {
+    public Double getOffsetX() {
         return offsetX;
     }
 
-    public void setOffsetX(double offsetX) {
+    public void setOffsetX(Double offsetX) {
         this.offsetX = offsetX;
     }
 
-    public double getOffsetY() {
+    public Double getOffsetY() {
         return offsetY;
     }
 
-    public void setOffsetY(double offsetY) {
+    public void setOffsetY(Double offsetY) {
         this.offsetY = offsetY;
     }
 

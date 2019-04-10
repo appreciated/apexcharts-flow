@@ -1,38 +1,38 @@
 package com.github.appreciated.apexcharts.config.annotations;
 
 public class YAxisAnnotations {
-    double y;
-    double y2;
-    double strokeDashArray;
+    Double y;
+    Double y2;
+    Double strokeDashArray;
     String fillColor;
     String borderColor;
-    double opacity;
-    double offsetX;
-    double offsetY;
-    double yAxisIndex;
+    Double opacity;
+    Double offsetX;
+    Double offsetY;
+    Double yAxisIndex;
     AnnotationLabel label;
 
-    public double getY() {
+    public Double getY() {
         return y;
     }
 
-    public void setY(double y) {
+    public void setY(Double y) {
         this.y = y;
     }
 
-    public double getY2() {
+    public Double getY2() {
         return y2;
     }
 
-    public void setY2(double y2) {
+    public void setY2(Double y2) {
         this.y2 = y2;
     }
 
-    public double getStrokeDashArray() {
+    public Double getStrokeDashArray() {
         return strokeDashArray;
     }
 
-    public void setStrokeDashArray(double strokeDashArray) {
+    public void setStrokeDashArray(Double strokeDashArray) {
         this.strokeDashArray = strokeDashArray;
     }
 
@@ -52,35 +52,35 @@ public class YAxisAnnotations {
         this.borderColor = borderColor;
     }
 
-    public double getOpacity() {
+    public Double getOpacity() {
         return opacity;
     }
 
-    public void setOpacity(double opacity) {
+    public void setOpacity(Double opacity) {
         this.opacity = opacity;
     }
 
-    public double getOffsetX() {
+    public Double getOffsetX() {
         return offsetX;
     }
 
-    public void setOffsetX(double offsetX) {
+    public void setOffsetX(Double offsetX) {
         this.offsetX = offsetX;
     }
 
-    public double getOffsetY() {
+    public Double getOffsetY() {
         return offsetY;
     }
 
-    public void setOffsetY(double offsetY) {
+    public void setOffsetY(Double offsetY) {
         this.offsetY = offsetY;
     }
 
-    public double getyAxisIndex() {
+    public Double getyAxisIndex() {
         return yAxisIndex;
     }
 
-    public void setyAxisIndex(double yAxisIndex) {
+    public void setyAxisIndex(Double yAxisIndex) {
         this.yAxisIndex = yAxisIndex;
     }
 
