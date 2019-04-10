@@ -84,7 +84,7 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
     }
 
     public ApexCharts withSeries(Map<String, Double> series) {
-        getModel().setMapChartSeries(series);
+        //getModel().setMapChartSeries(series);
         return this;
     }
 
@@ -119,7 +119,7 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
     }
 
     public ApexCharts withXaxis(ApexXAxis xaxis) {
-        getModel().setXaxis(xaxis);
+       // getModel().setXaxis(xaxis);
         return this;
     }
 

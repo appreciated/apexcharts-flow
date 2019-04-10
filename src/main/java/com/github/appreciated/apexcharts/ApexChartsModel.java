@@ -6,18 +6,17 @@ import com.vaadin.flow.templatemodel.Encode;
 import com.vaadin.flow.templatemodel.TemplateModel;
 
 import java.util.List;
-import java.util.Map;
 
 public interface ApexChartsModel extends TemplateModel {
 
     ApexAnnotations getAnnotations();
 
-    //@Encode(JsonEncoder.class)
+    @Encode(ApexAnnotationsEncoder.class)
     void setAnnotations(ApexAnnotations annotations);
 
     ApexChart getChart();
 
-    //@Encode(JsonEncoder.class)
+    @Encode(ApexChartEncoder.class)
     void setChart(ApexChart chart);
 
     List<String> getColors();
@@ -26,17 +25,17 @@ public interface ApexChartsModel extends TemplateModel {
 
     ApexDataLabels getDataLabels();
 
-    //@Encode(JsonEncoder.class)
+    @Encode(ApexDataLabelsEncoder.class)
     void setDataLabels(ApexDataLabels dataLabels);
 
     ApexFill getFill();
 
-   // @Encode(JsonEncoder.class)
+    @Encode(ApexFillEncoder.class)
     void setFill(ApexFill fill);
 
     ApexGrid getGrid();
 
-  //  @Encode(JsonEncoder.class)
+    @Encode(ApexGridEncoder.class)
     void setGrid(ApexGrid grid);
 
     List<String> getLabels();
@@ -50,13 +49,13 @@ public interface ApexChartsModel extends TemplateModel {
 
     ApexMarkers getMarkers();
 
-   // @Encode(JsonEncoder.class)
+    @Encode(ApexMarkersEncoder.class)
     void setMarkers(ApexMarkers markers);
 
     ApexNoData getNoData();
 
 
-    //@Encode(JsonEncoder.class)
+    @Encode(ApexNoDataEncoder.class)
     void setNoData(ApexNoData noData);
 
     ApexPlotOptions getPlotOptions();
@@ -66,7 +65,6 @@ public interface ApexChartsModel extends TemplateModel {
 
     List<ApexResponsive> getResponsive();
 
-    //@Encode(JsonEncoder.class)
     void setResponsive(List<ApexResponsive> responsive);
 
     ApexStates getStates();
@@ -99,10 +97,10 @@ public interface ApexChartsModel extends TemplateModel {
     @Encode(ApexTooltipEncoder.class)
     void setTooltip(ApexTooltip tooltip);
 
-    ApexXAxis getXaxis();
+    //ApexXAxis getXaxis();
 
-    //@Encode(JsonEncoder.class)
-    void setXaxis(ApexXAxis xaxis);
+    //@Encode(ApexXAxisEncoder.class)
+    //void setXaxis(ApexXAxis xaxis);
 
     String getYaxis();
 
@@ -112,8 +110,8 @@ public interface ApexChartsModel extends TemplateModel {
 
     //void setDoubleChartSeries(double[] doubleChartSeries);
 
-    Map<String, Double> getMapChartSeries();
+    String getMapChartSeries();
 
-   // @Encode(JsonEncoder.class)
-    void setMapChartSeries(Map<String, Double> mapChartSeries);
+
+    void setMapChartSeries(String mapChartSeries);
 }
