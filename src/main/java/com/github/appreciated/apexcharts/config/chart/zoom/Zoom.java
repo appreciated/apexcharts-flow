@@ -2,7 +2,7 @@ package com.github.appreciated.apexcharts.config.chart.zoom;
 
 public class Zoom {
     private Boolean enabled;
-    private Type type;
+    private ZoomType type;
     private ZoomedArea zoomedArea;
 
 
@@ -13,7 +13,7 @@ public class Zoom {
         return enabled;
     }
 
-    public Type getType() {
+    public ZoomType getType() {
         return type;
     }
 
@@ -25,7 +25,7 @@ public class Zoom {
         this.enabled = enabled;
     }
 
-    public void setType(Type type) {
+    public void setType(ZoomType type) {
         this.type = type;
     }
 

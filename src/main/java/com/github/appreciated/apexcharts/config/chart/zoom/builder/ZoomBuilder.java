@@ -1,12 +1,12 @@
 package com.github.appreciated.apexcharts.config.chart.zoom.builder;
 
-import com.github.appreciated.apexcharts.config.chart.zoom.Type;
 import com.github.appreciated.apexcharts.config.chart.zoom.Zoom;
+import com.github.appreciated.apexcharts.config.chart.zoom.ZoomType;
 import com.github.appreciated.apexcharts.config.chart.zoom.ZoomedArea;
 
 public class ZoomBuilder {
     private Boolean enabled;
-    private Type type;
+    private ZoomType type;
     private ZoomedArea zoomedArea;
 
     private ZoomBuilder() {
@@ -21,7 +21,7 @@ public class ZoomBuilder {
         return this;
     }
 
-    public ZoomBuilder withType(Type type) {
+    public ZoomBuilder withType(ZoomType type) {
         this.type = type;
         return this;
     }
