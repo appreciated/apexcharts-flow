@@ -7,8 +7,11 @@ import com.github.appreciated.apexcharts.config.chart.zoom.builder.ZoomBuilder;
 import com.github.appreciated.apexcharts.config.grid.builder.RowBuilder;
 import com.github.appreciated.apexcharts.config.legend.HorizontalAlign;
 import com.github.appreciated.apexcharts.config.plotoptions.builder.BarBuilder;
+import com.github.appreciated.apexcharts.config.plotoptions.builder.HollowBuilder;
+import com.github.appreciated.apexcharts.config.plotoptions.builder.RadialBarBuilder;
 import com.github.appreciated.apexcharts.config.stroke.Curve;
 import com.github.appreciated.apexcharts.config.subtitle.Align;
+import com.github.appreciated.apexcharts.config.tooltip.builder.YBuilder;
 import com.github.appreciated.apexcharts.config.yaxis.builder.TitleBuilder;
 import com.github.appreciated.apexcharts.helper.Series;
 import com.vaadin.flow.component.Component;
@@ -21,12 +24,15 @@ import java.util.stream.IntStream;
 @Route("")
 public class DemoView extends Div {
 
+
     public DemoView() {
         add(getPieChart());
         add(getDonutChart());
         add(getLineChart());
         add(getAreaChart());
-        add(getBarChart());
+        add(getHorizontalBarChart());
+        add(getVerticalBarChart());
+        add(getRadialBarChart());
     }
 
     private Component getPieChart() {
@@ -106,8 +112,11 @@ public class DemoView extends Div {
         return areaChart;
     }
 
-    private Component getBarChart() {
+    private Component getVerticalBarChart() {
         ApexCharts barChart = new ApexCharts()
+                .withChart(ChartBuilder.get()
+                        .withType(Type.bar)
+                        .build())
                 .withPlotOptions(PlotOptionsBuilder.get()
                         .withBar(BarBuilder.get()
                                 .withHorizontal(false)
@@ -131,8 +140,56 @@ public class DemoView extends Div {
                         .build())
                 .withXaxis(XAxisBuilder.get().withCategories("Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct").build())
                 .withFill(FillBuilder.get()
-                        .withOpacity(1.0).build());
-        barChart.setHeight("300px");
+                        .withOpacity(1.0).build())
+                .withTooltip(TooltipBuilder.get()
+                        .withY(YBuilder.get()
+                                .withFormatter("function (val) {\n" + // Formatter currently not yet working
+                                        "return \"$ \" + val + \" thousands\"\n" +
+                                        "}").build())
+                        .build());
+        barChart.setWidth("550px");
+        barChart.setHeight("350px");
+        return barChart;
+    }
+
+    private Component getRadialBarChart() {
+        ApexCharts barChart = new ApexCharts()
+                .withChart(ChartBuilder.get()
+                        .withType(Type.radialBar)
+                        .build())
+                .withPlotOptions(PlotOptionsBuilder.get()
+                        .withRadialBar(RadialBarBuilder.get()
+                                .withHollow(HollowBuilder.get()
+                                        .withSize("70%")
+                                        .build())
+                                .build())
+                        .build())
+                .withSeries(70.0)
+                .withLabels("Circket");
+        barChart.setWidth("550px");
+        barChart.setHeight("350px");
+        return barChart;
+    }
+
+    private Component getHorizontalBarChart() {
+        ApexCharts barChart = new ApexCharts()
+                .withChart(ChartBuilder.get()
+                        .withType(Type.bar)
+                        .build())
+                .withPlotOptions(PlotOptionsBuilder.get()
+                        .withBar(BarBuilder.get()
+                                .withHorizontal(true)
+                                .build())
+                        .build())
+                .withDataLabels(DataLabelsBuilder.get()
+                        .withEnabled(false)
+                        .build())
+                .withSeries(new Series(400.0, 430.0, 448.0, 470.0, 540.0, 580.0, 690.0, 1100.0, 1200.0, 1380.0))
+                .withXaxis(XAxisBuilder.get()
+                        .withCategories()
+                        .build());
+        barChart.setWidth("550px");
+        barChart.setHeight("350px");
         return barChart;
     }
 

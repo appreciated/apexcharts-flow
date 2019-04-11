@@ -8,9 +8,17 @@ public class Series {
     String name;
     List<Double> data;
 
+    public Series() {
+
+    }
+
     public Series(String name, ArrayList<Double> data) {
         this.name = name;
         this.data = data;
+    }
+
+    public Series(Double... data) {
+        this(null, data);
     }
 
     public Series(String name, Double... data) {

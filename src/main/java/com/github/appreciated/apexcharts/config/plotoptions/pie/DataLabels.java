@@ -1,6 +1,6 @@
-package com.github.appreciated.apexcharts.config.plotoptions;
+package com.github.appreciated.apexcharts.config.plotoptions.pie;
 
-class DataLabels {
+public class DataLabels {
     Double offset;
 
     public Double getOffset() {
