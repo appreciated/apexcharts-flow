@@ -5,7 +5,7 @@ import com.github.appreciated.apexcharts.config.xaxis.*;
 import java.util.List;
 
 public class XAxis {
-    private Type type;
+    private XAxisType type;
     private List<String> categories;
     private List<String> labels;
     private AxisBorder axisBorder;
@@ -24,7 +24,7 @@ public class XAxis {
     public XAxis() {
     }
 
-    public Type getType() {
+    public XAxisType getType() {
         return type;
     }
 
@@ -80,7 +80,7 @@ public class XAxis {
         return tooltip;
     }
 
-    public void setType(Type type) {
+    public void setType(XAxisType type) {
         this.type = type;
     }
 

@@ -4,24 +4,24 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Series {
+public class Series<T> {
     String name;
-    List<Double> data;
+    List<T> data;
 
     public Series() {
 
     }
 
-    public Series(String name, ArrayList<Double> data) {
+    public Series(String name, ArrayList<T> data) {
         this.name = name;
         this.data = data;
     }
 
-    public Series(Double... data) {
+    public Series(T... data) {
         this(null, data);
     }
 
-    public Series(String name, Double... data) {
+    public Series(String name, T... data) {
         this.name = name;
         this.data = Arrays.asList(data);
     }
@@ -34,11 +34,11 @@ public class Series {
         this.name = name;
     }
 
-    public List<Double> getData() {
+    public List<T> getData() {
         return data;
     }
 
-    public void setData(List<Double> data) {
+    public void setData(List<T> data) {
         this.data = data;
     }
 }

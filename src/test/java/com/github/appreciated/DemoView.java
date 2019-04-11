@@ -12,13 +12,19 @@ import com.github.appreciated.apexcharts.config.plotoptions.builder.RadialBarBui
 import com.github.appreciated.apexcharts.config.stroke.Curve;
 import com.github.appreciated.apexcharts.config.subtitle.Align;
 import com.github.appreciated.apexcharts.config.tooltip.builder.YBuilder;
+import com.github.appreciated.apexcharts.config.xaxis.XAxisType;
 import com.github.appreciated.apexcharts.config.yaxis.builder.TitleBuilder;
+import com.github.appreciated.apexcharts.helper.Coordinate;
 import com.github.appreciated.apexcharts.helper.Series;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.router.Route;
 
+import java.time.Instant;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.stream.IntStream;
 
 @Route("")
@@ -33,6 +39,7 @@ public class DemoView extends Div {
         add(getHorizontalBarChart());
         add(getVerticalBarChart());
         add(getRadialBarChart());
+        add(getCandleStickChart());
     }
 
     private Component getPieChart() {
@@ -103,13 +110,35 @@ public class DemoView extends Div {
                         .withAlign(Align.left).build())
                 .withLabels(IntStream.range(1, 10).boxed().map(day -> LocalDate.of(2000, 1, day).toString()).toArray(String[]::new))
                 .withXaxis(XAxisBuilder.get()
-                        .withType(com.github.appreciated.apexcharts.config.xaxis.Type.datetime).build())
+                        .withType(XAxisType.datetime).build())
                 .withYaxis(YAxisBuilder.get()
                         .withOpposite(true).build())
                 .withLegend(LegendBuilder.get().withHorizontalAlign(HorizontalAlign.left).build());
         areaChart.setWidth("550px");
         areaChart.setHeight("350px");
         return areaChart;
+    }
+
+    private Component getHorizontalBarChart() {
+        ApexCharts barChart = new ApexCharts()
+                .withChart(ChartBuilder.get()
+                        .withType(Type.bar)
+                        .build())
+                .withPlotOptions(PlotOptionsBuilder.get()
+                        .withBar(BarBuilder.get()
+                                .withHorizontal(true)
+                                .build())
+                        .build())
+                .withDataLabels(DataLabelsBuilder.get()
+                        .withEnabled(false)
+                        .build())
+                .withSeries(new Series(400.0, 430.0, 448.0, 470.0, 540.0, 580.0, 690.0, 1100.0, 1200.0, 1380.0))
+                .withXaxis(XAxisBuilder.get()
+                        .withCategories()
+                        .build());
+        barChart.setWidth("550px");
+        barChart.setHeight("350px");
+        return barChart;
     }
 
     private Component getVerticalBarChart() {
@@ -171,27 +200,52 @@ public class DemoView extends Div {
         return barChart;
     }
 
-    private Component getHorizontalBarChart() {
+    private Component getCandleStickChart() {
         ApexCharts barChart = new ApexCharts()
                 .withChart(ChartBuilder.get()
-                        .withType(Type.bar)
+                        .withType(Type.candlestick)
                         .build())
-                .withPlotOptions(PlotOptionsBuilder.get()
-                        .withBar(BarBuilder.get()
-                                .withHorizontal(true)
-                                .build())
+                .withTitle(TitleSubtitleBuilder.get()
+                        .withText("CandleStick Chart")
+                        .withAlign(Align.left)
                         .build())
-                .withDataLabels(DataLabelsBuilder.get()
-                        .withEnabled(false)
-                        .build())
-                .withSeries(new Series(400.0, 430.0, 448.0, 470.0, 540.0, 580.0, 690.0, 1100.0, 1200.0, 1380.0))
+                .withSeries(new Series<>(
+                        new Coordinate<>(getIsoFormattedString(1538778600000L), 6629.81, 6650.5, 6623.04, 6633.33),
+                        new Coordinate<>(getIsoFormattedString(1538780400000L), 6632.01, 6643.59, 6620, 6630.11),
+                        new Coordinate<>(getIsoFormattedString(1538782200000L), 6630.71, 6648.95, 6623.34, 6635.65),
+                        new Coordinate<>(getIsoFormattedString(1538784000000L), 6635.65, 6651, 6629.67, 6638.24),
+                        new Coordinate<>(getIsoFormattedString(1538785800000L), 6638.24, 6640, 6620, 6624.47),
+                        new Coordinate<>(getIsoFormattedString(1538787600000L), 6624.53, 6636.03, 6621.68, 6624.31),
+                        new Coordinate<>(getIsoFormattedString(1538789400000L), 6624.61, 6632.2, 6617, 6626.02),
+                        new Coordinate<>(getIsoFormattedString(1538791200000L), 6627, 6627.62, 6584.22, 6603.02),
+                        new Coordinate<>(getIsoFormattedString(1538793000000L), 6605, 6608.03, 6598.95, 6604.01),
+                        new Coordinate<>(getIsoFormattedString(1538794800000L), 6604.5, 6614.4, 6602.26, 6608.02),
+                        new Coordinate<>(getIsoFormattedString(1538796600000L), 6608.02, 6610.68, 6601.99, 6608.91),
+                        new Coordinate<>(getIsoFormattedString(1538798400000L), 6608.91, 6618.99, 6608.01, 6612),
+                        new Coordinate<>(getIsoFormattedString(1538800200000L), 6612, 6615.13, 6605.09, 6612),
+                        new Coordinate<>(getIsoFormattedString(1538802000000L), 6612, 6624.12, 6608.43, 6622.95),
+                        new Coordinate<>(getIsoFormattedString(1538803800000L), 6623.91, 6623.91, 6615, 6615.67),
+                        new Coordinate<>(getIsoFormattedString(1538805600000L), 6618.69, 6618.74, 6610, 6610.4),
+                        new Coordinate<>(getIsoFormattedString(1538807400000L), 6611, 6622.78, 6610.4, 6614.9),
+                        new Coordinate<>(getIsoFormattedString(1538809200000L), 6614.9, 6626.2, 6613.33, 6623.45),
+                        new Coordinate<>(getIsoFormattedString(1538811000000L), 6623.48, 6627, 6618.38, 6620.35),
+                        new Coordinate<>(getIsoFormattedString(1538812800000L), 6619.43, 6620.35, 6610.05, 6615.53)
+                ))
                 .withXaxis(XAxisBuilder.get()
-                        .withCategories()
+                        .withType(XAxisType.datetime)
+                        .build())
+                .withYaxis(YAxisBuilder.get()
+                        .withTooltip(TooltipBuilder.get()
+                                .withEnabled(true)
+                                .build())
                         .build());
         barChart.setWidth("550px");
         barChart.setHeight("350px");
         return barChart;
     }
 
+    private String getIsoFormattedString(long l) {
+        return LocalDateTime.ofInstant(Instant.ofEpochMilli(l), ZoneId.systemDefault()).format(DateTimeFormatter.ISO_LOCAL_DATE_TIME);
+    }
 
 }

@@ -102,6 +102,17 @@
                 }
                 if (this.series) {
                     config.series = JSON.parse(this.series);
+                  /*  if (config.series &&
+                        config.series.length &&
+                        config.series.length > 0 &&
+                        config.series[0].data &&
+                        config.series[0].data.length &&
+                        config.series[0].data.length > 0 &&
+                        config.series[0].data[0].x) {
+                        config.series[0].data.forEach(function(item, index) {
+                            config.series[0].data[index].x = new Date(config.series[0].data[index].x);
+                        });
+                    }*/
                 }
                 if (this.labels) {
                     config.labels = this.labels;

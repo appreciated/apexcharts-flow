@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class XAxisBuilder {
-    private Type type;
+    private XAxisType type;
     private List<String> categories;
     private List<String> labels;
     private AxisBorder axisBorder;
@@ -30,7 +30,7 @@ public class XAxisBuilder {
         return new XAxisBuilder();
     }
 
-    public XAxisBuilder withType(Type type) {
+    public XAxisBuilder withType(XAxisType type) {
         this.type = type;
         return this;
     }
