@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.config.yaxis;
 
-enum Align {
+public enum Align {
     left("left"),
     center("center"),
     right("right");
