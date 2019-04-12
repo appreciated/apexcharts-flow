@@ -2,7 +2,7 @@ package com.github.appreciated.apexcharts.config.xaxis.crosshairs;
 
 import java.util.List;
 
-class Gradient {
+public class Gradient {
     String colorFrom;
     String colorTo;
     List<Double> stops;

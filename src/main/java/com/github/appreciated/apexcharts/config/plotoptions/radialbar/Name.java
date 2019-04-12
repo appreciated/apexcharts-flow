@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.config.plotoptions.radialbar;
 
-class Name {
+public class Name {
     Boolean show;
     String fontSize;
     String color;

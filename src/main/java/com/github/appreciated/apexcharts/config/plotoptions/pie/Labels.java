@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.config.plotoptions.pie;
 
-class Labels {
+public class Labels {
     Boolean show;
     Name name;
     Value value;

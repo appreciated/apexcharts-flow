@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.config.chart.toolbar;
 
-enum AutoSelected {
+public enum AutoSelected {
     zoom("zoom"),
     selection("selection"),
     pan("pan");

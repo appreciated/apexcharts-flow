@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.config.annotations;
 
-class Label {
+public class Label {
     String borderColor;
     Double borderWidth;
     String text;

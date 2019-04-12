@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.config.plotoptions.pie;
 
-class Total {
+public class Total {
     Boolean show;
     String label;
     String color;

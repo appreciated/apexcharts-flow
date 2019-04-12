@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.config;
 
-class DiscretePoint {
+public class DiscretePoint {
     Double seriesIndex;
     Double dataPointIndex;
     String fillColor;

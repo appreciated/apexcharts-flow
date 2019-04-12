@@ -8,24 +8,24 @@ public class Selection {
     Xaxis xaxis;
     Yaxis yaxis;
 
-    class Fill {
+    public class Fill {
         String color;
         Double opacity;
     }
 
-    class Stroke {
+    public class Stroke {
         Double width;
         String color;
         Double opacity;
         Double dashArray;
     }
 
-    class Xaxis {
+    public class Xaxis {
         Double min;
         Double max;
     }
 
-    class Yaxis {
+    public class Yaxis {
         Double min;
         Double max;
     }

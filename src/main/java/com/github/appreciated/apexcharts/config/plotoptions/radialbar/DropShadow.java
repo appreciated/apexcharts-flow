@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.config.plotoptions.radialbar;
 
-class DropShadow {
+public class DropShadow {
     Boolean enabled;
     Double top;
     Double left;

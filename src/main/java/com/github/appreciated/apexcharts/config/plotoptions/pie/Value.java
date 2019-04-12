@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.config.plotoptions.pie;
 
-class Value {
+public class Value {
     Boolean show;
     String fontSize;
     String fontFamily;

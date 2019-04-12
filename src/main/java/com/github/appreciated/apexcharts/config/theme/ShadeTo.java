@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.config.theme;
 
-enum ShadeTo {
+public enum ShadeTo {
     light("light"),
     dark("dark");
     private String name;

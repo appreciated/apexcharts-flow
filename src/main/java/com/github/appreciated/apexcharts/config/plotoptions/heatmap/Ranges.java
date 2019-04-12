@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.config.plotoptions.heatmap;
 
-class Ranges {
+public class Ranges {
     Double from;
     Double to;
     String color;

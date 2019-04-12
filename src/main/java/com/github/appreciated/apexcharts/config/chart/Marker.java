@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.config.chart;
 
-class Marker {
+public class Marker {
     Double size;
     String fillColor;
     String strokeColor;
