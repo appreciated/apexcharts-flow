@@ -14,7 +14,6 @@ public class RadialBar {
     private Track track;
     private DataLabels dataLabels;
 
-
     public RadialBar() {
     }
 

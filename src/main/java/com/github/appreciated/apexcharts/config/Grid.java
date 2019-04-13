@@ -13,7 +13,6 @@ public class Grid {
     private Column column;
     private Padding padding;
 
-
     public Grid() {
     }
 

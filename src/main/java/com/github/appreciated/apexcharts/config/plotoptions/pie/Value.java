@@ -6,7 +6,6 @@ public class Value {
     String fontFamily;
     String color;
     Double offsetY;
-
     String formatter;
 
     public Boolean getShow() {

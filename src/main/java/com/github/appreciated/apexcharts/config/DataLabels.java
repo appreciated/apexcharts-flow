@@ -16,7 +16,6 @@ public class DataLabels {
     private Style style;
     private DropShadow dropShadow;
 
-
     public DataLabels() {
     }
 

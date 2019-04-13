@@ -14,7 +14,6 @@ public class Fill {
     private Image image;
     private Pattern pattern;
 
-
     public Fill() {
     }
 

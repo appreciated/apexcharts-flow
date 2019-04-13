@@ -24,7 +24,6 @@ public class Chart  {
     private Selection selection;
     private Animations animations;
 
-
     public Chart() {
     }
 

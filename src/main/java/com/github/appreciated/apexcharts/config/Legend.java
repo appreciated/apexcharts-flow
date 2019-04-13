@@ -26,7 +26,6 @@ public class Legend {
     private String textAnchor;
     private Labels labels;
 
-
     public Legend() {
     }
 

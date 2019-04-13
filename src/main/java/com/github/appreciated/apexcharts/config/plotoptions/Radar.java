@@ -8,7 +8,6 @@ public class Radar {
     private Double offsetY;
     private Polygons polygons;
 
-
     public Radar() {
     }
 

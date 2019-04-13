@@ -11,7 +11,6 @@ public class Bar {
     private Colors colors;
     private DataLabels dataLabels;
 
-
     public Bar() {
     }
 

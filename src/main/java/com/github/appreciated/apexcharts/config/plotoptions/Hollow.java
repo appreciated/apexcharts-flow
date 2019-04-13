@@ -14,7 +14,6 @@ public class Hollow {
     private Boolean clipped;
     private Position position;
 
-
     public Hollow() {
     }
 

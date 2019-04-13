@@ -12,7 +12,6 @@ public class Pie {
     private DataLabels dataLabels;
     private Donut donut;
 
-
     public Pie() {
     }
 

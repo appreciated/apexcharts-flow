@@ -7,7 +7,6 @@ public class Candlestick {
     private Colors colors;
     private Wick wick;
 
-
     public Candlestick() {
     }
 

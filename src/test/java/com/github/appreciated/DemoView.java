@@ -31,7 +31,6 @@ import java.util.stream.IntStream;
 @Route("")
 public class DemoView extends Div {
 
-
     public DemoView() {
         add(getPieChart());
         add(getDonutChart());

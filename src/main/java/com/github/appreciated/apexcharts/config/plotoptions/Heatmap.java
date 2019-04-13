@@ -9,7 +9,6 @@ public class Heatmap {
     private Boolean distributed;
     private ColorScale colorScale;
 
-
     public Heatmap() {
     }
 

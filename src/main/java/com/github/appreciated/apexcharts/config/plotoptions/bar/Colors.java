@@ -7,7 +7,6 @@ public class Colors {
     private List<String> backgroundBarColors;
     private Double backgroundBarOpacity;
 
-
     public Colors() {
     }
 
