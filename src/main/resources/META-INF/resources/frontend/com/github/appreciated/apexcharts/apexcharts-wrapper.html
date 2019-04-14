@@ -3,16 +3,8 @@
 <dom-module id="apex-charts-wrapper">
     <template>
         <style>
-            :host {
-                display: block;
-            }
-
             ::slotted(svg) {
                 overflow: visible;
-            }
-
-            ::slotted(.progressbar-text) {
-                white-space: nowrap;
             }
         </style>
         <slot></slot>
@@ -87,7 +79,13 @@
                     }, // ApexXAxis;
                     yaxis: {
                         type: Object
-                    } // ApexYAxis | ApexYAxis[];
+                    }, // ApexYAxis | ApexYAxis[];
+                    width: {
+                        type: String
+                    },
+                    height: {
+                        type: String
+                    }
                 }
             }
 
@@ -102,17 +100,17 @@
                 }
                 if (this.series) {
                     config.series = JSON.parse(this.series);
-                  /*  if (config.series &&
-                        config.series.length &&
-                        config.series.length > 0 &&
-                        config.series[0].data &&
-                        config.series[0].data.length &&
-                        config.series[0].data.length > 0 &&
-                        config.series[0].data[0].x) {
-                        config.series[0].data.forEach(function(item, index) {
-                            config.series[0].data[index].x = new Date(config.series[0].data[index].x);
-                        });
-                    }*/
+                    /*  if (config.series &&
+                          config.series.length &&
+                          config.series.length > 0 &&
+                          config.series[0].data &&
+                          config.series[0].data.length &&
+                          config.series[0].data.length > 0 &&
+                          config.series[0].data[0].x) {
+                          config.series[0].data.forEach(function(item, index) {
+                              config.series[0].data[index].x = new Date(config.series[0].data[index].x);
+                          });
+                      }*/
                 }
                 if (this.labels) {
                     config.labels = this.labels;
@@ -156,7 +154,7 @@
                 if (this.theme) {
                     config.theme = this.theme;
                 }
-                if (this.chartTitle){
+                if (this.chartTitle) {
                     config.title = JSON.parse(this.chartTitle);
                 }
                 if (this.tooltip) {
@@ -167,6 +165,18 @@
                 }
                 if (this.yaxis) {
                     config.yaxis = JSON.parse(this.yaxis);
+                }
+                if (this.width) {
+                    if (!config.chart){
+                        config.chart = {};
+                    }
+                    config.chart.width = this.width;
+                }
+                if (this.height) {
+                    if (!config.chart){
+                        config.chart = {};
+                    }
+                    config.chart.height = this.height;
                 }
                 console.log(config);
                 var chart = new ApexCharts(this, config);

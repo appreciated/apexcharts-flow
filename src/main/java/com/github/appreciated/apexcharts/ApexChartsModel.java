@@ -100,6 +100,14 @@ public interface ApexChartsModel extends TemplateModel {
 
     void setSeries(String series);
 
+    String getWidth();
+
+    void setWidth(String width);
+
+    String getHeight();
+
+    void setHeight(String height);
+
     @Encode(XAxisEncoder.class)
     void setXaxis(XAxis xaxis);
 }

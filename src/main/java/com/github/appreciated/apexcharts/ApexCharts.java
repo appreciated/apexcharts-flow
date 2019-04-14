@@ -17,8 +17,23 @@ import java.util.Arrays;
 public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasSize {
 
     public ApexCharts() {
-        setWidth("300px");
-        setHeight("300px");
+    }
+
+    @Override
+    public void setHeight(String height) {
+        HasSize.super.setHeight(height);
+        getModel().setHeight(height);
+        if (height.endsWith("px")) {
+            getModel().setWidth(height.substring(0,height.length()-2));
+        }
+    }
+
+    @Override
+    public void setWidth(String width) {
+        HasSize.super.setWidth(width);
+        if (width.endsWith("px")) {
+            getModel().setWidth(width.substring(0,width.length()-2));
+        }
     }
 
     public ApexCharts withAnnotations(Annotations annotations) {
@@ -129,7 +144,7 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
 
     public ApexCharts withTitle(TitleSubtitle title) {
         try {
-            getModel().setChartTitle( new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(title));
+            getModel().setChartTitle(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(title));
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
@@ -148,7 +163,7 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
 
     public ApexCharts withYaxis(YAxis... yaxis) {
         try {
-            getModel().setYaxis( new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(yaxis));
+            getModel().setYaxis(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(yaxis));
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }

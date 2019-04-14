@@ -49,7 +49,7 @@ public class DemoView extends Div {
                 .withChart(ChartBuilder.get().withType(Type.pie).build())
                 .withLabels("Team A", "Team B", "Team C", "Team D", "Team E")
                 .withSeries(44.0, 55.0, 13.0, 43.0, 22.0);
-        pieChart.setHeight("300px");
+        pieChart.setWidth("360px");
         return pieChart;
     }
 
@@ -57,7 +57,7 @@ public class DemoView extends Div {
         ApexCharts donutChart = new ApexCharts()
                 .withChart(ChartBuilder.get().withType(Type.donut).build())
                 .withSeries(44.0, 55.0, 41.0, 17.0, 15.0);
-        donutChart.setHeight("300px");
+        donutChart.setWidth("360px");
         return donutChart;
     }
 
