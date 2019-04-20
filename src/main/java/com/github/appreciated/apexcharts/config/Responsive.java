@@ -1,22 +1,28 @@
 package com.github.appreciated.apexcharts.config;
 
+import com.github.appreciated.apexcharts.config.responsive.Options;
+
 public class Responsive {
-    Double breakpoint;
-    String options; //TODO
+    private Double breakpoint;
+    private Options options;
+
+    public Responsive() {
+    }
 
     public Double getBreakpoint() {
         return breakpoint;
+    }
+
+    public Options getOptions() {
+        return options;
     }
 
     public void setBreakpoint(Double breakpoint) {
         this.breakpoint = breakpoint;
     }
 
-    public String getOptions() {
-        return options;
-    }
-
-    public void setOptions(String options) {
+    public void setOptions(Options options) {
         this.options = options;
     }
+
 }

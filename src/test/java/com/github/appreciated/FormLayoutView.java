@@ -1,12 +1,11 @@
 package com.github.appreciated;
 
-import com.vaadin.flow.component.html.Div;
+import com.vaadin.flow.component.formlayout.FormLayout;
 import com.vaadin.flow.router.Route;
 
-@Route("")
-public class DemoView extends Div {
-
-    public DemoView() {
+@Route(value = "form-layout")
+public class FormLayoutView extends FormLayout {
+    public FormLayoutView() {
         ExampleChartGenerator generator = new ExampleChartGenerator();
         add(generator.getPieChart());
         add(generator.getDonutChart());
@@ -18,7 +17,5 @@ public class DemoView extends Div {
         add(generator.getCandleStickChart());
         add(generator.getRadarChart());
         add(generator.getScatterChart());
-        setSizeFull();
     }
-
 }

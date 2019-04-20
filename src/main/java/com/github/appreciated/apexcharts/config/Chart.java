@@ -11,6 +11,8 @@ public class Chart  {
     private String background;
     private Double offsetX;
     private Double offsetY;
+    private String width;
+    private String height;
     private DropShadow dropShadow;
     private Brush brush;
     private String id;
@@ -163,6 +165,22 @@ public class Chart  {
         this.animations = animations;
     }
 
+
+    public String getWidth() {
+        return width;
+    }
+
+    public String getHeight() {
+        return height;
+    }
+
+    public void setWidth(String width) {
+        this.width = width;
+    }
+
+    public void setHeight(String height) {
+        this.height = height;
+    }
 }
 
 

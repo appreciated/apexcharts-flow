@@ -20,20 +20,15 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
     }
 
     @Override
-    public void setHeight(String height) {
-        HasSize.super.setHeight(height);
-        getModel().setHeight(height);
-        if (height.endsWith("px")) {
-            getModel().setWidth(height.substring(0,height.length()-2));
-        }
+    public void setWidth(String width) {
+        HasSize.super.setWidth(width);
+        getModel().setWidth(width);
     }
 
     @Override
-    public void setWidth(String width) {
-        HasSize.super.setWidth(width);
-        if (width.endsWith("px")) {
-            getModel().setWidth(width.substring(0,width.length()-2));
-        }
+    public void setHeight(String height) {
+        HasSize.super.setHeight(height);
+        getModel().setHeight(height);
     }
 
     public ApexCharts withAnnotations(Annotations annotations) {
@@ -96,7 +91,11 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
     }
 
     public ApexCharts withResponsive(Responsive... responsive) {
-        getModel().setResponsive(Arrays.asList(responsive));
+        try {
+            getModel().setResponsive(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(responsive));
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
         return this;
     }
 

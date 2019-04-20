@@ -61,9 +61,9 @@ public interface ApexChartsModel extends TemplateModel {
     @Encode(PlotOptionsEncoder.class)
     void setPlotOptions(PlotOptions plotOptions);
 
-    List<Responsive> getResponsive();
+    String getResponsive();
 
-    void setResponsive(List<Responsive> responsive);
+    void setResponsive(String responsive);
 
     States getStates();
 

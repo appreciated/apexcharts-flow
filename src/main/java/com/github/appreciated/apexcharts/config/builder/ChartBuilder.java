@@ -12,6 +12,8 @@ public class ChartBuilder {
     private String background;
     private Double offsetX;
     private Double offsetY;
+    private String width;
+    private String height;
     private DropShadow dropShadow;
     private Brush brush;
     private String id;
@@ -116,8 +118,20 @@ public class ChartBuilder {
         return this;
     }
 
+    public ChartBuilder withWidth(String width) {
+        this.width = width;
+        return this;
+    }
+
+    public ChartBuilder withHeight(String height) {
+        this.height = height;
+        return this;
+    }
+
     public Chart build() {
         Chart chart = new Chart();
+        chart.setWidth(width);
+        chart.setHeight(height);
         chart.setType(type);
         chart.setForeColor(foreColor);
         chart.setFontFamily(fontFamily);
