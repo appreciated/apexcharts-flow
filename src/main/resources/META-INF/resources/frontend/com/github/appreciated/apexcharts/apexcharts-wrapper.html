@@ -179,7 +179,9 @@
                     config.chart.height = this.height;
                 }
                 console.log(config);
-                var chart = new ApexCharts(this, config);
+                var div = document.createElement('div');
+                this.appendChild(div)
+                var chart = new ApexCharts(div, config);
                 chart.render();
             }
         }
