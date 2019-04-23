@@ -19,6 +19,7 @@ public class DemoView extends Div {
         add(generator.getRadarChart());
         add(generator.getScatterChart());
         setSizeFull();
+        getStyle().set("overflow", "auto");
     }
 
 }
