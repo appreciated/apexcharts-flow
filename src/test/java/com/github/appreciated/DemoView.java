@@ -15,6 +15,7 @@ public class DemoView extends Div {
         add(generator.getHorizontalBarChart());
         add(generator.getVerticalBarChart());
         add(generator.getRadialBarChart());
+        add(generator.getMultiRadialBarChart());
         add(generator.getCandleStickChart());
         add(generator.getRadarChart());
         add(generator.getScatterChart());

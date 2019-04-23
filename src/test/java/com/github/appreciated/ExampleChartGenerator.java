@@ -182,7 +182,7 @@ public class ExampleChartGenerator {
     }
 
     public Component getRadialBarChart() {
-        ApexCharts barChart = new ApexCharts()
+        ApexCharts radialBarChart = new ApexCharts()
                 .withChart(ChartBuilder.get()
                         .withType(Type.radialBar)
                         .build())
@@ -195,7 +195,17 @@ public class ExampleChartGenerator {
                         .build())
                 .withSeries(70.0)
                 .withLabels("Circket");
-        return barChart;
+        return radialBarChart;
+    }
+
+    public Component getMultiRadialBarChart() {
+        ApexCharts multiRadialBarChart = new ApexCharts()
+                .withChart(ChartBuilder.get()
+                        .withType(Type.radialBar)
+                        .build())
+                .withSeries(44.0, 55.0, 67.0, 83.0)
+                .withLabels("Apples", "Oranges", "Bananas", "Berries");
+        return multiRadialBarChart;
     }
 
     public Component getCandleStickChart() {

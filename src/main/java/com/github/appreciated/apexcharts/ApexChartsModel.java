@@ -7,7 +7,7 @@ import com.vaadin.flow.templatemodel.TemplateModel;
 
 import java.util.List;
 
-interface ApexChartsModel extends TemplateModel {
+public interface ApexChartsModel extends TemplateModel {
 
     Annotations getAnnotations();
 
