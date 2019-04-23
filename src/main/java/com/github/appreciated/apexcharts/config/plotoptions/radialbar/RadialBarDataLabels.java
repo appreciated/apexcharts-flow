@@ -1,13 +1,13 @@
 package com.github.appreciated.apexcharts.config.plotoptions.radialbar;
 
-public class DataLabels {
+public class RadialBarDataLabels {
     private Boolean show;
     private Name name;
     private Value value;
     private Total total;
 
 
-    public DataLabels() {
+    public RadialBarDataLabels() {
     }
 
     public Boolean getShow() {

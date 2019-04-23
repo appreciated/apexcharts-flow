@@ -2,6 +2,7 @@ package com.github.appreciated.apexcharts.config.fill.builder;
 
 import com.github.appreciated.apexcharts.config.fill.Gradient;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class GradientBuilder {
@@ -41,6 +42,11 @@ public class GradientBuilder {
         return this;
     }
 
+    public GradientBuilder withGradientToColors(String... gradientToColors) {
+        this.gradientToColors = Arrays.asList(gradientToColors);
+        return this;
+    }
+
     public GradientBuilder withInverseColors(Boolean inverseColors) {
         this.inverseColors = inverseColors;
         return this;
@@ -58,6 +64,11 @@ public class GradientBuilder {
 
     public GradientBuilder withStops(List<Double> stops) {
         this.stops = stops;
+        return this;
+    }
+
+    public GradientBuilder withStops(Double... stops) {
+        this.stops = Arrays.asList(stops);
         return this;
     }
 

@@ -1,45 +1,45 @@
 package com.github.appreciated.apexcharts.config.plotoptions.radialbar.builder;
 
-import com.github.appreciated.apexcharts.config.plotoptions.radialbar.DataLabels;
 import com.github.appreciated.apexcharts.config.plotoptions.radialbar.Name;
+import com.github.appreciated.apexcharts.config.plotoptions.radialbar.RadialBarDataLabels;
 import com.github.appreciated.apexcharts.config.plotoptions.radialbar.Total;
 import com.github.appreciated.apexcharts.config.plotoptions.radialbar.Value;
 
-public class DataLabelsBuilder {
+public class RadialBarDataLabelsBuilder {
     private Boolean show;
     private Name name;
     private Value value;
     private Total total;
 
-    private DataLabelsBuilder() {
+    private RadialBarDataLabelsBuilder() {
     }
 
-    public static DataLabelsBuilder get() {
-        return new DataLabelsBuilder();
+    public static RadialBarDataLabelsBuilder get() {
+        return new RadialBarDataLabelsBuilder();
     }
 
-    public DataLabelsBuilder withShow(Boolean show) {
+    public RadialBarDataLabelsBuilder withShow(Boolean show) {
         this.show = show;
         return this;
     }
 
-    public DataLabelsBuilder withName(Name name) {
+    public RadialBarDataLabelsBuilder withName(Name name) {
         this.name = name;
         return this;
     }
 
-    public DataLabelsBuilder withValue(Value value) {
+    public RadialBarDataLabelsBuilder withValue(Value value) {
         this.value = value;
         return this;
     }
 
-    public DataLabelsBuilder withTotal(Total total) {
+    public RadialBarDataLabelsBuilder withTotal(Total total) {
         this.total = total;
         return this;
     }
 
-    public DataLabels build() {
-        DataLabels dataLabels = new DataLabels();
+    public RadialBarDataLabels build() {
+        RadialBarDataLabels dataLabels = new RadialBarDataLabels();
         dataLabels.setShow(show);
         dataLabels.setName(name);
         dataLabels.setValue(value);

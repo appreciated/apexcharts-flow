@@ -1,4 +1,4 @@
-package com.github.appreciated.apexcharts.config.plotoptions;
+package com.github.appreciated.apexcharts.config.plotoptions.radialbar;
 
 import com.github.appreciated.apexcharts.config.chart.DropShadow;
 import com.github.appreciated.apexcharts.config.plotoptions.hollow.HollowPosition;
@@ -99,4 +99,11 @@ public class Hollow {
         this.position = position;
     }
 
+    public DropShadow getDropShadow() {
+        return dropShadow;
+    }
+
+    public void setDropShadow(DropShadow dropShadow) {
+        this.dropShadow = dropShadow;
+    }
 }

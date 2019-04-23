@@ -1,7 +1,8 @@
-package com.github.appreciated.apexcharts.config.plotoptions.builder;
+package com.github.appreciated.apexcharts.config.plotoptions.radialbar.builder;
 
-import com.github.appreciated.apexcharts.config.plotoptions.Hollow;
+import com.github.appreciated.apexcharts.config.chart.DropShadow;
 import com.github.appreciated.apexcharts.config.plotoptions.hollow.HollowPosition;
+import com.github.appreciated.apexcharts.config.plotoptions.radialbar.Hollow;
 
 public class HollowBuilder {
     private Double margin;
@@ -14,6 +15,7 @@ public class HollowBuilder {
     private Double offsetY;
     private Boolean clipped;
     private HollowPosition position;
+    private DropShadow dropShadow;
 
     private HollowBuilder() {
     }
@@ -44,6 +46,11 @@ public class HollowBuilder {
 
     public HollowBuilder withWidth(Double width) {
         this.width = width;
+        return this;
+    }
+
+    public HollowBuilder withDropShadow(DropShadow dropShadow) {
+        this.dropShadow = dropShadow;
         return this;
     }
 
@@ -84,6 +91,7 @@ public class HollowBuilder {
         hollow.setOffsetY(offsetY);
         hollow.setClipped(clipped);
         hollow.setPosition(position);
+        hollow.setDropShadow(dropShadow);
         return hollow;
     }
 }

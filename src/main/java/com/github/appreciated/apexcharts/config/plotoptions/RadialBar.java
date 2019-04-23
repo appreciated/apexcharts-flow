@@ -1,6 +1,7 @@
 package com.github.appreciated.apexcharts.config.plotoptions;
 
-import com.github.appreciated.apexcharts.config.plotoptions.radialbar.DataLabels;
+import com.github.appreciated.apexcharts.config.plotoptions.radialbar.Hollow;
+import com.github.appreciated.apexcharts.config.plotoptions.radialbar.RadialBarDataLabels;
 import com.github.appreciated.apexcharts.config.plotoptions.radialbar.Track;
 
 public class RadialBar {
@@ -12,7 +13,7 @@ public class RadialBar {
     private Double offsetY;
     private Hollow hollow;
     private Track track;
-    private DataLabels dataLabels;
+    private RadialBarDataLabels dataLabels;
 
     public RadialBar() {
     }
@@ -49,7 +50,7 @@ public class RadialBar {
         return track;
     }
 
-    public DataLabels getDataLabels() {
+    public RadialBarDataLabels getDataLabels() {
         return dataLabels;
     }
 
@@ -85,7 +86,7 @@ public class RadialBar {
         this.track = track;
     }
 
-    public void setDataLabels(DataLabels dataLabels) {
+    public void setDataLabels(RadialBarDataLabels dataLabels) {
         this.dataLabels = dataLabels;
     }
 
