@@ -156,11 +156,15 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
     }
 
     public ApexCharts withXaxis(XAxis xaxis) {
-        getModel().setXaxis(xaxis);
+        try {
+            getModel().setXaxis(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(xaxis));
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
         return this;
     }
 
-    public ApexCharts withYaxis(YAxis... yaxis) {
+    public ApexCharts withYaxis(YAxis yaxis) {
         try {
             getModel().setYaxis(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(yaxis));
         } catch (JsonProcessingException e) {

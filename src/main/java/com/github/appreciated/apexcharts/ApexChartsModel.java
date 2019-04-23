@@ -108,6 +108,5 @@ public interface ApexChartsModel extends TemplateModel {
 
     void setHeight(String height);
 
-    @Encode(XAxisEncoder.class)
-    void setXaxis(XAxis xaxis);
+    void setXaxis(String xaxis);
 }

@@ -1,20 +1,11 @@
 package com.github.appreciated.apexcharts.helper;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class Series<T> {
     private String name;
-    private List<T> data;
+    private T[] data;
 
     public Series() {
 
-    }
-
-    public Series(String name, ArrayList<T> data) {
-        this.name = name;
-        this.data = data;
     }
 
     public Series(T... data) {
@@ -23,7 +14,7 @@ public class Series<T> {
 
     public Series(String name, T... data) {
         this.name = name;
-        this.data = Arrays.asList(data);
+        this.data = data;
     }
 
     public String getName() {
@@ -34,11 +25,11 @@ public class Series<T> {
         this.name = name;
     }
 
-    public List<T> getData() {
+    public T[] getData() {
         return data;
     }
 
-    public void setData(List<T> data) {
+    public void setData(T[] data) {
         this.data = data;
     }
 }

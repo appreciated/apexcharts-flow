@@ -12,6 +12,7 @@ public class DemoView extends Div {
         add(generator.getDonutChart());
         add(generator.getLineChart());
         add(generator.getAreaChart());
+        add(generator.getBubbleChart());
         add(generator.getHorizontalBarChart());
         add(generator.getVerticalBarChart());
         add(generator.getRadialBarChart());
