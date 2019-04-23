@@ -10,4 +10,8 @@ public class Marker {
     public void setShow(Boolean show) {
         this.show = show;
     }
+
+    public Marker(Boolean show) {
+        this.show = show;
+    }
 }

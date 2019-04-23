@@ -5,27 +5,32 @@ public class Crosshairs {
     private String position;
     private Stroke stroke;
 
-    public Boolean getShow() {
-        return show;
+
+    public Crosshairs() {
     }
 
-    public void setShow(Boolean show) {
-        this.show = show;
+    public Boolean getShow() {
+        return show;
     }
 
     public String getPosition() {
         return position;
     }
 
-    public void setPosition(String position) {
-        this.position = position;
-    }
-
     public Stroke getStroke() {
         return stroke;
+    }
+
+    public void setShow(Boolean show) {
+        this.show = show;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
     }
 
     public void setStroke(Stroke stroke) {
         this.stroke = stroke;
     }
+
 }

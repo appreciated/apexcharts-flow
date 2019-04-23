@@ -10,4 +10,8 @@ public class OnDatasetHover {
     public void setHighlightDAtaSeries(Boolean highlightDAtaSeries) {
         this.highlightDAtaSeries = highlightDAtaSeries;
     }
+
+    public OnDatasetHover(Boolean highlightDAtaSeries) {
+        this.highlightDAtaSeries = highlightDAtaSeries;
+    }
 }

@@ -4,19 +4,24 @@ public class Filter {
     private String type;
     private Double value;
 
-    public String getType() {
-        return type;
+
+    public Filter() {
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public String getType() {
+        return type;
     }
 
     public Double getValue() {
         return value;
     }
 
+    public void setType(String type) {
+        this.type = type;
+    }
+
     public void setValue(Double value) {
         this.value = value;
     }
+
 }

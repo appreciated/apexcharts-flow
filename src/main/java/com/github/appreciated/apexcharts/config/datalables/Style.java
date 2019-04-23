@@ -7,27 +7,32 @@ public class Style {
     private String fontFamily;
     private List<String> colors;
 
-    public String getFontSize() {
-        return fontSize;
+
+    public Style() {
     }
 
-    public void setFontSize(String fontSize) {
-        this.fontSize = fontSize;
+    public String getFontSize() {
+        return fontSize;
     }
 
     public String getFontFamily() {
         return fontFamily;
     }
 
-    public void setFontFamily(String fontFamily) {
-        this.fontFamily = fontFamily;
-    }
-
     public List<String> getColors() {
         return colors;
+    }
+
+    public void setFontSize(String fontSize) {
+        this.fontSize = fontSize;
+    }
+
+    public void setFontFamily(String fontFamily) {
+        this.fontFamily = fontFamily;
     }
 
     public void setColors(List<String> colors) {
         this.colors = colors;
     }
+
 }

@@ -7,43 +7,48 @@ public class Value {
     private Double offsetY;
     private String formatter;
 
-    public Boolean getShow() {
-        return show;
+
+    public Value() {
     }
 
-    public void setShow(Boolean show) {
-        this.show = show;
+    public Boolean getShow() {
+        return show;
     }
 
     public String getFontSize() {
         return fontSize;
     }
 
-    public void setFontSize(String fontSize) {
-        this.fontSize = fontSize;
-    }
-
     public String getColor() {
         return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
     }
 
     public Double getOffsetY() {
         return offsetY;
     }
 
-    public void setOffsetY(Double offsetY) {
-        this.offsetY = offsetY;
-    }
-
     public String getFormatter() {
         return formatter;
+    }
+
+    public void setShow(Boolean show) {
+        this.show = show;
+    }
+
+    public void setFontSize(String fontSize) {
+        this.fontSize = fontSize;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setOffsetY(Double offsetY) {
+        this.offsetY = offsetY;
     }
 
     public void setFormatter(String formatter) {
         this.formatter = formatter;
     }
+
 }

@@ -10,4 +10,8 @@ public class DataLabels {
     public void setOffset(Double offset) {
         this.offset = offset;
     }
+
+    public DataLabels(Double offset) {
+        this.offset = offset;
+    }
 }

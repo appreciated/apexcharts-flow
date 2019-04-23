@@ -4,19 +4,24 @@ public class ContainerMargin {
     private Double left;
     private Double top;
 
-    public Double getLeft() {
-        return left;
+
+    public ContainerMargin() {
     }
 
-    public void setLeft(Double left) {
-        this.left = left;
+    public Double getLeft() {
+        return left;
     }
 
     public Double getTop() {
         return top;
     }
 
+    public void setLeft(Double left) {
+        this.left = left;
+    }
+
     public void setTop(Double top) {
         this.top = top;
     }
+
 }

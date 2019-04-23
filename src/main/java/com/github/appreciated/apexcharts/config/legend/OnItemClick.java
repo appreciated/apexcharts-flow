@@ -10,4 +10,8 @@ public class OnItemClick {
     public void setToggleDataSeries(Boolean toggleDataSeries) {
         this.toggleDataSeries = toggleDataSeries;
     }
+
+    public OnItemClick(Boolean toggleDataSeries) {
+        this.toggleDataSeries = toggleDataSeries;
+    }
 }

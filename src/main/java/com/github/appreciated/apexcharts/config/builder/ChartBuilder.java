@@ -2,8 +2,6 @@ package com.github.appreciated.apexcharts.config.builder;
 
 import com.github.appreciated.apexcharts.config.Chart;
 import com.github.appreciated.apexcharts.config.chart.*;
-import com.github.appreciated.apexcharts.config.chart.toolbar.Toolbar;
-import com.github.appreciated.apexcharts.config.chart.zoom.Zoom;
 
 public class ChartBuilder {
     private Type type;

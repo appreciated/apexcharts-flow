@@ -1,6 +1,6 @@
-package com.github.appreciated.apexcharts.config.chart.zoom.builder;
+package com.github.appreciated.apexcharts.config.chart.builder;
 
-import com.github.appreciated.apexcharts.config.chart.zoom.Zoom;
+import com.github.appreciated.apexcharts.config.chart.Zoom;
 import com.github.appreciated.apexcharts.config.chart.zoom.ZoomType;
 import com.github.appreciated.apexcharts.config.chart.zoom.ZoomedArea;
 

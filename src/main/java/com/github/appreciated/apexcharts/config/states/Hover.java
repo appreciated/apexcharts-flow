@@ -10,4 +10,8 @@ public class Hover {
     public void setFilter(Filter filter) {
         this.filter = filter;
     }
+
+    public Hover(Filter filter) {
+        this.filter = filter;
+    }
 }

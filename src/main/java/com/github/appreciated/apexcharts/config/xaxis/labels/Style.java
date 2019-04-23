@@ -8,35 +8,40 @@ public class Style {
     private String fontFamily;
     private String cssClass;
 
-    public List<String> getColors() {
-        return colors;
+
+    public Style() {
     }
 
-    public void setColors(List<String> colors) {
-        this.colors = colors;
+    public List<String> getColors() {
+        return colors;
     }
 
     public String getFontSize() {
         return fontSize;
     }
 
-    public void setFontSize(String fontSize) {
-        this.fontSize = fontSize;
-    }
-
     public String getFontFamily() {
         return fontFamily;
-    }
-
-    public void setFontFamily(String fontFamily) {
-        this.fontFamily = fontFamily;
     }
 
     public String getCssClass() {
         return cssClass;
     }
 
+    public void setColors(List<String> colors) {
+        this.colors = colors;
+    }
+
+    public void setFontSize(String fontSize) {
+        this.fontSize = fontSize;
+    }
+
+    public void setFontFamily(String fontFamily) {
+        this.fontFamily = fontFamily;
+    }
+
     public void setCssClass(String cssClass) {
         this.cssClass = cssClass;
     }
+
 }

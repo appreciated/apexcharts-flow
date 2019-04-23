@@ -7,43 +7,47 @@ public class AnnotationStyle {
     private String cssClass;
     private Padding padding;
 
-    public String getBackground() {
-        return background;
+    public AnnotationStyle() {
     }
 
-    public void setBackground(String background) {
-        this.background = background;
+    public String getBackground() {
+        return background;
     }
 
     public String getColor() {
         return color;
     }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
-
     public String getFontSize() {
         return fontSize;
-    }
-
-    public void setFontSize(String fontSize) {
-        this.fontSize = fontSize;
     }
 
     public String getCssClass() {
         return cssClass;
     }
 
-    public void setCssClass(String cssClass) {
-        this.cssClass = cssClass;
-    }
-
     public Padding getPadding() {
         return padding;
+    }
+
+    public void setBackground(String background) {
+        this.background = background;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setFontSize(String fontSize) {
+        this.fontSize = fontSize;
+    }
+
+    public void setCssClass(String cssClass) {
+        this.cssClass = cssClass;
     }
 
     public void setPadding(Padding padding) {
         this.padding = padding;
     }
+
 }

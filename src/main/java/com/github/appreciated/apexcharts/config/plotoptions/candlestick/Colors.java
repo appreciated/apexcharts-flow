@@ -4,19 +4,24 @@ public class Colors {
     private String upward;
     private String downward;
 
-    public String getUpward() {
-        return upward;
+
+    public Colors() {
     }
 
-    public void setUpward(String upward) {
-        this.upward = upward;
+    public String getUpward() {
+        return upward;
     }
 
     public String getDownward() {
         return downward;
     }
 
+    public void setUpward(String upward) {
+        this.upward = upward;
+    }
+
     public void setDownward(String downward) {
         this.downward = downward;
     }
+
 }

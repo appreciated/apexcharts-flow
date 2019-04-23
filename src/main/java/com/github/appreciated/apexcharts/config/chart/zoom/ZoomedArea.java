@@ -4,19 +4,24 @@ public class ZoomedArea {
     private Fill fill;
     private Stroke stroke;
 
-    public Fill getFill() {
-        return fill;
+
+    public ZoomedArea() {
     }
 
-    public void setFill(Fill fill) {
-        this.fill = fill;
+    public Fill getFill() {
+        return fill;
     }
 
     public Stroke getStroke() {
         return stroke;
     }
 
+    public void setFill(Fill fill) {
+        this.fill = fill;
+    }
+
     public void setStroke(Stroke stroke) {
         this.stroke = stroke;
     }
+
 }

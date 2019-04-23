@@ -4,19 +4,24 @@ public class Z {
     private String formatter;
     private String title;
 
-    public String getFormatter() {
-        return formatter;
+
+    public Z() {
     }
 
-    public void setFormatter(String formatter) {
-        this.formatter = formatter;
+    public String getFormatter() {
+        return formatter;
     }
 
     public String getTitle() {
         return title;
     }
 
+    public void setFormatter(String formatter) {
+        this.formatter = formatter;
+    }
+
     public void setTitle(String title) {
         this.title = title;
     }
+
 }

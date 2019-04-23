@@ -5,27 +5,32 @@ public class X {
     private String format;
     private String formatter;
 
-    public Boolean getShow() {
-        return show;
+
+    public X() {
     }
 
-    public void setShow(Boolean show) {
-        this.show = show;
+    public Boolean getShow() {
+        return show;
     }
 
     public String getFormat() {
         return format;
     }
 
-    public void setFormat(String format) {
-        this.format = format;
-    }
-
     public String getFormatter() {
         return formatter;
+    }
+
+    public void setShow(Boolean show) {
+        this.show = show;
+    }
+
+    public void setFormat(String format) {
+        this.format = format;
     }
 
     public void setFormatter(String formatter) {
         this.formatter = formatter;
     }
+
 }

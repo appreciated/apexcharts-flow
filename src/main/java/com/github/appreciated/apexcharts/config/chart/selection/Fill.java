@@ -4,19 +4,24 @@ public class Fill {
     private String color;
     private Double opacity;
 
-    public String getColor() {
-        return color;
+
+    public Fill() {
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public String getColor() {
+        return color;
     }
 
     public Double getOpacity() {
         return opacity;
     }
 
+    public void setColor(String color) {
+        this.color = color;
+    }
+
     public void setOpacity(Double opacity) {
         this.opacity = opacity;
     }
+
 }

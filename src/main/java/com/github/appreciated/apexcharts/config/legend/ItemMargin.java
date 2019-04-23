@@ -4,19 +4,24 @@ public class ItemMargin {
     private Double horizontal;
     private Double vertical;
 
-    public Double getHorizontal() {
-        return horizontal;
+
+    public ItemMargin() {
     }
 
-    public void setHorizontal(Double horizontal) {
-        this.horizontal = horizontal;
+    public Double getHorizontal() {
+        return horizontal;
     }
 
     public Double getVertical() {
         return vertical;
     }
 
+    public void setHorizontal(Double horizontal) {
+        this.horizontal = horizontal;
+    }
+
     public void setVertical(Double vertical) {
         this.vertical = vertical;
     }
+
 }

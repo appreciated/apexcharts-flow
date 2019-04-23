@@ -10,4 +10,8 @@ public class Normal {
     public void setFilter(Filter filter) {
         this.filter = filter;
     }
+
+    public Normal(Filter filter) {
+        this.filter = filter;
+    }
 }

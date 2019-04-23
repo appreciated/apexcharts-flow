@@ -12,4 +12,8 @@ public class Fill {
     public void setColors(List<String> colors) {
         this.colors = colors;
     }
+
+    public Fill(List<String> colors) {
+        this.colors = colors;
+    }
 }

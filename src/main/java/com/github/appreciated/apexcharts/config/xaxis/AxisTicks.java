@@ -8,51 +8,56 @@ public class AxisTicks {
     private Double offsetX;
     private Double offsetY;
 
-    public Boolean getShow() {
-        return show;
+
+    public AxisTicks() {
     }
 
-    public void setShow(Boolean show) {
-        this.show = show;
+    public Boolean getShow() {
+        return show;
     }
 
     public String getBorderType() {
         return borderType;
     }
 
-    public void setBorderType(String borderType) {
-        this.borderType = borderType;
-    }
-
     public String getColor() {
         return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
     }
 
     public Double getHeight() {
         return height;
     }
 
-    public void setHeight(Double height) {
-        this.height = height;
-    }
-
     public Double getOffsetX() {
         return offsetX;
-    }
-
-    public void setOffsetX(Double offsetX) {
-        this.offsetX = offsetX;
     }
 
     public Double getOffsetY() {
         return offsetY;
     }
 
+    public void setShow(Boolean show) {
+        this.show = show;
+    }
+
+    public void setBorderType(String borderType) {
+        this.borderType = borderType;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setHeight(Double height) {
+        this.height = height;
+    }
+
+    public void setOffsetX(Double offsetX) {
+        this.offsetX = offsetX;
+    }
+
     public void setOffsetY(Double offsetY) {
         this.offsetY = offsetY;
     }
+
 }

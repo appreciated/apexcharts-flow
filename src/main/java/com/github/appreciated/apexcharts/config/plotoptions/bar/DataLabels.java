@@ -10,4 +10,8 @@ public class DataLabels {
     public void setPosition(String position) {
         this.position = position;
     }
+
+    public DataLabels(String position) {
+        this.position = position;
+    }
 }

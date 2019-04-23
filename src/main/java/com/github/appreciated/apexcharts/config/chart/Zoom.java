@@ -1,4 +1,7 @@
-package com.github.appreciated.apexcharts.config.chart.zoom;
+package com.github.appreciated.apexcharts.config.chart;
+
+import com.github.appreciated.apexcharts.config.chart.zoom.ZoomType;
+import com.github.appreciated.apexcharts.config.chart.zoom.ZoomedArea;
 
 public class Zoom {
     private Boolean enabled;

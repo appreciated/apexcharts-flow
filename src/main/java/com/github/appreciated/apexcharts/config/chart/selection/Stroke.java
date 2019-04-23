@@ -6,35 +6,40 @@ public class Stroke {
     private Double opacity;
     private Double dashArray;
 
-    public Double getWidth() {
-        return width;
+
+    public Stroke() {
     }
 
-    public void setWidth(Double width) {
-        this.width = width;
+    public Double getWidth() {
+        return width;
     }
 
     public String getColor() {
         return color;
     }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
-
     public Double getOpacity() {
         return opacity;
-    }
-
-    public void setOpacity(Double opacity) {
-        this.opacity = opacity;
     }
 
     public Double getDashArray() {
         return dashArray;
     }
 
+    public void setWidth(Double width) {
+        this.width = width;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setOpacity(Double opacity) {
+        this.opacity = opacity;
+    }
+
     public void setDashArray(Double dashArray) {
         this.dashArray = dashArray;
     }
+
 }

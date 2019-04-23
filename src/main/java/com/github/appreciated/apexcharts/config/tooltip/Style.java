@@ -4,19 +4,24 @@ public class Style {
     private String fontSize;
     private String fontFamily;
 
-    public String getFontSize() {
-        return fontSize;
+
+    public Style() {
     }
 
-    public void setFontSize(String fontSize) {
-        this.fontSize = fontSize;
+    public String getFontSize() {
+        return fontSize;
     }
 
     public String getFontFamily() {
         return fontFamily;
     }
 
+    public void setFontSize(String fontSize) {
+        this.fontSize = fontSize;
+    }
+
     public void setFontFamily(String fontFamily) {
         this.fontFamily = fontFamily;
     }
+
 }

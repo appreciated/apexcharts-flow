@@ -5,27 +5,32 @@ public class Lines {
     private Double offsetX;
     private Double offsetY;
 
-    public Boolean getShow() {
-        return show;
+
+    public Lines() {
     }
 
-    public void setShow(Boolean show) {
-        this.show = show;
+    public Boolean getShow() {
+        return show;
     }
 
     public Double getOffsetX() {
         return offsetX;
     }
 
-    public void setOffsetX(Double offsetX) {
-        this.offsetX = offsetX;
-    }
-
     public Double getOffsetY() {
         return offsetY;
+    }
+
+    public void setShow(Boolean show) {
+        this.show = show;
+    }
+
+    public void setOffsetX(Double offsetX) {
+        this.offsetX = offsetX;
     }
 
     public void setOffsetY(Double offsetY) {
         this.offsetY = offsetY;
     }
+
 }

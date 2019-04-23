@@ -8,35 +8,40 @@ public class Title {
     private Double offsetY;
     private Style style;
 
-    public String getText() {
-        return text;
+
+    public Title() {
     }
 
-    public void setText(String text) {
-        this.text = text;
+    public String getText() {
+        return text;
     }
 
     public Double getOffsetX() {
         return offsetX;
     }
 
-    public void setOffsetX(Double offsetX) {
-        this.offsetX = offsetX;
-    }
-
     public Double getOffsetY() {
         return offsetY;
-    }
-
-    public void setOffsetY(Double offsetY) {
-        this.offsetY = offsetY;
     }
 
     public Style getStyle() {
         return style;
     }
 
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public void setOffsetX(Double offsetX) {
+        this.offsetX = offsetX;
+    }
+
+    public void setOffsetY(Double offsetY) {
+        this.offsetY = offsetY;
+    }
+
     public void setStyle(Style style) {
         this.style = style;
     }
+
 }

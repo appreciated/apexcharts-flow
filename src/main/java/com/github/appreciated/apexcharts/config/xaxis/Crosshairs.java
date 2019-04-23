@@ -13,59 +13,64 @@ public class Crosshairs {
     private Fill fill;
     private DropShadow dropShadow;
 
-    public Boolean getShow() {
-        return show;
+
+    public Crosshairs() {
     }
 
-    public void setShow(Boolean show) {
-        this.show = show;
+    public Boolean getShow() {
+        return show;
     }
 
     public String getWidth() {
         return width;
     }
 
-    public void setWidth(String width) {
-        this.width = width;
-    }
-
     public String getPosition() {
         return position;
-    }
-
-    public void setPosition(String position) {
-        this.position = position;
     }
 
     public Double getOpacity() {
         return opacity;
     }
 
-    public void setOpacity(Double opacity) {
-        this.opacity = opacity;
-    }
-
     public Stroke getStroke() {
         return stroke;
-    }
-
-    public void setStroke(Stroke stroke) {
-        this.stroke = stroke;
     }
 
     public Fill getFill() {
         return fill;
     }
 
-    public void setFill(Fill fill) {
-        this.fill = fill;
-    }
-
     public DropShadow getDropShadow() {
         return dropShadow;
+    }
+
+    public void setShow(Boolean show) {
+        this.show = show;
+    }
+
+    public void setWidth(String width) {
+        this.width = width;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    public void setOpacity(Double opacity) {
+        this.opacity = opacity;
+    }
+
+    public void setStroke(Stroke stroke) {
+        this.stroke = stroke;
+    }
+
+    public void setFill(Fill fill) {
+        this.fill = fill;
     }
 
     public void setDropShadow(DropShadow dropShadow) {
         this.dropShadow = dropShadow;
     }
+
 }

@@ -4,19 +4,24 @@ public class Labels {
     private String color;
     private Boolean useSeriesColors;
 
-    public String getColor() {
-        return color;
+
+    public Labels() {
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public String getColor() {
+        return color;
     }
 
     public Boolean getUseSeriesColors() {
         return useSeriesColors;
     }
 
+    public void setColor(String color) {
+        this.color = color;
+    }
+
     public void setUseSeriesColors(Boolean useSeriesColors) {
         this.useSeriesColors = useSeriesColors;
     }
+
 }

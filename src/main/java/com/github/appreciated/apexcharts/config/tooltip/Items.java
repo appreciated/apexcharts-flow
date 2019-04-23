@@ -10,4 +10,8 @@ public class Items {
     public void setDisplay(String display) {
         this.display = display;
     }
+
+    public Items(String display) {
+        this.display = display;
+    }
 }

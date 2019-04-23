@@ -16,7 +16,7 @@ public class PieBuilder {
     private PieBuilder() {
     }
 
-    public static PieBuilder aPie() {
+    public static PieBuilder get() {
         return new PieBuilder();
     }
 

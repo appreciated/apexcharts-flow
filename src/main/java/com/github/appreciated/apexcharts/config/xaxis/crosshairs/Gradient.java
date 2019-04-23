@@ -9,43 +9,48 @@ public class Gradient {
     private Double opacityFrom;
     private Double opacityTo;
 
-    public String getColorFrom() {
-        return colorFrom;
+
+    public Gradient() {
     }
 
-    public void setColorFrom(String colorFrom) {
-        this.colorFrom = colorFrom;
+    public String getColorFrom() {
+        return colorFrom;
     }
 
     public String getColorTo() {
         return colorTo;
     }
 
-    public void setColorTo(String colorTo) {
-        this.colorTo = colorTo;
-    }
-
     public List<Double> getStops() {
         return stops;
-    }
-
-    public void setStops(List<Double> stops) {
-        this.stops = stops;
     }
 
     public Double getOpacityFrom() {
         return opacityFrom;
     }
 
-    public void setOpacityFrom(Double opacityFrom) {
-        this.opacityFrom = opacityFrom;
-    }
-
     public Double getOpacityTo() {
         return opacityTo;
+    }
+
+    public void setColorFrom(String colorFrom) {
+        this.colorFrom = colorFrom;
+    }
+
+    public void setColorTo(String colorTo) {
+        this.colorTo = colorTo;
+    }
+
+    public void setStops(List<Double> stops) {
+        this.stops = stops;
+    }
+
+    public void setOpacityFrom(Double opacityFrom) {
+        this.opacityFrom = opacityFrom;
     }
 
     public void setOpacityTo(Double opacityTo) {
         this.opacityTo = opacityTo;
     }
+
 }

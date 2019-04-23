@@ -10,4 +10,8 @@ public class Wick {
     public void setUseFillColor(Boolean useFillColor) {
         this.useFillColor = useFillColor;
     }
+
+    public Wick(Boolean useFillColor) {
+        this.useFillColor = useFillColor;
+    }
 }

@@ -6,35 +6,40 @@ public class Padding {
     private Double top;
     private Double bottom;
 
-    public Double getLeft() {
-        return left;
+
+    public Padding() {
     }
 
-    public void setLeft(Double left) {
-        this.left = left;
+    public Double getLeft() {
+        return left;
     }
 
     public Double getRight() {
         return right;
     }
 
-    public void setRight(Double right) {
-        this.right = right;
-    }
-
     public Double getTop() {
         return top;
-    }
-
-    public void setTop(Double top) {
-        this.top = top;
     }
 
     public Double getBottom() {
         return bottom;
     }
 
+    public void setLeft(Double left) {
+        this.left = left;
+    }
+
+    public void setRight(Double right) {
+        this.right = right;
+    }
+
+    public void setTop(Double top) {
+        this.top = top;
+    }
+
     public void setBottom(Double bottom) {
         this.bottom = bottom;
     }
+
 }

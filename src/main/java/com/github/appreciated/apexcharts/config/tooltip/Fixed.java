@@ -6,35 +6,40 @@ public class Fixed {
     private Double offsetX;
     private Double offsetY;
 
-    public Boolean getEnabled() {
-        return enabled;
+
+    public Fixed() {
     }
 
-    public void setEnabled(Boolean enabled) {
-        this.enabled = enabled;
+    public Boolean getEnabled() {
+        return enabled;
     }
 
     public String getPosition() {
         return position;
     }
 
-    public void setPosition(String position) {
-        this.position = position;
-    }
-
     public Double getOffsetX() {
         return offsetX;
-    }
-
-    public void setOffsetX(Double offsetX) {
-        this.offsetX = offsetX;
     }
 
     public Double getOffsetY() {
         return offsetY;
     }
 
+    public void setEnabled(Boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    public void setOffsetX(Double offsetX) {
+        this.offsetX = offsetX;
+    }
+
     public void setOffsetY(Double offsetY) {
         this.offsetY = offsetY;
     }
+
 }

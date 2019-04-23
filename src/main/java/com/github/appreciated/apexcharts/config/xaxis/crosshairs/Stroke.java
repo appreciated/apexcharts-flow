@@ -5,27 +5,32 @@ public class Stroke {
     private Double width;
     private Double dashArray;
 
-    public String getColor() {
-        return color;
+
+    public Stroke() {
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public String getColor() {
+        return color;
     }
 
     public Double getWidth() {
         return width;
     }
 
-    public void setWidth(Double width) {
-        this.width = width;
-    }
-
     public Double getDashArray() {
         return dashArray;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setWidth(Double width) {
+        this.width = width;
     }
 
     public void setDashArray(Double dashArray) {
         this.dashArray = dashArray;
     }
+
 }

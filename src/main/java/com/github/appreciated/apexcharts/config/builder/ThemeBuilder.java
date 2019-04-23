@@ -12,7 +12,7 @@ public class ThemeBuilder {
     private ThemeBuilder() {
     }
 
-    public static ThemeBuilder aTheme() {
+    public static ThemeBuilder get() {
         return new ThemeBuilder();
     }
 

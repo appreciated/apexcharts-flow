@@ -7,43 +7,48 @@ public class DropShadow {
     private Double blur;
     private Double opacity;
 
-    public Boolean getEnable() {
-        return enable;
+
+    public DropShadow() {
     }
 
-    public void setEnable(Boolean enable) {
-        this.enable = enable;
+    public Boolean getEnable() {
+        return enable;
     }
 
     public Double getTop() {
         return top;
     }
 
-    public void setTop(Double top) {
-        this.top = top;
-    }
-
     public Double getLeft() {
         return left;
-    }
-
-    public void setLeft(Double left) {
-        this.left = left;
     }
 
     public Double getBlur() {
         return blur;
     }
 
-    public void setBlur(Double blur) {
-        this.blur = blur;
-    }
-
     public Double getOpacity() {
         return opacity;
+    }
+
+    public void setEnable(Boolean enable) {
+        this.enable = enable;
+    }
+
+    public void setTop(Double top) {
+        this.top = top;
+    }
+
+    public void setLeft(Double left) {
+        this.left = left;
+    }
+
+    public void setBlur(Double blur) {
+        this.blur = blur;
     }
 
     public void setOpacity(Double opacity) {
         this.opacity = opacity;
     }
+
 }

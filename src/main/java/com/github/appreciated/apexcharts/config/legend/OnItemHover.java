@@ -10,4 +10,8 @@ public class OnItemHover {
     public void setHighlightDataSeries(Boolean highlightDataSeries) {
         this.highlightDataSeries = highlightDataSeries;
     }
+
+    public OnItemHover(Boolean highlightDataSeries) {
+        this.highlightDataSeries = highlightDataSeries;
+    }
 }

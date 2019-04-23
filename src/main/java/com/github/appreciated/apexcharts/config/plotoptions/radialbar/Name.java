@@ -6,35 +6,40 @@ public class Name {
     private String color;
     private Double offsetY;
 
-    public Boolean getShow() {
-        return show;
+
+    public Name() {
     }
 
-    public void setShow(Boolean show) {
-        this.show = show;
+    public Boolean getShow() {
+        return show;
     }
 
     public String getFontSize() {
         return fontSize;
     }
 
-    public void setFontSize(String fontSize) {
-        this.fontSize = fontSize;
-    }
-
     public String getColor() {
         return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
     }
 
     public Double getOffsetY() {
         return offsetY;
     }
 
+    public void setShow(Boolean show) {
+        this.show = show;
+    }
+
+    public void setFontSize(String fontSize) {
+        this.fontSize = fontSize;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
     public void setOffsetY(Double offsetY) {
         this.offsetY = offsetY;
     }
+
 }

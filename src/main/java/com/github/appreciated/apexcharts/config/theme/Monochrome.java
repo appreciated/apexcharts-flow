@@ -6,35 +6,40 @@ public class Monochrome {
     private ShadeTo shadeTo;
     private Double shadeIntensity;
 
-    public Boolean getEnabled() {
-        return enabled;
+
+    public Monochrome() {
     }
 
-    public void setEnabled(Boolean enabled) {
-        this.enabled = enabled;
+    public Boolean getEnabled() {
+        return enabled;
     }
 
     public String getColor() {
         return color;
     }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
-
     public ShadeTo getShadeTo() {
         return shadeTo;
-    }
-
-    public void setShadeTo(ShadeTo shadeTo) {
-        this.shadeTo = shadeTo;
     }
 
     public Double getShadeIntensity() {
         return shadeIntensity;
     }
 
+    public void setEnabled(Boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setShadeTo(ShadeTo shadeTo) {
+        this.shadeTo = shadeTo;
+    }
+
     public void setShadeIntensity(Double shadeIntensity) {
         this.shadeIntensity = shadeIntensity;
     }
+
 }

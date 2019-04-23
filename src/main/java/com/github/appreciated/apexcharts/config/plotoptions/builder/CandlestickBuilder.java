@@ -11,7 +11,7 @@ public class CandlestickBuilder {
     private CandlestickBuilder() {
     }
 
-    public static CandlestickBuilder aCandlestick() {
+    public static CandlestickBuilder get() {
         return new CandlestickBuilder();
     }
 

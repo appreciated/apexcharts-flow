@@ -6,35 +6,40 @@ public class Total {
     private String color;
     private String formatter;
 
-    public Boolean getShow() {
-        return show;
+
+    public Total() {
     }
 
-    public void setShow(Boolean show) {
-        this.show = show;
+    public Boolean getShow() {
+        return show;
     }
 
     public String getLabel() {
         return label;
     }
 
-    public void setLabel(String label) {
-        this.label = label;
-    }
-
     public String getColor() {
         return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
     }
 
     public String getFormatter() {
         return formatter;
     }
 
+    public void setShow(Boolean show) {
+        this.show = show;
+    }
+
+    public void setLabel(String label) {
+        this.label = label;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
     public void setFormatter(String formatter) {
         this.formatter = formatter;
     }
+
 }

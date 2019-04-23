@@ -25,5 +25,4 @@ public class Y {
         this.title = title;
     }
 
-
 }
