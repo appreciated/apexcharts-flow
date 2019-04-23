@@ -21,6 +21,7 @@ public class DemoView extends Div {
         add(generator.getCandleStickChart());
         add(generator.getRadarChart());
         add(generator.getScatterChart());
+        add(generator.getHeatMapChart());
         setSizeFull();
         getStyle().set("overflow", "auto");
     }
