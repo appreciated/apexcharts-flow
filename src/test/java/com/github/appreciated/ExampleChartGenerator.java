@@ -293,7 +293,7 @@ public class ExampleChartGenerator {
                                         .build())
                                 .withValue(ValueBuilder
                                         .get()
-                                        .withFormatter("function(val) {return parseInt(val);}")
+                                        //.withFormatter("function(val) {return parseInt(val);}")
                                         .withColor("#111")
                                         .withFontSize("36px")
                                         .withShow(true)
