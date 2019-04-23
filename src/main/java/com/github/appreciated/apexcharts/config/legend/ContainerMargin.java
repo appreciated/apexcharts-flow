@@ -1,8 +1,8 @@
 package com.github.appreciated.apexcharts.config.legend;
 
 public class ContainerMargin {
-    Double left;
-    Double top;
+    private Double left;
+    private Double top;
 
     public Double getLeft() {
         return left;

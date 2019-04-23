@@ -1,9 +1,9 @@
 package com.github.appreciated.apexcharts.config.grid.xaxis;
 
 public class Lines {
-    Boolean show;
-    Double offsetX;
-    Double offsetY;
+    private Boolean show;
+    private Double offsetX;
+    private Double offsetY;
 
     public Boolean getShow() {
         return show;

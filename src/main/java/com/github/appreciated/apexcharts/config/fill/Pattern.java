@@ -1,10 +1,10 @@
 package com.github.appreciated.apexcharts.config.fill;
 
 public class Pattern {
-    String style;
-    Double width;
-    Double height;
-    Double strokeWidth;
+    private String style;
+    private Double width;
+    private Double height;
+    private Double strokeWidth;
 
     public String getStyle() {
         return style;

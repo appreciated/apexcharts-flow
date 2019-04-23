@@ -1,7 +1,7 @@
 package com.github.appreciated.apexcharts.config.tooltip;
 
 public class Marker {
-    Boolean show;
+    private Boolean show;
 
     public Boolean getShow() {
         return show;

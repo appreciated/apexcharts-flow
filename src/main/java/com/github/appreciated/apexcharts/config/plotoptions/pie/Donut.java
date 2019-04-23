@@ -1,9 +1,9 @@
 package com.github.appreciated.apexcharts.config.plotoptions.pie;
 
 public class Donut {
-    String size;
-    String background;
-    Labels labels;
+    private String size;
+    private String background;
+    private Labels labels;
 
     public String getSize() {
         return size;

@@ -1,11 +1,11 @@
 package com.github.appreciated.apexcharts.config.xaxis.crosshairs;
 
 public class DropShadow {
-    Boolean enabled;
-    Double top;
-    Double left;
-    Double blur;
-    Double opacity;
+    private Boolean enabled;
+    private Double top;
+    private Double left;
+    private Double blur;
+    private Double opacity;
 
     public Boolean getEnabled() {
         return enabled;

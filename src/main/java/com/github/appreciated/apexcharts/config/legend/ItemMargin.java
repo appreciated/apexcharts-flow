@@ -1,8 +1,8 @@
 package com.github.appreciated.apexcharts.config.legend;
 
 public class ItemMargin {
-    Double horizontal;
-    Double vertical;
+    private Double horizontal;
+    private Double vertical;
 
     public Double getHorizontal() {
         return horizontal;

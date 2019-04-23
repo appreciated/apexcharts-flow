@@ -1,8 +1,8 @@
 package com.github.appreciated.apexcharts.config.states;
 
 public class Filter {
-    String type;
-    Double value;
+    private String type;
+    private Double value;
 
     public String getType() {
         return type;

@@ -1,8 +1,8 @@
 package com.github.appreciated.apexcharts.config.legend;
 
 public class Labels {
-    String color;
-    Boolean useSeriesColors;
+    private String color;
+    private Boolean useSeriesColors;
 
     public String getColor() {
         return color;

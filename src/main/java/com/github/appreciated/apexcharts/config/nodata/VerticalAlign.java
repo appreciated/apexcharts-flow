@@ -4,7 +4,7 @@ public enum VerticalAlign {
     top("top"),
     middle("middle"),
     bottom("bottom");
-    private String name;
+    private final String name;
     VerticalAlign(String name){
         this.name = name;
     }

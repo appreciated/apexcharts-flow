@@ -1,8 +1,8 @@
 package com.github.appreciated.apexcharts.config.plotoptions.candlestick;
 
 public class Colors {
-    String upward;
-    String downward;
+    private String upward;
+    private String downward;
 
     public String getUpward() {
         return upward;

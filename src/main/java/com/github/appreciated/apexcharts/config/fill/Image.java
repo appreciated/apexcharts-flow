@@ -3,9 +3,9 @@ package com.github.appreciated.apexcharts.config.fill;
 import java.util.List;
 
 public class Image {
-    List<String> src;
-    Double width;
-    Double height;
+    private List<String> src;
+    private Double width;
+    private Double height;
 
     public List<String> getSrc() {
         return src;

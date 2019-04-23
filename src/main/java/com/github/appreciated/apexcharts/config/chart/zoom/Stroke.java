@@ -1,9 +1,9 @@
 package com.github.appreciated.apexcharts.config.chart.zoom;
 
 class Stroke {
-    String color;
-    Double opacity;
-    Double width;
+    private String color;
+    private Double opacity;
+    private Double width;
 
     public String getColor() {
         return color;

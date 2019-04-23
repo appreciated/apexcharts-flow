@@ -1,10 +1,10 @@
 package com.github.appreciated.apexcharts.config.tooltip;
 
 public class Fixed {
-    Boolean enabled;
-    String position;
-    Double offsetX;
-    Double offsetY;
+    private Boolean enabled;
+    private String position;
+    private Double offsetX;
+    private Double offsetY;
 
     public Boolean getEnabled() {
         return enabled;

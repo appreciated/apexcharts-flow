@@ -1,9 +1,9 @@
 package com.github.appreciated.apexcharts.config.chart.toolbar;
 
 public class Toolbar {
-    Boolean show;
-    Tools tools;
-    AutoSelected autoSelected;
+    private Boolean show;
+    private Tools tools;
+    private AutoSelected autoSelected;
 
     public Boolean getShow() {
         return show;

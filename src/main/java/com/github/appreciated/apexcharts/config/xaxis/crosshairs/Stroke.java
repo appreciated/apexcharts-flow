@@ -1,9 +1,9 @@
 package com.github.appreciated.apexcharts.config.xaxis.crosshairs;
 
 public class Stroke {
-    String color;
-    Double width;
-    Double dashArray;
+    private String color;
+    private Double width;
+    private Double dashArray;
 
     public String getColor() {
         return color;

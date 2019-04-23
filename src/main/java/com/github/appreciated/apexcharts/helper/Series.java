@@ -5,8 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Series<T> {
-    String name;
-    List<T> data;
+    private String name;
+    private List<T> data;
 
     public Series() {
 

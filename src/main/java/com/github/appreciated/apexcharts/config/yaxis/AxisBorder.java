@@ -1,10 +1,10 @@
 package com.github.appreciated.apexcharts.config.yaxis;
 
 public class AxisBorder {
-    Boolean show;
-    String color;
-    Number offsetX;
-    Number offsetY;
+    private Boolean show;
+    private String color;
+    private Number offsetX;
+    private Number offsetY;
 
     public Boolean getShow() {
         return show;

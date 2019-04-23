@@ -1,13 +1,13 @@
 package com.github.appreciated.apexcharts.config.chart.toolbar;
 
 class Tools {
-    String download;
-    String selection;
-    String zoom;
-    String zoomin;
-    String zoomout;
-    String pan;
-    String reset;
+    private String download;
+    private String selection;
+    private String zoom;
+    private String zoomin;
+    private String zoomout;
+    private String pan;
+    private String reset;
 
     public String getDownload() {
         return download;

@@ -1,8 +1,8 @@
 package com.github.appreciated.apexcharts.config.xaxis;
 
-public class Tooltip {
-    Boolean enabled;
-    Double offsetY;
+class Tooltip {
+    private Boolean enabled;
+    private Double offsetY;
 
     public Boolean getEnabled() {
         return enabled;

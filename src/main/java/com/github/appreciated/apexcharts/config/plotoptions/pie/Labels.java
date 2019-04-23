@@ -1,10 +1,10 @@
 package com.github.appreciated.apexcharts.config.plotoptions.pie;
 
 public class Labels {
-    Boolean show;
-    Name name;
-    Value value;
-    Total total;
+    private Boolean show;
+    private Name name;
+    private Value value;
+    private Total total;
 
     public Boolean getShow() {
         return show;

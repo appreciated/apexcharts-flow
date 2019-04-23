@@ -1,10 +1,10 @@
 package com.github.appreciated.apexcharts.config.yaxis.labels;
 
 public class Style {
-    String color;
-    String fontSize;
-    String fontFamily;
-    String cssClass;
+    private String color;
+    private String fontSize;
+    private String fontFamily;
+    private String cssClass;
 
     public String getColor() {
         return color;

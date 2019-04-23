@@ -3,9 +3,9 @@ package com.github.appreciated.apexcharts.config.datalables;
 import java.util.List;
 
 public class Style {
-    String fontSize;
-    String fontFamily;
-    List<String> colors;
+    private String fontSize;
+    private String fontFamily;
+    private List<String> colors;
 
     public String getFontSize() {
         return fontSize;

@@ -3,14 +3,14 @@ package com.github.appreciated.apexcharts.config.fill;
 import java.util.List;
 
 public class Gradient {
-    String shade;
-    String type;
-    Double shadeIntensity;
-    List<String> gradientToColors;
-    Boolean inverseColors;
-    Double opacityFrom;
-    Double opacityTo;
-    List<Double> stops;
+    private String shade;
+    private String type;
+    private Double shadeIntensity;
+    private List<String> gradientToColors;
+    private Boolean inverseColors;
+    private Double opacityFrom;
+    private Double opacityTo;
+    private List<Double> stops;
 
     public String getShade() {
         return shade;

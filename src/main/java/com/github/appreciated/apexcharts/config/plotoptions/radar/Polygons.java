@@ -5,9 +5,9 @@ import com.github.appreciated.apexcharts.config.plotoptions.polygons.Fill;
 import java.util.List;
 
 public class Polygons {
-    List<String> strokeColor;
-    List<String> connectorColors;
-    Fill fill;
+    private List<String> strokeColor;
+    private List<String> connectorColors;
+    private Fill fill;
 
     public List<String> getStrokeColor() {
         return strokeColor;

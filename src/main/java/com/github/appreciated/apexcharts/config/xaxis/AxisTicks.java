@@ -1,12 +1,12 @@
 package com.github.appreciated.apexcharts.config.xaxis;
 
 public class AxisTicks {
-    Boolean show;
-    String borderType;
-    String color;
-    Double height;
-    Double offsetX;
-    Double offsetY;
+    private Boolean show;
+    private String borderType;
+    private String color;
+    private Double height;
+    private Double offsetX;
+    private Double offsetY;
 
     public Boolean getShow() {
         return show;

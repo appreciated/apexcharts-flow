@@ -1,8 +1,8 @@
 package com.github.appreciated.apexcharts.helper;
 
 public class Coordinate<X, Y> {
-    X x;
-    Y[] y;
+    private X x;
+    private Y[] y;
 
     public Coordinate(X x, Y... y) {
         this.x = x;

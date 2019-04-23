@@ -1,8 +1,8 @@
 package com.github.appreciated.apexcharts.config.chart.selection;
 
 public class Fill {
-    String color;
-    Double opacity;
+    private String color;
+    private Double opacity;
 
     public String getColor() {
         return color;

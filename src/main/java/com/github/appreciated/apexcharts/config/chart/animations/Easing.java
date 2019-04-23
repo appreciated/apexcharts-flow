@@ -5,7 +5,7 @@ public enum Easing {
     easein("easein"),
     easeout("easeout"),
     easeinout("easeinout");
-    private String name;
+    private final String name;
     Easing(String name){
         this.name = name;
     }

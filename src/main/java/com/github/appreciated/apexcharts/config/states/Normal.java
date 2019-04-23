@@ -1,7 +1,7 @@
 package com.github.appreciated.apexcharts.config.states;
 
 public class Normal {
-    Filter filter;
+    private Filter filter;
 
     public Filter getFilter() {
         return filter;

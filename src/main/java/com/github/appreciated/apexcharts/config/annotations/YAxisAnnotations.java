@@ -1,16 +1,16 @@
 package com.github.appreciated.apexcharts.config.annotations;
 
 public class YAxisAnnotations {
-    Double y;
-    Double y2;
-    Double strokeDashArray;
-    String fillColor;
-    String borderColor;
-    Double opacity;
-    Double offsetX;
-    Double offsetY;
-    Double yAxisIndex;
-    AnnotationLabel label;
+    private Double y;
+    private Double y2;
+    private Double strokeDashArray;
+    private String fillColor;
+    private String borderColor;
+    private Double opacity;
+    private Double offsetX;
+    private Double offsetY;
+    private Double yAxisIndex;
+    private AnnotationLabel label;
 
     public Double getY() {
         return y;

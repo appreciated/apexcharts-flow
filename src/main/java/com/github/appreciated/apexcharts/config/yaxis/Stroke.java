@@ -1,9 +1,9 @@
 package com.github.appreciated.apexcharts.config.yaxis;
 
 class Stroke {
-    String color;
-    Number width;
-    Number dashArray;
+    private String color;
+    private Number width;
+    private Number dashArray;
 
     public String getColor() {
         return color;

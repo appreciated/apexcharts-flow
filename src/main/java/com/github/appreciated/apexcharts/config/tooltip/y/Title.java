@@ -1,7 +1,7 @@
 package com.github.appreciated.apexcharts.config.tooltip.y;
 
 public class Title {
-    String formatter;
+    private String formatter;
 
     public Title(String formatter) {
         this.formatter = formatter;

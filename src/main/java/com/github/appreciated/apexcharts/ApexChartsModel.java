@@ -7,7 +7,7 @@ import com.vaadin.flow.templatemodel.TemplateModel;
 
 import java.util.List;
 
-public interface ApexChartsModel extends TemplateModel {
+interface ApexChartsModel extends TemplateModel {
 
     Annotations getAnnotations();
 
@@ -71,7 +71,7 @@ public interface ApexChartsModel extends TemplateModel {
 
     Stroke getStroke();
 
-    @Encode(ApexStrokeEncoder.class)
+    @Encode(StrokeEncoder.class)
     void setStroke(Stroke stroke);
 
     String getSubtitle();

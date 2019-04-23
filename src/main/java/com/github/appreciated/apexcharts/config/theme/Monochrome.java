@@ -1,10 +1,10 @@
 package com.github.appreciated.apexcharts.config.theme;
 
 public class Monochrome {
-    Boolean enabled;
-    String color;
-    ShadeTo shadeTo;
-    Double shadeIntensity;
+    private Boolean enabled;
+    private String color;
+    private ShadeTo shadeTo;
+    private Double shadeIntensity;
 
     public Boolean getEnabled() {
         return enabled;

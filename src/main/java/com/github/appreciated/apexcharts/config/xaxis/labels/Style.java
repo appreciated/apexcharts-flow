@@ -3,10 +3,10 @@ package com.github.appreciated.apexcharts.config.xaxis.labels;
 import java.util.List;
 
 public class Style {
-    List<String> colors;
-    String fontSize;
-    String fontFamily;
-    String cssClass;
+    private List<String> colors;
+    private String fontSize;
+    private String fontFamily;
+    private String cssClass;
 
     public List<String> getColors() {
         return colors;

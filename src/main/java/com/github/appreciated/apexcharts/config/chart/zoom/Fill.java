@@ -1,8 +1,8 @@
 package com.github.appreciated.apexcharts.config.chart.zoom;
 
 class Fill {
-    String color;
-    Number opacity;
+    private String color;
+    private Number opacity;
 
     public String getColor() {
         return color;

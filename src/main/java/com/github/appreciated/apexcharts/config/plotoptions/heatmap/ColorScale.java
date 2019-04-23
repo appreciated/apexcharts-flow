@@ -1,10 +1,10 @@
 package com.github.appreciated.apexcharts.config.plotoptions.heatmap;
 
 public class ColorScale {
-    Ranges ranges;
-    Boolean inverse;
-    Double min;
-    Double max;
+    private Ranges ranges;
+    private Boolean inverse;
+    private Double min;
+    private Double max;
 
     public Ranges getRanges() {
         return ranges;

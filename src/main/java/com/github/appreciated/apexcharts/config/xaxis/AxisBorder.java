@@ -1,11 +1,11 @@
 package com.github.appreciated.apexcharts.config.xaxis;
 
 public class AxisBorder {
-    Boolean show;
-    String color;
-    Double offsetX;
-    Double offsetY;
-    Double strokeWidth;
+    private Boolean show;
+    private String color;
+    private Double offsetX;
+    private Double offsetY;
+    private Double strokeWidth;
 
     public Boolean getShow() {
         return show;

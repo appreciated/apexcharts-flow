@@ -1,11 +1,11 @@
 package com.github.appreciated.apexcharts.config;
 
 public class DiscretePoint {
-    Double seriesIndex;
-    Double dataPointIndex;
-    String fillColor;
-    String strokeColor;
-    Double size;
+    private Double seriesIndex;
+    private Double dataPointIndex;
+    private String fillColor;
+    private String strokeColor;
+    private Double size;
 
     public Double getSeriesIndex() {
         return seriesIndex;

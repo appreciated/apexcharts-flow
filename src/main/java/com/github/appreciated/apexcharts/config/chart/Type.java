@@ -13,7 +13,7 @@ public enum Type {
     heatmap("heatmap"),
     candlestick("candlestick"),
     radar("radar");
-    private String name;
+    private final String name;
 
     Type(String name) {
         this.name = name;

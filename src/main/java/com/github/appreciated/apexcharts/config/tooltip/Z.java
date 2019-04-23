@@ -1,8 +1,8 @@
 package com.github.appreciated.apexcharts.config.tooltip;
 
 public class Z {
-    String formatter;
-    String title;
+    private String formatter;
+    private String title;
 
     public String getFormatter() {
         return formatter;

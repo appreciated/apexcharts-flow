@@ -1,15 +1,15 @@
 package com.github.appreciated.apexcharts.config.annotations;
 
 public class Label {
-    String borderColor;
-    Double borderWidth;
-    String text;
-    String textAnchor;
-    String position;
-    String orientation;
-    Double offsetX;
-    Double offsetY;
-    AnnotationStyle style;
+    private String borderColor;
+    private Double borderWidth;
+    private String text;
+    private String textAnchor;
+    private String position;
+    private String orientation;
+    private Double offsetX;
+    private Double offsetY;
+    private AnnotationStyle style;
 
     public String getBorderColor() {
         return borderColor;

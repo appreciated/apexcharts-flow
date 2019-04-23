@@ -4,7 +4,7 @@ public enum AutoSelected {
     zoom("zoom"),
     selection("selection"),
     pan("pan");
-    private String name;
+    private final String name;
     AutoSelected(String name){
         this.name = name;
     }

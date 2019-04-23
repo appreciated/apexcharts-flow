@@ -3,10 +3,10 @@ package com.github.appreciated.apexcharts.config.xaxis;
 import com.github.appreciated.apexcharts.config.xaxis.title.Style;
 
 public class Title {
-    String text;
-    Double offsetX;
-    Double offsetY;
-    Style style;
+    private String text;
+    private Double offsetX;
+    private Double offsetY;
+    private Style style;
 
     public String getText() {
         return text;

@@ -7,10 +7,10 @@ import com.github.appreciated.apexcharts.config.chart.PointAnnotations;
 import java.util.List;
 
 public class Annotations {
-    String position;
-    List<YAxisAnnotations> yaxis;
-    List<XAxisAnnotations> xaxis;
-    List<PointAnnotations> points;
+    private String position;
+    private List<YAxisAnnotations> yaxis;
+    private List<XAxisAnnotations> xaxis;
+    private List<PointAnnotations> points;
 
     public String getPosition() {
         return position;

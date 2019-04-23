@@ -1,14 +1,14 @@
 package com.github.appreciated.apexcharts.config.plotoptions.radialbar;
 
 public class Track {
-    Boolean show;
-    Double startAngle;
-    Double endAngle;
-    String background;
-    String strokeWidth;
-    Double opacity;
-    Double margin;
-    DropShadow dropShadow;
+    private Boolean show;
+    private Double startAngle;
+    private Double endAngle;
+    private String background;
+    private String strokeWidth;
+    private Double opacity;
+    private Double margin;
+    private DropShadow dropShadow;
 
     public Boolean getShow() {
         return show;

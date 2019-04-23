@@ -5,7 +5,7 @@ public enum Position {
     right("right"),
     bottom("bottom"),
     left("left");
-    private String name;
+    private final String name;
 
     Position(String name) {
         this.name = name;

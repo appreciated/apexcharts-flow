@@ -1,12 +1,12 @@
 package com.github.appreciated.apexcharts.config.plotoptions.pie;
 
 public class Value {
-    Boolean show;
-    String fontSize;
-    String fontFamily;
-    String color;
-    Double offsetY;
-    String formatter;
+    private Boolean show;
+    private String fontSize;
+    private String fontFamily;
+    private String color;
+    private Double offsetY;
+    private String formatter;
 
     public Boolean getShow() {
         return show;

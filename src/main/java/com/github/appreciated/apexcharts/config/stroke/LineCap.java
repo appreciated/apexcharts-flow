@@ -4,7 +4,7 @@ public enum LineCap {
     butt("butt"),
     square("square"),
     round("round");
-    private String name;
+    private final String name;
 
     LineCap(String name) {
         this.name = name;

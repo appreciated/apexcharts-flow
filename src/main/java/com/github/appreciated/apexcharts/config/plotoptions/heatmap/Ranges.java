@@ -1,10 +1,10 @@
 package com.github.appreciated.apexcharts.config.plotoptions.heatmap;
 
 public class Ranges {
-    Double from;
-    Double to;
-    String color;
-    String name;
+    private Double from;
+    private Double to;
+    private String color;
+    private String name;
 
     public Double getFrom() {
         return from;

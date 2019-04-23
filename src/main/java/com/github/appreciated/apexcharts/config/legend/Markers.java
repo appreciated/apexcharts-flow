@@ -1,15 +1,15 @@
 package com.github.appreciated.apexcharts.config.legend;
 
-public class Markers {
-    Double width;
-    Double height;
-    String strokeColor;
-    Double strokeWidth;
-    Double offsetX;
-    Double offsetY;
-    Double radius;
-    Shape shape;
-    String customHTML;
+class Markers {
+    private Double width;
+    private Double height;
+    private String strokeColor;
+    private Double strokeWidth;
+    private Double offsetX;
+    private Double offsetY;
+    private Double radius;
+    private Shape shape;
+    private String customHTML;
 
     public Double getWidth() {
         return width;

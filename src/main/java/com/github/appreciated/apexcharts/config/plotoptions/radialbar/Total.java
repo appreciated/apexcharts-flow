@@ -1,10 +1,10 @@
 package com.github.appreciated.apexcharts.config.plotoptions.radialbar;
 
 public class Total {
-    Boolean show;
-    String label;
-    String color;
-    String formatter;
+    private Boolean show;
+    private String label;
+    private String color;
+    private String formatter;
 
     public Boolean getShow() {
         return show;

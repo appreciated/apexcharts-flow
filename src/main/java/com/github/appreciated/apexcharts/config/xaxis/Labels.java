@@ -3,22 +3,22 @@ package com.github.appreciated.apexcharts.config.xaxis;
 import com.github.appreciated.apexcharts.config.xaxis.labels.DatetimeFormatter;
 import com.github.appreciated.apexcharts.config.xaxis.labels.Style;
 
-public class Labels {
-    Boolean show;
-    Double rotate;
-    Boolean rotateAlways;
-    Boolean hideOverlappingLabels;
-    Boolean showDuplicates;
-    Boolean trim;
-    Double minHeight;
-    Double maxHeight;
-    Style style;
-    Double offsetX;
-    Double offsetY;
-    String format;
+class Labels {
+    private Boolean show;
+    private Double rotate;
+    private Boolean rotateAlways;
+    private Boolean hideOverlappingLabels;
+    private Boolean showDuplicates;
+    private Boolean trim;
+    private Double minHeight;
+    private Double maxHeight;
+    private Style style;
+    private Double offsetX;
+    private Double offsetY;
+    private String format;
 
-    String formatter;
-    DatetimeFormatter datetimeFormatter;
+    private String formatter;
+    private DatetimeFormatter datetimeFormatter;
 
     public Boolean getShow() {
         return show;

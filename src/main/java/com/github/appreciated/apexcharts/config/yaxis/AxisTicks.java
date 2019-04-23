@@ -1,11 +1,11 @@
 package com.github.appreciated.apexcharts.config.yaxis;
 
 public class AxisTicks {
-    Boolean show;
-    String color;
-    Number width;
-    Number offsetX;
-    Number offsetY;
+    private Boolean show;
+    private String color;
+    private Number width;
+    private Number offsetX;
+    private Number offsetY;
 
     public Boolean getShow() {
         return show;

@@ -1,10 +1,10 @@
 package com.github.appreciated.apexcharts.config.grid;
 
 public class Padding {
-    Double top;
-    Double right;
-    Double bottom;
-    Double left;
+    private Double top;
+    private Double right;
+    private Double bottom;
+    private Double left;
 
     public Double getTop() {
         return top;

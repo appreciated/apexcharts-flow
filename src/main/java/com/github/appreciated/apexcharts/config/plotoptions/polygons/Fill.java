@@ -3,7 +3,7 @@ package com.github.appreciated.apexcharts.config.plotoptions.polygons;
 import java.util.List;
 
 public class Fill {
-    List<String> colors;
+    private List<String> colors;
 
     public List<String> getColors() {
         return colors;

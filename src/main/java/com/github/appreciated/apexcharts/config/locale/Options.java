@@ -3,11 +3,11 @@ package com.github.appreciated.apexcharts.config.locale;
 import java.util.List;
 
 public class Options {
-    List<String> months;
-    List<String> shortMonths;
-    List<String> days;
-    List<String> shortDays;
-    Toolbar toolbar;
+    private List<String> months;
+    private List<String> shortMonths;
+    private List<String> days;
+    private List<String> shortDays;
+    private Toolbar toolbar;
 
     public List<String> getMonths() {
         return months;

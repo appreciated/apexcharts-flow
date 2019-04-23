@@ -1,10 +1,10 @@
 package com.github.appreciated.apexcharts.config.annotations;
 
 public class Padding {
-    Double left;
-    Double right;
-    Double top;
-    Double bottom;
+    private Double left;
+    private Double right;
+    private Double top;
+    private Double bottom;
 
     public Double getLeft() {
         return left;

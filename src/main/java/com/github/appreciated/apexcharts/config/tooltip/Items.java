@@ -1,7 +1,7 @@
 package com.github.appreciated.apexcharts.config.tooltip;
 
 public class Items {
-    String display;
+    private String display;
 
     public String getDisplay() {
         return display;

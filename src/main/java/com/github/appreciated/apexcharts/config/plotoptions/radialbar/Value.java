@@ -1,11 +1,11 @@
 package com.github.appreciated.apexcharts.config.plotoptions.radialbar;
 
 public class Value {
-    Boolean show;
-    String fontSize;
-    String color;
-    Double offsetY;
-    String formatter;
+    private Boolean show;
+    private String fontSize;
+    private String color;
+    private Double offsetY;
+    private String formatter;
 
     public Boolean getShow() {
         return show;

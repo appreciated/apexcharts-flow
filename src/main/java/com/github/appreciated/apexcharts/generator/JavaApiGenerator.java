@@ -13,9 +13,9 @@ import java.util.stream.IntStream;
  * A kind of a TypeScript to Java Compiler, nothing to special.
  */
 public class JavaApiGenerator {
-    ArrayList<API> apis = new ArrayList<>();
+    private final ArrayList<API> apis = new ArrayList<>();
 
-    public JavaApiGenerator() {
+    private JavaApiGenerator() {
         // get file as string list
         List<String> file = new BufferedReader(new InputStreamReader(
                 this.getClass().getClassLoader().getResourceAsStream("META-INF/resources/webjars/apexcharts/3.6.8/types/apexcharts.d.ts"),
@@ -33,7 +33,7 @@ public class JavaApiGenerator {
                 .map(s -> s.substring(5, s.length() - 4))
                 .forEach(name -> apis.add(new API(name, "class")));
 
-        apis.stream().forEach(api1 -> api1.parse(file));
+        apis.forEach(api1 -> api1.parse(file));
     }
 
     public static void main(String[] args) {
@@ -46,11 +46,11 @@ public class JavaApiGenerator {
 
     class API {
 
-        List<API> attributes = new ArrayList<>();
-        private String name;
+        final List<API> attributes = new ArrayList<>();
+        private final String name;
         private String type;
 
-        public API(String name, String type) {
+        API(String name, String type) {
             this.name = name != null ? name.trim().replace(":", "").replace(";", "").replace(" ", "").replace("?", "") : "";
             this.type = type != null ? type.trim().replace(":", "").replace(";", "").replace(",", "").replace(" ", "").replace("?", "") : "";
             if (this.type.contains("|") && (this.type.contains("\"") ||this.type.contains("\'"))) {
@@ -61,7 +61,7 @@ public class JavaApiGenerator {
             }
         }
 
-        public void parse(List<String> string) {
+        void parse(List<String> string) {
             int typeBegin = 0;
             int braceCount = 1;
             int typeEnd = 0;
@@ -91,7 +91,7 @@ public class JavaApiGenerator {
         void parseClassDefinition(List<String> classDefinition, API api, boolean root) {
             int typeBegin = 0;
             int braceCount = 0;
-            int typeEnd = 0;
+            int typeEnd;
             String typename = null;
             String type = null;
 
@@ -105,7 +105,6 @@ public class JavaApiGenerator {
                             line = line.substring(0, line.indexOf("//"));
                         }
                         typeBegin = i;
-                        typeEnd = i;
                         typename = line.substring(0, line.lastIndexOf(":") - 1);
                         type = line.substring(line.lastIndexOf(":"));
                         if (typename == null || type == null) {
@@ -135,7 +134,7 @@ public class JavaApiGenerator {
             }
         }
 
-        public List<String> getClassDefinition() {
+        List<String> getClassDefinition() {
             if (type.equals("class")) {
                 List<String> definition = new ArrayList<>();
                 definition.add("class " + name.substring(0, 1).toUpperCase() + name.substring(1) + " {");

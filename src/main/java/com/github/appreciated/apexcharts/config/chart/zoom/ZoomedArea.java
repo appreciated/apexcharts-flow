@@ -1,8 +1,8 @@
 package com.github.appreciated.apexcharts.config.chart.zoom;
 
 public class ZoomedArea {
-    Fill fill;
-    Stroke stroke;
+    private Fill fill;
+    private Stroke stroke;
 
     public Fill getFill() {
         return fill;

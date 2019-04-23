@@ -5,13 +5,13 @@ import com.github.appreciated.apexcharts.config.xaxis.crosshairs.Fill;
 import com.github.appreciated.apexcharts.config.xaxis.crosshairs.Stroke;
 
 public class Crosshairs {
-    Boolean show;
-    String width;
-    String position;
-    Double opacity;
-    Stroke stroke;
-    Fill fill;
-    DropShadow dropShadow;
+    private Boolean show;
+    private String width;
+    private String position;
+    private Double opacity;
+    private Stroke stroke;
+    private Fill fill;
+    private DropShadow dropShadow;
 
     public Boolean getShow() {
         return show;

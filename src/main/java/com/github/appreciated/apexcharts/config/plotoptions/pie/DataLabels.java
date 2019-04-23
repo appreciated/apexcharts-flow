@@ -1,7 +1,7 @@
 package com.github.appreciated.apexcharts.config.plotoptions.pie;
 
 public class DataLabels {
-    Double offset;
+    private Double offset;
 
     public Double getOffset() {
         return offset;

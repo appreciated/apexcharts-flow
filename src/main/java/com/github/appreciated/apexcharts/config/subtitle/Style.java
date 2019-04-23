@@ -1,8 +1,8 @@
 package com.github.appreciated.apexcharts.config.subtitle;
 
 public class Style {
-    String fontSize;
-    String color;
+    private String fontSize;
+    private String color;
 
     public String getFontSize() {
         return fontSize;

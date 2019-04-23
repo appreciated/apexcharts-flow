@@ -5,7 +5,7 @@ public enum TextAnchor {
     start("start"),
     middle("middle"),
     end("end");
-    private String name;
+    private final String name;
 
     TextAnchor(String name) {
         this.name = name;

@@ -1,9 +1,9 @@
 package com.github.appreciated.apexcharts.config.tooltip;
 
 public class X {
-    Boolean show;
-    String format;
-    String formatter;
+    private Boolean show;
+    private String format;
+    private String formatter;
 
     public Boolean getShow() {
         return show;

@@ -1,10 +1,10 @@
 package com.github.appreciated.apexcharts.config.chart.selection;
 
 public class Stroke {
-    Double width;
-    String color;
-    Double opacity;
-    Double dashArray;
+    private Double width;
+    private String color;
+    private Double opacity;
+    private Double dashArray;
 
     public Double getWidth() {
         return width;

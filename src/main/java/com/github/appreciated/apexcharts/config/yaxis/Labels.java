@@ -3,16 +3,16 @@ package com.github.appreciated.apexcharts.config.yaxis;
 import com.github.appreciated.apexcharts.config.yaxis.labels.Style;
 
 public class Labels {
-    Boolean show;
-    Double minWidth;
-    Double maxWidth;
-    Double offsetX;
-    Double offsetY;
-    Double rotate;
-    Align align;
-    Double padding;
-    Style style;
-    String formatter;
+    private Boolean show;
+    private Double minWidth;
+    private Double maxWidth;
+    private Double offsetX;
+    private Double offsetY;
+    private Double rotate;
+    private Align align;
+    private Double padding;
+    private Style style;
+    private String formatter;
 
     public Boolean getShow() {
         return show;

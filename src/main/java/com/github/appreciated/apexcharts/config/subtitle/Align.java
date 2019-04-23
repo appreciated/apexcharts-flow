@@ -4,7 +4,7 @@ public enum Align {
     left("left"),
     center("center"),
     right("right");
-    private String name;
+    private final String name;
     Align(String name){
         this.name = name;
     }

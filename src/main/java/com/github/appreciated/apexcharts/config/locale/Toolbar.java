@@ -1,13 +1,13 @@
 package com.github.appreciated.apexcharts.config.locale;
 
 class Toolbar {
-    String download;
-    String selection;
-    String selectionZoom;
-    String zoomIn;
-    String zoomOut;
-    String pan;
-    String reset;
+    private String download;
+    private String selection;
+    private String selectionZoom;
+    private String zoomIn;
+    private String zoomOut;
+    private String pan;
+    private String reset;
 
     public String getDownload() {
         return download;

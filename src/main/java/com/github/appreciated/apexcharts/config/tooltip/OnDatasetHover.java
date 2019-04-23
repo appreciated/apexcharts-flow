@@ -1,7 +1,7 @@
 package com.github.appreciated.apexcharts.config.tooltip;
 
 public class OnDatasetHover {
-    Boolean highlightDAtaSeries;
+    private Boolean highlightDAtaSeries;
 
     public Boolean getHighlightDAtaSeries() {
         return highlightDAtaSeries;

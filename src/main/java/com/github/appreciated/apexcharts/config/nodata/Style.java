@@ -1,9 +1,9 @@
 package com.github.appreciated.apexcharts.config.nodata;
 
 public class Style {
-    String color;
-    String fontSize;
-    String fontFamily;
+    private String color;
+    private String fontSize;
+    private String fontFamily;
 
     public String getColor() {
         return color;

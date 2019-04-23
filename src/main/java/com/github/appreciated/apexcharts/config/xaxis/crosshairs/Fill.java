@@ -1,9 +1,9 @@
 package com.github.appreciated.apexcharts.config.xaxis.crosshairs;
 
 public class Fill {
-    String type;
-    String color;
-    Gradient gradient;
+    private String type;
+    private String color;
+    private Gradient gradient;
 
     public String getType() {
         return type;

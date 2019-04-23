@@ -4,7 +4,7 @@ public enum Curve {
     smooth("smooth"),
     straight("straight"),
     stepline("stepline");
-    private String name;
+    private final String name;
 
     Curve(String name) {
         this.name = name;

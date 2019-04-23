@@ -1,8 +1,8 @@
 package com.github.appreciated.apexcharts.config.chart.selection;
 
 public class Yaxis {
-    Double min;
-    Double max;
+    private Double min;
+    private Double max;
 
     public Double getMin() {
         return min;

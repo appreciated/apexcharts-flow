@@ -1,8 +1,8 @@
 package com.github.appreciated.apexcharts.config.markers;
 
 public class Hover {
-    Double size;
-    Double sizeOffset;
+    private Double size;
+    private Double sizeOffset;
 
     public Double getSize() {
         return size;

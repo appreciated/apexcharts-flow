@@ -1,11 +1,11 @@
 package com.github.appreciated.apexcharts.config.annotations;
 
 public class AnnotationStyle {
-    String background;
-    String color;
-    String fontSize;
-    String cssClass;
-    Padding padding;
+    private String background;
+    private String color;
+    private String fontSize;
+    private String cssClass;
+    private Padding padding;
 
     public String getBackground() {
         return background;

@@ -3,8 +3,8 @@ package com.github.appreciated.apexcharts.config.grid;
 import java.util.List;
 
 public class Column {
-    List<String> colors;
-    Double opacity;
+    private List<String> colors;
+    private Double opacity;
 
     public List<String> getColors() {
         return colors;

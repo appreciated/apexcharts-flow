@@ -1,8 +1,8 @@
 package com.github.appreciated.apexcharts.config.tooltip;
 
 public class Style {
-    String fontSize;
-    String fontFamily;
+    private String fontSize;
+    private String fontFamily;
 
     public String getFontSize() {
         return fontSize;

@@ -1,9 +1,9 @@
 package com.github.appreciated.apexcharts.config.xaxis.title;
 
 public class Style {
-    String color;
-    String fontSize;
-    String cssClass;
+    private String color;
+    private String fontSize;
+    private String cssClass;
 
     public String getColor() {
         return color;

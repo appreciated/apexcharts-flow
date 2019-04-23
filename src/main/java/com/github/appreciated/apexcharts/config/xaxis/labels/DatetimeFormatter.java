@@ -1,11 +1,11 @@
 package com.github.appreciated.apexcharts.config.xaxis.labels;
 
 public class DatetimeFormatter {
-    String year;
-    String month;
-    String day;
-    String hour;
-    String minute;
+    private String year;
+    private String month;
+    private String day;
+    private String hour;
+    private String minute;
 
     public String getYear() {
         return year;

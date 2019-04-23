@@ -1,8 +1,8 @@
 package com.github.appreciated.apexcharts.config.yaxis;
 
-public class Tooltip {
-    Boolean enabled;
-    Number offsetX;
+class Tooltip {
+    private Boolean enabled;
+    private Number offsetX;
 
     public Boolean getEnabled() {
         return enabled;

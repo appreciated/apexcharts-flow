@@ -1,15 +1,15 @@
 package com.github.appreciated.apexcharts.config.annotations;
 
 public class XAxisAnnotations {
-    Double x;
-    Double x2;
-    Double strokeDashArray;
-    String fillColor;
-    String borderColor;
-    Double opacity;
-    Double offsetX;
-    Double offsetY;
-    Label label;
+    private Double x;
+    private Double x2;
+    private Double strokeDashArray;
+    private String fillColor;
+    private String borderColor;
+    private Double opacity;
+    private Double offsetX;
+    private Double offsetY;
+    private Label label;
 
     public Double getX() {
         return x;

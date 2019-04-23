@@ -3,11 +3,11 @@ package com.github.appreciated.apexcharts.config.xaxis.crosshairs;
 import java.util.List;
 
 public class Gradient {
-    String colorFrom;
-    String colorTo;
-    List<Double> stops;
-    Double opacityFrom;
-    Double opacityTo;
+    private String colorFrom;
+    private String colorTo;
+    private List<Double> stops;
+    private Double opacityFrom;
+    private Double opacityTo;
 
     public String getColorFrom() {
         return colorFrom;

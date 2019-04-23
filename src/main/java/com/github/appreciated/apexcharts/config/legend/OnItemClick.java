@@ -1,7 +1,7 @@
 package com.github.appreciated.apexcharts.config.legend;
 
 public class OnItemClick {
-    Boolean toggleDataSeries;
+    private Boolean toggleDataSeries;
 
     public Boolean getToggleDataSeries() {
         return toggleDataSeries;
