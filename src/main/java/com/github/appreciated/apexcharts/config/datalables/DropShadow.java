@@ -7,7 +7,6 @@ public class DropShadow {
     private Double blur;
     private Double opacity;
 
-
     public DropShadow() {
     }
 

@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.config.xaxis;
 
-import com.github.appreciated.apexcharts.config.xaxis.crosshairs.DropShadow;
+import com.github.appreciated.apexcharts.config.chart.DropShadow;
 import com.github.appreciated.apexcharts.config.xaxis.crosshairs.Fill;
 import com.github.appreciated.apexcharts.config.xaxis.crosshairs.Stroke;
 

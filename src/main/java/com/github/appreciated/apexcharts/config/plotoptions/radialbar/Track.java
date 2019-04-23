@@ -1,5 +1,7 @@
 package com.github.appreciated.apexcharts.config.plotoptions.radialbar;
 
+import com.github.appreciated.apexcharts.config.chart.DropShadow;
+
 public class Track {
     private Boolean show;
     private Double startAngle;

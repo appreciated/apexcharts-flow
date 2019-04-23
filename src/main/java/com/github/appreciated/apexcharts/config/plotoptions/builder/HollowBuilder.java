@@ -1,7 +1,7 @@
 package com.github.appreciated.apexcharts.config.plotoptions.builder;
 
 import com.github.appreciated.apexcharts.config.plotoptions.Hollow;
-import com.github.appreciated.apexcharts.config.plotoptions.hollow.Position;
+import com.github.appreciated.apexcharts.config.plotoptions.hollow.HollowPosition;
 
 public class HollowBuilder {
     private Double margin;
@@ -13,7 +13,7 @@ public class HollowBuilder {
     private Double offsetX;
     private Double offsetY;
     private Boolean clipped;
-    private Position position;
+    private HollowPosition position;
 
     private HollowBuilder() {
     }
@@ -67,7 +67,7 @@ public class HollowBuilder {
         return this;
     }
 
-    public HollowBuilder withPosition(Position position) {
+    public HollowBuilder withPosition(HollowPosition position) {
         this.position = position;
         return this;
     }

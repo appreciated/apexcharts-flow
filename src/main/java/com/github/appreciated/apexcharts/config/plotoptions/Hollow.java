@@ -1,6 +1,7 @@
 package com.github.appreciated.apexcharts.config.plotoptions;
 
-import com.github.appreciated.apexcharts.config.plotoptions.hollow.Position;
+import com.github.appreciated.apexcharts.config.chart.DropShadow;
+import com.github.appreciated.apexcharts.config.plotoptions.hollow.HollowPosition;
 
 public class Hollow {
     private Double margin;
@@ -12,7 +13,8 @@ public class Hollow {
     private Double offsetX;
     private Double offsetY;
     private Boolean clipped;
-    private Position position;
+    private HollowPosition position;
+    private DropShadow dropShadow;
 
     public Hollow() {
     }
@@ -53,7 +55,7 @@ public class Hollow {
         return clipped;
     }
 
-    public Position getPosition() {
+    public HollowPosition getPosition() {
         return position;
     }
 
@@ -93,7 +95,7 @@ public class Hollow {
         this.clipped = clipped;
     }
 
-    public void setPosition(Position position) {
+    public void setPosition(HollowPosition position) {
         this.position = position;
     }
 

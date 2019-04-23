@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.config.plotoptions.radialbar.builder;
 
-import com.github.appreciated.apexcharts.config.plotoptions.radialbar.DropShadow;
+import com.github.appreciated.apexcharts.config.chart.DropShadow;
 import com.github.appreciated.apexcharts.config.plotoptions.radialbar.Track;
 
 public class TrackBuilder {
