@@ -18,7 +18,7 @@ public class JavaApiGenerator {
     public JavaApiGenerator() {
         // get file as string list
         List<String> file = new BufferedReader(new InputStreamReader(
-                this.getClass().getClassLoader().getResourceAsStream("META-INF/resources/webjars/apexcharts/3.6.6/types/apexcharts.d.ts"),
+                this.getClass().getClassLoader().getResourceAsStream("META-INF/resources/webjars/apexcharts/3.6.8/types/apexcharts.d.ts"),
                 StandardCharsets.UTF_8)).lines().collect(Collectors.toList());
 
         for (int i = 0; i < file.size(); i++) {
