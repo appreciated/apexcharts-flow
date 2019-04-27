@@ -13,21 +13,12 @@
         <slot></slot>
     </template>
     <script>
-        class ApexChartsWrapper extends Vaadin.ThemableMixin
-
-        (Polymer.Element)
-        {
-            static
-            get
-            is()
-            {
+        class ApexChartsWrapper extends Vaadin.ThemableMixin(Polymer.Element){
+            static get is(){
                 return 'apex-charts-wrapper'
             }
 
-            static
-            get
-            properties()
-            {
+            static get properties(){
                 return {
                     annotations: {
                         type: Object
@@ -101,8 +92,7 @@
                 }
             }
 
-            ready()
-            {
+            ready(){
                 super.ready();
                 var config = {};
                 if (this.annotations) {
@@ -187,7 +177,6 @@
                 chart.render();
             }
         }
-
         customElements.define(ApexChartsWrapper.is, ApexChartsWrapper);
     </script>
 </dom-module>
