@@ -6,6 +6,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.appreciated.apexcharts.config.*;
 import com.github.appreciated.apexcharts.helper.Series;
 import com.vaadin.flow.component.HasSize;
+import com.vaadin.flow.component.HasStyle;
+import com.vaadin.flow.component.HasTheme;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.HtmlImport;
 import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
@@ -13,8 +15,9 @@ import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
 import java.util.Arrays;
 
 @Tag("apex-charts-wrapper")
-@HtmlImport("frontend://com/github/appreciated/apexcharts/apexcharts-wrapper.html")
-public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasSize {
+@HtmlImport("frontend://src/apexcharts/apexcharts-wrapper.html")
+@HtmlImport("frontend://src/apexcharts/apexcharts-wrapper-styles.html")
+public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasSize, HasStyle, HasTheme {
 
     public ApexCharts() {
     }
