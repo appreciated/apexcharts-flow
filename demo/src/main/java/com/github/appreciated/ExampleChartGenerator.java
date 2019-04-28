@@ -35,7 +35,26 @@ import java.util.stream.IntStream;
 
 public class ExampleChartGenerator {
 
-    public Component getPieChart() {
+    ApexCharts[] getCharts() {
+        return new ApexCharts[]{
+                getPieChart(),
+                getDonutChart(),
+                getLineChart(),
+                getAreaChart(),
+                getBubbleChart(),
+                getHorizontalBarChart(),
+                getVerticalBarChart(),
+                getRadialBarChart(),
+                getGradientRadialBarChart(),
+                getMultiRadialBarChart(),
+                getCandleStickChart(),
+                getRadarChart(),
+                getScatterChart(),
+                getHeatMapChart()
+        };
+    }
+
+    public ApexCharts getPieChart() {
         ApexCharts pieChart = new ApexCharts()
                 .withChart(ChartBuilder.get().withType(Type.pie).build())
                 .withLabels("Team A", "Team B", "Team C", "Team D", "Team E")
@@ -54,7 +73,7 @@ public class ExampleChartGenerator {
         return pieChart;
     }
 
-    public Component getDonutChart() {
+    public ApexCharts getDonutChart() {
         ApexCharts donutChart = new ApexCharts()
                 .withChart(ChartBuilder.get().withType(Type.donut).build())
                 .withLegend(LegendBuilder.get()
@@ -72,7 +91,7 @@ public class ExampleChartGenerator {
         return donutChart;
     }
 
-    public Component getLineChart() {
+    public ApexCharts getLineChart() {
         ApexCharts lineChart = new ApexCharts()
                 .withChart(ChartBuilder.get()
                         .withType(Type.line)
@@ -99,7 +118,7 @@ public class ExampleChartGenerator {
         return lineChart;
     }
 
-    public Component getAreaChart() {
+    public ApexCharts getAreaChart() {
         ApexCharts areaChart = new ApexCharts()
                 .withChart(
                         ChartBuilder.get()
@@ -128,7 +147,7 @@ public class ExampleChartGenerator {
         return areaChart;
     }
 
-    public Component getHorizontalBarChart() {
+    public ApexCharts getHorizontalBarChart() {
         ApexCharts barChart = new ApexCharts()
                 .withChart(ChartBuilder.get()
                         .withType(Type.bar)
@@ -148,7 +167,7 @@ public class ExampleChartGenerator {
         return barChart;
     }
 
-    public Component getVerticalBarChart() {
+    public ApexCharts getVerticalBarChart() {
         ApexCharts barChart = new ApexCharts()
                 .withChart(ChartBuilder.get()
                         .withType(Type.bar)
@@ -186,7 +205,7 @@ public class ExampleChartGenerator {
         return barChart;
     }
 
-    public Component getRadialBarChart() {
+    public ApexCharts getRadialBarChart() {
         ApexCharts radialBarChart = new ApexCharts()
                 .withChart(ChartBuilder.get()
                         .withType(Type.radialBar)
@@ -203,7 +222,7 @@ public class ExampleChartGenerator {
         return radialBarChart;
     }
 
-    public Component getMultiRadialBarChart() {
+    public ApexCharts getMultiRadialBarChart() {
         ApexCharts multiRadialBarChart = new ApexCharts()
                 .withChart(ChartBuilder.get()
                         .withType(Type.radialBar)
@@ -213,7 +232,7 @@ public class ExampleChartGenerator {
         return multiRadialBarChart;
     }
 
-    public Component getGradientRadialBarChart() {
+    public ApexCharts getGradientRadialBarChart() {
         ApexCharts gradientRadialBarChart = new ApexCharts()
                 .withChart(ChartBuilder.get()
                         .withType(Type.radialBar)
@@ -283,7 +302,7 @@ public class ExampleChartGenerator {
         return gradientRadialBarChart;
     }
 
-    public Component getCandleStickChart() {
+    public ApexCharts getCandleStickChart() {
         ApexCharts barChart = new ApexCharts()
                 .withChart(ChartBuilder.get()
                         .withType(Type.candlestick)
@@ -329,7 +348,7 @@ public class ExampleChartGenerator {
         return LocalDateTime.ofInstant(Instant.ofEpochMilli(l), ZoneId.systemDefault()).format(DateTimeFormatter.ISO_LOCAL_DATE_TIME);
     }
 
-    public Component getRadarChart() {
+    public ApexCharts getRadarChart() {
         ApexCharts radarChart = new ApexCharts()
                 .withChart(ChartBuilder.get()
                         .withType(Type.radar)
@@ -343,7 +362,7 @@ public class ExampleChartGenerator {
 
     }
 
-    public Component getScatterChart() {
+    public ApexCharts getScatterChart() {
         ApexCharts scatterChart = new ApexCharts()
                 .withChart(ChartBuilder.get()
                         .withType(Type.scatter)
@@ -383,7 +402,7 @@ public class ExampleChartGenerator {
         return scatterChart;
     }
 
-    public Component getBubbleChart() {
+    public ApexCharts getBubbleChart() {
         ApexCharts bubbleChart = new ApexCharts()
                 .withChart(
                         ChartBuilder.get()
@@ -420,7 +439,7 @@ public class ExampleChartGenerator {
         return bubbleChart;
     }
 
-    public Component getHeatMapChart() {
+    public ApexCharts getHeatMapChart() {
         ApexCharts heatmapChart = new ApexCharts()
                 .withChart(
                         ChartBuilder.get()
