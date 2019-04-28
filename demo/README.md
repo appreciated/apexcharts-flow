@@ -16,5 +16,7 @@ For a full Vaadin Flow application example, there is the Beverage Buddy App Star
 
 Branching information:
 * `master` the latest version of the starter, using latest platform snapshot
-* `V10` the version for Vaadin 10
-* `V11` the version for Vaadin 11
+* `v10` the version for Vaadin 10
+* `v11` the version for Vaadin 11
+* `v12` the version for Vaadin 12
+* `v13` the version for Vaadin 13

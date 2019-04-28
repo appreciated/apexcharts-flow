@@ -1,4 +1,4 @@
-package com.github.appreciated.production;
+package com.github.appreciated;
 
 import com.vaadin.flow.component.formlayout.FormLayout;
 import com.vaadin.flow.router.Route;

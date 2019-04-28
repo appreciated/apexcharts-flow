@@ -1,4 +1,4 @@
-package com.github.appreciated.production;
+package com.github.appreciated;
 
 import com.github.appreciated.apexcharts.ApexCharts;
 import com.github.appreciated.apexcharts.config.builder.*;

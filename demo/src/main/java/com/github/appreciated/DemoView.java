@@ -1,11 +1,11 @@
-package com.github.appreciated.production;
+package com.github.appreciated;
 
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.theme.Theme;
 import com.vaadin.flow.theme.material.Material;
 
-@Route("")
+@Route("demo")
 @Theme(Material.class)
 public class DemoView extends Div {
 

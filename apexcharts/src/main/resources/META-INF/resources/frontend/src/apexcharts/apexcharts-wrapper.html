@@ -2,7 +2,7 @@
 <link rel="import" href="../../bower_components/polymer/lib/elements/custom-style.html">
 <link rel="import" href="../../bower_components/vaadin-themable-mixin/vaadin-themable-mixin.html">
 
-<script src="../../../../webjars/apexcharts/3.6.8/dist/apexcharts.js"></script>
+<script src="../../../../../webjars/apexcharts/3.6.8/dist/apexcharts.js"></script>
 <dom-module id="apex-charts-wrapper">
     <template>
         <style>
@@ -145,6 +145,8 @@
                 }
                 if (this.theme) {
                     config.theme = this.theme;
+                } else {
+                   // config.
                 }
                 if (this.chartTitle) {
                     config.title = JSON.parse(this.chartTitle);
