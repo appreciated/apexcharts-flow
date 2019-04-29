@@ -176,5 +176,9 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
         return this;
     }
 
+    public void render(){
+        getElement().callFunction("render");
+    }
+
 }
 

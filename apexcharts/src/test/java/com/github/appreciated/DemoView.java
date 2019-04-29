@@ -8,7 +8,7 @@ import com.vaadin.flow.theme.material.Material;
 import java.util.Arrays;
 
 @Route("")
-@Theme(Material.class)
+@Theme(value = Material.class,variant = Material.DARK)
 public class DemoView extends Div {
 
     public DemoView() {
