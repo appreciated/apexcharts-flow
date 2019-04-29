@@ -103,6 +103,18 @@
             }
 
             updateConfig(){
+                var primaryColor;
+                if (ShadyCSS) {
+                    primaryColor = ShadyCSS.getComputedStyleValue(this, '--apex-charts-primary-color');
+                } else {
+                    primaryColor = getComputedStyle(this).getPropertyValue('--apex-charts-primary-color');
+                }
+                var backgroundColor;
+                if (ShadyCSS) {
+                    backgroundColor = ShadyCSS.getComputedStyleValue(this, '--apex-charts-background-color');
+                } else {
+                    backgroundColor = getComputedStyle(this).getPropertyValue('--apex-charts-background-color');
+                }
                 this.config = {};
                 if (this.annotations) {
                     this.config.annotations = this.annotations;
@@ -155,18 +167,6 @@
                 if (this.theme) {
                     this.config.theme = this.theme;
                 } else {
-                    var primaryColor;
-                    if (ShadyCSS) {
-                        primaryColor = ShadyCSS.getComputedStyleValue(this, '--apex-charts-primary-color');
-                    } else {
-                        primaryColor = getComputedStyle(this).getPropertyValue('--apex-charts-primary-color');
-                    }
-                    var backgroundColor;
-                    if (ShadyCSS) {
-                        backgroundColor = ShadyCSS.getComputedStyleValue(this, '--apex-charts-background-color');
-                    } else {
-                        backgroundColor = getComputedStyle(this).getPropertyValue('--apex-charts-background-color');
-                    }
                     this.config.theme = {
                         mode: ((chroma.contrast(backgroundColor, '#000') > 4.5) ? 'light' : 'dark'),
                         monochrome: {
@@ -189,20 +189,22 @@
                 if (this.yaxis) {
                     this.config.yaxis = JSON.parse(this.yaxis);
                 }
+                if (!this.config.chart) {
+                    this.config.chart = {};
+                }
                 if (this.width) {
-                    if (!this.config.chart) {
-                        this.config.chart = {};
-                    }
                     this.config.chart.width = this.width;
                 }
                 if (this.height) {
-                    if (!this.config.chart) {
-                        this.config.chart = {};
-                    }
                     this.config.chart.height = this.height;
                 }
+                if(!this.config.chart.background){
+                    this.config.chart.background = backgroundColor;
+                }
+                if (!this.config.stroke) {
+                    this.config.stroke = {};
+                }
             }
-
             render(){
                 if (this.chart){
                     this.updateConfig();
