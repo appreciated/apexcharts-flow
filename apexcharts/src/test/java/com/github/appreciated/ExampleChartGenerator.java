@@ -24,7 +24,6 @@ import com.github.appreciated.apexcharts.config.xaxis.XAxisType;
 import com.github.appreciated.apexcharts.config.yaxis.builder.TitleBuilder;
 import com.github.appreciated.apexcharts.helper.Coordinate;
 import com.github.appreciated.apexcharts.helper.Series;
-import com.vaadin.flow.component.Component;
 
 import java.time.Instant;
 import java.time.LocalDate;
@@ -76,6 +75,7 @@ public class ExampleChartGenerator {
     public ApexCharts getDonutChart() {
         ApexCharts donutChart = new ApexCharts()
                 .withChart(ChartBuilder.get().withType(Type.donut).build())
+                .withColors("#008FFB", "#00E396", "#FEB019", "#FF4560", "#775DD0")
                 .withLegend(LegendBuilder.get()
                         .withPosition(Position.right)
                         .build())
