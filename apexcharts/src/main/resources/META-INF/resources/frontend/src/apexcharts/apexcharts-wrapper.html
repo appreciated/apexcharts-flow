@@ -168,7 +168,7 @@
                     this.config.theme = this.theme;
                 } else {
                     this.config.theme = {
-                        mode: ((one.color(backgroundColor).lightness > 4.5) ? 'light' : 'dark'),
+                        mode: ((one.color(backgroundColor).lightness() > 0.5) ? 'light' : 'dark'),
                         monochrome: {
                             enabled: true,
                             color: one.color(primaryColor).hex(),
