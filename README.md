@@ -1,4 +1,4 @@
-Vaadin Platform wrapper for ApexCharts to build interactive visualizations in Vaadin.
+Vaadin Platform wrapper for [ApexCharts](https://github.com/apexcharts/apexcharts.js) to build interactive visualizations in Vaadin.
 
 ## Development instructions
 
