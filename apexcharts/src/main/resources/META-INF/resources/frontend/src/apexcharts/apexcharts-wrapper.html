@@ -3,7 +3,7 @@
 <link rel="import" href="../../bower_components/vaadin-themable-mixin/vaadin-themable-mixin.html">
 
 <script src="../../../../../webjars/apexcharts/3.6.8/dist/apexcharts.js"></script>
-<script src="../../../../../webjars/chroma-js/1.1.1/chroma.js"></script>
+<script src="../../../../../webjars/onecolor/3.0.5/one-color.js"></script>
 <dom-module id="apex-charts-wrapper">
     <template>
         <style>
@@ -168,10 +168,10 @@
                     this.config.theme = this.theme;
                 } else {
                     this.config.theme = {
-                        mode: ((chroma.contrast(backgroundColor, '#000') > 4.5) ? 'light' : 'dark'),
+                        mode: ((one.color(backgroundColor).lightness > 4.5) ? 'light' : 'dark'),
                         monochrome: {
                             enabled: true,
-                            color: chroma(primaryColor).hex(),
+                            color: one.color(primaryColor).hex(),
                             shadeTo: 'light',
                             shadeIntensity: 0.65
                         }
