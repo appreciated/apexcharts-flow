@@ -198,15 +198,28 @@
                 if (this.height) {
                     this.config.chart.height = this.height;
                 }
-                if(!this.config.chart.background){
+                if (!this.config.chart.background) {
                     this.config.chart.background = backgroundColor;
                 }
                 if (!this.config.stroke) {
                     this.config.stroke = {};
                 }
+                if (this.config.chart && this.config.chart.type === "radar") {
+                    if (!this.config.plotOptions) {
+                        this.config.plotOptions = {
+                            radar: {
+                                polygons: {
+                                    fill: {
+                                        colors: [one.color(backgroundColor).hex()]
+                                    }
+                                }
+                            }
+                        };
+                    }
+                }
             }
-            render(){
-                if (this.chart){
+            render() {
+                if (this.chart) {
                     this.updateConfig();
                     this.chart.render();
                 }
