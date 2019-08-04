@@ -1,5 +1,7 @@
 Vaadin Platform wrapper for [ApexCharts](https://github.com/apexcharts/apexcharts.js) to build interactive visualizations in Vaadin.
 
+## [Demo](https://appreciated-collection.herokuapp.com/apexcharts/)
+
 ## Development instructions
 
 Starting the test/demo server:
