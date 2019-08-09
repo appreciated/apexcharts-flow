@@ -9,8 +9,10 @@ import com.vaadin.flow.component.HasSize;
 import com.vaadin.flow.component.HasStyle;
 import com.vaadin.flow.component.HasTheme;
 import com.vaadin.flow.component.Tag;
+import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.dependency.NpmPackage;
+import com.vaadin.flow.component.dependency.StyleSheet;
 import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
 
 import java.util.Arrays;
@@ -18,6 +20,8 @@ import java.util.Arrays;
 @NpmPackage(value = "apexcharts",version = "3.8.4")
 @NpmPackage(value = "onecolor",version = "3.0.5")
 @JsModule("apexcharts-wrapper.js")
+@CssImport(value = "./theme/lumo/apexcharts/apexcharts-wrapper-styles.css", id="lumo-apex-charts-wrapper", themeFor="apex-charts-wrapper")
+@CssImport(value = "./theme/lumo/apexcharts/apexcharts-wrapper-styles.css", id="lumo-apex-charts-wrapper", themeFor="apex-charts-wrapper")
 @Tag("apex-charts-wrapper")
 
 public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasSize, HasStyle, HasTheme {

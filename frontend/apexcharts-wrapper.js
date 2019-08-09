@@ -1,6 +1,5 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
-import ApexCharts from 'apexcharts';
-import 'onecolor/index.js';
+
 
 class ApexChartsWrapper extends PolymerElement {
     static get template() {
@@ -94,6 +93,9 @@ class ApexChartsWrapper extends PolymerElement {
 
     ready() {
         super.ready();
+        this.color = require('onecolor');
+        console.warn(this.color('rgba(100%, 0%, 0%, .5)').lightness(0));
+
         var div = document.createElement('div');
         this.appendChild(div);
         this.updateConfig();
@@ -102,7 +104,6 @@ class ApexChartsWrapper extends PolymerElement {
     }
 
     updateConfig() {
-        this.one = require('onecolor');
         var primaryColor;
         if (ShadyCSS) {
             primaryColor = ShadyCSS.getComputedStyleValue(this, '--apex-charts-primary-color');
@@ -110,6 +111,7 @@ class ApexChartsWrapper extends PolymerElement {
             primaryColor = getComputedStyle(this).getPropertyValue('--apex-charts-primary-color');
         }
         var backgroundColor;
+        console.log(ShadyCSS);
         if (ShadyCSS) {
             backgroundColor = ShadyCSS.getComputedStyleValue(this, '--apex-charts-background-color');
         } else {
@@ -168,12 +170,12 @@ class ApexChartsWrapper extends PolymerElement {
             this.config.theme = this.theme;
         } else {
             this.config.theme = {
-                mode: ((color(backgroundColor).lightness() > 0.5) ? 'light' : 'dark')
+                mode: ((this.color(backgroundColor).lightness(0) > 0.5) ? 'light' : 'dark')
             }
             if (!this.colors) {
                 this.config.theme.monochrome = {
                     enabled: true,
-                    color: color(primaryColor).hex(),
+                    color: this.color(primaryColor).hex(),
                     shadeTo: 'light',
                     shadeIntensity: 0.65
                 }
@@ -212,7 +214,7 @@ class ApexChartsWrapper extends PolymerElement {
                     radar: {
                         polygons: {
                             fill: {
-                                colors: [color(backgroundColor).hex()]
+                                colors: [this.color(backgroundColor)]
                             }
                         }
                     }
