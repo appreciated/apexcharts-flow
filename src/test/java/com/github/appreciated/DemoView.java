@@ -9,7 +9,7 @@ import com.vaadin.flow.theme.material.Material;
 import java.util.Arrays;
 
 @Route("")
-//@Theme(value = Material.class, variant = Lumo.LIGHT)
+@Theme(value = Material.class, variant = Lumo.LIGHT)
 public class DemoView extends Div {
 
     public DemoView() {

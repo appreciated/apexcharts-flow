@@ -6,7 +6,7 @@ import ApexCharts from 'apexcharts';
 class ApexChartsWrapper extends PolymerElement {
     static get template() {
         return html`
-           <style include="apex-charts-style-lumo apex-charts-style-material">
+           <style include="apex-charts-style">
             ::slotted(div) {
                 overflow: hidden;
                 }
@@ -168,10 +168,13 @@ class ApexChartsWrapper extends PolymerElement {
         if (this.theme) {
             this.config.theme = this.theme;
         } else {
-            this.config.theme = {
-                mode: ((this.color(backgroundColor).lightness() > 0.5) ? 'light' : 'dark')
-            };
-            if (!this.colors) {
+            if (backgroundColor && this.color(backgroundColor)) {
+                console.log(this.color(backgroundColor).lightness());
+                this.config.theme = {
+                    mode: ((this.color(backgroundColor).lightness() > 0.5) ? 'light' : 'dark')
+                };
+            }
+            if (!this.colors && primaryColor && this.color(primaryColor)) {
                 this.config.theme.monochrome = {
                     enabled: true,
                     color: this.color(primaryColor).hex(),
@@ -201,19 +204,20 @@ class ApexChartsWrapper extends PolymerElement {
         if (this.height) {
             this.config.chart.height = this.height;
         }
-        if (!this.config.chart.background) {
+        if (!this.config.chart.background && backgroundColor && this.color(backgroundColor)) {
             this.config.chart.background = backgroundColor;
         }
         if (!this.config.stroke) {
             this.config.stroke = {};
         }
         if (this.config.chart && this.config.chart.type === "radar") {
-            if (!this.config.plotOptions) {
+            if (!this.config.plotOptions && backgroundColor && this.color(backgroundColor)) {
+                console.log(this.color(backgroundColor))
                 this.config.plotOptions = {
                     radar: {
                         polygons: {
                             fill: {
-                                colors: [this.color(backgroundColor)]
+                                colors: [this.color(backgroundColor).hex()]
                             }
                         }
                     }
