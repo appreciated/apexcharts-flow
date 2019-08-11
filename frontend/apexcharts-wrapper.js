@@ -1,13 +1,15 @@
-import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
-
+import {PolymerElement} from '@polymer/polymer/polymer-element.js';
+import {html} from '@polymer/polymer/lib/utils/html-tag.js';
+import '@polymer/polymer/lib/utils/html-tag.js';
+import ApexCharts from 'apexcharts'
 
 class ApexChartsWrapper extends PolymerElement {
     static get template() {
         return html`
-        <style>
+           <style include="apex-charts-style">
             ::slotted(div) {
                 overflow: hidden;
-            }
+                }
         </style>
         <slot></slot>
     `;
@@ -94,11 +96,11 @@ class ApexChartsWrapper extends PolymerElement {
     ready() {
         super.ready();
         this.color = require('onecolor');
-        console.warn(this.color('rgba(100%, 0%, 0%, .5)').lightness(0));
-
         var div = document.createElement('div');
         this.appendChild(div);
         this.updateConfig();
+        console.log(div);
+        console.log(this.config);
         this.chart = new ApexCharts(div, this.config);
         this.chart.render();
     }
