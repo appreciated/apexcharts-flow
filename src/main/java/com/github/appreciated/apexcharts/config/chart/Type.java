@@ -12,7 +12,8 @@ public enum Type {
     bubble("bubble"),
     heatmap("heatmap"),
     candlestick("candlestick"),
-    radar("radar");
+    radar("radar"),
+    rangeBar("rangeBar");
     private final String name;
 
     Type(String name) {

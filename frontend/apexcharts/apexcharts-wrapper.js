@@ -211,7 +211,6 @@ class ApexChartsWrapper extends PolymerElement {
         }
         if (this.config.chart && this.config.chart.type === "radar") {
             if (!this.config.plotOptions && backgroundColor && this.color(backgroundColor)) {
-                console.log(this.color(backgroundColor))
                 this.config.plotOptions = {
                     radar: {
                         polygons: {

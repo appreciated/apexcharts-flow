@@ -42,6 +42,7 @@ public class ExampleChartGenerator {
                 getAreaChart(),
                 getBubbleChart(),
                 getHorizontalBarChart(),
+                getTimelineChart(),
                 getVerticalBarChart(),
                 getRadialBarChart(),
                 getGradientRadialBarChart(),
@@ -51,6 +52,86 @@ public class ExampleChartGenerator {
                 getScatterChart(),
                 getHeatMapChart()
         };
+    }
+
+    /**
+     * var options = {
+     * <p>
+     * series: [{
+     * name: '',
+     * data: [{
+     *
+     * <p>
+     * }, {
+     * <p>
+     * }, {
+     * name: '',
+     * data: [{
+     * x: 'Design',
+     * y: [new Date('2019-03-01').getTime(), new Date('2019-03-02').getTime()]
+     * }, {
+     * x: 'Code',
+     * y: [new Date('2019-03-03').getTime(), new Date('2019-03-07').getTime()]
+     * }, {
+     * x: 'Test',
+     * y: [new Date('2019-03-06').getTime(), new Date('2019-03-09').getTime()]
+     * }, {
+     * x: 'Deployment',
+     * y: [new Date('2019-03-10').getTime(), new Date('2019-03-11').getTime()]
+     * }]
+     * }],
+     * <p>
+     * fill: {
+     * type: 'gradient',
+     * gradient: {
+     * shade: 'light',
+     * type: "vertical",
+     * shadeIntensity: 0.25,
+     * gradientToColors: undefined,
+     * inverseColors: true,
+     * opacityFrom: 1,
+     * opacityTo: 1,
+     * stops: [50, 0, 100, 100]
+     * }
+     * }
+     * }
+     *
+     * @return
+     */
+    private ApexCharts getTimelineChart() {
+        ApexCharts timelineChart = new ApexCharts()
+                .withChart(ChartBuilder.get()
+                        .withType(Type.rangeBar)
+                        .build())
+                .withPlotOptions(PlotOptionsBuilder.get()
+                        .withBar(BarBuilder.get()
+                                .withHorizontal(true)
+                                .build())
+                        .build())
+                .withDataLabels(DataLabelsBuilder.get()
+                        .withEnabled(false)
+                        .build())
+                .withSeries(new Series("Bob",
+                                new Coordinate<>("Design", LocalDate.of(2019, 3, 2), LocalDate.of(2019, 3, 2)),
+                                new Coordinate<>("Code", LocalDate.of(2019, 3, 2), LocalDate.of(2019, 3, 4)),
+                                new Coordinate<>("Test", LocalDate.of(2019, 3, 4), LocalDate.of(2019, 3, 7)),
+                                new Coordinate<>("Deployment", LocalDate.of(2019, 3, 11), LocalDate.of(2019, 3, 12))
+                        ),
+                        new Series("Joe",
+                                new Coordinate<>("Design", LocalDate.of(2019, 3, 1), LocalDate.of(2019, 3, 2)),
+                                new Coordinate<>("Code", LocalDate.of(2019, 3, 3), LocalDate.of(2019, 3, 7)),
+                                new Coordinate<>("Test", LocalDate.of(2019, 3, 6), LocalDate.of(2019, 3, 9)),
+                                new Coordinate<>("Deployment", LocalDate.of(2019, 3, 10), LocalDate.of(2019, 3, 11))
+                        )
+                )
+                .withYaxis(YAxisBuilder.get()
+                        .withMin(LocalDate.of(2019, 3, 1))
+                        .withMax(LocalDate.of(2019, 3, 14))
+                        .build())
+                .withXaxis(XAxisBuilder.get()
+                        .withType(XAxisType.datetime)
+                        .build());
+        return timelineChart;
     }
 
     public ApexCharts getPieChart() {
