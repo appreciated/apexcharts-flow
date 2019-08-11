@@ -96,7 +96,7 @@ class ApexChartsWrapper extends PolymerElement {
     ready() {
         super.ready();
         this.color = require('onecolor');
-        let div = document.createElement('div');
+        var div = document.createElement('div');
         this.appendChild(div);
         this.updateConfig();
         this.chart = new ApexCharts(div, this.config);
@@ -170,7 +170,7 @@ class ApexChartsWrapper extends PolymerElement {
         } else {
             this.config.theme = {
                 mode: ((this.color(backgroundColor).lightness(0) > 0.5) ? 'light' : 'dark')
-            }
+            };
             if (!this.colors) {
                 this.config.theme.monochrome = {
                     enabled: true,
