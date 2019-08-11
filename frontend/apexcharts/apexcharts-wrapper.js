@@ -169,7 +169,6 @@ class ApexChartsWrapper extends PolymerElement {
             this.config.theme = this.theme;
         } else {
             if (backgroundColor && this.color(backgroundColor)) {
-                console.log(this.color(backgroundColor).lightness());
                 this.config.theme = {
                     mode: ((this.color(backgroundColor).lightness() > 0.5) ? 'light' : 'dark')
                 };
