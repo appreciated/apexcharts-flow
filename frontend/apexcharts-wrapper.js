@@ -6,7 +6,7 @@ import ApexCharts from 'apexcharts';
 class ApexChartsWrapper extends PolymerElement {
     static get template() {
         return html`
-           <style include="apex-charts-style">
+           <style include="apex-charts-style-lumo apex-charts-style-material">
             ::slotted(div) {
                 overflow: hidden;
                 }
