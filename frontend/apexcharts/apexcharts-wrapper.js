@@ -118,7 +118,7 @@ class ApexChartsWrapper extends PolymerElement {
         }
         this.config = {};
         if (this.annotations) {
-            this.config.annotations = this.annotations;
+            this.config.annotations = JSON.parse(this.annotations);
         }
         if (this.chart) {
             this.config.chart = JSON.parse(this.chart);
