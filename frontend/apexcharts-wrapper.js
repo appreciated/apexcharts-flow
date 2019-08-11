@@ -96,11 +96,9 @@ class ApexChartsWrapper extends PolymerElement {
     ready() {
         super.ready();
         this.color = require('onecolor');
-        var div = document.createElement('div');
+        let div = document.createElement('div');
         this.appendChild(div);
         this.updateConfig();
-        console.log(div);
-        console.log(this.config);
         this.chart = new ApexCharts(div, this.config);
         this.chart.render();
     }
@@ -113,7 +111,6 @@ class ApexChartsWrapper extends PolymerElement {
             primaryColor = getComputedStyle(this).getPropertyValue('--apex-charts-primary-color');
         }
         var backgroundColor;
-        console.log(ShadyCSS);
         if (ShadyCSS) {
             backgroundColor = ShadyCSS.getComputedStyleValue(this, '--apex-charts-background-color');
         } else {
