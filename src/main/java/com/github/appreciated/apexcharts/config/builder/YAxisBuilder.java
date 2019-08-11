@@ -12,8 +12,8 @@ public class YAxisBuilder {
     private Boolean logarithmic;
     private Double tickAmount;
     private Boolean forceNiceScale;
-    private Double min;
-    private Double max;
+    private Object min;
+    private Object max;
     private Boolean floating;
     private Double decimalsInFloat;
     private Labels labels;
@@ -71,6 +71,16 @@ public class YAxisBuilder {
     }
 
     public YAxisBuilder withMax(Double max) {
+        this.max = max;
+        return this;
+    }
+
+    public YAxisBuilder withMin(Object min) {
+        this.min = min;
+        return this;
+    }
+
+    public YAxisBuilder withMax(Object max) {
         this.max = max;
         return this;
     }

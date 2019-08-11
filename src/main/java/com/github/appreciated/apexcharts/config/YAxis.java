@@ -10,8 +10,8 @@ public class YAxis {
     private Boolean logarithmic;
     private Double tickAmount;
     private Boolean forceNiceScale;
-    private Double min;
-    private Double max;
+    private Object min;
+    private Object max;
     private Boolean floating;
     private Double decimalsInFloat;
     private Labels labels;
@@ -53,11 +53,11 @@ public class YAxis {
         return forceNiceScale;
     }
 
-    public Double getMin() {
+    public Object getMin() {
         return min;
     }
 
-    public Double getMax() {
+    public Object getMax() {
         return max;
     }
 
@@ -126,6 +126,14 @@ public class YAxis {
     }
 
     public void setMax(Double max) {
+        this.max = max;
+    }
+
+    public void setMin(Object min) {
+        this.min = min;
+    }
+
+    public void setMax(Object max) {
         this.max = max;
     }
 
