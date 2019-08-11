@@ -1,8 +1,9 @@
 package com.github.appreciated.apexcharts.config.annotations;
 
 public class XAxisAnnotations {
-    private Double x;
-    private Double x2;
+    private Object x;
+    private Object x2;
+
     private Double strokeDashArray;
     private String fillColor;
     private String borderColor;
@@ -11,15 +12,14 @@ public class XAxisAnnotations {
     private Double offsetY;
     private Label label;
 
-
     public XAxisAnnotations() {
     }
 
-    public Double getX() {
+    public Object getX() {
         return x;
     }
 
-    public Double getX2() {
+    public Object getX2() {
         return x2;
     }
 
@@ -56,6 +56,14 @@ public class XAxisAnnotations {
     }
 
     public void setX2(Double x2) {
+        this.x2 = x2;
+    }
+
+    public void setX(Object x) {
+        this.x = x;
+    }
+
+    public void setX2(Object x2) {
         this.x2 = x2;
     }
 

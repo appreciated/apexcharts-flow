@@ -4,8 +4,8 @@ import com.github.appreciated.apexcharts.config.annotations.Label;
 import com.github.appreciated.apexcharts.config.annotations.XAxisAnnotations;
 
 public class XAxisAnnotationsBuilder {
-    private Double x;
-    private Double x2;
+    private Object x;
+    private Object x2;
     private Double strokeDashArray;
     private String fillColor;
     private String borderColor;
@@ -27,6 +27,16 @@ public class XAxisAnnotationsBuilder {
     }
 
     public XAxisAnnotationsBuilder withX2(Double x2) {
+        this.x2 = x2;
+        return this;
+    }
+
+    public XAxisAnnotationsBuilder withX(Object x) {
+        this.x = x;
+        return this;
+    }
+
+    public XAxisAnnotationsBuilder withX2(Object x2) {
         this.x2 = x2;
         return this;
     }
