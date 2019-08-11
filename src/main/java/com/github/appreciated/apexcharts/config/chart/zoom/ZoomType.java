@@ -5,7 +5,8 @@ public enum ZoomType {
     y("y"),
     xy("xy");
     private final String name;
-    ZoomType(String name){
+
+    ZoomType(String name) {
         this.name = name;
     }
 }

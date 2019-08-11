@@ -5,7 +5,8 @@ public enum AutoSelected {
     selection("selection"),
     pan("pan");
     private final String name;
-    AutoSelected(String name){
+
+    AutoSelected(String name) {
         this.name = name;
     }
 }

@@ -53,9 +53,9 @@ public class JavaApiGenerator {
         API(String name, String type) {
             this.name = name != null ? name.trim().replace(":", "").replace(";", "").replace(" ", "").replace("?", "") : "";
             this.type = type != null ? type.trim().replace(":", "").replace(";", "").replace(",", "").replace(" ", "").replace("?", "") : "";
-            if (this.type.contains("|") && (this.type.contains("\"") ||this.type.contains("\'"))) {
+            if (this.type.contains("|") && (this.type.contains("\"") || this.type.contains("\'"))) {
                 Arrays.stream(this.type.split("\\|")).forEach(s -> {
-                    attributes.add(new API(s.replace("\"", "").replace("\'", "") + "(" + s.replace("\'","\"") + ")",""));
+                    attributes.add(new API(s.replace("\"", "").replace("\'", "") + "(" + s.replace("\'", "\"") + ")", ""));
                 });
                 this.type = "enum";
             }
@@ -152,7 +152,7 @@ public class JavaApiGenerator {
                 List<String> definition = new ArrayList<>();
                 definition.add("enum " + name.substring(0, 1).toUpperCase() + name.substring(1) + " {");
                 attributes.forEach(api1 -> definition.add(api1.type + " " + api1.name + ","));
-                definition.set(definition.size()-1,definition.get(definition.size()-1).replace(",",";"));
+                definition.set(definition.size() - 1, definition.get(definition.size() - 1).replace(",", ";"));
                 definition.add("private String name;");
                 definition.add(name.substring(0, 1).toUpperCase() + name.substring(1) + "(String name){");
                 definition.add("this.name = name;");

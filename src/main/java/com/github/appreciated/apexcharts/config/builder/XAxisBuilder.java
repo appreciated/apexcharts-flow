@@ -40,7 +40,7 @@ public class XAxisBuilder {
         return this;
     }
 
-    public XAxisBuilder withCategories(String ... categories) {
+    public XAxisBuilder withCategories(String... categories) {
         this.categories = Arrays.asList(categories);
         return this;
     }

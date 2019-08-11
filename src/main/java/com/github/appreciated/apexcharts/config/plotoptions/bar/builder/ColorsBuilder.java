@@ -23,7 +23,7 @@ public class ColorsBuilder {
         return this;
     }
 
-    public ColorsBuilder withBackgroundBarColors(String ... backgroundBarColors) {
+    public ColorsBuilder withBackgroundBarColors(String... backgroundBarColors) {
         this.backgroundBarColors = Arrays.asList(backgroundBarColors);
         return this;
     }

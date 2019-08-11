@@ -37,7 +37,7 @@ public class StrokeBuilder {
         return this;
     }
 
-    public StrokeBuilder withColors(String ... colors) {
+    public StrokeBuilder withColors(String... colors) {
         this.colors = Arrays.asList(colors);
         return this;
     }

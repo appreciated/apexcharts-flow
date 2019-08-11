@@ -21,7 +21,7 @@ public class RowBuilder {
         return this;
     }
 
-    public RowBuilder withColors(String ... colors) {
+    public RowBuilder withColors(String... colors) {
         this.colors = Arrays.asList(colors);
         return this;
     }

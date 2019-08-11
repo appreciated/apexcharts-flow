@@ -20,6 +20,7 @@ public interface ApexChartsModel extends TemplateModel {
     void setChart(Chart chart);
 
     String getColors();
+
     void setColors(String colors);
 
     DataLabels getDataLabels();

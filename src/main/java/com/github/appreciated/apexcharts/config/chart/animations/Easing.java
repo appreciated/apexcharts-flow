@@ -6,7 +6,8 @@ public enum Easing {
     easeout("easeout"),
     easeinout("easeinout");
     private final String name;
-    Easing(String name){
+
+    Easing(String name) {
         this.name = name;
     }
 }

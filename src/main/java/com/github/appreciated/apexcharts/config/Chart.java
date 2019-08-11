@@ -2,7 +2,7 @@ package com.github.appreciated.apexcharts.config;
 
 import com.github.appreciated.apexcharts.config.chart.*;
 
-public class Chart  {
+public class Chart {
     private Type type;
     private String foreColor;
     private String fontFamily;

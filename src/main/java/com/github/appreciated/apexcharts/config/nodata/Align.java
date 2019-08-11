@@ -5,7 +5,8 @@ public enum Align {
     right("right"),
     center("center");
     private final String name;
-    Align(String name){
+
+    Align(String name) {
         this.name = name;
     }
 }
