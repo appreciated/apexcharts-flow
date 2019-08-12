@@ -99,8 +99,8 @@ class ApexChartsWrapper extends PolymerElement {
         var div = document.createElement('div');
         this.appendChild(div);
         this.updateConfig();
-        this.chart = new ApexCharts(div, this.config);
-        this.chart.render();
+        this.chartComponent = new ApexCharts(div, this.config);
+        this.chartComponent.render();
     }
 
     updateConfig() {
@@ -224,10 +224,16 @@ class ApexChartsWrapper extends PolymerElement {
         }
     }
 
+    updateData() {
+        if (this.chartObj) {
+            this.chartObj.updateSeries(JSON.parse(this.series))
+        }
+    }
+
     render() {
-        if (this.chart) {
+        if (this.chartComponent) {
             this.updateConfig();
-            this.chart.render();
+            this.chartComponent.render();
         }
     }
 }
