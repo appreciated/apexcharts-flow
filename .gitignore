@@ -3,4 +3,5 @@
 /target/
 /demo/target/
 /package-lock.json
+/node_modules
 webpack.generated.js

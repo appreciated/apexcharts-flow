@@ -184,5 +184,10 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
     public void render() {
         getElement().callJsFunction("render");
     }
+
+    public void updateGraphSeries()
+    {
+        getElement().callJsFunction("updateData");
+    }
 }
 
