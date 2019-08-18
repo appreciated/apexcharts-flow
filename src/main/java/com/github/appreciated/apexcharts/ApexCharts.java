@@ -107,24 +107,6 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
         return this;
     }
 
-    public ApexCharts withSeries(Double... series) {
-        try {
-            getModel().setSeries(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(series));
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
-        }
-        return this;
-    }
-
-    public ApexCharts withSeries(Series... series) {
-        try {
-            getModel().setSeries(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(series));
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
-        }
-        return this;
-    }
-
     public ApexCharts withStates(States states) {
         try {
             getModel().setStates(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(states));
@@ -189,9 +171,32 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
         getElement().callJsFunction("render");
     }
 
-    public void updateGraphSeries()
-    {
+    public void updateSeries(Series... series) {
+        withSeries(series);
         getElement().callJsFunction("updateData");
+    }
+
+    public ApexCharts withSeries(Series... series) {
+        try {
+            getModel().setSeries(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(series));
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+        return this;
+    }
+
+    public void updateSeries(Double... series) {
+        withSeries(series);
+        getElement().callJsFunction("updateData");
+    }
+
+    public ApexCharts withSeries(Double... series) {
+        try {
+            getModel().setSeries(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(series));
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+        return this;
     }
 }
 
