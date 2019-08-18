@@ -7,7 +7,6 @@ import java.util.List;
 public class XAxis {
     private XAxisType type;
     private List<String> categories;
-    private List<String> labels;
     private AxisBorder axisBorder;
     private AxisTicks axisTicks;
     private Double tickAmount;
@@ -19,7 +18,7 @@ public class XAxis {
     private Title title;
     private Crosshairs crosshairs;
     private Tooltip tooltip;
-
+    private Labels labels;
 
     public XAxis() {
     }
@@ -32,7 +31,7 @@ public class XAxis {
         return categories;
     }
 
-    public List<String> getLabels() {
+    public Labels getLabels() {
         return labels;
     }
 
@@ -88,7 +87,7 @@ public class XAxis {
         this.categories = categories;
     }
 
-    public void setLabels(List<String> labels) {
+    public void setLabels(Labels labels) {
         this.labels = labels;
     }
 

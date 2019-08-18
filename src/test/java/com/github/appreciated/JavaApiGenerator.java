@@ -1,4 +1,4 @@
-package com.github.appreciated.apexcharts.generator;
+package com.github.appreciated;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -18,7 +18,7 @@ public class JavaApiGenerator {
     private JavaApiGenerator() {
         // get file as string list
         List<String> file = new BufferedReader(new InputStreamReader(
-                this.getClass().getClassLoader().getResourceAsStream("META-INF/resources/webjars/apexcharts/3.6.8/types/apexcharts.d.ts"),
+                this.getClass().getClassLoader().getResourceAsStream("apexcharts.d.ts"),
                 StandardCharsets.UTF_8)).lines().collect(Collectors.toList());
 
         for (int i = 0; i < file.size(); i++) {

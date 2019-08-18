@@ -10,7 +10,7 @@ import java.util.List;
 public class XAxisBuilder {
     private XAxisType type;
     private List<String> categories;
-    private List<String> labels;
+    private Labels labels;
     private AxisBorder axisBorder;
     private AxisTicks axisTicks;
     private Double tickAmount;
@@ -45,7 +45,7 @@ public class XAxisBuilder {
         return this;
     }
 
-    public XAxisBuilder withLabels(List<String> labels) {
+    public XAxisBuilder withLabels(Labels labels) {
         this.labels = labels;
         return this;
     }

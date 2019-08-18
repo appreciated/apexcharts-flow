@@ -5,3 +5,4 @@
 /package-lock.json
 /node_modules
 webpack.generated.js
+/src/test/resources/apexcharts.d.ts

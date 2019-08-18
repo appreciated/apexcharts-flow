@@ -111,8 +111,6 @@ public class LabelsBuilder {
         labels.setOffsetX(offsetX);
         labels.setOffsetY(offsetY);
         labels.setFormat(format);
-        labels.setFormatter(formatter);
-        labels.setDatetimeFormatter(datetimeFormatter);
         return labels;
     }
 }
