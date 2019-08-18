@@ -4,6 +4,7 @@ import com.github.appreciated.apexcharts.config.Tooltip;
 import com.github.appreciated.apexcharts.config.XAxis;
 import com.github.appreciated.apexcharts.config.xaxis.*;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class XAxisBuilder {
@@ -31,6 +32,11 @@ public class XAxisBuilder {
 
     public XAxisBuilder withType(XAxisType type) {
         this.type = type;
+        return this;
+    }
+
+    public XAxisBuilder withCategories(String... categories) {
+        this.categories = Arrays.asList(categories);
         return this;
     }
 
