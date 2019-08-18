@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 /**
- * A kind of a TypeScript to Java Compiler, nothing to special.
+ * Some kind of a TypeScript to Java Transpiler
  */
 public class JavaApiGenerator {
     private final ArrayList<API> apis = new ArrayList<>();
