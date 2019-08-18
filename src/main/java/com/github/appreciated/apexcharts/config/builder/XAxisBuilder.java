@@ -25,7 +25,7 @@ public class XAxisBuilder {
     private XAxisBuilder() {
     }
 
-    public static XAxisBuilder aXAxis() {
+    public static XAxisBuilder get() {
         return new XAxisBuilder();
     }
 
