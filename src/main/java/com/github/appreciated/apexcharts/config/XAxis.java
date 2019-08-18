@@ -31,10 +31,6 @@ public class XAxis {
         return categories;
     }
 
-    public Labels getLabels() {
-        return labels;
-    }
-
     public AxisBorder getAxisBorder() {
         return axisBorder;
     }
@@ -79,16 +75,16 @@ public class XAxis {
         return tooltip;
     }
 
+    public Labels getLabels() {
+        return labels;
+    }
+
     public void setType(XAxisType type) {
         this.type = type;
     }
 
     public void setCategories(List<String> categories) {
         this.categories = categories;
-    }
-
-    public void setLabels(Labels labels) {
-        this.labels = labels;
     }
 
     public void setAxisBorder(AxisBorder axisBorder) {
@@ -133,6 +129,10 @@ public class XAxis {
 
     public void setTooltip(Tooltip tooltip) {
         this.tooltip = tooltip;
+    }
+
+    public void setLabels(Labels labels) {
+        this.labels = labels;
     }
 
 }

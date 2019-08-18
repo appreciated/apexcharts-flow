@@ -4,13 +4,11 @@ import com.github.appreciated.apexcharts.config.Tooltip;
 import com.github.appreciated.apexcharts.config.XAxis;
 import com.github.appreciated.apexcharts.config.xaxis.*;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class XAxisBuilder {
     private XAxisType type;
     private List<String> categories;
-    private Labels labels;
     private AxisBorder axisBorder;
     private AxisTicks axisTicks;
     private Double tickAmount;
@@ -22,11 +20,12 @@ public class XAxisBuilder {
     private Title title;
     private Crosshairs crosshairs;
     private com.github.appreciated.apexcharts.config.Tooltip tooltip;
+    private Labels labels;
 
     private XAxisBuilder() {
     }
 
-    public static XAxisBuilder get() {
+    public static XAxisBuilder aXAxis() {
         return new XAxisBuilder();
     }
 
@@ -37,16 +36,6 @@ public class XAxisBuilder {
 
     public XAxisBuilder withCategories(List<String> categories) {
         this.categories = categories;
-        return this;
-    }
-
-    public XAxisBuilder withCategories(String... categories) {
-        this.categories = Arrays.asList(categories);
-        return this;
-    }
-
-    public XAxisBuilder withLabels(Labels labels) {
-        this.labels = labels;
         return this;
     }
 
@@ -105,11 +94,15 @@ public class XAxisBuilder {
         return this;
     }
 
+    public XAxisBuilder withLabels(Labels labels) {
+        this.labels = labels;
+        return this;
+    }
+
     public XAxis build() {
         XAxis xAxis = new XAxis();
         xAxis.setType(type);
         xAxis.setCategories(categories);
-        xAxis.setLabels(labels);
         xAxis.setAxisBorder(axisBorder);
         xAxis.setAxisTicks(axisTicks);
         xAxis.setTickAmount(tickAmount);
@@ -121,6 +114,7 @@ public class XAxisBuilder {
         xAxis.setTitle(title);
         xAxis.setCrosshairs(crosshairs);
         xAxis.setTooltip(tooltip);
+        xAxis.setLabels(labels);
         return xAxis;
     }
 }
