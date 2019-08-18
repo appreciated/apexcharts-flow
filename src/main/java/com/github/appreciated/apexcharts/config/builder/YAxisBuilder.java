@@ -4,6 +4,9 @@ import com.github.appreciated.apexcharts.config.Tooltip;
 import com.github.appreciated.apexcharts.config.YAxis;
 import com.github.appreciated.apexcharts.config.yaxis.*;
 
+import java.time.LocalDate;
+import java.time.ZoneId;
+
 public class YAxisBuilder {
     private Boolean show;
     private Boolean showAlways;
@@ -82,6 +85,18 @@ public class YAxisBuilder {
 
     public YAxisBuilder withMax(Object max) {
         this.max = max;
+        return this;
+    }
+
+    public YAxisBuilder withMin(LocalDate min) {
+        ZoneId zoneId = ZoneId.systemDefault();
+        this.min = min.atStartOfDay(zoneId).toInstant().toEpochMilli();
+        return this;
+    }
+
+    public YAxisBuilder withMax(LocalDate max) {
+        ZoneId zoneId = ZoneId.systemDefault();
+        this.max = max.atStartOfDay(zoneId).toInstant().toEpochMilli();
         return this;
     }
 

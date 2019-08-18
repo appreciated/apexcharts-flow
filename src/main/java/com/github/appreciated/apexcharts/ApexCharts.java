@@ -126,7 +126,11 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
     }
 
     public ApexCharts withStates(States states) {
-        getModel().setStates(states);
+        try {
+            getModel().setStates(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(states));
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
         return this;
     }
 

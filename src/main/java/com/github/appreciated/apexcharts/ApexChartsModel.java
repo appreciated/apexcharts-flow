@@ -66,9 +66,9 @@ public interface ApexChartsModel extends TemplateModel {
 
     void setResponsive(String responsive);
 
-    States getStates();
+    String getStates();
 
-    void setStates(States states);
+    void setStates(String states);
 
     Stroke getStroke();
 

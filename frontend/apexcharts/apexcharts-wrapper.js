@@ -157,7 +157,7 @@ class ApexChartsWrapper extends PolymerElement {
             this.config.responsive = JSON.parse(this.responsive);
         }
         if (this.states) {
-            this.config.states = this.states;
+            this.config.states = JSON.parse(this.states);
         }
         if (this.stroke) {
             this.config.stroke = JSON.parse(this.stroke);
