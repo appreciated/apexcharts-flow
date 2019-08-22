@@ -16,12 +16,11 @@ import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
 
 import java.util.Arrays;
 
+@Tag("apex-charts-wrapper")
 @NpmPackage(value = "apexcharts", version = "3.8.4")
 @NpmPackage(value = "onecolor", version = "3.0.5")
 @JsModule("./com/github/appreciated/apexcharts/apexcharts-wrapper.js")
 @CssImport(value = "./com/github/appreciated/apexcharts/apexcharts-wrapper-styles.css", id = "apex-charts-style")
-@Tag("apex-charts-wrapper")
-
 public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasSize, HasStyle, HasTheme {
 
     public ApexCharts() {
