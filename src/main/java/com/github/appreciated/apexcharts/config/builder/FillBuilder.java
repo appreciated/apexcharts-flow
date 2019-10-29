@@ -9,11 +9,11 @@ import java.util.List;
 
 public class FillBuilder {
     private List<String> colors;
-    private Double opacity;
-    private String type;
-    private Gradient gradient;
-    private Image image;
-    private Pattern pattern;
+    private Double[] opacity;
+    private String[] type;
+    private Gradient[] gradient;
+    private Image[] image;
+    private Pattern[] pattern;
 
     private FillBuilder() {
     }
@@ -27,27 +27,27 @@ public class FillBuilder {
         return this;
     }
 
-    public FillBuilder withOpacity(Double opacity) {
+    public FillBuilder withOpacity(Double... opacity) {
         this.opacity = opacity;
         return this;
     }
 
-    public FillBuilder withType(String type) {
+    public FillBuilder withType(String... type) {
         this.type = type;
         return this;
     }
 
-    public FillBuilder withGradient(Gradient gradient) {
+    public FillBuilder withGradient(Gradient... gradient) {
         this.gradient = gradient;
         return this;
     }
 
-    public FillBuilder withImage(Image image) {
+    public FillBuilder withImage(Image... image) {
         this.image = image;
         return this;
     }
 
-    public FillBuilder withPattern(Pattern pattern) {
+    public FillBuilder withPattern(Pattern... pattern) {
         this.pattern = pattern;
         return this;
     }

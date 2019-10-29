@@ -8,11 +8,11 @@ import java.util.List;
 
 public class Fill {
     private List<String> colors;
-    private Double opacity;
-    private String type;
-    private Gradient gradient;
-    private Image image;
-    private Pattern pattern;
+    private Double[] opacity;
+    private String[] type;
+    private Gradient[] gradient;
+    private Image[] image;
+    private Pattern[] pattern;
 
     public Fill() {
     }
@@ -21,23 +21,23 @@ public class Fill {
         return colors;
     }
 
-    public Double getOpacity() {
+    public Double[] getOpacity() {
         return opacity;
     }
 
-    public String getType() {
+    public String[] getType() {
         return type;
     }
 
-    public Gradient getGradient() {
+    public Gradient[] getGradient() {
         return gradient;
     }
 
-    public Image getImage() {
+    public Image[] getImage() {
         return image;
     }
 
-    public Pattern getPattern() {
+    public Pattern[] getPattern() {
         return pattern;
     }
 
@@ -45,23 +45,23 @@ public class Fill {
         this.colors = colors;
     }
 
-    public void setOpacity(Double opacity) {
+    public void setOpacity(Double... opacity) {
         this.opacity = opacity;
     }
 
-    public void setType(String type) {
+    public void setType(String... type) {
         this.type = type;
     }
 
-    public void setGradient(Gradient gradient) {
+    public void setGradient(Gradient... gradient) {
         this.gradient = gradient;
     }
 
-    public void setImage(Image image) {
+    public void setImage(Image... image) {
         this.image = image;
     }
 
-    public void setPattern(Pattern pattern) {
+    public void setPattern(Pattern... pattern) {
         this.pattern = pattern;
     }
 
