@@ -16,6 +16,7 @@ import com.github.appreciated.apexcharts.config.plotoptions.builder.RadialBarBui
 import com.github.appreciated.apexcharts.config.plotoptions.hollow.HollowPosition;
 import com.github.appreciated.apexcharts.config.plotoptions.radialbar.builder.*;
 import com.github.appreciated.apexcharts.config.responsive.builder.OptionsBuilder;
+import com.github.appreciated.apexcharts.config.series.SeriesType;
 import com.github.appreciated.apexcharts.config.stroke.Curve;
 import com.github.appreciated.apexcharts.config.stroke.LineCap;
 import com.github.appreciated.apexcharts.config.subtitle.Align;
@@ -41,6 +42,9 @@ public class ExampleChartGenerator {
                 getDonutChart(),
                 getLineChart(),
                 getAreaChart(),
+                getLineAreaChart(),
+                getLineColumnChart(),
+                getLineColumnAreaChart(),
                 getBubbleChart(),
                 getHorizontalBarChart(),
                 getTimelineChart(),
@@ -183,6 +187,115 @@ public class ExampleChartGenerator {
                         .withOpposite(true).build())
                 .withLegend(LegendBuilder.get().withHorizontalAlign(HorizontalAlign.left).build());
         return areaChart;
+    }
+    
+    public ApexCharts getLineAreaChart() {
+    	ApexCharts lineAreaChart = new ApexCharts()
+                .withChart(
+                        ChartBuilder.get()
+                                .withType(Type.line)
+                                .withZoom(ZoomBuilder.get()
+                                        .withEnabled(false)
+                                        .build())
+                                .build())
+                .withColors("#008FFB", "#FEB019")
+                .withDataLabels(DataLabelsBuilder.get()
+                        .withEnabled(false)
+                        .build())
+                .withStroke(StrokeBuilder.get().withCurve(Curve.straight).build())
+                .withSeries(
+                		new Series("INDEX XYZ", SeriesType.area, 30.0, 24.0, 28.0, 20.0, 32.0, 48.0, 88.0, 72.0, 68.0),
+                		new Series("STOCK ABC", SeriesType.line, 10.0, 41.0, 35.0, 51.0, 49.0, 62.0, 69.0, 91.0, 148.0))
+                .withFill(FillBuilder.get()
+                		.withType("solid")
+                		.withOpacity(0.35, 1.0)
+                		.build())
+                .withTitle(TitleSubtitleBuilder.get()
+                        .withText("Fundamental Analysis of Stocks")
+                        .withAlign(Align.left).build())
+                .withSubtitle(TitleSubtitleBuilder.get()
+                        .withText("Price Movements")
+                        .withAlign(Align.left).build())
+                .withLabels(IntStream.range(1, 10).boxed().map(day -> LocalDate.of(2000, 1, day).toString()).toArray(String[]::new))
+                .withXaxis(XAxisBuilder.get()
+                        .withType(XAxisType.datetime).build())
+                .withYaxis(YAxisBuilder.get()
+                        .withOpposite(true).build())
+                .withLegend(LegendBuilder.get().withHorizontalAlign(HorizontalAlign.left).build());
+        return lineAreaChart;
+    }
+    
+    public ApexCharts getLineColumnChart() {
+    	ApexCharts lineAreaChart = new ApexCharts()
+                .withChart(
+                        ChartBuilder.get()
+                                .withType(Type.line)
+                                .withZoom(ZoomBuilder.get()
+                                        .withEnabled(false)
+                                        .build())
+                                .build())
+                .withColors("#008FFB", "#FEB019")
+                .withDataLabels(DataLabelsBuilder.get()
+                        .withEnabled(false)
+                        .build())
+                .withStroke(StrokeBuilder.get().withCurve(Curve.straight).build())
+                .withSeries(
+                		new Series("Sales", SeriesType.column, 11.0, 14.0, 7.0, 2.0, 7.0, 15.0, 26.0, 19.0, 36.0),
+                		new Series("INDEX XYZ", SeriesType.line, 30.0, 24.0, 28.0, 20.0, 32.0, 48.0, 88.0, 72.0, 68.0))
+                .withFill(FillBuilder.get()
+                		.withType("solid")
+                		.withOpacity(1.0, 1.0)
+                		.build())
+                .withTitle(TitleSubtitleBuilder.get()
+                        .withText("Fundamental Analysis of Stocks")
+                        .withAlign(Align.left).build())
+                .withSubtitle(TitleSubtitleBuilder.get()
+                        .withText("Price Movements")
+                        .withAlign(Align.left).build())
+                .withLabels(IntStream.range(1, 10).boxed().map(day -> LocalDate.of(2000, 1, day).toString()).toArray(String[]::new))
+                .withXaxis(XAxisBuilder.get()
+                        .withType(XAxisType.datetime).build())
+                .withYaxis(YAxisBuilder.get()
+                        .withOpposite(false).build())
+                .withLegend(LegendBuilder.get().withHorizontalAlign(HorizontalAlign.left).build());
+        return lineAreaChart;
+    }
+    
+    public ApexCharts getLineColumnAreaChart() {
+    	ApexCharts lineAreaChart = new ApexCharts()
+                .withChart(
+                        ChartBuilder.get()
+                                .withType(Type.line)
+                                .withZoom(ZoomBuilder.get()
+                                        .withEnabled(false)
+                                        .build())
+                                .build())
+                .withColors("#008FFB", "#FEB019", "#775DD0")
+                .withDataLabels(DataLabelsBuilder.get()
+                        .withEnabled(false)
+                        .build())
+                .withStroke(StrokeBuilder.get().withCurve(Curve.straight).build())
+                .withSeries(
+                		new Series("Sales", SeriesType.column, 11.0, 14.0, 7.0, 2.0, 7.0, 15.0, 26.0, 19.0, 36.0),
+                		new Series("INDEX XYZ", SeriesType.line, 30.0, 24.0, 28.0, 20.0, 32.0, 48.0, 88.0, 72.0, 68.0),
+                		new Series("Volumne", SeriesType.area, 41.0, 65.0, 72.0, 74.0, 81.0, 96.0, 132.0, 151.0, 187.0))
+                .withFill(FillBuilder.get()
+                		.withType("solid")
+                		.withOpacity(1.0, 1.0, 0.35)
+                		.build())
+                .withTitle(TitleSubtitleBuilder.get()
+                        .withText("Fundamental Analysis of Stocks")
+                        .withAlign(Align.left).build())
+                .withSubtitle(TitleSubtitleBuilder.get()
+                        .withText("Price Movements")
+                        .withAlign(Align.left).build())
+                .withLabels(IntStream.range(1, 10).boxed().map(day -> LocalDate.of(2000, 1, day).toString()).toArray(String[]::new))
+                .withXaxis(XAxisBuilder.get()
+                        .withType(XAxisType.datetime).build())
+                .withYaxis(YAxisBuilder.get()
+                        .withOpposite(false).build())
+                .withLegend(LegendBuilder.get().withHorizontalAlign(HorizontalAlign.left).build());
+        return lineAreaChart;
     }
 
     public ApexCharts getHorizontalBarChart() {
