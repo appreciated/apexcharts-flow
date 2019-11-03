@@ -1,4 +1,4 @@
-package com.github.appreciated;
+package com.github.appreciated.apexcharts;
 
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.router.Route;
@@ -14,7 +14,7 @@ public class DemoView extends Div {
 
     public DemoView() {
         ExampleChartGenerator generator = new ExampleChartGenerator();
-        Arrays.stream(generator.getCharts()).forEach(this::add);
+        Arrays.stream(ExampleChartGenerator.getCharts()).forEach(this::add);
         setSizeFull();
         getStyle()
                 .set("display", "flex")

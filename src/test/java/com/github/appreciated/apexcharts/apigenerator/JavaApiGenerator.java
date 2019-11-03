@@ -1,4 +1,4 @@
-package com.github.appreciated;
+package com.github.appreciated.apexcharts.apigenerator;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
