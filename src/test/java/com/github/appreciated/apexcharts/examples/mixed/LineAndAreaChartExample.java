@@ -1,4 +1,4 @@
-package com.github.appreciated.apexcharts.examples.heatmap.linecolumn;
+package com.github.appreciated.apexcharts.examples.heatmap.mixed;
 
 import com.github.appreciated.apexcharts.ApexCharts;
 import com.github.appreciated.apexcharts.config.builder.*;
@@ -14,9 +14,8 @@ import com.github.appreciated.apexcharts.helper.Series;
 import java.time.LocalDate;
 import java.util.stream.IntStream;
 
-public class LineColumnChartExample extends ApexCharts {
-
-    public LineColumnChartExample() {
+public class LineAndAreaChartExample extends ApexCharts {
+    public LineAndAreaChartExample() {
         withChart(
                 ChartBuilder.get()
                         .withType(Type.line)
@@ -30,11 +29,11 @@ public class LineColumnChartExample extends ApexCharts {
                         .build())
                 .withStroke(StrokeBuilder.get().withCurve(Curve.straight).build())
                 .withSeries(
-                        new Series("Sales", SeriesType.column, 11.0, 14.0, 7.0, 2.0, 7.0, 15.0, 26.0, 19.0, 36.0),
-                        new Series("INDEX XYZ", SeriesType.line, 30.0, 24.0, 28.0, 20.0, 32.0, 48.0, 88.0, 72.0, 68.0))
+                        new Series("INDEX XYZ", SeriesType.area, 30.0, 24.0, 28.0, 20.0, 32.0, 48.0, 88.0, 72.0, 68.0),
+                        new Series("STOCK ABC", SeriesType.line, 10.0, 41.0, 35.0, 51.0, 49.0, 62.0, 69.0, 91.0, 148.0))
                 .withFill(FillBuilder.get()
                         .withType("solid")
-                        .withOpacity(1.0, 1.0)
+                        .withOpacity(0.35, 1.0)
                         .build())
                 .withTitle(TitleSubtitleBuilder.get()
                         .withText("Fundamental Analysis of Stocks")
@@ -46,7 +45,7 @@ public class LineColumnChartExample extends ApexCharts {
                 .withXaxis(XAxisBuilder.get()
                         .withType(XAxisType.datetime).build())
                 .withYaxis(YAxisBuilder.get()
-                        .withOpposite(false).build())
+                        .withOpposite(true).build())
                 .withLegend(LegendBuilder.get().withHorizontalAlign(HorizontalAlign.left).build());
     }
 }

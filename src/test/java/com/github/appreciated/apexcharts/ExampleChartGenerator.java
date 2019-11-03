@@ -8,9 +8,8 @@ import com.github.appreciated.apexcharts.examples.heatmap.areachart.AreaChartExa
 import com.github.appreciated.apexcharts.examples.heatmap.bubble.BubbleChartExample;
 import com.github.appreciated.apexcharts.examples.heatmap.donut.DonutChartExample;
 import com.github.appreciated.apexcharts.examples.heatmap.line.LineChartExample;
-import com.github.appreciated.apexcharts.examples.heatmap.linecolumn.LineColumnChartExample;
-import com.github.appreciated.apexcharts.examples.heatmap.linecolumnarea.LineColumnAreaChartExample;
-import com.github.appreciated.apexcharts.examples.heatmap.mixed.MixedLineAndAreaChartExample;
+import com.github.appreciated.apexcharts.examples.mixed.LineAndColumnChartExample;
+import com.github.appreciated.apexcharts.examples.mixed.LineAndColumnAndAreaChartExample;
 import com.github.appreciated.apexcharts.examples.heatmap.pie.PieChartExample;
 import com.github.appreciated.apexcharts.examples.heatmap.timeline.TimeLineChartExample;
 import com.github.appreciated.apexcharts.examples.radar.RadarChartExample;
@@ -27,9 +26,9 @@ public class ExampleChartGenerator {
                 new DonutChartExample(),
                 new LineChartExample(),
                 new AreaChartExample(),
-                new MixedLineAndAreaChartExample(),
-                new LineColumnChartExample(),
-                new LineColumnAreaChartExample(),
+                new com.github.appreciated.apexcharts.examples.heatmap.mixed.LineAndAreaChartExample(),
+                new LineAndColumnChartExample(),
+                new LineAndColumnAndAreaChartExample(),
                 new BubbleChartExample(),
                 new HorizontalBarChartExample(),
                 new TimeLineChartExample(),
