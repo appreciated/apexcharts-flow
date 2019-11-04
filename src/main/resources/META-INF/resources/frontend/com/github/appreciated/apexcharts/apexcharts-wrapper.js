@@ -170,7 +170,7 @@ class ApexChartsWrapper extends PolymerElement {
         }
         if (this.theme) {
             this.config.theme = this.theme;
-        } else {
+        } else if (!this.config.fill || !this.config.fill.type || !Array.isArray(this.config.fill.type) || this.config.fill.type[0] !== "gradient") {
             if (backgroundColor && this.color(backgroundColor)) {
                 this.config.theme = {
                     mode: ((this.color(backgroundColor).lightness() > 0.5) ? 'light' : 'dark')
