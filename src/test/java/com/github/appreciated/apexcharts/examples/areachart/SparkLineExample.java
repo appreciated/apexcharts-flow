@@ -1,13 +1,15 @@
 package com.github.appreciated.apexcharts.examples.areachart;
 
 import com.github.appreciated.apexcharts.ApexChartsBuilder;
-import com.github.appreciated.apexcharts.config.builder.*;
+import com.github.appreciated.apexcharts.config.builder.ChartBuilder;
+import com.github.appreciated.apexcharts.config.builder.DataLabelsBuilder;
+import com.github.appreciated.apexcharts.config.builder.StrokeBuilder;
+import com.github.appreciated.apexcharts.config.builder.YAxisBuilder;
 import com.github.appreciated.apexcharts.config.chart.Sparkline;
 import com.github.appreciated.apexcharts.config.chart.Type;
 import com.github.appreciated.apexcharts.config.chart.builder.ZoomBuilder;
-import com.github.appreciated.apexcharts.config.legend.HorizontalAlign;
 import com.github.appreciated.apexcharts.config.stroke.Curve;
-import com.github.appreciated.apexcharts.config.xaxis.XAxisType;
+import com.github.appreciated.apexcharts.helper.Series;
 
 public class SparkLineExample extends ApexChartsBuilder {
     public SparkLineExample() {
@@ -23,11 +25,8 @@ public class SparkLineExample extends ApexChartsBuilder {
                         .withEnabled(false)
                         .build())
                 .withStroke(StrokeBuilder.get().withCurve(Curve.straight).build())
-                .withSeries(10.0, 41.0, 35.0, 51.0, 49.0, 62.0, 69.0, 91.0, 148.0)
-                .withXaxis(XAxisBuilder.get()
-                        .withType(XAxisType.datetime).build())
+                .withSeries(new Series<>(10.0, 41.0, 35.0, 51.0, 49.0, 62.0, 69.0, 91.0, 148.0))
                 .withYaxis(YAxisBuilder.get()
-                        .withOpposite(true).build())
-                .withLegend(LegendBuilder.get().withHorizontalAlign(HorizontalAlign.left).build());
+                        .withMin(0.0).build());
     }
 }

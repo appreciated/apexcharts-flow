@@ -11,7 +11,7 @@ import com.github.appreciated.apexcharts.config.responsive.builder.OptionsBuilde
 public class PieChartExample extends ApexChartsBuilder {
 
     public PieChartExample() {
-                withChart(ChartBuilder.get().withType(Type.pie).build())
+        withChart(ChartBuilder.get().withType(Type.pie).build())
                 .withLabels("Team A", "Team B", "Team C", "Team D", "Team E")
                 .withLegend(LegendBuilder.get()
                         .withPosition(Position.right)
