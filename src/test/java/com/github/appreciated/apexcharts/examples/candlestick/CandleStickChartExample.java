@@ -3,6 +3,8 @@ package com.github.appreciated.apexcharts.examples.candlestick;
 import com.github.appreciated.apexcharts.ApexChartsBuilder;
 import com.github.appreciated.apexcharts.config.builder.*;
 import com.github.appreciated.apexcharts.config.chart.Type;
+import com.github.appreciated.apexcharts.config.plotoptions.builder.CandlestickBuilder;
+import com.github.appreciated.apexcharts.config.plotoptions.candlestick.builder.ColorsBuilder;
 import com.github.appreciated.apexcharts.config.subtitle.Align;
 import com.github.appreciated.apexcharts.config.xaxis.XAxisType;
 import com.github.appreciated.apexcharts.helper.Coordinate;
@@ -51,7 +53,13 @@ public class CandleStickChartExample extends ApexChartsBuilder {
                         .withTooltip(TooltipBuilder.get()
                                 .withEnabled(true)
                                 .build())
-                        .build());
+                        .build())
+                .withPlotOptions(PlotOptionsBuilder.get()
+                        .withCandlestick(
+                                CandlestickBuilder.get()
+                                        .withColors(ColorsBuilder.get().withDownward("").withUpward("").build())
+                                        .build()
+                        ).build());
     }
 
     public String getISOString(long l) {

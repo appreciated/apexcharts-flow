@@ -16,7 +16,7 @@ import java.util.stream.IntStream;
 
 public class LineAndAreaChartExample extends ApexChartsBuilder {
     public LineAndAreaChartExample() {
-        ApexChartsBuilder.get().withChart(
+        withChart(
                 ChartBuilder.get()
                         .withType(Type.line)
                         .withZoom(ZoomBuilder.get()

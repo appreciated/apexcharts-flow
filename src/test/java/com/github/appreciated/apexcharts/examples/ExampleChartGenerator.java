@@ -1,6 +1,9 @@
 package com.github.appreciated.apexcharts.examples;
 
 import com.github.appreciated.apexcharts.ApexChartsBuilder;
+import com.github.appreciated.apexcharts.config.builder.PlotOptionsBuilder;
+import com.github.appreciated.apexcharts.config.plotoptions.builder.CandlestickBuilder;
+import com.github.appreciated.apexcharts.config.plotoptions.candlestick.builder.ColorsBuilder;
 import com.github.appreciated.apexcharts.examples.areachart.AreaChartExample;
 import com.github.appreciated.apexcharts.examples.bar.HorizontalBarChartExample;
 import com.github.appreciated.apexcharts.examples.bar.VerticalBarChartExample;
@@ -25,7 +28,17 @@ import java.util.Arrays;
 public class ExampleChartGenerator {
     public static ApexChartsBuilder[] getColoredCharts() {
         return Arrays.stream(getCharts())
-                .map(builder -> builder instanceof CandleStickChartExample ? builder : builder.withColors("#008FFB"))
+                .map(builder ->
+                        builder instanceof CandleStickChartExample ?
+                                builder.withPlotOptions(PlotOptionsBuilder.get()
+                                        .withCandlestick(CandlestickBuilder.get()
+                                                .withColors(ColorsBuilder.get()
+                                                        .withDownward("#1e88e5")
+                                                        .withUpward("#00acc1").build())
+                                                .build()
+                                        ).build()) :
+                                builder.withColors("#1e88e5", "#00acc1", "#5e35b1")
+                )
                 .toArray(ApexChartsBuilder[]::new);
     }
 

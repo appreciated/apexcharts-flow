@@ -27,6 +27,7 @@ public class ApexChartsBuilder {
     private YAxis yaxis;
     private Series[] series;
     private Double[] doubleSeries;
+    private boolean debug;
 
     public ApexChartsBuilder() {
     }
@@ -122,6 +123,11 @@ public class ApexChartsBuilder {
         return this;
     }
 
+    public ApexChartsBuilder withDebug(boolean debug) {
+        this.debug = debug;
+        return this;
+    }
+
     public ApexChartsBuilder withTitle(TitleSubtitle title) {
         this.title = title;
         return this;
@@ -214,10 +220,11 @@ public class ApexChartsBuilder {
         if (yaxis != null) {
             apexCharts.setYaxis(yaxis);
         }
-        if (series == null && doubleSeries != null) {
-            apexCharts.setSeries(doubleSeries);
-        } else if (series != null) {
+        apexCharts.setDebug(debug);
+        if (series != null) {
             apexCharts.setSeries(series);
+        } else if (doubleSeries != null) {
+            apexCharts.setSeries(doubleSeries);
         }
         return apexCharts;
     }
