@@ -1,7 +1,10 @@
 package com.github.appreciated.apexcharts.examples.heatmap;
 
 import com.github.appreciated.apexcharts.ApexChartsBuilder;
-import com.github.appreciated.apexcharts.config.builder.*;
+import com.github.appreciated.apexcharts.config.builder.ChartBuilder;
+import com.github.appreciated.apexcharts.config.builder.DataLabelsBuilder;
+import com.github.appreciated.apexcharts.config.builder.XAxisBuilder;
+import com.github.appreciated.apexcharts.config.builder.YAxisBuilder;
 import com.github.appreciated.apexcharts.config.chart.Type;
 import com.github.appreciated.apexcharts.config.xaxis.XAxisType;
 import com.github.appreciated.apexcharts.helper.Coordinate;
@@ -16,7 +19,6 @@ public class HeatmapChartExample extends ApexChartsBuilder {
                 .withDataLabels(DataLabelsBuilder.get()
                         .withEnabled(false)
                         .build())
-                .withTitle(TitleSubtitleBuilder.get().withText("HeatMap Chart (Single color)").build())
                 .withSeries(new Series<>("Metric 1",
                         new Coordinate<>("w1", 10.0), new Coordinate<>("w2", 20.0), new Coordinate<>("w3", 30.0),
                         new Coordinate<>("w4", 40.0), new Coordinate<>("w5", 50.0), new Coordinate<>("w6", 60.0),

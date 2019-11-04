@@ -20,7 +20,6 @@ public class BubbleChartExample extends ApexChartsBuilder {
                         .withEnabled(false)
                         .build())
                 .withFill(FillBuilder.get().withOpacity(0.8).build())
-                .withTitle(TitleSubtitleBuilder.get().withText("Simple Bubble Chart").build())
                 .withSeries(new Series("Bubble1", new Double[]{637.0, 52.0, 46.0}, // {X, Y, <Bubble Size>}
                                 new Double[]{162.0, 59.0, 33.0},
                                 new Double[]{400.0, 52.0, 60.0},

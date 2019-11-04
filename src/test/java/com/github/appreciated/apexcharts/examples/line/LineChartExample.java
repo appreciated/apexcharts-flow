@@ -1,12 +1,14 @@
 package com.github.appreciated.apexcharts.examples.line;
 
 import com.github.appreciated.apexcharts.ApexChartsBuilder;
-import com.github.appreciated.apexcharts.config.builder.*;
+import com.github.appreciated.apexcharts.config.builder.ChartBuilder;
+import com.github.appreciated.apexcharts.config.builder.GridBuilder;
+import com.github.appreciated.apexcharts.config.builder.StrokeBuilder;
+import com.github.appreciated.apexcharts.config.builder.XAxisBuilder;
 import com.github.appreciated.apexcharts.config.chart.Type;
 import com.github.appreciated.apexcharts.config.chart.builder.ZoomBuilder;
 import com.github.appreciated.apexcharts.config.grid.builder.RowBuilder;
 import com.github.appreciated.apexcharts.config.stroke.Curve;
-import com.github.appreciated.apexcharts.config.subtitle.Align;
 import com.github.appreciated.apexcharts.helper.Series;
 
 public class LineChartExample extends ApexChartsBuilder {
@@ -19,10 +21,6 @@ public class LineChartExample extends ApexChartsBuilder {
                 .build())
                 .withStroke(StrokeBuilder.get()
                         .withCurve(Curve.straight)
-                        .build())
-                .withTitle(TitleSubtitleBuilder.get()
-                        .withText("Product Trends by Month")
-                        .withAlign(Align.left)
                         .build())
                 .withGrid(GridBuilder.get()
                         .withRow(RowBuilder.get()

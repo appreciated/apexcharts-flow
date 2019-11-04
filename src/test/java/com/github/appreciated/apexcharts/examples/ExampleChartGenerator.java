@@ -2,6 +2,7 @@ package com.github.appreciated.apexcharts.examples;
 
 import com.github.appreciated.apexcharts.ApexChartsBuilder;
 import com.github.appreciated.apexcharts.config.builder.PlotOptionsBuilder;
+import com.github.appreciated.apexcharts.config.builder.TitleSubtitleBuilder;
 import com.github.appreciated.apexcharts.config.plotoptions.builder.CandlestickBuilder;
 import com.github.appreciated.apexcharts.config.plotoptions.candlestick.builder.ColorsBuilder;
 import com.github.appreciated.apexcharts.examples.areachart.AreaChartExample;
@@ -15,6 +16,7 @@ import com.github.appreciated.apexcharts.examples.line.LineChartExample;
 import com.github.appreciated.apexcharts.examples.mixed.LineAndAreaChartExample;
 import com.github.appreciated.apexcharts.examples.mixed.LineAndColumnAndAreaChartExample;
 import com.github.appreciated.apexcharts.examples.mixed.LineAndColumnChartExample;
+import com.github.appreciated.apexcharts.examples.mixed.LineAndScatterChartExample;
 import com.github.appreciated.apexcharts.examples.pie.PieChartExample;
 import com.github.appreciated.apexcharts.examples.radar.RadarChartExample;
 import com.github.appreciated.apexcharts.examples.radialbar.GradientRadialBarChartExample;
@@ -43,7 +45,7 @@ public class ExampleChartGenerator {
     }
 
     public static ApexChartsBuilder[] getCharts() {
-        return new ApexChartsBuilder[]{
+        return Arrays.stream(new ApexChartsBuilder[]{
                 new PieChartExample(),
                 new DonutChartExample(),
                 new LineChartExample(),
@@ -51,6 +53,7 @@ public class ExampleChartGenerator {
                 new LineAndAreaChartExample(),
                 new LineAndColumnChartExample(),
                 new LineAndColumnAndAreaChartExample(),
+                new LineAndScatterChartExample(),
                 new BubbleChartExample(),
                 new HorizontalBarChartExample(),
                 new TimeLineChartExample(),
@@ -62,6 +65,8 @@ public class ExampleChartGenerator {
                 new RadarChartExample(),
                 new ScatterChartExample(),
                 new HeatmapChartExample()
-        };
+        }).map(builder ->
+                builder.withTitle(TitleSubtitleBuilder.get().withText(builder.getClass().getSimpleName()).build())
+        ).toArray(ApexChartsBuilder[]::new);
     }
 }

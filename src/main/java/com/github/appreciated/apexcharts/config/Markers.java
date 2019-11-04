@@ -6,7 +6,7 @@ import com.github.appreciated.apexcharts.config.markers.Shape;
 import java.util.List;
 
 public class Markers {
-    private Double size;
+    private Double[] size;
     private List<String> colors;
     private String strokeColor;
     private Double strokeWidth;
@@ -23,7 +23,7 @@ public class Markers {
     public Markers() {
     }
 
-    public Double getSize() {
+    public Double[] getSize() {
         return size;
     }
 
@@ -71,7 +71,7 @@ public class Markers {
         return hover;
     }
 
-    public void setSize(Double size) {
+    public void setSize(Double[] size) {
         this.size = size;
     }
 

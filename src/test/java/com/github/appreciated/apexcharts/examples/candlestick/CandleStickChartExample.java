@@ -1,9 +1,11 @@
 package com.github.appreciated.apexcharts.examples.candlestick;
 
 import com.github.appreciated.apexcharts.ApexChartsBuilder;
-import com.github.appreciated.apexcharts.config.builder.*;
+import com.github.appreciated.apexcharts.config.builder.ChartBuilder;
+import com.github.appreciated.apexcharts.config.builder.TooltipBuilder;
+import com.github.appreciated.apexcharts.config.builder.XAxisBuilder;
+import com.github.appreciated.apexcharts.config.builder.YAxisBuilder;
 import com.github.appreciated.apexcharts.config.chart.Type;
-import com.github.appreciated.apexcharts.config.subtitle.Align;
 import com.github.appreciated.apexcharts.config.xaxis.XAxisType;
 import com.github.appreciated.apexcharts.helper.Coordinate;
 import com.github.appreciated.apexcharts.helper.Series;
@@ -18,10 +20,6 @@ public class CandleStickChartExample extends ApexChartsBuilder {
         withChart(ChartBuilder.get()
                 .withType(Type.candlestick)
                 .build())
-                .withTitle(TitleSubtitleBuilder.get()
-                        .withText("CandleStick Chart")
-                        .withAlign(Align.left)
-                        .build())
                 .withSeries(new Series<>(
                         new Coordinate<>(getISOString(1538778600000L), 6629.81, 6650.5, 6623.04, 6633.33),
                         new Coordinate<>(getISOString(1538780400000L), 6632.01, 6643.59, 6620, 6630.11),

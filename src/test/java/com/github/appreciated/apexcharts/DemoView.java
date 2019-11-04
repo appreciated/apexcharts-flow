@@ -4,14 +4,10 @@ import com.github.appreciated.apexcharts.examples.ExampleChartGenerator;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
-import com.vaadin.flow.theme.Theme;
-import com.vaadin.flow.theme.lumo.Lumo;
-import com.vaadin.flow.theme.material.Material;
 
 import java.util.Arrays;
 
 @Route("")
-@Theme(value = Material.class, variant = Lumo.LIGHT)
 public class DemoView extends HorizontalLayout {
     VerticalLayout left = new VerticalLayout();
     VerticalLayout right = new VerticalLayout();

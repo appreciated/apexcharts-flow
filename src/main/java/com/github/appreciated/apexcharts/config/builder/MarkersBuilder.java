@@ -8,7 +8,7 @@ import com.github.appreciated.apexcharts.config.markers.Shape;
 import java.util.List;
 
 public class MarkersBuilder {
-    private Double size;
+    private Double[] size;
     private List<String> colors;
     private String strokeColor;
     private Double strokeWidth;
@@ -28,8 +28,8 @@ public class MarkersBuilder {
         return new MarkersBuilder();
     }
 
-    public MarkersBuilder withSize(Double size) {
-        this.size = size;
+    public MarkersBuilder withSize(Double width, Double height) {
+        this.size = new Double[]{width, height};
         return this;
     }
 
