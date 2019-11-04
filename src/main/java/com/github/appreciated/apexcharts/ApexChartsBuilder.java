@@ -148,11 +148,25 @@ public class ApexChartsBuilder {
         return this;
     }
 
+
+
+    /**
+     * Method to set the data for all chart types except {@link com.github.appreciated.apexcharts.config.chart.Type#pie} and {@link com.github.appreciated.apexcharts.config.chart.Type#donut}.
+     * For these both types use withSeries{@link #withSeries(Double[])}
+     * @param series the date series to assign to the Chart
+     * @return the builder
+     */
     public ApexChartsBuilder withSeries(Series... series) {
         this.series = series;
         return this;
     }
 
+    /**
+     * Method to set the data for {@link com.github.appreciated.apexcharts.config.chart.Type#pie} and {@link com.github.appreciated.apexcharts.config.chart.Type#donut}.
+     * For all other chart types use withSeries{@link #withSeries(Series[])}
+     * @param series the date series to assign to the Chart
+     * @return the builder
+     */
     public ApexChartsBuilder withSeries(Double... series) {
         doubleSeries = series;
         return this;

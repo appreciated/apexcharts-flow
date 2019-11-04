@@ -154,16 +154,31 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
         getModel().setDebug(enabled);
     }
 
+    /**
+     * Method to set update the data for all chart types except {@link com.github.appreciated.apexcharts.config.chart.Type#pie} and {@link com.github.appreciated.apexcharts.config.chart.Type#donut}.
+     * For these both types use setSeries{@link #setSeries(Double[])}
+     * @param series the data series to update to the Chart with
+     */
     public void updateSeries(Double... series) {
         setSeries(series);
         getElement().callJsFunction("updateData");
     }
 
+    /**
+     * Method to set update the data for all chart types except {@link com.github.appreciated.apexcharts.config.chart.Type#pie} and {@link com.github.appreciated.apexcharts.config.chart.Type#donut}.
+     * For all other chart types use setSeries{@link #setSeries(Series[])}
+     * @param series the data series to update to the Chart with
+     */
     public void updateSeries(Series... series) {
         setSeries(series);
         getElement().callJsFunction("updateData");
     }
 
+    /**
+     * Method to set the data for all chart types except {@link com.github.appreciated.apexcharts.config.chart.Type#pie} and {@link com.github.appreciated.apexcharts.config.chart.Type#donut}.
+     * For these both types use setSeries{@link #setSeries(Double[])}
+     * @param series the data series to assign to the Chart
+     */
     public void setSeries(Series... series) {
         try {
             getModel().setSeries(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(series));
@@ -172,6 +187,11 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
         }
     }
 
+    /**
+     * Method to set the data for {@link com.github.appreciated.apexcharts.config.chart.Type#pie} and {@link com.github.appreciated.apexcharts.config.chart.Type#donut}.
+     * For all other chart types use setSeries{@link #setSeries(Series[])}
+     * @param series the data series to assign to the Chart
+     */
     public void setSeries(Double... series) {
         try {
             getModel().setSeries(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(series));
