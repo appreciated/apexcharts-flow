@@ -42,10 +42,8 @@ public class ScatterChartExample extends ApexChartsBuilder {
                                 new double[]{33.4, 0}, new double[]{16.4, 0})
                 )
                 .withXaxis(XAxisBuilder.get()
-                        .withTickAmount(10.0)
                         .build())
                 .withYaxis(YAxisBuilder.get()
-                        .withTickAmount(7.0)
                         .build());
     }
 }

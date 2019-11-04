@@ -24,7 +24,6 @@ public class LineAndColumnAndAreaChartExample extends ApexChartsBuilder {
                                 .withEnabled(false)
                                 .build())
                         .build())
-                .withColors("#008FFB", "#FEB019", "#775DD0")
                 .withDataLabels(DataLabelsBuilder.get()
                         .withEnabled(false)
                         .build())

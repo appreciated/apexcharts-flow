@@ -11,7 +11,6 @@ import com.github.appreciated.apexcharts.config.responsive.builder.OptionsBuilde
 public class DonutChartExample extends ApexChartsBuilder {
     public DonutChartExample() {
       withChart(ChartBuilder.get().withType(Type.donut).build())
-                .withColors("#008FFB", "#00E396", "#FEB019", "#FF4560", "#775DD0")
                 .withLegend(LegendBuilder.get()
                         .withPosition(Position.right)
                         .build())

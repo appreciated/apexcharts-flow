@@ -39,7 +39,7 @@ public class BubbleChartExample extends ApexChartsBuilder {
                                 new Double[]{556.0, 35.0, 62.0},
                                 new Double[]{331.0, 36.0, 53.0},
                                 new Double[]{251.0, 49.0, 25.0}))
-                .withXaxis(XAxisBuilder.get().withType(XAxisType.numeric).build())
+                .withXaxis(XAxisBuilder.get().withTickAmount(10.0).withType(XAxisType.numeric).build())
                 .withYaxis(YAxisBuilder.get().withMax(70.0).build());
     }
 }
