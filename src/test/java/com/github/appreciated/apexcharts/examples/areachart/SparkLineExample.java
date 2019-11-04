@@ -8,7 +8,6 @@ import com.github.appreciated.apexcharts.config.chart.builder.ZoomBuilder;
 import com.github.appreciated.apexcharts.config.legend.HorizontalAlign;
 import com.github.appreciated.apexcharts.config.stroke.Curve;
 import com.github.appreciated.apexcharts.config.xaxis.XAxisType;
-import com.github.appreciated.apexcharts.helper.Series;
 
 public class SparkLineExample extends ApexChartsBuilder {
     public SparkLineExample() {
@@ -24,7 +23,7 @@ public class SparkLineExample extends ApexChartsBuilder {
                         .withEnabled(false)
                         .build())
                 .withStroke(StrokeBuilder.get().withCurve(Curve.straight).build())
-                .withSeries(new Series<>(10.0, 41.0, 35.0, 51.0, 49.0, 62.0, 69.0, 91.0, 148.0))
+                .withSeries(10.0, 41.0, 35.0, 51.0, 49.0, 62.0, 69.0, 91.0, 148.0)
                 .withXaxis(XAxisBuilder.get()
                         .withType(XAxisType.datetime).build())
                 .withYaxis(YAxisBuilder.get()

@@ -20,7 +20,7 @@ public class CandleStickChartExample extends ApexChartsBuilder {
         withChart(ChartBuilder.get()
                 .withType(Type.candlestick)
                 .build())
-                .withSeries(new Series<>(
+                .withSeries(new Series<Coordinate>(
                         new Coordinate<>(getISOString(1538778600000L), 6629.81, 6650.5, 6623.04, 6633.33),
                         new Coordinate<>(getISOString(1538780400000L), 6632.01, 6643.59, 6620, 6630.11),
                         new Coordinate<>(getISOString(1538782200000L), 6630.71, 6648.95, 6623.34, 6635.65),
