@@ -148,7 +148,7 @@ class ApexChartsWrapper extends PolymerElement {
             this.config.legend = JSON.parse(this.legend);
         }
         if (this.markers) {
-            this.config.markers = this.markers;
+            this.config.markers = JSON.parse(this.markers);
         }
         if (this.noData) {
             this.config.noData = this.noData;
