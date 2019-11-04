@@ -110,4 +110,8 @@ public interface ApexChartsModel extends TemplateModel {
     void setHeight(String height);
 
     void setXaxis(String xaxis);
+
+    boolean getDebug();
+
+    void setDebug(boolean responsive);
 }

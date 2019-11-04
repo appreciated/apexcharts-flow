@@ -84,6 +84,9 @@ class ApexChartsWrapper extends PolymerElement {
             yaxis: {
                 type: Object
             }, // ApexYAxis | ApexYAxis[];
+            debug: {
+                type: Boolean
+            },
             width: {
                 type: String
             },
@@ -221,6 +224,9 @@ class ApexChartsWrapper extends PolymerElement {
                     }
                 };
             }
+        }
+        if (this.debug) {
+            console.log(this.config);
         }
     }
 

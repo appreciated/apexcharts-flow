@@ -10,7 +10,7 @@ public class Fill {
     private List<String> colors;
     private Double[] opacity;
     private String[] type;
-    private Gradient[] gradient;
+    private Gradient gradient;
     private Image[] image;
     private Pattern[] pattern;
 
@@ -29,7 +29,7 @@ public class Fill {
         return type;
     }
 
-    public Gradient[] getGradient() {
+    public Gradient getGradient() {
         return gradient;
     }
 
@@ -53,7 +53,7 @@ public class Fill {
         this.type = type;
     }
 
-    public void setGradient(Gradient... gradient) {
+    public void setGradient(Gradient gradient) {
         this.gradient = gradient;
     }
 

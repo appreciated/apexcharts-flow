@@ -11,7 +11,7 @@ public class FillBuilder {
     private List<String> colors;
     private Double[] opacity;
     private String[] type;
-    private Gradient[] gradient;
+    private Gradient gradient;
     private Image[] image;
     private Pattern[] pattern;
 
@@ -37,7 +37,7 @@ public class FillBuilder {
         return this;
     }
 
-    public FillBuilder withGradient(Gradient... gradient) {
+    public FillBuilder withGradient(Gradient gradient) {
         this.gradient = gradient;
         return this;
     }

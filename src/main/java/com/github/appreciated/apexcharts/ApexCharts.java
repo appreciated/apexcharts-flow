@@ -170,6 +170,15 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
         getElement().callJsFunction("render");
     }
 
+    public ApexCharts withEnableDebug(boolean debug) {
+        setDebug(debug);
+        return this;
+    }
+
+    public void setDebug(boolean enabled) {
+        getModel().setDebug(enabled);
+    }
+
     public void updateSeries(Series... series) {
         withSeries(series);
         getElement().callJsFunction("updateData");
