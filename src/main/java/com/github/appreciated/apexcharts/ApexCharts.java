@@ -38,141 +38,116 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
         getModel().setHeight(height);
     }
 
-    public ApexCharts withAnnotations(Annotations annotations) {
+    public void setAnnotations(Annotations annotations) {
         getModel().setAnnotations(annotations);
-        return this;
     }
 
-    public ApexCharts withChart(Chart chart) {
+    public void setChart(Chart chart) {
         getModel().setChart(chart);
-        return this;
     }
 
-    public ApexCharts withColors(String... colors) {
+    public void setColors(String... colors) {
         try {
             getModel().setColors(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(colors));
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
-        return this;
     }
 
-    public ApexCharts withDataLabels(DataLabels dataLabels) {
+    public void setDataLabels(DataLabels dataLabels) {
         getModel().setDataLabels(dataLabels);
-        return this;
     }
 
-    public ApexCharts withFill(Fill fill) {
+    public void setFill(Fill fill) {
         getModel().setFill(fill);
-        return this;
     }
 
-    public ApexCharts withGrid(Grid grid) {
+    public void setGrid(Grid grid) {
         getModel().setGrid(grid);
-        return this;
     }
 
-    public ApexCharts withLabels(String... labels) {
+    public void setLabels(String... labels) {
         getModel().setLabels(Arrays.asList(labels));
-        return this;
     }
 
-    public ApexCharts withLegend(Legend legend) {
+    public void setLegend(Legend legend) {
         getModel().setLegend(legend);
-        return this;
     }
 
-    public ApexCharts withMarkers(Markers markers) {
+    public void setMarkers(Markers markers) {
         getModel().setMarkers(markers);
-        return this;
     }
 
-    public ApexCharts withNoData(NoData noData) {
+    public void setNoData(NoData noData) {
         getModel().setNoData(noData);
-        return this;
     }
 
-    public ApexCharts withPlotOptions(PlotOptions plotOptions) {
+    public void setPlotOptions(PlotOptions plotOptions) {
         getModel().setPlotOptions(plotOptions);
-        return this;
     }
 
-    public ApexCharts withResponsive(Responsive... responsive) {
+    public void setResponsive(Responsive... responsive) {
         try {
             getModel().setResponsive(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(responsive));
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
-        return this;
     }
 
-    public ApexCharts withStates(States states) {
+    public void setStates(States states) {
         try {
             getModel().setStates(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(states));
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
-        return this;
     }
 
-    public ApexCharts withStroke(Stroke stroke) {
+    public void setStroke(Stroke stroke) {
         getModel().setStroke(stroke);
-        return this;
     }
 
-    public ApexCharts withSubtitle(TitleSubtitle subtitle) {
+    public void setSubtitle(TitleSubtitle subtitle) {
         try {
             getModel().setSubtitle(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(subtitle));
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
-        return this;
     }
 
-    public ApexCharts withTheme(Theme theme) {
+    public void setTheme(Theme theme) {
         getModel().setTheme(theme);
-        return this;
     }
 
-    public ApexCharts withTitle(TitleSubtitle title) {
+    public void setTitle(TitleSubtitle title) {
         try {
             getModel().setChartTitle(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(title));
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
-        return this;
     }
 
-    public ApexCharts withTooltip(Tooltip tooltip) {
+    public void setTooltip(Tooltip tooltip) {
         getModel().setTooltip(tooltip);
-        return this;
     }
 
-    public ApexCharts withXaxis(XAxis xaxis) {
+    public void setXaxis(XAxis xaxis) {
         try {
             getModel().setXaxis(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(xaxis));
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
-        return this;
     }
 
-    public ApexCharts withYaxis(YAxis yaxis) {
+    public void setYaxis(YAxis yaxis) {
         try {
             getModel().setYaxis(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(yaxis));
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
-        return this;
     }
 
     public void render() {
         getElement().callJsFunction("render");
-    }
-
-    public ApexCharts withEnableDebug(boolean debug) {
-        setDebug(debug);
-        return this;
     }
 
     public void setDebug(boolean enabled) {
@@ -180,31 +155,24 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
     }
 
     public void updateSeries(Series... series) {
-        withSeries(series);
+        setSeries(series);
         getElement().callJsFunction("updateData");
     }
 
-    public ApexCharts withSeries(Series... series) {
+    public void setSeries(Series... series) {
         try {
             getModel().setSeries(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(series));
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
-        return this;
     }
 
-    public void updateSeries(Double... series) {
-        withSeries(series);
-        getElement().callJsFunction("updateData");
-    }
-
-    public ApexCharts withSeries(Double... series) {
+    public void setSeries(Double... series) {
         try {
             getModel().setSeries(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(series));
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
-        return this;
     }
 }
 

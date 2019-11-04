@@ -1,6 +1,6 @@
-package com.github.appreciated.apexcharts.examples.heatmap.line;
+package com.github.appreciated.apexcharts.examples.line;
 
-import com.github.appreciated.apexcharts.ApexCharts;
+import com.github.appreciated.apexcharts.ApexChartsBuilder;
 import com.github.appreciated.apexcharts.config.builder.*;
 import com.github.appreciated.apexcharts.config.chart.Type;
 import com.github.appreciated.apexcharts.config.chart.builder.ZoomBuilder;
@@ -9,7 +9,7 @@ import com.github.appreciated.apexcharts.config.stroke.Curve;
 import com.github.appreciated.apexcharts.config.subtitle.Align;
 import com.github.appreciated.apexcharts.helper.Series;
 
-public class LineChartExample extends ApexCharts {
+public class LineChartExample extends ApexChartsBuilder {
     public LineChartExample() {
         withChart(ChartBuilder.get()
                 .withType(Type.line)

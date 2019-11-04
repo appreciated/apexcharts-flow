@@ -1,12 +1,12 @@
 package com.github.appreciated.apexcharts.examples.radar;
 
-import com.github.appreciated.apexcharts.ApexCharts;
+import com.github.appreciated.apexcharts.ApexChartsBuilder;
 import com.github.appreciated.apexcharts.config.builder.ChartBuilder;
 import com.github.appreciated.apexcharts.config.builder.TitleSubtitleBuilder;
 import com.github.appreciated.apexcharts.config.chart.Type;
 import com.github.appreciated.apexcharts.helper.Series;
 
-public class RadarChartExample extends ApexCharts {
+public class RadarChartExample extends ApexChartsBuilder {
     public RadarChartExample() {
         withChart(ChartBuilder.get()
                 .withType(Type.radar)

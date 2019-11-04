@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.examples.bar;
 
-import com.github.appreciated.apexcharts.ApexCharts;
+import com.github.appreciated.apexcharts.ApexChartsBuilder;
 import com.github.appreciated.apexcharts.config.builder.*;
 import com.github.appreciated.apexcharts.config.chart.Type;
 import com.github.appreciated.apexcharts.config.plotoptions.builder.BarBuilder;
@@ -8,7 +8,7 @@ import com.github.appreciated.apexcharts.config.tooltip.builder.YBuilder;
 import com.github.appreciated.apexcharts.config.yaxis.builder.TitleBuilder;
 import com.github.appreciated.apexcharts.helper.Series;
 
-public class VerticalBarChartExample extends ApexCharts {
+public class VerticalBarChartExample extends ApexChartsBuilder {
     public VerticalBarChartExample() {
         withChart(ChartBuilder.get()
                 .withType(Type.bar)

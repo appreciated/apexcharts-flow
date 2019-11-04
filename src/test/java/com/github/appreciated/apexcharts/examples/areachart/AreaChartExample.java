@@ -1,6 +1,6 @@
-package com.github.appreciated.apexcharts.examples.heatmap.areachart;
+package com.github.appreciated.apexcharts.examples.areachart;
 
-import com.github.appreciated.apexcharts.ApexCharts;
+import com.github.appreciated.apexcharts.ApexChartsBuilder;
 import com.github.appreciated.apexcharts.config.builder.*;
 import com.github.appreciated.apexcharts.config.chart.Type;
 import com.github.appreciated.apexcharts.config.chart.builder.ZoomBuilder;
@@ -13,7 +13,7 @@ import com.github.appreciated.apexcharts.helper.Series;
 import java.time.LocalDate;
 import java.util.stream.IntStream;
 
-public class AreaChartExample extends ApexCharts {
+public class AreaChartExample extends ApexChartsBuilder {
 
     public AreaChartExample() {
         withChart(

@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.examples.bar;
 
-import com.github.appreciated.apexcharts.ApexCharts;
+import com.github.appreciated.apexcharts.ApexChartsBuilder;
 import com.github.appreciated.apexcharts.config.builder.ChartBuilder;
 import com.github.appreciated.apexcharts.config.builder.DataLabelsBuilder;
 import com.github.appreciated.apexcharts.config.builder.PlotOptionsBuilder;
@@ -9,7 +9,7 @@ import com.github.appreciated.apexcharts.config.chart.Type;
 import com.github.appreciated.apexcharts.config.plotoptions.builder.BarBuilder;
 import com.github.appreciated.apexcharts.helper.Series;
 
-public class HorizontalBarChartExample extends ApexCharts {
+public class HorizontalBarChartExample extends ApexChartsBuilder {
 
     public HorizontalBarChartExample() {
         withChart(ChartBuilder.get()

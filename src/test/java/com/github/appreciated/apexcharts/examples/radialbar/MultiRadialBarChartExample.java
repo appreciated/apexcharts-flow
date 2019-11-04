@@ -1,10 +1,10 @@
 package com.github.appreciated.apexcharts.examples.radialbar;
 
-import com.github.appreciated.apexcharts.ApexCharts;
+import com.github.appreciated.apexcharts.ApexChartsBuilder;
 import com.github.appreciated.apexcharts.config.builder.ChartBuilder;
 import com.github.appreciated.apexcharts.config.chart.Type;
 
-public class MultiRadialBarChartExample extends ApexCharts {
+public class MultiRadialBarChartExample extends ApexChartsBuilder {
     public MultiRadialBarChartExample() {
         withChart(ChartBuilder.get()
                 .withType(Type.radialBar)

@@ -1,6 +1,6 @@
-package com.github.appreciated.apexcharts.examples.heatmap.donut;
+package com.github.appreciated.apexcharts.examples.donut;
 
-import com.github.appreciated.apexcharts.ApexCharts;
+import com.github.appreciated.apexcharts.ApexChartsBuilder;
 import com.github.appreciated.apexcharts.config.builder.ChartBuilder;
 import com.github.appreciated.apexcharts.config.builder.LegendBuilder;
 import com.github.appreciated.apexcharts.config.builder.ResponsiveBuilder;
@@ -8,9 +8,9 @@ import com.github.appreciated.apexcharts.config.chart.Type;
 import com.github.appreciated.apexcharts.config.legend.Position;
 import com.github.appreciated.apexcharts.config.responsive.builder.OptionsBuilder;
 
-public class DonutChartExample extends ApexCharts {
+public class DonutChartExample extends ApexChartsBuilder {
     public DonutChartExample() {
-        withChart(ChartBuilder.get().withType(Type.donut).build())
+      withChart(ChartBuilder.get().withType(Type.donut).build())
                 .withColors("#008FFB", "#00E396", "#FEB019", "#FF4560", "#775DD0")
                 .withLegend(LegendBuilder.get()
                         .withPosition(Position.right)

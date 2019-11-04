@@ -1,13 +1,13 @@
-package com.github.appreciated.apexcharts.examples.heatmap.bubble;
+package com.github.appreciated.apexcharts.examples.bubble;
 
-import com.github.appreciated.apexcharts.ApexCharts;
+import com.github.appreciated.apexcharts.ApexChartsBuilder;
 import com.github.appreciated.apexcharts.config.builder.*;
 import com.github.appreciated.apexcharts.config.chart.Type;
 import com.github.appreciated.apexcharts.config.chart.builder.ZoomBuilder;
 import com.github.appreciated.apexcharts.config.xaxis.XAxisType;
 import com.github.appreciated.apexcharts.helper.Series;
 
-public class BubbleChartExample extends ApexCharts {
+public class BubbleChartExample extends ApexChartsBuilder {
     public BubbleChartExample() {
         withChart(
                 ChartBuilder.get()

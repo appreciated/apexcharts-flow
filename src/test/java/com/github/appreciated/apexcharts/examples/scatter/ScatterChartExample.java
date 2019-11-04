@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.examples.scatter;
 
-import com.github.appreciated.apexcharts.ApexCharts;
+import com.github.appreciated.apexcharts.ApexChartsBuilder;
 import com.github.appreciated.apexcharts.config.builder.ChartBuilder;
 import com.github.appreciated.apexcharts.config.builder.XAxisBuilder;
 import com.github.appreciated.apexcharts.config.builder.YAxisBuilder;
@@ -9,10 +9,10 @@ import com.github.appreciated.apexcharts.config.chart.builder.ZoomBuilder;
 import com.github.appreciated.apexcharts.config.chart.zoom.ZoomType;
 import com.github.appreciated.apexcharts.helper.Series;
 
-public class ScatterChartExample extends ApexCharts {
+public class ScatterChartExample extends ApexChartsBuilder {
 
     public ScatterChartExample() {
-        withChart(ChartBuilder.get()
+       withChart(ChartBuilder.get()
                 .withType(Type.scatter)
                 .withZoom(ZoomBuilder.get()
                         .withEnabled(true)

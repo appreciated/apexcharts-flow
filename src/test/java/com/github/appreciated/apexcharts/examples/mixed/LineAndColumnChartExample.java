@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.examples.mixed;
 
-import com.github.appreciated.apexcharts.ApexCharts;
+import com.github.appreciated.apexcharts.ApexChartsBuilder;
 import com.github.appreciated.apexcharts.config.builder.*;
 import com.github.appreciated.apexcharts.config.chart.Type;
 import com.github.appreciated.apexcharts.config.chart.builder.ZoomBuilder;
@@ -14,7 +14,7 @@ import com.github.appreciated.apexcharts.helper.Series;
 import java.time.LocalDate;
 import java.util.stream.IntStream;
 
-public class LineAndColumnChartExample extends ApexCharts {
+public class LineAndColumnChartExample extends ApexChartsBuilder {
 
     public LineAndColumnChartExample() {
         withChart(

@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.examples.radialbar;
 
-import com.github.appreciated.apexcharts.ApexCharts;
+import com.github.appreciated.apexcharts.ApexChartsBuilder;
 import com.github.appreciated.apexcharts.config.builder.ChartBuilder;
 import com.github.appreciated.apexcharts.config.builder.FillBuilder;
 import com.github.appreciated.apexcharts.config.builder.PlotOptionsBuilder;
@@ -14,7 +14,7 @@ import com.github.appreciated.apexcharts.config.plotoptions.hollow.HollowPositio
 import com.github.appreciated.apexcharts.config.plotoptions.radialbar.builder.*;
 import com.github.appreciated.apexcharts.config.stroke.LineCap;
 
-public class GradientRadialBarChartExample extends ApexCharts {
+public class GradientRadialBarChartExample extends ApexChartsBuilder {
     public GradientRadialBarChartExample() {
         withChart(ChartBuilder.get()
                 .withType(Type.radialBar)

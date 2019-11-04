@@ -1,6 +1,6 @@
-package com.github.appreciated.apexcharts.examples.heatmap.timeline;
+package com.github.appreciated.apexcharts.examples.timeline;
 
-import com.github.appreciated.apexcharts.ApexCharts;
+import com.github.appreciated.apexcharts.ApexChartsBuilder;
 import com.github.appreciated.apexcharts.config.builder.*;
 import com.github.appreciated.apexcharts.config.chart.Type;
 import com.github.appreciated.apexcharts.config.plotoptions.builder.BarBuilder;
@@ -10,7 +10,7 @@ import com.github.appreciated.apexcharts.helper.Series;
 
 import java.time.LocalDate;
 
-public class TimeLineChartExample extends ApexCharts {
+public class TimeLineChartExample extends ApexChartsBuilder {
     public TimeLineChartExample() {
         withChart(ChartBuilder.get()
                 .withType(Type.rangeBar)

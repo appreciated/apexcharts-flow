@@ -1,6 +1,6 @@
 package com.github.appreciated.apexcharts.examples.candlestick;
 
-import com.github.appreciated.apexcharts.ApexCharts;
+import com.github.appreciated.apexcharts.ApexChartsBuilder;
 import com.github.appreciated.apexcharts.config.builder.*;
 import com.github.appreciated.apexcharts.config.chart.Type;
 import com.github.appreciated.apexcharts.config.subtitle.Align;
@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
-public class CandleStickChartExample extends ApexCharts {
+public class CandleStickChartExample extends ApexChartsBuilder {
     public CandleStickChartExample() {
         withChart(ChartBuilder.get()
                 .withType(Type.candlestick)
