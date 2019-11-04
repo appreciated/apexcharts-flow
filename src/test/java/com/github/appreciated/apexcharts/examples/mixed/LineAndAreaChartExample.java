@@ -1,4 +1,4 @@
-package com.github.appreciated.apexcharts.examples.heatmap.mixed;
+package com.github.appreciated.apexcharts.examples.mixed;
 
 import com.github.appreciated.apexcharts.ApexCharts;
 import com.github.appreciated.apexcharts.config.builder.*;

@@ -163,9 +163,10 @@
                         <supportedPackaging>jar</supportedPackaging>
                     </supportedPackagings>
                     <webApp>
-                        <baseResource implementation="org.eclipse.jetty.util.resource.ResourceCollection">
-                            <resourcesAsCSV>${project.basedir}/src/main/resources/META-INF/resources</resourcesAsCSV>
-                        </baseResource>
+                        <resourceBases>
+                            <resourceBase>${project.basedir}/src/main/resources/META-INF/resources</resourceBase>
+                            <resourceBase>${project.basedir}/src/test/resources/</resourceBase>
+                        </resourceBases>
                     </webApp>
                 </configuration>
             </plugin>

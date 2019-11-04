@@ -1,5 +1,6 @@
 package com.github.appreciated.apexcharts;
 
+import com.github.appreciated.apexcharts.examples.ExampleChartGenerator;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.theme.Theme;
@@ -13,7 +14,6 @@ import java.util.Arrays;
 public class DemoView extends Div {
 
     public DemoView() {
-        ExampleChartGenerator generator = new ExampleChartGenerator();
         Arrays.stream(ExampleChartGenerator.getCharts()).forEach(this::add);
         setSizeFull();
         getStyle()
