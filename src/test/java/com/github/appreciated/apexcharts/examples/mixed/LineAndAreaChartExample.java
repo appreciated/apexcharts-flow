@@ -28,8 +28,8 @@ public class LineAndAreaChartExample extends ApexChartsBuilder {
                         .build())
                 .withStroke(StrokeBuilder.get().withCurve(Curve.straight).build())
                 .withSeries(
-                        new Series("INDEX XYZ", SeriesType.area, 30.0, 24.0, 28.0, 20.0, 32.0, 48.0, 88.0, 72.0, 68.0),
-                        new Series("STOCK ABC", SeriesType.line, 10.0, 41.0, 35.0, 51.0, 49.0, 62.0, 69.0, 91.0, 148.0))
+                        new Series<>("INDEX XYZ", SeriesType.area, 30.0, 24.0, 28.0, 20.0, 32.0, 48.0, 88.0, 72.0, 68.0),
+                        new Series<>("STOCK ABC", SeriesType.line, 10.0, 41.0, 35.0, 51.0, 49.0, 62.0, 69.0, 91.0, 148.0))
                 .withFill(FillBuilder.get()
                         .withType("solid")
                         .withOpacity(0.35, 1.0)

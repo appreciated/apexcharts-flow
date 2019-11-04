@@ -3,7 +3,8 @@ package com.github.appreciated.apexcharts.config.chart;
 public class Sparkline {
     private Boolean enabled;
 
-    public Sparkline() {
+    public Sparkline(Boolean enabled) {
+        this.enabled = enabled;
     }
 
     public Boolean getEnabled() {

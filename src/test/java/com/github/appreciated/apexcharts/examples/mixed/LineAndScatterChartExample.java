@@ -39,7 +39,7 @@ public class LineAndScatterChartExample extends ApexChartsBuilder {
                         .withTickAmount(12.0)
                         .build())
                 .withStroke(StrokeBuilder.get().withCurve(Curve.straight).build())
-                .withSeries(new Series("Points", SeriesType.scatter,
+                .withSeries(new Series<>("Points", SeriesType.scatter,
                                 new Coordinate<>(1, 2.14),
                                 new Coordinate<>(1.2, 2.19),
                                 new Coordinate<>(1.8, 2.43),
@@ -54,7 +54,7 @@ public class LineAndScatterChartExample extends ApexChartsBuilder {
                                 new Coordinate<>(7.1, 7.14),
                                 new Coordinate<>(9.18, 8.4)
                         ),
-                        new Series("Line", SeriesType.line,
+                        new Series<>("Line", SeriesType.line,
                                 new Coordinate<>(1, 2),
                                 new Coordinate<>(2, 3),
                                 new Coordinate<>(3, 4),
@@ -65,6 +65,7 @@ public class LineAndScatterChartExample extends ApexChartsBuilder {
                                 new Coordinate<>(8, 9),
                                 new Coordinate<>(9, 10),
                                 new Coordinate<>(10, 11)
-                        ));
+                        ))
+                .withDebug(true);
     }
 }

@@ -10,7 +10,7 @@ public class RadarChartExample extends ApexChartsBuilder {
         withChart(ChartBuilder.get()
                 .withType(Type.radar)
                 .build())
-                .withSeries(new Series("Series 1", 80, 50, 30, 40, 100, 20))
+                .withSeries(new Series<>("Series 1", 80, 50, 30, 40, 100, 20))
                 .withLabels("January", "February", "March", "April", "May", "June");
     }
 }

@@ -6,6 +6,7 @@ import com.github.appreciated.apexcharts.config.builder.TitleSubtitleBuilder;
 import com.github.appreciated.apexcharts.config.plotoptions.builder.CandlestickBuilder;
 import com.github.appreciated.apexcharts.config.plotoptions.candlestick.builder.ColorsBuilder;
 import com.github.appreciated.apexcharts.examples.areachart.AreaChartExample;
+import com.github.appreciated.apexcharts.examples.areachart.SparkLineExample;
 import com.github.appreciated.apexcharts.examples.bar.HorizontalBarChartExample;
 import com.github.appreciated.apexcharts.examples.bar.VerticalBarChartExample;
 import com.github.appreciated.apexcharts.examples.bubble.BubbleChartExample;
@@ -50,6 +51,7 @@ public class ExampleChartGenerator {
                 new DonutChartExample(),
                 new LineChartExample(),
                 new AreaChartExample(),
+                new SparkLineExample(),
                 new LineAndAreaChartExample(),
                 new LineAndColumnChartExample(),
                 new LineAndColumnAndAreaChartExample(),

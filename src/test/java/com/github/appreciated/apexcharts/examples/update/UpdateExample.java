@@ -31,14 +31,14 @@ public class UpdateExample extends VerticalLayout {
                 .withDataLabels(DataLabelsBuilder.get()
                         .withEnabled(false)
                         .build())
-                .withSeries(new Series(400.0, 430.0, 448.0, 470.0, 540.0, 580.0, 690.0, 1100.0, 1200.0, 1380.0))
+                .withSeries(new Series<>(400.0, 430.0, 448.0, 470.0, 540.0, 580.0, 690.0, 1100.0, 1200.0, 1380.0))
                 .withXaxis(XAxisBuilder.get()
                         .withCategories()
                         .build())
                 .build();
         chart.setHeight("400px");
         Button update = new Button("Update", buttonClickEvent -> {
-            chart.updateSeries(new Series(400.0, 430.0, 448.0, 470.0, 540.0, 580.0, 690.0, 1100.0, 1200.0, 500.0));
+            chart.updateSeries(new Series<>(400.0, 430.0, 448.0, 470.0, 540.0, 580.0, 690.0, 1100.0, 1200.0, 500.0));
             Notification.show("The chart was updated!");
         });
         add(chart, update);
