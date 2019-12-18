@@ -1,7 +1,9 @@
 package com.github.appreciated.apexcharts.config.locale;
 
 public class Toolbar {
-    private String download;
+    private String exportToSVG;
+    private String exportToPNG;
+    private String menu;
     private String selection;
     private String selectionZoom;
     private String zoomIn;
@@ -9,64 +11,80 @@ public class Toolbar {
     private String pan;
     private String reset;
 
-
     public Toolbar() {
     }
 
-    public String getDownload() {
-        return download;
-    }
+	public String getExportToSVG() {
+		return exportToSVG;
+	}
 
-    public String getSelection() {
-        return selection;
-    }
+	public void setExportToSVG(String exportToSVG) {
+		this.exportToSVG = exportToSVG;
+	}
 
-    public String getSelectionZoom() {
-        return selectionZoom;
-    }
+	public String getExportToPNG() {
+		return exportToPNG;
+	}
 
-    public String getZoomIn() {
-        return zoomIn;
-    }
+	public void setExportToPNG(String exportToPNG) {
+		this.exportToPNG = exportToPNG;
+	}
 
-    public String getZoomOut() {
-        return zoomOut;
-    }
+	public String getMenu() {
+		return menu;
+	}
 
-    public String getPan() {
-        return pan;
-    }
+	public void setMenu(String menu) {
+		this.menu = menu;
+	}
 
-    public String getReset() {
-        return reset;
-    }
+	public String getSelection() {
+		return selection;
+	}
 
-    public void setDownload(String download) {
-        this.download = download;
-    }
+	public void setSelection(String selection) {
+		this.selection = selection;
+	}
 
-    public void setSelection(String selection) {
-        this.selection = selection;
-    }
+	public String getSelectionZoom() {
+		return selectionZoom;
+	}
 
-    public void setSelectionZoom(String selectionZoom) {
-        this.selectionZoom = selectionZoom;
-    }
+	public void setSelectionZoom(String selectionZoom) {
+		this.selectionZoom = selectionZoom;
+	}
 
-    public void setZoomIn(String zoomIn) {
-        this.zoomIn = zoomIn;
-    }
+	public String getZoomIn() {
+		return zoomIn;
+	}
 
-    public void setZoomOut(String zoomOut) {
-        this.zoomOut = zoomOut;
-    }
+	public void setZoomIn(String zoomIn) {
+		this.zoomIn = zoomIn;
+	}
 
-    public void setPan(String pan) {
-        this.pan = pan;
-    }
+	public String getZoomOut() {
+		return zoomOut;
+	}
 
-    public void setReset(String reset) {
-        this.reset = reset;
-    }
+	public void setZoomOut(String zoomOut) {
+		this.zoomOut = zoomOut;
+	}
+
+	public String getPan() {
+		return pan;
+	}
+
+	public void setPan(String pan) {
+		this.pan = pan;
+	}
+
+	public String getReset() {
+		return reset;
+	}
+
+	public void setReset(String reset) {
+		this.reset = reset;
+	}
+
 
 }

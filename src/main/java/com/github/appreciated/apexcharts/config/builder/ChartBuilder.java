@@ -2,6 +2,7 @@ package com.github.appreciated.apexcharts.config.builder;
 
 import com.github.appreciated.apexcharts.config.Chart;
 import com.github.appreciated.apexcharts.config.chart.*;
+import com.github.appreciated.apexcharts.config.Locale;
 
 public class ChartBuilder {
     private Type type;
@@ -23,6 +24,7 @@ public class ChartBuilder {
     private Zoom zoom;
     private Selection selection;
     private Animations animations;
+    private Locale[] locales;
 
     private ChartBuilder() {
     }
@@ -125,6 +127,11 @@ public class ChartBuilder {
         this.height = height;
         return this;
     }
+    
+    public ChartBuilder withLocales(Locale... locales) {
+        this.locales = locales;
+        return this;
+    }
 
     public Chart build() {
         Chart chart = new Chart();
@@ -147,6 +154,7 @@ public class ChartBuilder {
         chart.setZoom(zoom);
         chart.setSelection(selection);
         chart.setAnimations(animations);
+        chart.setLocales(locales);
         return chart;
     }
 }

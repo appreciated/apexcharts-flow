@@ -14,7 +14,7 @@ public class Chart {
     private DropShadow dropShadow;
     private Brush brush;
     private String id;
-    //ApexLocale[] locales;
+    Locale[] locales;
     private String defaultLocale;
     private Sparkline sparkline;
     private Boolean stacked;
@@ -179,6 +179,16 @@ public class Chart {
     public void setHeight(String height) {
         this.height = height;
     }
+
+	public Locale[] getLocales() {
+		return locales;
+	}
+
+	public void setLocales(Locale[] locales) {
+		this.locales = locales;
+	}
+    
+    
 }
 
 
