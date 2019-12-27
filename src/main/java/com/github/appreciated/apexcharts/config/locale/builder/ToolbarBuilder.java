@@ -3,7 +3,9 @@ package com.github.appreciated.apexcharts.config.locale.builder;
 import com.github.appreciated.apexcharts.config.locale.Toolbar;
 
 public class ToolbarBuilder {
-    private String download;
+    private String exportToSVG;
+    private String exportToPNG;
+    private String menu;
     private String selection;
     private String selectionZoom;
     private String zoomIn;
@@ -18,8 +20,18 @@ public class ToolbarBuilder {
         return new ToolbarBuilder();
     }
 
-    public ToolbarBuilder withDownload(String download) {
-        this.download = download;
+    public ToolbarBuilder withExportToSVG(String exportToSVG) {
+        this.exportToSVG = exportToSVG;
+        return this;
+    }
+    
+    public ToolbarBuilder withExportToPNG(String exportToPNG) {
+        this.exportToPNG = exportToPNG;
+        return this;
+    }
+    
+    public ToolbarBuilder withMenu(String menu) {
+        this.menu = menu;
         return this;
     }
 
@@ -55,7 +67,9 @@ public class ToolbarBuilder {
 
     public Toolbar build() {
         Toolbar toolbar = new Toolbar();
-        toolbar.setDownload(download);
+        toolbar.setExportToSVG(exportToSVG);
+        toolbar.setExportToPNG(exportToPNG);
+        toolbar.setMenu(menu);
         toolbar.setSelection(selection);
         toolbar.setSelectionZoom(selectionZoom);
         toolbar.setZoomIn(zoomIn);
