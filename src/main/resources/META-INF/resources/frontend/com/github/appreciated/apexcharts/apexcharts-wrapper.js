@@ -137,6 +137,9 @@ class ApexChartsWrapper extends PolymerElement {
         }
         if (this.dataLabels) {
             this.config.dataLabels = JSON.parse(this.dataLabels);
+            if (this.config.dataLabels.formatter) {
+            	this.config.dataLabels.formatter = eval(this.config.dataLabels.formatter);
+            }
         }
         if (this.fill) {
             this.config.fill = JSON.parse(this.fill);
@@ -190,12 +193,24 @@ class ApexChartsWrapper extends PolymerElement {
         }
         if (this.tooltip) {
             this.config.tooltip = JSON.parse(this.tooltip);
+            if (this.config.tooltip.x.formatter) {
+            	this.config.tooltip.x.formatter = eval(this.config.tooltip.x.formatter);
+            }
+            if (this.config.tooltip.y.formatter) {
+            	this.config.tooltip.y.formatter = eval(this.config.tooltip.y.formatter);
+            }
         }
         if (this.xaxis) {
             this.config.xaxis = JSON.parse(this.xaxis);
+            if ((this.config.xaxis.labels) && (this.config.xaxis.labels.formatter)) {
+            	this.config.xaxis.labels.formatter = eval(this.config.xaxis.labels.formatter);
+            }
         }
         if (this.yaxis) {
             this.config.yaxis = JSON.parse(this.yaxis);
+            if ((this.config.yaxis.labels) && (this.config.yaxis.labels.formatter)) {
+            	this.config.yaxis.labels.formatter = eval(this.config.yaxis.labels.formatter);
+            }
         }
         if (!this.config.chart) {
             this.config.chart = {};
@@ -225,6 +240,7 @@ class ApexChartsWrapper extends PolymerElement {
                 };
             }
         }
+
         if (this.debug) {
             console.log(this.config);
         }

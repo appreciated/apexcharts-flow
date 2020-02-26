@@ -2,7 +2,14 @@
 /.idea/
 /target/
 /demo/target/
-/package-lock.json
 /node_modules
+package-lock.json
+package.json
+webpack.config.ts
 webpack.generated.js
 /src/test/resources/apexcharts.d.ts
+
+# eclipse
+/.settings
+.classpath
+.project
