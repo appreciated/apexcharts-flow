@@ -99,7 +99,7 @@ class ApexChartsWrapper extends PolymerElement {
     ready() {
         super.ready();
         this.color = require('onecolor');
-        var div = document.createElement('div');
+        const div = document.createElement('div');
         this.appendChild(div);
         this.updateConfig();
         this.chartComponent = new ApexCharts(div, this.config);
@@ -107,7 +107,7 @@ class ApexChartsWrapper extends PolymerElement {
     }
 
     updateConfig() {
-        var primaryColor;
+        let primaryColor;
         if (ShadyCSS) {
             primaryColor = ShadyCSS.getComputedStyleValue(this, '--apex-charts-primary-color');
         } else {
