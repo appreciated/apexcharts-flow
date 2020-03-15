@@ -146,10 +146,17 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
         }
     }
 
+    /**
+     * This method will be called automatically and does not require to be called manually
+     */
     public void render() {
         getElement().callJsFunction("render");
     }
 
+    /**
+     * To enable client-side debug logs
+     * @param enabled
+     */
     public void setDebug(boolean enabled) {
         getModel().setDebug(enabled);
     }

@@ -138,7 +138,7 @@ class ApexChartsWrapper extends PolymerElement {
         if (this.dataLabels) {
             this.config.dataLabels = JSON.parse(this.dataLabels);
             if (this.config.dataLabels.formatter) {
-            	this.config.dataLabels.formatter = eval(this.config.dataLabels.formatter);
+                this.config.dataLabels.formatter = this.evalFunction(this.config.dataLabels.formatter);
             }
         }
         if (this.fill) {
@@ -193,23 +193,23 @@ class ApexChartsWrapper extends PolymerElement {
         }
         if (this.tooltip) {
             this.config.tooltip = JSON.parse(this.tooltip);
-            if (this.config.tooltip.x.formatter) {
-            	this.config.tooltip.x.formatter = eval(this.config.tooltip.x.formatter);
+            if (this.config.tooltip.x && this.config.tooltip.x.formatter) {
+                this.config.tooltip.x.formatter = this.evalFunction(this.config.tooltip.x.formatter);
             }
-            if (this.config.tooltip.y.formatter) {
-            	this.config.tooltip.y.formatter = eval(this.config.tooltip.y.formatter);
+            if (this.config.tooltip.y && this.config.tooltip.y.formatter) {
+                this.config.tooltip.y.formatter = this.evalFunction(this.config.tooltip.y.formatter);
             }
         }
         if (this.xaxis) {
             this.config.xaxis = JSON.parse(this.xaxis);
-            if ((this.config.xaxis.labels) && (this.config.xaxis.labels.formatter)) {
-            	this.config.xaxis.labels.formatter = eval(this.config.xaxis.labels.formatter);
+            if (this.config.xaxis.labels && this.config.xaxis.labels.formatter) {
+                this.config.xaxis.labels.formatter = this.evalFunction(this.config.xaxis.labels.formatter);
             }
         }
         if (this.yaxis) {
             this.config.yaxis = JSON.parse(this.yaxis);
-            if ((this.config.yaxis.labels) && (this.config.yaxis.labels.formatter)) {
-            	this.config.yaxis.labels.formatter = eval(this.config.yaxis.labels.formatter);
+            if (this.config.yaxis.labels && this.config.yaxis.labels.formatter) {
+                this.config.yaxis.labels.formatter = this.evalFunction(this.config.yaxis.labels.formatter);
             }
         }
         if (!this.config.chart) {
@@ -246,11 +246,26 @@ class ApexChartsWrapper extends PolymerElement {
         }
     }
 
+    /**
+     * This is due to the way the eval function works eval("function (){return \"test\"}") will throw an
+     * Uncaught SyntaxError: Function statements require a function name.
+     *
+     * If the string is wrapped with brackets, as for example eval("(function (){return \"test\"})") the function
+     * returns ƒ (){return "test"} which is what is needed.
+     * @param string for example "function (){return \"test\"}"
+     * @returns {function} returns an actual JavaScript instance of the passed string function
+     */
+    evalFunction(string) {
+        return eval("(" + string + ")");
+    }
+
     updateData() {
         if (this.chartComponent) {
             this.chartComponent.updateSeries(JSON.parse(this.series));
         }
-        console.log(this.chartComponent);
+        if (this.debug) {
+            console.log(this.chartComponent);
+        }
     }
 
     render() {

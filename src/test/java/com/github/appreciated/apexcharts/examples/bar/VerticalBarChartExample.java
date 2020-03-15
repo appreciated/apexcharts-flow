@@ -33,9 +33,7 @@ public class VerticalBarChartExample extends ApexChartsBuilder {
                         .withOpacity(1.0).build())
                 .withTooltip(TooltipBuilder.get()
                         .withY(YBuilder.get()
-                                .withFormatter("function (val) {\n" + // Formatter currently not yet working
-                                        "return \"$ \" + val + \" thousands\"\n" +
-                                        "}").build())
+                                .withFormatter("function (val, opts) { return val + \" test\" }").build())
                         .build());
     }
 }
