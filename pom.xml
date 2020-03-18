@@ -15,7 +15,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <jetty.version>9.4.15.v20190215</jetty.version>
+        <jetty.version>9.4.27.v20200227</jetty.version>
     </properties>
     <organization>
         <name>appreciated</name>
