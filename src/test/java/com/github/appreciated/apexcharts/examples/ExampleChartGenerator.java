@@ -1,5 +1,7 @@
 package com.github.appreciated.apexcharts.examples;
 
+import java.util.Arrays;
+
 import com.github.appreciated.apexcharts.ApexChartsBuilder;
 import com.github.appreciated.apexcharts.config.builder.PlotOptionsBuilder;
 import com.github.appreciated.apexcharts.config.builder.TitleSubtitleBuilder;
@@ -24,51 +26,35 @@ import com.github.appreciated.apexcharts.examples.radialbar.GradientRadialBarCha
 import com.github.appreciated.apexcharts.examples.radialbar.MultiRadialBarChartExample;
 import com.github.appreciated.apexcharts.examples.radialbar.RadialBarChartExample;
 import com.github.appreciated.apexcharts.examples.scatter.ScatterChartExample;
+import com.github.appreciated.apexcharts.examples.syncronised.SyncronisedLineChartExample1;
+import com.github.appreciated.apexcharts.examples.syncronised.SyncronisedLineChartExample2;
 import com.github.appreciated.apexcharts.examples.timeline.TimeLineChartExample;
 
-import java.util.Arrays;
-
 public class ExampleChartGenerator {
-    public static ApexChartsBuilder[] getColoredCharts() {
-        return Arrays.stream(getCharts())
-                .map(builder ->
-                        builder instanceof CandleStickChartExample ?
-                                builder.withPlotOptions(PlotOptionsBuilder.get()
-                                        .withCandlestick(CandlestickBuilder.get()
-                                                .withColors(ColorsBuilder.get()
-                                                        .withDownward("#1e88e5")
-                                                        .withUpward("#00acc1").build())
-                                                .build()
-                                        ).build()) :
-                                builder.withColors("#1e88e5", "#00acc1", "#5e35b1")
-                )
-                .toArray(ApexChartsBuilder[]::new);
-    }
+	public static ApexChartsBuilder[] getColoredCharts() {
+		return Arrays.stream(getCharts())
+				.map(builder -> builder instanceof CandleStickChartExample
+						? builder.withPlotOptions(PlotOptionsBuilder.get()
+								.withCandlestick(CandlestickBuilder.get()
+										.withColors(ColorsBuilder.get().withDownward("#1e88e5").withUpward("#00acc1")
+												.build())
+										.build())
+								.build())
+						: builder.withColors("#1e88e5", "#00acc1", "#5e35b1"))
+				.toArray(ApexChartsBuilder[]::new);
+	}
 
-    public static ApexChartsBuilder[] getCharts() {
-        return Arrays.stream(new ApexChartsBuilder[]{
-                new PieChartExample(),
-                new DonutChartExample(),
-                new LineChartExample(),
-                new AreaChartExample(),
-                new SparkLineExample(),
-                new LineAndAreaChartExample(),
-                new LineAndColumnChartExample(),
-                new LineAndColumnAndAreaChartExample(),
-                new LineAndScatterChartExample(),
-                new BubbleChartExample(),
-                new HorizontalBarChartExample(),
-                new TimeLineChartExample(),
-                new VerticalBarChartExample(),
-                new RadialBarChartExample(),
-                new GradientRadialBarChartExample(),
-                new MultiRadialBarChartExample(),
-                new CandleStickChartExample(),
-                new RadarChartExample(),
-                new ScatterChartExample(),
-                new HeatmapChartExample()
-        }).map(builder ->
-                builder.withTitle(TitleSubtitleBuilder.get().withText(builder.getClass().getSimpleName()).build())
-        ).toArray(ApexChartsBuilder[]::new);
-    }
+	public static ApexChartsBuilder[] getCharts() {
+		return Arrays.stream(new ApexChartsBuilder[] { new PieChartExample(), new DonutChartExample(),
+				new LineChartExample(), new AreaChartExample(), new SparkLineExample(), new LineAndAreaChartExample(),
+				new LineAndColumnChartExample(), new LineAndColumnAndAreaChartExample(),
+				new LineAndScatterChartExample(), new BubbleChartExample(), new HorizontalBarChartExample(),
+				new TimeLineChartExample(), new VerticalBarChartExample(), new RadialBarChartExample(),
+				new GradientRadialBarChartExample(), new MultiRadialBarChartExample(), new CandleStickChartExample(),
+				new RadarChartExample(), new ScatterChartExample(), new HeatmapChartExample(),
+				new SyncronisedLineChartExample1(), new SyncronisedLineChartExample2() })
+				.map(builder -> builder
+						.withTitle(TitleSubtitleBuilder.get().withText(builder.getClass().getSimpleName()).build()))
+				.toArray(ApexChartsBuilder[]::new);
+	}
 }
