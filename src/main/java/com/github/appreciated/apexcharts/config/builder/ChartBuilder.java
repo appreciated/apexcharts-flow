@@ -1,16 +1,8 @@
 package com.github.appreciated.apexcharts.config.builder;
 
 import com.github.appreciated.apexcharts.config.Chart;
+import com.github.appreciated.apexcharts.config.chart.*;
 import com.github.appreciated.apexcharts.config.Locale;
-import com.github.appreciated.apexcharts.config.chart.Animations;
-import com.github.appreciated.apexcharts.config.chart.Brush;
-import com.github.appreciated.apexcharts.config.chart.DropShadow;
-import com.github.appreciated.apexcharts.config.chart.Selection;
-import com.github.appreciated.apexcharts.config.chart.Sparkline;
-import com.github.appreciated.apexcharts.config.chart.StackType;
-import com.github.appreciated.apexcharts.config.chart.Toolbar;
-import com.github.appreciated.apexcharts.config.chart.Type;
-import com.github.appreciated.apexcharts.config.chart.Zoom;
 
 public class ChartBuilder {
 	private Type type;
@@ -24,7 +16,6 @@ public class ChartBuilder {
 	private DropShadow dropShadow;
 	private Brush brush;
 	private String id;
-	private String group;
 	private String defaultLocale;
 	private Sparkline sparkline;
 	private Boolean stacked;
@@ -34,17 +25,13 @@ public class ChartBuilder {
 	private Selection selection;
 	private Animations animations;
 	private Locale[] locales;
+	private String group;
 
 	private ChartBuilder() {
 	}
 
 	public static ChartBuilder get() {
 		return new ChartBuilder();
-	}
-
-	public ChartBuilder withGroup(String group) {
-		this.group = group;
-		return this;
 	}
 
 	public ChartBuilder withType(Type type) {
@@ -144,6 +131,11 @@ public class ChartBuilder {
 
 	public ChartBuilder withLocales(Locale... locales) {
 		this.locales = locales;
+		return this;
+	}
+	
+	public ChartBuilder withGroup(String group) {
+		this.group = group;
 		return this;
 	}
 
