@@ -23,6 +23,7 @@ public class Chart {
     private Zoom zoom;
     private Selection selection;
     private Animations animations;
+    private String group;
 
     public Chart() {
     }
@@ -189,6 +190,13 @@ public class Chart {
 	}
     
     
+	public String getGroup() {
+		return group;
+	}
+
+	public void setGroup(String group) {
+		this.group = group;
+	}
 }
 
 
