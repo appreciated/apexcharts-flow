@@ -13,14 +13,25 @@ import com.github.appreciated.apexcharts.helper.Series;
 
 public class SyncronisedLineChartExample1 extends ApexChartsBuilder {
 	public SyncronisedLineChartExample1() {
-		withChart(ChartBuilder.get().withGroup("test1").withId("test1").withType(Type.line)
-				.withZoom(ZoomBuilder.get().withEnabled(false).build()).build())
-						.withStroke(StrokeBuilder.get().withCurve(Curve.straight).build())
-						.withGrid(GridBuilder.get()
-								.withRow(RowBuilder.get().withColors("#f3f3f3", "transparent").withOpacity(0.5).build())
-								.build())
-						.withXaxis(XAxisBuilder.get()
-								.withCategories("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep").build())
-						.withSeries(new Series<>("Desktops", 10.0, 41.0, 35.0, 51.0, 49.0, 62.0, 69.0, 91.0, 148.0));
-	}
+		withChart(ChartBuilder.get()
+			.withGroup("test1")
+			.withId("test1")
+			.withType(Type.line)
+			.withZoom(ZoomBuilder.get()
+				.withEnabled(false)
+				.build())
+			.build())
+			.withStroke(StrokeBuilder.get()
+				.withCurve(Curve.straight)
+				.build())
+			.withGrid(GridBuilder.get()
+				.withRow(RowBuilder.get()
+					.withColors("#f3f3f3", "transparent")
+					.withOpacity(0.5).build()
+				).build())
+			.withXaxis(XAxisBuilder.get()
+				.withCategories("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep")
+				.build())
+			.withSeries(new Series<>("Desktops", 10.0, 41.0, 35.0, 51.0, 49.0, 62.0, 69.0, 91.0, 148.0));
+    }
 }
