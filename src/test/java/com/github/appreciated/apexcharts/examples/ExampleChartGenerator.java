@@ -68,7 +68,7 @@ public class ExampleChartGenerator {
                 new CandleStickChartExample(),
                 new RadarChartExample(),
                 new ScatterChartExample(),
-                new HeatmapChartExample()
+                new HeatmapChartExample(),
                 new SyncronisedLineChartExample1(),
                 new SyncronisedLineChartExample2()
         }).map(builder ->
