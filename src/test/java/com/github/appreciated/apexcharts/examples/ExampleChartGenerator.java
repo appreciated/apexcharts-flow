@@ -25,6 +25,8 @@ import com.github.appreciated.apexcharts.examples.radialbar.MultiRadialBarChartE
 import com.github.appreciated.apexcharts.examples.radialbar.RadialBarChartExample;
 import com.github.appreciated.apexcharts.examples.scatter.ScatterChartExample;
 import com.github.appreciated.apexcharts.examples.timeline.TimeLineChartExample;
+import com.github.appreciated.apexcharts.examples.syncronised.SyncronisedLineChartExample1;
+import com.github.appreciated.apexcharts.examples.syncronised.SyncronisedLineChartExample2;
 
 import java.util.Arrays;
 
@@ -66,7 +68,9 @@ public class ExampleChartGenerator {
                 new CandleStickChartExample(),
                 new RadarChartExample(),
                 new ScatterChartExample(),
-                new HeatmapChartExample()
+                new HeatmapChartExample(),
+                new SyncronisedLineChartExample1(),
+                new SyncronisedLineChartExample2()
         }).map(builder ->
                 builder.withTitle(TitleSubtitleBuilder.get().withText(builder.getClass().getSimpleName()).build())
         ).toArray(ApexChartsBuilder[]::new);

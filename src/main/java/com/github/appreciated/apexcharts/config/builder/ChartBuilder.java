@@ -25,6 +25,7 @@ public class ChartBuilder {
     private Selection selection;
     private Animations animations;
     private Locale[] locales;
+    private String group;
 
     private ChartBuilder() {
     }
@@ -132,7 +133,12 @@ public class ChartBuilder {
         this.locales = locales;
         return this;
     }
-
+    
+    public ChartBuilder withGroup(String group) {
+        this.group = group;
+        return this;
+    }    
+    
     public Chart build() {
         Chart chart = new Chart();
         chart.setWidth(width);
@@ -155,6 +161,7 @@ public class ChartBuilder {
         chart.setSelection(selection);
         chart.setAnimations(animations);
         chart.setLocales(locales);
+        chart.setGroup(group);
         return chart;
     }
 }
