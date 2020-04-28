@@ -24,6 +24,7 @@ import com.github.appreciated.apexcharts.examples.radialbar.GradientRadialBarCha
 import com.github.appreciated.apexcharts.examples.radialbar.MultiRadialBarChartExample;
 import com.github.appreciated.apexcharts.examples.radialbar.RadialBarChartExample;
 import com.github.appreciated.apexcharts.examples.scatter.ScatterChartExample;
+import com.github.appreciated.apexcharts.examples.timeline.TimeLineChartCustomColorExample;
 import com.github.appreciated.apexcharts.examples.timeline.TimeLineChartExample;
 import com.github.appreciated.apexcharts.examples.syncronised.SyncronisedLineChartExample1;
 import com.github.appreciated.apexcharts.examples.syncronised.SyncronisedLineChartExample2;
@@ -61,6 +62,7 @@ public class ExampleChartGenerator {
                 new BubbleChartExample(),
                 new HorizontalBarChartExample(),
                 new TimeLineChartExample(),
+                new TimeLineChartCustomColorExample(),
                 new VerticalBarChartExample(),
                 new RadialBarChartExample(),
                 new GradientRadialBarChartExample(),
