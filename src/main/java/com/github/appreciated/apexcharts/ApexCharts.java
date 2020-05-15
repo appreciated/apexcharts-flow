@@ -22,8 +22,10 @@ import java.util.Arrays;
 @JsModule("./com/github/appreciated/apexcharts/apexcharts-wrapper.js")
 @CssImport(value = "./com/github/appreciated/apexcharts/apexcharts-wrapper-styles.css", id = "apex-charts-style")
 public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasSize, HasStyle, HasTheme {
+    private ObjectMapper objectMapper;
 
     public ApexCharts() {
+        this.objectMapper = new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL);
     }
 
     @Override
@@ -48,7 +50,7 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
 
     public void setColors(String... colors) {
         try {
-            getModel().setColors(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(colors));
+            getModel().setColors(objectMapper.writeValueAsString(colors));
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
@@ -88,7 +90,7 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
 
     public void setResponsive(Responsive... responsive) {
         try {
-            getModel().setResponsive(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(responsive));
+            getModel().setResponsive(objectMapper.writeValueAsString(responsive));
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
@@ -96,7 +98,7 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
 
     public void setStates(States states) {
         try {
-            getModel().setStates(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(states));
+            getModel().setStates(objectMapper.writeValueAsString(states));
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
@@ -108,7 +110,7 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
 
     public void setSubtitle(TitleSubtitle subtitle) {
         try {
-            getModel().setSubtitle(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(subtitle));
+            getModel().setSubtitle(objectMapper.writeValueAsString(subtitle));
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
@@ -120,7 +122,7 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
 
     public void setTitle(TitleSubtitle title) {
         try {
-            getModel().setChartTitle(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(title));
+            getModel().setChartTitle(objectMapper.writeValueAsString(title));
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
@@ -132,7 +134,7 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
 
     public void setXaxis(XAxis xaxis) {
         try {
-            getModel().setXaxis(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(xaxis));
+            getModel().setXaxis(objectMapper.writeValueAsString(xaxis));
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
@@ -140,7 +142,7 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
 
     public void setYaxis(YAxis yaxis) {
         try {
-            getModel().setYaxis(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(yaxis));
+            getModel().setYaxis(objectMapper.writeValueAsString(yaxis));
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
@@ -188,7 +190,7 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
      */
     public void setSeries(Series... series) {
         try {
-            getModel().setSeries(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(series));
+            getModel().setSeries(objectMapper.writeValueAsString(series));
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
@@ -201,10 +203,20 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
      */
     public void setSeries(Double... series) {
         try {
-            getModel().setSeries(new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(series));
+            getModel().setSeries(objectMapper.writeValueAsString(series));
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
+    }
+
+    /**
+     * Method to set a custom {@link ObjectMapper} used for customizing object serialization.
+     * Usually, this objectMapper should set {@link JsonInclude.Include#NON_NULL}.
+     *
+     * @param objectMapper the objectMapper to use
+     */
+    public void setObjectMapper(ObjectMapper objectMapper) {
+        this.objectMapper = objectMapper;
     }
 }
 

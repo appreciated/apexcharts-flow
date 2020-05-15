@@ -1,5 +1,7 @@
 package com.github.appreciated.apexcharts;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.appreciated.apexcharts.config.*;
 import com.github.appreciated.apexcharts.helper.Series;
 
@@ -28,6 +30,7 @@ public class ApexChartsBuilder {
     private Series[] series;
     private Double[] doubleSeries;
     private boolean debug;
+    private ObjectMapper objectMapper;
 
     public ApexChartsBuilder() {
     }
@@ -172,6 +175,18 @@ public class ApexChartsBuilder {
         return this;
     }
 
+
+    /**
+     * Method to set a custom {@link ObjectMapper} used for customizing object serialization.
+     * Usually, this objectMapper should set {@link JsonInclude.Include#NON_NULL}.
+     *
+     * @param objectMapper the objectMapper to use
+     */
+    public ApexChartsBuilder withObjectMapper(ObjectMapper objectMapper) {
+        this.objectMapper = objectMapper;
+        return this;
+    }
+
     public ApexCharts build() {
         ApexCharts apexCharts = new ApexCharts();
         if (annotations != null) {
@@ -239,6 +254,9 @@ public class ApexChartsBuilder {
             apexCharts.setSeries(series);
         } else if (doubleSeries != null) {
             apexCharts.setSeries(doubleSeries);
+        }
+        if(objectMapper != null) {
+            apexCharts.setObjectMapper(objectMapper);
         }
         return apexCharts;
     }
