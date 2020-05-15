@@ -22,20 +22,10 @@ import java.util.Arrays;
 @JsModule("./com/github/appreciated/apexcharts/apexcharts-wrapper.js")
 @CssImport(value = "./com/github/appreciated/apexcharts/apexcharts-wrapper-styles.css", id = "apex-charts-style")
 public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasSize, HasStyle, HasTheme {
-    private final ObjectMapper objectMapper;
+    private ObjectMapper objectMapper;
 
     public ApexCharts() {
-        this(null);
-    }
-
-    public ApexCharts(ObjectMapper objectMapper) {
-        if(objectMapper != null) {
-            this.objectMapper = objectMapper;
-        }
-        else {
-            this.objectMapper = new ObjectMapper();
-        }
-        this.objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+        this.objectMapper = new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL);
     }
 
     @Override
@@ -217,6 +207,16 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
+    }
+
+    /**
+     * Method to set a custom {@link ObjectMapper} used for customizing object serialization.
+     * Usually, this objectMapper should set {@link JsonInclude.Include#NON_NULL}.
+     *
+     * @param objectMapper the objectMapper to use
+     */
+    public void setObjectMapper(ObjectMapper objectMapper) {
+        this.objectMapper = objectMapper;
     }
 }
 
