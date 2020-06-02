@@ -182,6 +182,16 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
         setSeries(series);
         getElement().callJsFunction("updateData");
     }
+    /**
+     * Method to set update the data for all chart types except {@link com.github.appreciated.apexcharts.config.chart.Type#pie} and {@link com.github.appreciated.apexcharts.config.chart.Type#donut}.
+     * For all other chart types use setSeries{@link #setSeries(Series[])}
+     * @param animate sets the animation while updating, either false (off) or true (on)
+     * @param series the data series to update to the Chart with
+     */
+    public void updateSeries(Boolean animate, Series... series) {
+        setSeries(series);
+        getElement().callJsFunction("updateData", animate);
+    }
 
     /**
      * Method to set the data for all chart types except {@link com.github.appreciated.apexcharts.config.chart.Type#pie} and {@link com.github.appreciated.apexcharts.config.chart.Type#donut}.
