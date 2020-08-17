@@ -14,6 +14,7 @@ import java.time.LocalDate;
 import java.util.stream.IntStream;
 
 public class AreaChartExample extends ApexChartsBuilder {
+
     public AreaChartExample() {
         withChart(
                 ChartBuilder.get()
