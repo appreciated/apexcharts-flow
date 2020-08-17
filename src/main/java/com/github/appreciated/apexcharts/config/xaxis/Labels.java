@@ -1,5 +1,6 @@
 package com.github.appreciated.apexcharts.config.xaxis;
 
+import com.github.appreciated.apexcharts.config.xaxis.labels.DatetimeFormatter;
 import com.github.appreciated.apexcharts.config.xaxis.labels.Style;
 
 public class Labels {
@@ -15,6 +16,8 @@ public class Labels {
     private Double offsetX;
     private Double offsetY;
     private String format;
+    private String formatter;
+    private DatetimeFormatter datetimeFormatter;
 
     public Labels() {
     }
@@ -115,4 +118,16 @@ public class Labels {
         this.format = format;
     }
 
+    public String getFormatter() {
+        return formatter;
+    }
+    public void setFormatter(String formatter) {
+        this.formatter = formatter;
+    }
+    public DatetimeFormatter getDatetimeFormatter() {
+        return datetimeFormatter;
+    }
+    public void setDatetimeFormatter(DatetimeFormatter datetimeFormatter) {
+        this.datetimeFormatter = datetimeFormatter;
+    }
 }
