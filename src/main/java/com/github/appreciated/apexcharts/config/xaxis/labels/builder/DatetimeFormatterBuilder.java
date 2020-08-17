@@ -8,6 +8,7 @@ public class DatetimeFormatterBuilder {
     private String day;
     private String hour;
     private String minute;
+    private String second;
 
     private DatetimeFormatterBuilder() {
     }
@@ -41,6 +42,11 @@ public class DatetimeFormatterBuilder {
         return this;
     }
 
+    public DatetimeFormatterBuilder withSecond(String second) {
+        this.second = second;
+        return this;
+    }
+
     public DatetimeFormatter build() {
         DatetimeFormatter datetimeFormatter = new DatetimeFormatter();
         datetimeFormatter.setYear(year);
@@ -48,6 +54,7 @@ public class DatetimeFormatterBuilder {
         datetimeFormatter.setDay(day);
         datetimeFormatter.setHour(hour);
         datetimeFormatter.setMinute(minute);
+        datetimeFormatter.setSecond(second);
         return datetimeFormatter;
     }
 }

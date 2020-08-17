@@ -6,6 +6,7 @@ public class DatetimeFormatter {
     private String day;
     private String hour;
     private String minute;
+    private String second;
 
 
     public DatetimeFormatter() {
@@ -31,6 +32,10 @@ public class DatetimeFormatter {
         return minute;
     }
 
+    public String getSecond() {
+        return second;
+    }
+
     public void setYear(String year) {
         this.year = year;
     }
@@ -51,4 +56,7 @@ public class DatetimeFormatter {
         this.minute = minute;
     }
 
+    public void setSecond(String second) {
+        this.second = second;
+    }
 }
