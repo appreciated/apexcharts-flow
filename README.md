@@ -11,6 +11,11 @@ mvn jetty:run
 
 This deploys demo at http://localhost:8080
 
+To deploy to another port set **jetty.port** and/or **jetty.ssl.port** like
+```
+mvn jetty:run -Djetty.port=8090 -Djetty.ssl.port=8555
+```
+
 ### Branching information
 
 * `master` the latest version of the starter, using latest platform snapshot
