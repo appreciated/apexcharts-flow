@@ -5,7 +5,7 @@
 
     <groupId>com.github.appreciated</groupId>
     <artifactId>apexcharts</artifactId>
-    <version>2.0.0.beta11</version>
+    <version>2.0.0.beta10</version>
     <name>ApexCharts.js</name>
     <description>Integration of ApexCharts.js for the Vaadin platform</description>
 
@@ -157,7 +157,7 @@
                 <configuration>
                     <scanIntervalSeconds>3</scanIntervalSeconds>
                     <!-- Use test scope because the UI/demo classes are in
-                    the test package. -->
+                            the test package. -->
                     <useTestScope>true</useTestScope>
                     <supportedPackagings>
                         <supportedPackaging>jar</supportedPackaging>
