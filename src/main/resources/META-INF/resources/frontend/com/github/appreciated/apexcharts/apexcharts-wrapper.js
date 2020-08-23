@@ -274,13 +274,13 @@ class ApexChartsWrapper extends PolymerElement {
             this.chartComponent.render();
         }
     }
-	
-	dataURI() {
-		if (this.chartComponent) {
-			this.updateConfig();
-			return this.chartComponent.dataURI();
-		}
-	}
+
+    dataURI() {
+        if (this.chartComponent) {
+            this.updateConfig();
+            return this.chartComponent.dataURI();
+        }
+    }
 }
 
 customElements.define(ApexChartsWrapper.is, ApexChartsWrapper);
