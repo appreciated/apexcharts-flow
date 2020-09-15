@@ -1,6 +1,7 @@
 package com.github.appreciated.apexcharts.config.tooltip.builder;
 
 import com.github.appreciated.apexcharts.config.tooltip.X;
+import com.github.appreciated.apexcharts.helper.Formatter;
 
 public class XBuilder {
     private Boolean show;
@@ -26,6 +27,11 @@ public class XBuilder {
 
     public XBuilder withFormatter(String formatter) {
         this.formatter = formatter;
+        return this;
+    }
+
+    public XBuilder withFormatter(Formatter formatter) {
+        this.formatter = formatter.getString();
         return this;
     }
 

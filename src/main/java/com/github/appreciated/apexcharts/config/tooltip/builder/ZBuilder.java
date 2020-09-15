@@ -1,6 +1,7 @@
 package com.github.appreciated.apexcharts.config.tooltip.builder;
 
 import com.github.appreciated.apexcharts.config.tooltip.Z;
+import com.github.appreciated.apexcharts.helper.Formatter;
 
 public class ZBuilder {
     private String formatter;
@@ -15,6 +16,11 @@ public class ZBuilder {
 
     public ZBuilder withFormatter(String formatter) {
         this.formatter = formatter;
+        return this;
+    }
+
+    public ZBuilder withFormatter(Formatter formatter) {
+        this.formatter = formatter.getString();
         return this;
     }
 

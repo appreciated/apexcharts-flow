@@ -4,6 +4,7 @@ import com.github.appreciated.apexcharts.config.Tooltip;
 import com.github.appreciated.apexcharts.config.XAxis;
 import com.github.appreciated.apexcharts.config.xaxis.*;
 
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 
@@ -12,7 +13,7 @@ public class XAxisBuilder {
     private List<String> categories;
     private AxisBorder axisBorder;
     private AxisTicks axisTicks;
-    private Double tickAmount;
+    private BigDecimal tickAmount;
     private Double min;
     private Double max;
     private Double range;
@@ -55,7 +56,7 @@ public class XAxisBuilder {
         return this;
     }
 
-    public XAxisBuilder withTickAmount(Double tickAmount) {
+    public XAxisBuilder withTickAmount(BigDecimal tickAmount) {
         this.tickAmount = tickAmount;
         return this;
     }

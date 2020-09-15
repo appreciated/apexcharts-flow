@@ -1,6 +1,7 @@
 package com.github.appreciated.apexcharts.config.plotoptions.pie.builder;
 
 import com.github.appreciated.apexcharts.config.plotoptions.pie.Total;
+import com.github.appreciated.apexcharts.helper.Formatter;
 
 public class TotalBuilder {
     private Boolean show;
@@ -32,6 +33,11 @@ public class TotalBuilder {
 
     public TotalBuilder withFormatter(String formatter) {
         this.formatter = formatter;
+        return this;
+    }
+
+    public TotalBuilder withFormatter(Formatter formatter) {
+        this.formatter = formatter.getString();
         return this;
     }
 

@@ -1,5 +1,6 @@
-package com.github.appreciated.apexcharts;
+package com.github.appreciated.apexcharts.examples.locale;
 
+import com.github.appreciated.apexcharts.ApexChartsBuilder;
 import com.github.appreciated.apexcharts.config.builder.ChartBuilder;
 import com.github.appreciated.apexcharts.config.builder.LegendBuilder;
 import com.github.appreciated.apexcharts.config.builder.LocaleBuilder;
@@ -10,10 +11,10 @@ import com.github.appreciated.apexcharts.config.responsive.builder.OptionsBuilde
 import com.vaadin.flow.router.Route;
 
 @Route("locale")
-public class LocaleExampleView extends ExampleHolderView {
+public class LocaleExampleView extends ApexChartsBuilder {
 
     public LocaleExampleView() {
-        ApexCharts chart = ApexChartsBuilder.get().withChart(
+        withChart(
                 ChartBuilder.get()
                         .withLocales(LocaleBuilder.get().withName("fr").build())
                         .withDefaultLocale("fr")
@@ -30,7 +31,6 @@ public class LocaleExampleView extends ExampleHolderView {
                                         .build())
                                 .build())
                         .build()).build();
-        getHolder().add(chart);
     }
 
 }

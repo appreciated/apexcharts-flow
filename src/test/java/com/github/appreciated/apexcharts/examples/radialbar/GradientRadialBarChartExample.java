@@ -55,7 +55,6 @@ public class GradientRadialBarChartExample extends ApexChartsBuilder {
                                         .build())
                                 .withValue(ValueBuilder
                                         .get()
-                                        //.withFormatter("function(val) {return parseInt(val);}")
                                         .withColor("#111")
                                         .withFontSize("36px")
                                         .withShow(true)

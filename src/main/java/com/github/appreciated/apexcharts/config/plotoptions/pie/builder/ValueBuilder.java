@@ -1,6 +1,7 @@
 package com.github.appreciated.apexcharts.config.plotoptions.pie.builder;
 
 import com.github.appreciated.apexcharts.config.plotoptions.pie.Value;
+import com.github.appreciated.apexcharts.helper.Formatter;
 
 public class ValueBuilder {
     private Boolean show;
@@ -44,6 +45,11 @@ public class ValueBuilder {
 
     public ValueBuilder withFormatter(String formatter) {
         this.formatter = formatter;
+        return this;
+    }
+
+    public ValueBuilder withFormatter(Formatter formatter) {
+        this.formatter = formatter.getString();
         return this;
     }
 

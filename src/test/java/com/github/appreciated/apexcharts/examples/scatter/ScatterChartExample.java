@@ -9,6 +9,8 @@ import com.github.appreciated.apexcharts.config.chart.builder.ZoomBuilder;
 import com.github.appreciated.apexcharts.config.chart.zoom.ZoomType;
 import com.github.appreciated.apexcharts.helper.Series;
 
+import java.math.BigDecimal;
+
 public class ScatterChartExample extends ApexChartsBuilder {
 
     public ScatterChartExample() {
@@ -19,28 +21,28 @@ public class ScatterChartExample extends ApexChartsBuilder {
                         .withType(ZoomType.xy)
                         .build())
                 .build())
-                .withSeries(
-                        new Series<>("SAMPLE A",
-                                new double[]{16.4, 5.4}, new double[]{21.7, 2}, new double[]{25.4, 3}, new double[]{19, 2}, new double[]{10.9, 1},
-                                new double[]{13.6, 3.2}, new double[]{10.9, 7.4}, new double[]{10.9, 0}, new double[]{10.9, 8.2}, new double[]{16.4, 0},
-                                new double[]{16.4, 1.8}, new double[]{13.6, 0.3}, new double[]{13.6, 0}, new double[]{29.9, 0}, new double[]{27.1, 2.3},
-                                new double[]{16.4, 0}, new double[]{13.6, 3.7}, new double[]{10.9, 5.2}, new double[]{16.4, 6.5}, new double[]{10.9, 0},
-                                new double[]{24.5, 7.1}, new double[]{10.9, 0}, new double[]{8.1, 4.7}, new double[]{19, 0}, new double[]{21.7, 1.8},
-                                new double[]{27.1, 0}, new double[]{24.5, 0}, new double[]{27.1, 0}, new double[]{29.9, 1.5}, new double[]{27.1, 0.8},
-                                new double[]{22.1, 2}),
-                        new Series<>("SAMPLE B", new double[]{6.4, 13.4}, new double[]{1.7, 11}, new double[]{5.4, 8}, new double[]{9, 17}, new double[]{1.9, 4},
-                                new double[]{3.6, 12.2}, new double[]{1.9, 14.4}, new double[]{1.9, 9}, new double[]{1.9, 13.2}, new double[]{1.4, 7}, new double[]{6.4, 8.8},
-                                new double[]{3.6, 4.3}, new double[]{1.6, 10}, new double[]{9.9, 2}, new double[]{7.1, 15}, new double[]{1.4, 0}, new double[]{3.6, 13.7},
-                                new double[]{1.9, 15.2}, new double[]{6.4, 16.5}, new double[]{0.9, 10}, new double[]{4.5, 17.1}, new double[]{10.9, 10}, new double[]{0.1, 14.7},
-                                new double[]{9, 10}, new double[]{12.7, 11.8}, new double[]{2.1, 10}, new double[]{2.5, 10}, new double[]{27.1, 10}, new double[]{2.9, 11.5},
-                                new double[]{7.1, 10.8}, new double[]{2.1, 12}),
-                        new Series<>("SAMPLE C", new double[]{21.7, 3}, new double[]{23.6, 3.5}, new double[]{24.6, 3}, new double[]{29.9, 3}, new double[]{21.7, 20},
-                                new double[]{23, 2}, new double[]{10.9, 3}, new double[]{28, 4}, new double[]{27.1, 0.3}, new double[]{16.4, 4}, new double[]{13.6, 0},
-                                new double[]{19, 5}, new double[]{22.4, 3}, new double[]{24.5, 3}, new double[]{32.6, 3}, new double[]{27.1, 4}, new double[]{29.6, 6},
-                                new double[]{31.6, 8}, new double[]{21.6, 5}, new double[]{20.9, 4}, new double[]{22.4, 0}, new double[]{32.6, 10.3}, new double[]{29.7, 20.8},
-                                new double[]{24.5, 0.8}, new double[]{21.4, 0}, new double[]{21.7, 6.9}, new double[]{28.6, 7.7}, new double[]{15.4, 0}, new double[]{18.1, 0},
-                                new double[]{33.4, 0}, new double[]{16.4, 0})
-                )
+               .withSeries(
+                       new Series<>("SAMPLE A",
+                               new BigDecimal[]{new BigDecimal("16.4"),new BigDecimal("5.4")}, new BigDecimal[]{new BigDecimal("21.7"),new BigDecimal("2")}, new BigDecimal[]{new BigDecimal("25.4"),new BigDecimal("3")}, new BigDecimal[]{new BigDecimal("19"),new BigDecimal("2")}, new BigDecimal[]{new BigDecimal("10.9"),new BigDecimal("1")},
+                               new BigDecimal[]{new BigDecimal("13.6"),new BigDecimal("3.2")}, new BigDecimal[]{new BigDecimal("10.9"),new BigDecimal("7.4")}, new BigDecimal[]{new BigDecimal("10.9"),new BigDecimal("0")}, new BigDecimal[]{new BigDecimal("10.9"),new BigDecimal("8.2")}, new BigDecimal[]{new BigDecimal("16.4"),new BigDecimal("0")},
+                               new BigDecimal[]{new BigDecimal("16.4"),new BigDecimal("1.8")}, new BigDecimal[]{new BigDecimal("13.6"),new BigDecimal("0.3")}, new BigDecimal[]{new BigDecimal("13.6"),new BigDecimal("0")}, new BigDecimal[]{new BigDecimal("29.9"),new BigDecimal("0")}, new BigDecimal[]{new BigDecimal("27.1"),new BigDecimal("2.3")},
+                               new BigDecimal[]{new BigDecimal("16.4"),new BigDecimal("0")}, new BigDecimal[]{new BigDecimal("13.6"),new BigDecimal("3.7")}, new BigDecimal[]{new BigDecimal("10.9"),new BigDecimal("5.2")}, new BigDecimal[]{new BigDecimal("16.4"),new BigDecimal("6.5")}, new BigDecimal[]{new BigDecimal("10.9"),new BigDecimal("0")},
+                               new BigDecimal[]{new BigDecimal("24.5"),new BigDecimal("7.1")}, new BigDecimal[]{new BigDecimal("10.9"),new BigDecimal("0")}, new BigDecimal[]{new BigDecimal("8.1"),new BigDecimal("4.7")}, new BigDecimal[]{new BigDecimal("19"),new BigDecimal("0")}, new BigDecimal[]{new BigDecimal("21.7"),new BigDecimal("1.8")},
+                               new BigDecimal[]{new BigDecimal("27.1"),new BigDecimal("0")}, new BigDecimal[]{new BigDecimal("24.5"),new BigDecimal("0")}, new BigDecimal[]{new BigDecimal("27.1"),new BigDecimal("0")}, new BigDecimal[]{new BigDecimal("29.9"),new BigDecimal("1.5")}, new BigDecimal[]{new BigDecimal("27.1"),new BigDecimal("0.8")},
+                               new BigDecimal[]{new BigDecimal("22.1"),new BigDecimal("2")}),
+                       new Series<>("SAMPLE B", new BigDecimal[]{new BigDecimal("6.4"),new BigDecimal("13.4")}, new BigDecimal[]{new BigDecimal("1.7"),new BigDecimal("11")}, new BigDecimal[]{new BigDecimal("5.4"),new BigDecimal("8")}, new BigDecimal[]{new BigDecimal("9"),new BigDecimal("17")}, new BigDecimal[]{new BigDecimal("1.9"),new BigDecimal("4")},
+                               new BigDecimal[]{new BigDecimal("3.6"),new BigDecimal("12.2")}, new BigDecimal[]{new BigDecimal("1.9"),new BigDecimal("14.4")}, new BigDecimal[]{new BigDecimal("1.9"),new BigDecimal("9")}, new BigDecimal[]{new BigDecimal("1.9"),new BigDecimal("13.2")}, new BigDecimal[]{new BigDecimal("1.4"),new BigDecimal("7")}, new BigDecimal[]{new BigDecimal("6.4"),new BigDecimal("8.8")},
+                               new BigDecimal[]{new BigDecimal("3.6"),new BigDecimal("4.3")}, new BigDecimal[]{new BigDecimal("1.6"),new BigDecimal("10")}, new BigDecimal[]{new BigDecimal("9.9"),new BigDecimal("2")}, new BigDecimal[]{new BigDecimal("7.1"),new BigDecimal("15")}, new BigDecimal[]{new BigDecimal("1.4"),new BigDecimal("0")}, new BigDecimal[]{new BigDecimal("3.6"),new BigDecimal("13.7")},
+                               new BigDecimal[]{new BigDecimal("1.9"),new BigDecimal("15.2")}, new BigDecimal[]{new BigDecimal("6.4"),new BigDecimal("16.5")}, new BigDecimal[]{new BigDecimal("0.9"),new BigDecimal("10")}, new BigDecimal[]{new BigDecimal("4.5"),new BigDecimal("17.1")}, new BigDecimal[]{new BigDecimal("10.9"),new BigDecimal("10")}, new BigDecimal[]{new BigDecimal("0.1"),new BigDecimal("14.7")},
+                               new BigDecimal[]{new BigDecimal("9"),new BigDecimal("10")}, new BigDecimal[]{new BigDecimal("12.7"),new BigDecimal("11.8")}, new BigDecimal[]{new BigDecimal("2.1"),new BigDecimal("10")}, new BigDecimal[]{new BigDecimal("2.5"),new BigDecimal("10")}, new BigDecimal[]{new BigDecimal("27.1"),new BigDecimal("10")}, new BigDecimal[]{new BigDecimal("2.9"),new BigDecimal("11.5")},
+                               new BigDecimal[]{new BigDecimal("7.1"),new BigDecimal("10.8")}, new BigDecimal[]{new BigDecimal("2.1"),new BigDecimal("12")}),
+                       new Series<>("SAMPLE C", new BigDecimal[]{new BigDecimal("21.7"),new BigDecimal("3")}, new BigDecimal[]{new BigDecimal("23.6"),new BigDecimal("3.5")}, new BigDecimal[]{new BigDecimal("24.6"),new BigDecimal("3")}, new BigDecimal[]{new BigDecimal("29.9"),new BigDecimal("3")}, new BigDecimal[]{new BigDecimal("21.7"),new BigDecimal("20")},
+                               new BigDecimal[]{new BigDecimal("23"),new BigDecimal("2")}, new BigDecimal[]{new BigDecimal("10.9"),new BigDecimal("3")}, new BigDecimal[]{new BigDecimal("28"),new BigDecimal("4")}, new BigDecimal[]{new BigDecimal("27.1"),new BigDecimal("0.3")}, new BigDecimal[]{new BigDecimal("16.4"),new BigDecimal("4")}, new BigDecimal[]{new BigDecimal("13.6"),new BigDecimal("0")},
+                               new BigDecimal[]{new BigDecimal("19"),new BigDecimal("5")}, new BigDecimal[]{new BigDecimal("22.4"),new BigDecimal("3")}, new BigDecimal[]{new BigDecimal("24.5"),new BigDecimal("3")}, new BigDecimal[]{new BigDecimal("32.6"),new BigDecimal("3")}, new BigDecimal[]{new BigDecimal("27.1"),new BigDecimal("4")}, new BigDecimal[]{new BigDecimal("29.6"),new BigDecimal("6")},
+                               new BigDecimal[]{new BigDecimal("31.6"),new BigDecimal("8")}, new BigDecimal[]{new BigDecimal("21.6"),new BigDecimal("5")}, new BigDecimal[]{new BigDecimal("20.9"),new BigDecimal("4")}, new BigDecimal[]{new BigDecimal("22.4"),new BigDecimal("0")}, new BigDecimal[]{new BigDecimal("32.6"),new BigDecimal("10.3")}, new BigDecimal[]{new BigDecimal("29.7"),new BigDecimal("20.8")},
+                               new BigDecimal[]{new BigDecimal("24.5"),new BigDecimal("0.8")}, new BigDecimal[]{new BigDecimal("21.4"),new BigDecimal("0")}, new BigDecimal[]{new BigDecimal("21.7"),new BigDecimal("6.9")}, new BigDecimal[]{new BigDecimal("28.6"),new BigDecimal("7.7")}, new BigDecimal[]{new BigDecimal("15.4"),new BigDecimal("0")}, new BigDecimal[]{new BigDecimal("18.1"),new BigDecimal("0")},
+                               new BigDecimal[]{new BigDecimal("33.4"),new BigDecimal("0")}, new BigDecimal[]{new BigDecimal("16.4"),new BigDecimal("0")})
+               )
                 .withXaxis(XAxisBuilder.get()
                         .build())
                 .withYaxis(YAxisBuilder.get()

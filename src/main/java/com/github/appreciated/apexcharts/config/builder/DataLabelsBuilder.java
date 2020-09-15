@@ -4,6 +4,7 @@ import com.github.appreciated.apexcharts.config.DataLabels;
 import com.github.appreciated.apexcharts.config.datalables.DropShadow;
 import com.github.appreciated.apexcharts.config.datalables.Style;
 import com.github.appreciated.apexcharts.config.datalables.TextAnchor;
+import com.github.appreciated.apexcharts.helper.Formatter;
 
 import java.util.List;
 
@@ -36,6 +37,11 @@ public class DataLabelsBuilder {
 
     public DataLabelsBuilder withFormatter(String formatter) {
         this.formatter = formatter;
+        return this;
+    }
+
+    public DataLabelsBuilder withFormatter(Formatter formatter) {
+        this.formatter = formatter.getString();
         return this;
     }
 

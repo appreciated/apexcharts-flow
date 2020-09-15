@@ -3,6 +3,7 @@ package com.github.appreciated.apexcharts.config.yaxis.builder;
 import com.github.appreciated.apexcharts.config.yaxis.Align;
 import com.github.appreciated.apexcharts.config.yaxis.Labels;
 import com.github.appreciated.apexcharts.config.yaxis.labels.Style;
+import com.github.appreciated.apexcharts.helper.Formatter;
 
 public class LabelsBuilder {
     private Boolean show;
@@ -70,6 +71,11 @@ public class LabelsBuilder {
 
     public LabelsBuilder withFormatter(String formatter) {
         this.formatter = formatter;
+        return this;
+    }
+
+    public LabelsBuilder withFormatter(Formatter formatter) {
+        this.formatter = formatter.getString();
         return this;
     }
 

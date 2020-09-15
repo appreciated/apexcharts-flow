@@ -1,12 +1,12 @@
 package com.github.appreciated.apexcharts.config.builder;
 
-import java.io.File;
-import java.io.IOException;
-import java.net.URISyntaxException;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.appreciated.apexcharts.config.Locale;
 import com.github.appreciated.apexcharts.config.locale.Options;
+
+import java.io.File;
+import java.io.IOException;
+import java.net.URISyntaxException;
 
 public class LocaleBuilder {
     String name;
@@ -39,7 +39,7 @@ public class LocaleBuilder {
     
     /**
      * 
-     * @param localeName
+     * @param localeName the name of the local
      * @return the @Locale object for the given localeName 
      */
     public Locale build(String localeName) {

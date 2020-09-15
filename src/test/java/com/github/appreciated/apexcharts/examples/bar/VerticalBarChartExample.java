@@ -4,7 +4,6 @@ import com.github.appreciated.apexcharts.ApexChartsBuilder;
 import com.github.appreciated.apexcharts.config.builder.*;
 import com.github.appreciated.apexcharts.config.chart.Type;
 import com.github.appreciated.apexcharts.config.plotoptions.builder.BarBuilder;
-import com.github.appreciated.apexcharts.config.tooltip.builder.YBuilder;
 import com.github.appreciated.apexcharts.helper.Series;
 
 public class VerticalBarChartExample extends ApexChartsBuilder {
@@ -26,15 +25,11 @@ public class VerticalBarChartExample extends ApexChartsBuilder {
                         .withWidth(2.0)
                         .withColors("transparent")
                         .build())
-                .withSeries(new Series<>("Net Profit", 44.0, 55.0, 57.0, 56.0, 61.0, 58.0, 63.0, 60.0, 66.0),
-                        new Series<>("Revenue", 76.0, 85.0, 101.0, 98.0, 87.0, 105.0, 91.0, 114.0, 94.0),
-                        new Series<>("Free Cash Flow", 35.0, 41.0, 36.0, 26.0, 45.0, 48.0, 52.0, 53.0, 41.0))
+                .withSeries(new Series<>("Net Profit","44","55","57","56","61","58","63","60","66"),
+                        new Series<>("Revenue","76","85","101","98","87","105","91","114","94"),
+                        new Series<>("Free Cash Flow","35","41","36","26","45","48","52","53","41"))
                 .withXaxis(XAxisBuilder.get().withCategories("Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct").build())
                 .withFill(FillBuilder.get()
-                        .withOpacity(1.0).build())
-                .withTooltip(TooltipBuilder.get()
-                        .withY(YBuilder.get()
-                                .withFormatter("function (val, opts) { return val + \" test\" }").build())
-                        .build());
+                        .withOpacity(1.0).build());
     }
 }

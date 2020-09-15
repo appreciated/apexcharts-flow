@@ -3,6 +3,7 @@ package com.github.appreciated.apexcharts.config.xaxis.builder;
 import com.github.appreciated.apexcharts.config.xaxis.Labels;
 import com.github.appreciated.apexcharts.config.xaxis.labels.DatetimeFormatter;
 import com.github.appreciated.apexcharts.config.xaxis.labels.Style;
+import com.github.appreciated.apexcharts.helper.Formatter;
 
 public class LabelsBuilder {
     private Boolean show;
@@ -89,6 +90,11 @@ public class LabelsBuilder {
 
     public LabelsBuilder withFormatter(String formatter) {
         this.formatter = formatter;
+        return this;
+    }
+
+    public LabelsBuilder withFormatter(Formatter formatter) {
+        this.formatter = formatter.getString();
         return this;
     }
 

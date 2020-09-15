@@ -2,6 +2,7 @@ package com.github.appreciated.apexcharts.config;
 
 import com.github.appreciated.apexcharts.config.xaxis.*;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 public class XAxis {
@@ -9,7 +10,7 @@ public class XAxis {
     private List<String> categories;
     private AxisBorder axisBorder;
     private AxisTicks axisTicks;
-    private Double tickAmount;
+    private BigDecimal tickAmount;
     private Double min;
     private Double max;
     private Double range;
@@ -39,7 +40,7 @@ public class XAxis {
         return axisTicks;
     }
 
-    public Double getTickAmount() {
+    public BigDecimal getTickAmount() {
         return tickAmount;
     }
 
@@ -95,7 +96,7 @@ public class XAxis {
         this.axisTicks = axisTicks;
     }
 
-    public void setTickAmount(Double tickAmount) {
+    public void setTickAmount(BigDecimal tickAmount) {
         this.tickAmount = tickAmount;
     }
 

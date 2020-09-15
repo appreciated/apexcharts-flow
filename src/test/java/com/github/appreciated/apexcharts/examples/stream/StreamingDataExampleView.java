@@ -1,5 +1,8 @@
-package com.github.appreciated.apexcharts;
+package com.github.appreciated.apexcharts.examples.stream;
 
+import com.github.appreciated.apexcharts.ApexCharts;
+import com.github.appreciated.apexcharts.ApexChartsBuilder;
+import com.github.appreciated.apexcharts.ExampleHolderView;
 import com.github.appreciated.apexcharts.config.builder.ChartBuilder;
 import com.github.appreciated.apexcharts.config.builder.DataLabelsBuilder;
 import com.github.appreciated.apexcharts.config.builder.XAxisBuilder;

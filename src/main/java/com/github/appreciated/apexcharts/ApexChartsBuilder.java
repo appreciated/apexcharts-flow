@@ -186,6 +186,7 @@ public class ApexChartsBuilder {
      * Usually, this objectMapper should set {@link JsonInclude.Include#NON_NULL}.
      *
      * @param objectMapper the objectMapper to use
+     * @return ApexChartsBuilder the fluent instance
      */
     public ApexChartsBuilder withObjectMapper(ObjectMapper objectMapper) {
         this.objectMapper = objectMapper;

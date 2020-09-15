@@ -3,6 +3,7 @@ package com.github.appreciated.apexcharts.config.builder;
 import com.github.appreciated.apexcharts.config.Legend;
 import com.github.appreciated.apexcharts.config.Markers;
 import com.github.appreciated.apexcharts.config.legend.*;
+import com.github.appreciated.apexcharts.helper.Formatter;
 
 public class LegendBuilder {
     private Boolean show;
@@ -126,6 +127,11 @@ public class LegendBuilder {
 
     public LegendBuilder withFormatter(String formatter) {
         this.formatter = formatter;
+        return this;
+    }
+
+    public LegendBuilder withFormatter(Formatter formatter) {
+        this.formatter = formatter.getString();
         return this;
     }
 

@@ -12,8 +12,13 @@ import com.github.appreciated.apexcharts.examples.bar.VerticalBarChartExample;
 import com.github.appreciated.apexcharts.examples.bubble.BubbleChartExample;
 import com.github.appreciated.apexcharts.examples.candlestick.CandleStickChartExample;
 import com.github.appreciated.apexcharts.examples.donut.DonutChartExample;
+import com.github.appreciated.apexcharts.examples.formatter.IntFormatterExample;
+import com.github.appreciated.apexcharts.examples.formatter.NumberFormatFormatterExample;
+import com.github.appreciated.apexcharts.examples.formatter.StringFormatterExample;
+import com.github.appreciated.apexcharts.examples.formatter.SuffixFormatterExample;
 import com.github.appreciated.apexcharts.examples.heatmap.HeatmapChartExample;
 import com.github.appreciated.apexcharts.examples.line.LineChartExample;
+import com.github.appreciated.apexcharts.examples.locale.LocaleExampleView;
 import com.github.appreciated.apexcharts.examples.mixed.LineAndAreaChartExample;
 import com.github.appreciated.apexcharts.examples.mixed.LineAndColumnAndAreaChartExample;
 import com.github.appreciated.apexcharts.examples.mixed.LineAndColumnChartExample;
@@ -24,10 +29,10 @@ import com.github.appreciated.apexcharts.examples.radialbar.GradientRadialBarCha
 import com.github.appreciated.apexcharts.examples.radialbar.MultiRadialBarChartExample;
 import com.github.appreciated.apexcharts.examples.radialbar.RadialBarChartExample;
 import com.github.appreciated.apexcharts.examples.scatter.ScatterChartExample;
-import com.github.appreciated.apexcharts.examples.timeline.TimeLineChartCustomColorExample;
-import com.github.appreciated.apexcharts.examples.timeline.TimeLineChartExample;
 import com.github.appreciated.apexcharts.examples.syncronised.SyncronisedLineChartExample1;
 import com.github.appreciated.apexcharts.examples.syncronised.SyncronisedLineChartExample2;
+import com.github.appreciated.apexcharts.examples.timeline.TimeLineChartCustomColorExample;
+import com.github.appreciated.apexcharts.examples.timeline.TimeLineChartExample;
 
 import java.util.Arrays;
 
@@ -70,6 +75,11 @@ public class ExampleChartGenerator {
                 new CandleStickChartExample(),
                 new RadarChartExample(),
                 new ScatterChartExample(),
+                new LocaleExampleView(),
+                new NumberFormatFormatterExample(),
+                new IntFormatterExample(),
+                new StringFormatterExample(),
+                new SuffixFormatterExample(),
                 new HeatmapChartExample(),
                 new SyncronisedLineChartExample1(),
                 new SyncronisedLineChartExample2()

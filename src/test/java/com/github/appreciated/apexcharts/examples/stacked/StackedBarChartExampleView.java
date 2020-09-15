@@ -1,5 +1,8 @@
-package com.github.appreciated.apexcharts;
+package com.github.appreciated.apexcharts.examples.stacked;
 
+import com.github.appreciated.apexcharts.ApexCharts;
+import com.github.appreciated.apexcharts.ApexChartsBuilder;
+import com.github.appreciated.apexcharts.ExampleHolderView;
 import com.github.appreciated.apexcharts.config.builder.ChartBuilder;
 import com.github.appreciated.apexcharts.config.builder.FillBuilder;
 import com.github.appreciated.apexcharts.config.builder.PlotOptionsBuilder;
@@ -10,9 +13,9 @@ import com.github.appreciated.apexcharts.helper.Series;
 import com.vaadin.flow.router.Route;
 
 @Route("colored-stack")
-public class VerticalBarChartColoredExampleView extends ExampleHolderView {
+public class StackedBarChartExampleView extends ExampleHolderView {
 
-    public VerticalBarChartColoredExampleView() {
+    public StackedBarChartExampleView() {
         ApexCharts chart = ApexChartsBuilder.get()
                 .withChart(ChartBuilder.get()
                         .withType(Type.bar)

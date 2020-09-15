@@ -163,7 +163,7 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
 
     /**
      * To enable client-side debug logs
-     * @param enabled
+     * @param enabled true enabled the debug output false disables it
      */
     public void setDebug(boolean enabled) {
         getModel().setDebug(enabled);
