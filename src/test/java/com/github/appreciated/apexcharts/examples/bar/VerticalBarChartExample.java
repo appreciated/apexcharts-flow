@@ -12,6 +12,7 @@ public class VerticalBarChartExample extends ApexChartsBuilder {
         withChart(ChartBuilder.get()
                 .withType(Type.bar)
                 .build())
+                .withColors()
                 .withPlotOptions(PlotOptionsBuilder.get()
                         .withBar(BarBuilder.get()
                                 .withHorizontal(false)
