@@ -56,6 +56,11 @@ public class ApexChartsBuilder {
         return this;
     }
 
+    /**
+     *
+     * @param colors a string containing a color in hex or rgb/rgba format. Color names are not supported.
+     * @return ApexChartsBuilder
+     */
     public ApexChartsBuilder withColors(String... colors) {
         this.colors = colors;
         return this;

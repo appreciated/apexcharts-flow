@@ -27,6 +27,7 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
 
     public ApexCharts() {
         this.objectMapper = new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL);
+        setWidth("100%");
     }
 
     @Override
