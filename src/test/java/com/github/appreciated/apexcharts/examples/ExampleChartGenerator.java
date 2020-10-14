@@ -8,6 +8,7 @@ import com.github.appreciated.apexcharts.config.plotoptions.candlestick.builder.
 import com.github.appreciated.apexcharts.examples.areachart.AreaChartExample;
 import com.github.appreciated.apexcharts.examples.areachart.SparkLineExample;
 import com.github.appreciated.apexcharts.examples.bar.HorizontalBarChartExample;
+import com.github.appreciated.apexcharts.examples.bar.RangedVerticalBarChartExample;
 import com.github.appreciated.apexcharts.examples.bar.VerticalBarChartExample;
 import com.github.appreciated.apexcharts.examples.bubble.BubbleChartExample;
 import com.github.appreciated.apexcharts.examples.candlestick.CandleStickChartExample;
@@ -17,6 +18,7 @@ import com.github.appreciated.apexcharts.examples.formatter.NumberFormatFormatte
 import com.github.appreciated.apexcharts.examples.formatter.StringFormatterExample;
 import com.github.appreciated.apexcharts.examples.formatter.SuffixFormatterExample;
 import com.github.appreciated.apexcharts.examples.heatmap.HeatmapChartExample;
+import com.github.appreciated.apexcharts.examples.heatmap.RangedHeatmapChartExample;
 import com.github.appreciated.apexcharts.examples.line.LineChartExample;
 import com.github.appreciated.apexcharts.examples.locale.LocaleExampleView;
 import com.github.appreciated.apexcharts.examples.mixed.LineAndAreaChartExample;
@@ -69,6 +71,7 @@ public class ExampleChartGenerator {
                 new TimeLineChartExample(),
                 new TimeLineChartCustomColorExample(),
                 new VerticalBarChartExample(),
+                new RangedVerticalBarChartExample(),
                 new RadialBarChartExample(),
                 new GradientRadialBarChartExample(),
                 new MultiRadialBarChartExample(),
@@ -81,6 +84,7 @@ public class ExampleChartGenerator {
                 new StringFormatterExample(),
                 new SuffixFormatterExample(),
                 new HeatmapChartExample(),
+                new RangedHeatmapChartExample(),
                 new SyncronisedLineChartExample1(),
                 new SyncronisedLineChartExample2()
         }).map(builder ->
