@@ -4,6 +4,7 @@ public class Ranges {
     private Double from;
     private Double to;
     private String color;
+    private String foreColor;
     private String name;
 
 
@@ -20,6 +21,10 @@ public class Ranges {
 
     public String getColor() {
         return color;
+    }
+
+    public String getForeColor() {
+        return foreColor;
     }
 
     public String getName() {
@@ -42,4 +47,7 @@ public class Ranges {
         this.name = name;
     }
 
+    public void setForeColor(String foreColor) {
+        this.foreColor = foreColor;
+    }
 }

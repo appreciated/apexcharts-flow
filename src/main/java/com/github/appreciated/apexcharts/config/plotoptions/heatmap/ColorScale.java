@@ -1,7 +1,10 @@
 package com.github.appreciated.apexcharts.config.plotoptions.heatmap;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class ColorScale {
-    private Ranges ranges;
+    private List<Ranges> ranges;
     private Boolean inverse;
     private Double min;
     private Double max;
@@ -10,7 +13,7 @@ public class ColorScale {
     public ColorScale() {
     }
 
-    public Ranges getRanges() {
+    public List<Ranges> getRanges() {
         return ranges;
     }
 
@@ -26,8 +29,12 @@ public class ColorScale {
         return max;
     }
 
-    public void setRanges(Ranges ranges) {
+    public void setRanges(List<Ranges> ranges) {
         this.ranges = ranges;
+    }
+
+    public void setRanges(Ranges... ranges) {
+        this.ranges = Arrays.asList(ranges);
     }
 
     public void setInverse(Boolean inverse) {

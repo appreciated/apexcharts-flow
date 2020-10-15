@@ -7,9 +7,10 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ColorsBuilder {
-    private Ranges ranges;
+    private List<Ranges> ranges;
     private List<String> backgroundBarColors;
     private Double backgroundBarOpacity;
+    private Double backgroundBarRadius;
 
     private ColorsBuilder() {
     }
@@ -18,8 +19,13 @@ public class ColorsBuilder {
         return new ColorsBuilder();
     }
 
-    public ColorsBuilder withRanges(Ranges ranges) {
+    public ColorsBuilder withRanges(List<Ranges> ranges) {
         this.ranges = ranges;
+        return this;
+    }
+
+    public ColorsBuilder withRanges(Ranges... ranges) {
+        this.ranges = Arrays.asList(ranges);
         return this;
     }
 
@@ -33,11 +39,17 @@ public class ColorsBuilder {
         return this;
     }
 
+    public ColorsBuilder withBackgroundBarRadius(Double backgroundBarRadius) {
+        this.backgroundBarRadius = backgroundBarRadius;
+        return this;
+    }
+
     public Colors build() {
         Colors colors = new Colors();
         colors.setRanges(ranges);
         colors.setBackgroundBarColors(backgroundBarColors);
         colors.setBackgroundBarOpacity(backgroundBarOpacity);
+        colors.setBackgroundBarRadius(backgroundBarRadius);
         return colors;
     }
 }

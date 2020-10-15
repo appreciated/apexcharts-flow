@@ -3,8 +3,11 @@ package com.github.appreciated.apexcharts.config.plotoptions.heatmap.builder;
 import com.github.appreciated.apexcharts.config.plotoptions.heatmap.ColorScale;
 import com.github.appreciated.apexcharts.config.plotoptions.heatmap.Ranges;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class ColorScaleBuilder {
-    private Ranges ranges;
+    private List<Ranges> ranges;
     private Boolean inverse;
     private Double min;
     private Double max;
@@ -16,8 +19,13 @@ public class ColorScaleBuilder {
         return new ColorScaleBuilder();
     }
 
-    public ColorScaleBuilder withRanges(Ranges ranges) {
+    public ColorScaleBuilder withRanges(List<Ranges> ranges) {
         this.ranges = ranges;
+        return this;
+    }
+
+    public ColorScaleBuilder withRanges(Ranges... ranges) {
+        this.ranges = Arrays.asList(ranges);
         return this;
     }
 
