@@ -156,7 +156,7 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
     public void render() {
         getElement().callJsFunction("render");
     }
-    
+
     public PendingJavaScriptResult dataURI() {
         return getElement().callJsFunction("dataURI");
     }
@@ -213,6 +213,39 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
+    }
+
+    /**
+    * Method to toggle the visibility of series programmatically. Useful when you have a custom legend.
+    * @param seriesName the series name which you want to toggle visibility for
+    */
+    public PendingJavaScriptResult toggleSeries(String seriesName) {
+        return getElement().callJsFunction("toggleSeries", seriesName);
+    }
+
+    /**
+    * Method  to show the hidden series. If the series is already visible, this doesn’t affect it.
+    * @param seriesName the series name which you want to show
+    */
+    public void showSeries(String seriesName) {
+        getElement().callJsFunction("showSeries", seriesName);
+    }
+
+    /**
+    * Method to hide the visible series. If the series is already hidden, this method doesn’t affect it.
+    * @param seriesName the series name which you want to hide
+    */
+    public void hideSeries(String seriesName) {
+        getElement().callJsFunction("hideSeries", seriesName);
+    }
+
+    /**
+    * Method to resets all toggled series and bring back the chart to its original state.
+    * @param shouldUpdateChart after resetting the series, the chart data should update and return to it’s original series
+    * @param shouldResetZoom if the user has zoomed in when this method is called, the zoom level should also reset.
+    */
+    public void resetSeries(Boolean shouldUpdateChart, Boolean shouldResetZoom) {
+        getElement().callJsFunction("resetSeries", shouldUpdateChart, shouldResetZoom);
     }
 
     /**

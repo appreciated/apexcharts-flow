@@ -281,6 +281,36 @@ class ApexChartsWrapper extends PolymerElement {
             return this.chartComponent.dataURI();
         }
     }
+
+    toggleSeries(seriesName) {
+        if (this.chartComponent) {
+            this.updateConfig();
+            return this.chartComponent.toggleSeries(seriesName);
+        }
+    }
+
+    hideSeries(seriesName) {
+        if (this.chartComponent) {
+            this.updateConfig();
+            return this.chartComponent.hideSeries(seriesName);
+        }
+    }
+
+    showSeries(seriesName) {
+        if (this.chartComponent) {
+            this.updateConfig();
+            return this.chartComponent.showSeries(seriesName);
+        }
+    }
+
+    resetSeries(shouldUpdateChart, shouldResetZoom)
+    {
+        if (this.chartComponent) {
+            this.updateConfig();
+            return this.chartComponent.resetSeries(shouldUpdateChart, shouldResetZoom);
+        }
+    }
+
 }
 
 customElements.define(ApexChartsWrapper.is, ApexChartsWrapper);
