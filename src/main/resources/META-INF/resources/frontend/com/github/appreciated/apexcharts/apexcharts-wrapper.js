@@ -6,13 +6,13 @@ import ApexCharts from 'apexcharts/dist/apexcharts.esm';
 class ApexChartsWrapper extends PolymerElement {
     static get template() {
         return html`
-           <style include="apex-charts-style">
-            ::slotted(div) {
-                overflow: hidden;
+            <style include="apex-charts-style">
+                ::slotted(div) {
+                    overflow: hidden;
                 }
-        </style>
-        <slot></slot>
-    `;
+            </style>
+            <slot></slot>
+        `;
     }
 
     static get is() {
@@ -103,7 +103,17 @@ class ApexChartsWrapper extends PolymerElement {
         this.appendChild(div);
         this.updateConfig();
         this.chartComponent = new ApexCharts(div, this.config);
-        this.chartComponent.render();
+        this.beginRender();
+    }
+
+    async beginRender() {
+        try {
+            await this.chartComponent.render();
+        } catch (e) {
+            console.error("An exception occurred during the rendering of the chart with the following configuration:");
+            console.error(this.config);
+            console.error(e);
+        }
     }
 
     updateConfig() {
@@ -131,6 +141,9 @@ class ApexChartsWrapper extends PolymerElement {
         }
         if (this.labels) {
             this.config.labels = this.labels;
+            if (this.config.labels.formatter) {
+                this.config.labels.formatter = this.evalFunction(this.config.labels.formatter);
+            }
         }
         if (this.colors) {
             this.config.colors = JSON.parse(this.colors);
@@ -149,6 +162,9 @@ class ApexChartsWrapper extends PolymerElement {
         }
         if (this.legend) {
             this.config.legend = JSON.parse(this.legend);
+            if (this.config.legend.formatter) {
+                this.config.legend.formatter = this.evalFunction(this.config.legend.formatter);
+            }
         }
         if (this.markers) {
             this.config.markers = JSON.parse(this.markers);
@@ -205,11 +221,17 @@ class ApexChartsWrapper extends PolymerElement {
             if (this.config.xaxis.labels && this.config.xaxis.labels.formatter) {
                 this.config.xaxis.labels.formatter = this.evalFunction(this.config.xaxis.labels.formatter);
             }
+            if (this.config.xaxis.title && this.config.xaxis.title.formatter) {
+                this.config.xaxis.title.formatter = this.evalFunction(this.config.xaxis.title.formatter);
+            }
         }
         if (this.yaxis) {
             this.config.yaxis = JSON.parse(this.yaxis);
             if (this.config.yaxis.labels && this.config.yaxis.labels.formatter) {
                 this.config.yaxis.labels.formatter = this.evalFunction(this.config.yaxis.labels.formatter);
+            }
+            if (this.config.yaxis.title && this.config.yaxis.title.formatter) {
+                this.config.yaxis.title.formatter = this.evalFunction(this.config.yaxis.title.formatter);
             }
         }
         if (!this.config.chart) {
@@ -239,10 +261,6 @@ class ApexChartsWrapper extends PolymerElement {
                     }
                 };
             }
-        }
-
-        if (this.debug) {
-            console.log(this.config);
         }
     }
 
@@ -303,8 +321,7 @@ class ApexChartsWrapper extends PolymerElement {
         }
     }
 
-    resetSeries(shouldUpdateChart, shouldResetZoom)
-    {
+    resetSeries(shouldUpdateChart, shouldResetZoom) {
         if (this.chartComponent) {
             this.updateConfig();
             return this.chartComponent.resetSeries(shouldUpdateChart, shouldResetZoom);
