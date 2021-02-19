@@ -51,7 +51,8 @@ public class ExampleChartGenerator {
                                                 .build()
                                         ).build()) :
                                 builder.withColors("#1e88e5", "#00acc1", "#5e35b1")
-                )
+                ).map(builder ->
+                        builder.withTitle(TitleSubtitleBuilder.get().withText("Colored"+builder.getClass().getSimpleName()).build()))
                 .toArray(ApexChartsBuilder[]::new);
     }
 

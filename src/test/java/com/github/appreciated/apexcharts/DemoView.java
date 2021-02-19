@@ -3,7 +3,6 @@ package com.github.appreciated.apexcharts;
 import com.github.appreciated.apexcharts.config.builder.TitleSubtitleBuilder;
 import com.github.appreciated.apexcharts.examples.ExampleChartGenerator;
 import com.github.appreciated.apexcharts.examples.bar.RangedVerticalBarChartExample;
-import com.github.appreciated.apexcharts.examples.bar.VerticalBarChartExample;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.Span;
@@ -22,15 +21,15 @@ public class DemoView extends HorizontalLayout {
         Arrays.stream(ExampleChartGenerator.getCharts()).map(ApexChartsBuilder::build).forEach(left::add);
         Arrays.stream(ExampleChartGenerator.getColoredCharts()).map(ApexChartsBuilder::build).forEach(right::add);
 
-        ApexChartsBuilder  verticalBarChartBuilder = new RangedVerticalBarChartExample();
-        ApexCharts verticalBarChartExample = verticalBarChartBuilder
-                .withTitle(TitleSubtitleBuilder.get().withText(verticalBarChartBuilder.getClass().getSimpleName()).build())
+        ApexChartsBuilder rangedVerticalBarChartBuilder = new RangedVerticalBarChartExample();
+        ApexCharts verticalBarChartExample = rangedVerticalBarChartBuilder
+                .withTitle(TitleSubtitleBuilder.get().withText("Revenue Example").build())
                 .build();
 
-        Button toggleButton = new Button("Toggle", click -> {verticalBarChartExample.toggleSeries("Revenue");});
-        Button hideButton = new Button("Hide", click -> {verticalBarChartExample.hideSeries("Revenue");});
-        Button showButton = new Button("Show", click -> {verticalBarChartExample.showSeries("Revenue");});
-        Button resetButton = new Button("Reset", click -> {verticalBarChartExample.resetSeries(true, true);});
+        Button toggleButton = new Button("Toggle", click -> verticalBarChartExample.toggleSeries("Revenue"));
+        Button hideButton = new Button("Hide", click -> verticalBarChartExample.hideSeries("Revenue"));
+        Button showButton = new Button("Show", click -> verticalBarChartExample.showSeries("Revenue"));
+        Button resetButton = new Button("Reset", click -> verticalBarChartExample.resetSeries(true, true));
 
         Div div = new Div();
         HorizontalLayout hl = new HorizontalLayout();

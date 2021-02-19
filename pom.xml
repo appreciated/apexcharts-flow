@@ -10,7 +10,7 @@
     <description>Integration of ApexCharts.js for the Vaadin platform</description>
 
     <properties>
-        <vaadin.version>14.3.9</vaadin.version>
+        <vaadin.version>14.4.7</vaadin.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
