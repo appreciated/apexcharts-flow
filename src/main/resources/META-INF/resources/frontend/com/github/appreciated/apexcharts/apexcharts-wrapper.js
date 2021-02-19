@@ -172,7 +172,7 @@ class ApexChartsWrapper extends PolymerElement {
             this.config.subtitle = JSON.parse(this.subtitle);
         }
         if (this.theme) {
-            this.config.theme = this.theme;
+            this.config.theme = JSON.parse(this.theme);
         } else if (!this.config.fill || !this.config.fill.type || !Array.isArray(this.config.fill.type) || this.config.fill.type[0] !== "gradient") {
             if (backgroundColor && this.color(backgroundColor)) {
                 this.config.theme = {
