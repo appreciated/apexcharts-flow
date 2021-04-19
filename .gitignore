@@ -13,3 +13,6 @@ webpack.generated.js
 /.settings
 .classpath
 .project
+
+# intellij
+*.iml
