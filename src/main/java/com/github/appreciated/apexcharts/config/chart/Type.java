@@ -14,7 +14,8 @@ public enum Type {
     candlestick("candlestick"),
     radar("radar"),
     rangeBar("rangeBar"),
-    boxPlot("boxPlot");
+    boxPlot("boxPlot"),
+    ;
     private final String name;
 
     Type(String name) {
