@@ -4,7 +4,8 @@ public enum SeriesType {
 	line("line"),
     area("area"),
     column("column"),
-    scatter("scatter");
+    scatter("scatter"),
+    boxPlot("boxPlot");
     private final String name;
 
     SeriesType(String name) {
