@@ -46,13 +46,6 @@
 
     <repositories>
         <repository>
-            <id>central</id>
-            <url>https://repo.maven.apache.org/maven2</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <repository>
             <id>Vaadin Directory</id>
             <url>https://maven.vaadin.com/vaadin-addons</url>
         </repository>
@@ -69,13 +62,6 @@
     </repositories>
 
     <pluginRepositories>
-        <pluginRepository>
-            <id>central</id>
-            <url>https://repo.maven.apache.org/maven2</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </pluginRepository>
         <!-- Repository needed for prerelease versions of Vaadin -->
         <pluginRepository>
             <id>Vaadin prereleases</id>
@@ -93,12 +79,8 @@
     <dependencies>
         <dependency>
             <groupId>com.vaadin</groupId>
-            <!-- Replace artifactId with vaadin-core to use only free components -->
-            <artifactId>vaadin</artifactId>
+            <artifactId>vaadin-core</artifactId>
             <exclusions>
-                <!-- Webjars are only needed when running in Vaadin 13 compatibility mode in V14.
-                     Your add-on can support npm in the same version mode and V13 compatiblity mode at the same time,
-                     or with separate versions. Any V13 version should work with the compatibility mode in V14. -->
                 <exclusion>
                     <groupId>com.vaadin.webjar</groupId>
                     <artifactId>*</artifactId>
@@ -131,16 +113,9 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>com.vaadin</groupId>
-            <artifactId>vaadin-testbench</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.11.3</version>
         </dependency>
     </dependencies>
 
@@ -277,7 +252,6 @@
                 </plugins>
             </build>
         </profile>
-
         <!-- Run (demo) in production mode-->
         <profile>
             <id>production</id>
