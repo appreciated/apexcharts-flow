@@ -3,7 +3,7 @@
 
     <groupId>io.graphenee.vaadin.flow</groupId>
     <artifactId>apexcharts-js</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <name>apexcharts-js</name>
     <description>Integration of ApexCharts.js for the Vaadin platform</description>
 
