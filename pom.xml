@@ -373,5 +373,9 @@
         </repository>
     </distributionManagement>
 
+    <scm>
+        <url>https://github.com/ijazfx/apexcharts-js</url>
+        <tag>master</tag>
+    </scm>
 
 </project>
