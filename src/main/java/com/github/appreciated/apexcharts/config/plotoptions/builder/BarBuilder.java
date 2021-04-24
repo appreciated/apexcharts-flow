@@ -11,6 +11,7 @@ public class BarBuilder {
     private Boolean distributed;
     private Colors colors;
     private DataLabels dataLabels;
+    private Boolean rangeBarGroupRows;
 
     private BarBuilder() {
     }
@@ -49,6 +50,12 @@ public class BarBuilder {
         return this;
     }
 
+    public BarBuilder withRangeBarGroupRows(Boolean rangeBarGroupRows) {
+        this.rangeBarGroupRows = rangeBarGroupRows;
+        return this;
+    }
+
+
     public Bar build() {
         Bar bar = new Bar();
         bar.setHorizontal(horizontal);
@@ -57,6 +64,7 @@ public class BarBuilder {
         bar.setDistributed(distributed);
         bar.setColors(colors);
         bar.setDataLabels(dataLabels);
+        bar.setRangeBarGroupRows(rangeBarGroupRows);
         return bar;
     }
 }

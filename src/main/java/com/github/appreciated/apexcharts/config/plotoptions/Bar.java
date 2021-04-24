@@ -10,6 +10,7 @@ public class Bar {
     private Boolean distributed;
     private Colors colors;
     private DataLabels dataLabels;
+    private Boolean rangeBarGroupRows;
 
     public Bar() {
     }
@@ -38,6 +39,10 @@ public class Bar {
         return dataLabels;
     }
 
+    public Boolean getRangeBarGroupRows() {
+        return rangeBarGroupRows;
+    }
+
     public void setHorizontal(Boolean horizontal) {
         this.horizontal = horizontal;
     }
@@ -60,6 +65,10 @@ public class Bar {
 
     public void setDataLabels(DataLabels dataLabels) {
         this.dataLabels = dataLabels;
+    }
+
+    public void setRangeBarGroupRows(Boolean rangeBarGroupRows) {
+        this.rangeBarGroupRows = rangeBarGroupRows;
     }
 
 }

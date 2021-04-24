@@ -1,4 +1,18 @@
-Vaadin Platform wrapper for [ApexCharts](https://github.com/apexcharts/apexcharts.js) to build interactive visualizations in Vaadin.
+
+</p>    
+
+<p align="center">
+  <a href="https://vaadin.com/directory/component/apexchartsjs"><img src="https://img.shields.io/badge/Vaadin%20Directory-published-00b4f0.svg"></a>
+  <a href="https://vaadin.com/directory/component/apexchartsjs"><img src="https://img.shields.io/vaadin-directory/version/apexchartsjs.svg" /></a>
+   <a href="https://vaadin.com/directory/component/apexchartsjs"><img src="https://img.shields.io/vaadin-directory/rating/apexchartsjs.svg" /></a>
+   <a href="https://vaadin.com/directory/component/apexchartsjs"><img src="https://img.shields.io/vaadin-directory/release-date/apexchartsjs.svg" /></a>
+  </a>
+</p>
+<p align="center">
+   <br>
+Vaadin Platform wrapper for <a href="https://github.com/apexcharts/apexcharts.js">ApexCharts</a> to build interactive visualizations in Vaadin.
+  <br>
+</p>
 
 ## [Demo](https://appreciated-collection.herokuapp.com/apexcharts/)
 
