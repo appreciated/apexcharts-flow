@@ -1,6 +1,7 @@
 package com.github.appreciated.apexcharts.config;
 
 import com.github.appreciated.apexcharts.config.plotoptions.*;
+import com.github.appreciated.apexcharts.config.plotoptions.boxplot.BoxPlot;
 
 public class PlotOptions {
     private Bar bar;
@@ -9,6 +10,7 @@ public class PlotOptions {
     private Pie pie;
     private Radar radar;
     private RadialBar radialBar;
+    private BoxPlot boxPlot;
 
 
     public PlotOptions() {
@@ -62,4 +64,11 @@ public class PlotOptions {
         this.radialBar = radialBar;
     }
 
+    public BoxPlot getBoxPlot() {
+        return boxPlot;
+    }
+
+    public void setBoxPlot(BoxPlot boxPlot) {
+        this.boxPlot = boxPlot;
+    }
 }
