@@ -17,6 +17,7 @@ public class TimeLineChartExample extends ApexChartsBuilder {
                 .build())
                 .withPlotOptions(PlotOptionsBuilder.get()
                         .withBar(BarBuilder.get()
+                                .withRangeBarGroupRows(true)
                                 .withHorizontal(true)
                                 .build())
                         .build())
