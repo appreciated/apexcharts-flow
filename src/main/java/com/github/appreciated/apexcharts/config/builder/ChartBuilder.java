@@ -1,8 +1,8 @@
 package com.github.appreciated.apexcharts.config.builder;
 
 import com.github.appreciated.apexcharts.config.Chart;
-import com.github.appreciated.apexcharts.config.chart.*;
 import com.github.appreciated.apexcharts.config.Locale;
+import com.github.appreciated.apexcharts.config.chart.*;
 
 public class ChartBuilder {
     private Type type;
@@ -26,6 +26,7 @@ public class ChartBuilder {
     private Animations animations;
     private Locale[] locales;
     private String group;
+    private Events events;
 
     private ChartBuilder() {
     }
@@ -86,6 +87,11 @@ public class ChartBuilder {
 
     public ChartBuilder withSparkline(Sparkline sparkline) {
         this.sparkline = sparkline;
+        return this;
+    }
+
+    public ChartBuilder withEvents(Events events) {
+        this.events = events;
         return this;
     }
 
@@ -162,6 +168,7 @@ public class ChartBuilder {
         chart.setAnimations(animations);
         chart.setLocales(locales);
         chart.setGroup(group);
+        chart.setEvents(events);
         return chart;
     }
 }

@@ -1,11 +1,9 @@
 package com.github.appreciated.apexcharts;
 
-import com.github.appreciated.apexcharts.config.builder.TitleSubtitleBuilder;
 import com.github.appreciated.apexcharts.examples.ExampleChartGenerator;
-import com.github.appreciated.apexcharts.examples.bar.RangedVerticalBarChartExample;
-import com.vaadin.flow.component.button.Button;
-import com.vaadin.flow.component.html.Div;
-import com.vaadin.flow.component.html.Span;
+import com.github.appreciated.apexcharts.examples.RevenueExample;
+import com.github.appreciated.apexcharts.examples.event.ScatterChartWithEventsExample;
+import com.github.appreciated.apexcharts.examples.tooltip.ScatterChartWithCustomTooltipsExample;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
@@ -18,28 +16,11 @@ public class DemoView extends HorizontalLayout {
     VerticalLayout right = new VerticalLayout();
 
     public DemoView() {
-        Arrays.stream(ExampleChartGenerator.getCharts()).map(ApexChartsBuilder::build).forEach(left::add);
-        Arrays.stream(ExampleChartGenerator.getColoredCharts()).map(ApexChartsBuilder::build).forEach(right::add);
+        initLayouts();
+        addExamples();
+    }
 
-        ApexChartsBuilder rangedVerticalBarChartBuilder = new RangedVerticalBarChartExample();
-        ApexCharts verticalBarChartExample = rangedVerticalBarChartBuilder
-                .withTitle(TitleSubtitleBuilder.get().withText("Revenue Example").build())
-                .build();
-
-        Button toggleButton = new Button("Toggle", click -> verticalBarChartExample.toggleSeries("Revenue"));
-        Button hideButton = new Button("Hide", click -> verticalBarChartExample.hideSeries("Revenue"));
-        Button showButton = new Button("Show", click -> verticalBarChartExample.showSeries("Revenue"));
-        Button resetButton = new Button("Reset", click -> verticalBarChartExample.resetSeries(true, true));
-
-        Div div = new Div();
-        HorizontalLayout hl = new HorizontalLayout();
-
-        hl.add(toggleButton, hideButton, showButton, resetButton);
-        div.add(verticalBarChartExample, new Span("Revenue series control: "), hl);
-        left.add(div);
-
-        div.setWidthFull();
-
+    private void initLayouts() {
         setSizeFull();
         getStyle()
                 .set("overflow", "auto");
@@ -49,7 +30,14 @@ public class DemoView extends HorizontalLayout {
         left.setWidth("50%");
         right.setWidth("50%");
         right.setHeight("unset");
+    }
 
+    private void addExamples() {
+        Arrays.stream(ExampleChartGenerator.getCharts()).map(ApexChartsBuilder::build).forEach(left::add);
+        Arrays.stream(ExampleChartGenerator.getColoredCharts()).map(ApexChartsBuilder::build).forEach(right::add);
+        left.add(new RevenueExample());
+        right.add(new ScatterChartWithEventsExample().build());
+        left.add(new ScatterChartWithCustomTooltipsExample().build());
     }
 
 }

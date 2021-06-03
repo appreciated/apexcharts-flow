@@ -24,6 +24,7 @@ public class Chart {
     private Selection selection;
     private Animations animations;
     private String group;
+    private Events events;
 
     public Chart() {
     }
@@ -164,7 +165,6 @@ public class Chart {
         this.animations = animations;
     }
 
-
     public String getWidth() {
         return width;
     }
@@ -189,7 +189,6 @@ public class Chart {
 		this.locales = locales;
 	}
     
-    
 	public String getGroup() {
 		return group;
 	}
@@ -197,6 +196,14 @@ public class Chart {
 	public void setGroup(String group) {
 		this.group = group;
 	}
+
+    public Events getEvents() {
+        return events;
+    }
+
+    public void setEvents(Events events) {
+        this.events = events;
+    }
 }
 
 
