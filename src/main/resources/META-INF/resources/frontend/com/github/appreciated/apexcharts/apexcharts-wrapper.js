@@ -7,9 +7,6 @@ class ApexChartsWrapper extends PolymerElement {
     static get template() {
         return html`
             <style include="apex-charts-style">
-                ::slotted(div) {
-                    overflow: hidden;
-                }
             </style>
             <slot></slot>
         `;
