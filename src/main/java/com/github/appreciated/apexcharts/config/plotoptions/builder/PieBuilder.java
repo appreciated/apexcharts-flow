@@ -9,6 +9,8 @@ public class PieBuilder {
     private Double customScale;
     private Double offsetX;
     private Double offsetY;
+    private Double startAngle;
+    private Double endAngle;
     private Boolean expandOnClick;
     private DataLabels dataLabels;
     private Donut donut;
@@ -55,6 +57,16 @@ public class PieBuilder {
         return this;
     }
 
+    public PieBuilder withStartAngle(Double startAngle) {
+        this.startAngle = startAngle;
+        return this;
+    }
+
+    public PieBuilder withEndAngle(Double endAngle) {
+        this.endAngle = endAngle;
+        return this;
+    }
+
     public Pie build() {
         Pie pie = new Pie();
         pie.setSize(size);
@@ -64,6 +76,8 @@ public class PieBuilder {
         pie.setExpandOnClick(expandOnClick);
         pie.setDataLabels(dataLabels);
         pie.setDonut(donut);
+        pie.setStartAngle(startAngle);
+        pie.setEndAngle(endAngle);
         return pie;
     }
 }
