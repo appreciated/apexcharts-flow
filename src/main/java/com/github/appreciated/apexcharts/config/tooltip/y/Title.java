@@ -1,10 +1,10 @@
 package com.github.appreciated.apexcharts.config.tooltip.y;
 
 public class Title {
+
     private String formatter;
 
-    public Title(String formatter) {
-        this.formatter = formatter;
+    public Title() {
     }
 
     public String getFormatter() {
@@ -14,4 +14,5 @@ public class Title {
     public void setFormatter(String formatter) {
         this.formatter = formatter;
     }
+
 }

@@ -6,8 +6,7 @@ import ApexCharts from 'apexcharts/dist/apexcharts.esm';
 class ApexChartsWrapper extends PolymerElement {
     static get template() {
         return html`
-            <style include="apex-charts-style">
-            </style>
+            <style include="apex-charts-style"></style>
             <slot></slot>
         `;
     }
@@ -132,53 +131,53 @@ class ApexChartsWrapper extends PolymerElement {
         }
         if (this.chart) {
             this.config.chart = JSON.parse(this.chart);
-            if (this.config.chart && this.config.chart.events){
-                if (this.config.chart.events.animationEnd){
+            if (this.config.chart && this.config.chart.events) {
+                if (this.config.chart.events.animationEnd) {
                     this.config.chart.events.animationEnd = this.evalFunction(this.config.chart.events.animationEnd);
                 }
-                if (this.config.chart.events.beforeMount){
+                if (this.config.chart.events.beforeMount) {
                     this.config.chart.events.beforeMount = this.evalFunction(this.config.chart.events.beforeMount);
                 }
-                if (this.config.chart.events.mounted){
+                if (this.config.chart.events.mounted) {
                     this.config.chart.events.mounted = this.evalFunction(this.config.chart.events.mounted);
                 }
-                if (this.config.chart.events.updated){
+                if (this.config.chart.events.updated) {
                     this.config.chart.events.updated = this.evalFunction(this.config.chart.events.updated);
                 }
-                if (this.config.chart.events.click){
+                if (this.config.chart.events.click) {
                     this.config.chart.events.click = this.evalFunction(this.config.chart.events.click);
                 }
-                if (this.config.chart.events.mouseMove){
+                if (this.config.chart.events.mouseMove) {
                     this.config.chart.events.mouseMove = this.evalFunction(this.config.chart.events.mouseMove);
                 }
-                if (this.config.chart.events.legendClick){
+                if (this.config.chart.events.legendClick) {
                     this.config.chart.events.legendClick = this.evalFunction(this.config.chart.events.legendClick);
                 }
-                if (this.config.chart.events.markerClick){
+                if (this.config.chart.events.markerClick) {
                     this.config.chart.events.markerClick = this.evalFunction(this.config.chart.events.markerClick);
                 }
-                if (this.config.chart.events.selection){
+                if (this.config.chart.events.selection) {
                     this.config.chart.events.selection = this.evalFunction(this.config.chart.events.selection);
                 }
-                if (this.config.chart.events.dataPointSelection){
+                if (this.config.chart.events.dataPointSelection) {
                     this.config.chart.events.dataPointSelection = this.evalFunction(this.config.chart.events.dataPointSelection);
                 }
-                if (this.config.chart.events.dataPointMouseEnter){
+                if (this.config.chart.events.dataPointMouseEnter) {
                     this.config.chart.events.dataPointMouseEnter = this.evalFunction(this.config.chart.events.dataPointMouseEnter);
                 }
-                if (this.config.chart.events.dataPointMouseLeave){
+                if (this.config.chart.events.dataPointMouseLeave) {
                     this.config.chart.events.dataPointMouseLeave = this.evalFunction(this.config.chart.events.dataPointMouseLeave);
                 }
-                if (this.config.chart.events.beforeZoom){
+                if (this.config.chart.events.beforeZoom) {
                     this.config.chart.events.beforeZoom = this.evalFunction(this.config.chart.events.beforeZoom);
                 }
-                if (this.config.chart.events.beforeResetZoom){
+                if (this.config.chart.events.beforeResetZoom) {
                     this.config.chart.events.beforeResetZoom = this.evalFunction(this.config.chart.events.beforeResetZoom);
                 }
-                if (this.config.chart.events.zoomed){
+                if (this.config.chart.events.zoomed) {
                     this.config.chart.events.zoomed = this.evalFunction(this.config.chart.events.zoomed);
                 }
-                if (this.config.chart.events.scrolled){
+                if (this.config.chart.events.scrolled) {
                     this.config.chart.events.scrolled = this.evalFunction(this.config.chart.events.scrolled);
                 }
             }
@@ -262,6 +261,9 @@ class ApexChartsWrapper extends PolymerElement {
             if (this.config.tooltip.y && this.config.tooltip.y.formatter) {
                 this.config.tooltip.y.formatter = this.evalFunction(this.config.tooltip.y.formatter);
             }
+            if (this.config.tooltip.z && this.config.tooltip.z.formatter) {
+                this.config.tooltip.z.formatter = this.evalFunction(this.config.tooltip.z.formatter);
+            }
             if (this.config.tooltip.custom) {
                 this.config.tooltip.custom = this.evalFunction(this.config.tooltip.custom);
             }
@@ -311,6 +313,18 @@ class ApexChartsWrapper extends PolymerElement {
                     }
                 };
             }
+        }
+        if (this.config.plotoptions && this.config.plotoptions.radialbar && this.config.plotoptions.radialbar.datalabels && this.config.plotoptions.radialbar.datalabels.value && this.config.plotoptions.radialbar.datalabels.value.formatter) {
+            this.config.plotoptions.radialbar.datalabels.value.formatter = this.evalFunction(this.config.plotoptions.radialbar.datalabels.value.formatter);
+        }
+        if (this.config.plotoptions && this.config.plotoptions.radialbar && this.config.plotoptions.radialbar.datalabels && this.config.plotoptions.radialbar.datalabels.total && this.config.plotoptions.radialbar.datalabels.total.formatter) {
+            this.config.plotoptions.radialbar.datalabels.total.formatter = this.evalFunction(this.config.plotoptions.radialbar.datalabels.total.formatter);
+        }
+        if (this.config.plotoptions && this.config.plotoptions.pie && this.config.plotoptions.pie.datalabels && this.config.plotoptions.pie.datalabels.total && this.config.plotoptions.pie.datalabels.total.formatter) {
+            this.config.plotoptions.pie.datalabels.total.formatter = this.evalFunction(this.config.plotoptions.pie.datalabels.total.formatter);
+        }
+        if (this.config.plotoptions && this.config.plotoptions.pie && this.config.plotoptions.pie.datalabels && this.config.plotoptions.pie.datalabels.value && this.config.plotoptions.pie.datalabels.value.formatter) {
+            this.config.plotoptions.pie.datalabels.value.formatter = this.evalFunction(this.config.plotoptions.pie.datalabels.value.formatter);
         }
     }
 
