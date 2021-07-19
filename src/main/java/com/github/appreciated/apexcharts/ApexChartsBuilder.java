@@ -5,6 +5,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.appreciated.apexcharts.config.*;
 import com.github.appreciated.apexcharts.helper.Series;
 
+import java.util.List;
+
 public class ApexChartsBuilder {
 
     private Chart chart;
@@ -26,7 +28,7 @@ public class ApexChartsBuilder {
     private TitleSubtitle title;
     private Tooltip tooltip;
     private XAxis xaxis;
-    private YAxis yaxis;
+    private YAxis[] yaxis;
     private Series[] series;
     private Double[] doubleSeries;
     private boolean debug;
@@ -151,7 +153,7 @@ public class ApexChartsBuilder {
         return this;
     }
 
-    public ApexChartsBuilder withYaxis(YAxis yaxis) {
+    public ApexChartsBuilder withYaxis(YAxis... yaxis) {
         this.yaxis = yaxis;
         return this;
     }
