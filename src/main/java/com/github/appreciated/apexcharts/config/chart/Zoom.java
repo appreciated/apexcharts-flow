@@ -7,6 +7,7 @@ public class Zoom {
     private Boolean enabled;
     private ZoomType type;
     private ZoomedArea zoomedArea;
+    private Boolean autoScaleYaxis;
 
 
     public Zoom() {
@@ -24,6 +25,10 @@ public class Zoom {
         return zoomedArea;
     }
 
+    public Boolean getAutoScaleYaxis() {
+        return autoScaleYaxis;
+    }
+
     public void setEnabled(Boolean enabled) {
         this.enabled = enabled;
     }
@@ -34,6 +39,10 @@ public class Zoom {
 
     public void setZoomedArea(ZoomedArea zoomedArea) {
         this.zoomedArea = zoomedArea;
+    }
+
+    public void setAutoScaleYaxis(final Boolean autoScaleYaxis) {
+        this.autoScaleYaxis = autoScaleYaxis;
     }
 
 }
