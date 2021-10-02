@@ -14,6 +14,7 @@ public class XAxisBuilder {
     private AxisBorder axisBorder;
     private AxisTicks axisTicks;
     private BigDecimal tickAmount;
+    private TickPlacement tickPlacement;
     private Double min;
     private Double max;
     private Double range;
@@ -58,6 +59,11 @@ public class XAxisBuilder {
 
     public XAxisBuilder withTickAmount(BigDecimal tickAmount) {
         this.tickAmount = tickAmount;
+        return this;
+    }
+
+    public XAxisBuilder withTickPlacement(TickPlacement tickPlacement) {
+        this.tickPlacement = tickPlacement;
         return this;
     }
 
@@ -113,6 +119,7 @@ public class XAxisBuilder {
         xAxis.setAxisBorder(axisBorder);
         xAxis.setAxisTicks(axisTicks);
         xAxis.setTickAmount(tickAmount);
+        xAxis.setTickPlacement(tickPlacement);
         xAxis.setMin(min);
         xAxis.setMax(max);
         xAxis.setRange(range);
