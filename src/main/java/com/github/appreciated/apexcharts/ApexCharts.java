@@ -142,7 +142,7 @@ public class ApexCharts extends PolymerTemplate<ApexChartsModel> implements HasS
         }
     }
 
-    public void setYaxis(YAxis yaxis) {
+    public void setYaxis(YAxis[] yaxis) {
         try {
             getModel().setYaxis(objectMapper.writeValueAsString(yaxis));
         } catch (JsonProcessingException e) {
