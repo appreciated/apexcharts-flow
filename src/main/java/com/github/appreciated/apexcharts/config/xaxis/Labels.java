@@ -18,6 +18,7 @@ public class Labels {
     private String format;
     private String formatter;
     private DatetimeFormatter datetimeFormatter;
+    private Boolean dateTimeUTC;
 
     public Labels() {
     }
@@ -129,5 +130,13 @@ public class Labels {
     }
     public void setDatetimeFormatter(DatetimeFormatter datetimeFormatter) {
         this.datetimeFormatter = datetimeFormatter;
+    }
+
+    public Boolean getDateTimeUTC() {
+        return dateTimeUTC;
+    }
+
+    public void setDateTimeUTC(Boolean dateTimeUTC) {
+        this.dateTimeUTC = dateTimeUTC;
     }
 }
