@@ -11,6 +11,7 @@ public class XAxis {
     private AxisBorder axisBorder;
     private AxisTicks axisTicks;
     private BigDecimal tickAmount;
+    private TickPlacement tickPlacement;
     private Double min;
     private Double max;
     private Double range;
@@ -42,6 +43,10 @@ public class XAxis {
 
     public BigDecimal getTickAmount() {
         return tickAmount;
+    }
+
+    public TickPlacement getTickPlacement() {
+        return tickPlacement;
     }
 
     public Double getMin() {
@@ -98,6 +103,10 @@ public class XAxis {
 
     public void setTickAmount(BigDecimal tickAmount) {
         this.tickAmount = tickAmount;
+    }
+
+    public void setTickPlacement(TickPlacement tickPlacement) {
+        this.tickPlacement = tickPlacement;
     }
 
     public void setMin(Double min) {

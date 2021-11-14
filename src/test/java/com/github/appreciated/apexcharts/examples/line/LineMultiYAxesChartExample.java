@@ -1,19 +1,18 @@
 package com.github.appreciated.apexcharts.examples.line;
 
 import com.github.appreciated.apexcharts.ApexChartsBuilder;
-import com.github.appreciated.apexcharts.config.builder.ChartBuilder;
-import com.github.appreciated.apexcharts.config.builder.GridBuilder;
-import com.github.appreciated.apexcharts.config.builder.StrokeBuilder;
-import com.github.appreciated.apexcharts.config.builder.XAxisBuilder;
+import com.github.appreciated.apexcharts.config.builder.*;
 import com.github.appreciated.apexcharts.config.chart.Type;
 import com.github.appreciated.apexcharts.config.chart.builder.ZoomBuilder;
 import com.github.appreciated.apexcharts.config.grid.builder.RowBuilder;
 import com.github.appreciated.apexcharts.config.stroke.Curve;
-import com.github.appreciated.apexcharts.config.xaxis.TickPlacement;
+import com.github.appreciated.apexcharts.config.yaxis.AxisBorder;
+import com.github.appreciated.apexcharts.config.yaxis.builder.AxisBorderBuilder;
+import com.github.appreciated.apexcharts.config.yaxis.builder.TitleBuilder;
 import com.github.appreciated.apexcharts.helper.Series;
 
-public class LineChartExample extends ApexChartsBuilder {
-    public LineChartExample() {
+public class LineMultiYAxesChartExample extends ApexChartsBuilder {
+    public LineMultiYAxesChartExample() {
         withChart(ChartBuilder.get()
                 .withType(Type.line)
                 .withZoom(ZoomBuilder.get()
@@ -30,8 +29,18 @@ public class LineChartExample extends ApexChartsBuilder {
                         ).build())
                 .withXaxis(XAxisBuilder.get()
                         .withCategories("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep")
-                        .withTickPlacement(TickPlacement.between)
                         .build())
-                .withSeries(new Series<>("Desktops", 10.0, 41.0, 35.0, 51.0, 49.0, 62.0, 69.0, 91.0, 148.0));
+                .withYaxis(YAxisBuilder.get()
+                        .withTitle(TitleBuilder.get().withText("Desktops").build())
+                        .withAxisBorder(AxisBorderBuilder.get().withShow(true).build())
+                        .build(),
+                        YAxisBuilder.get()
+                        .withTitle(TitleBuilder.get().withText("Mobil").build())
+                        .withAxisBorder(AxisBorderBuilder.get().withShow(true).build())
+                        .withOpposite(true)
+                        .build()
+                )
+                .withSeries(new Series<>("Desktops", 10.0, 41.0, 35.0, 51.0, 49.0, 62.0, 69.0, 91.0, 148.0),
+                        new Series<>("Mobil", 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 13.0, 15.0, 20.0));
     }
 }

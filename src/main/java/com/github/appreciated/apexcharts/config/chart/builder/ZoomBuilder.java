@@ -8,6 +8,7 @@ public class ZoomBuilder {
     private Boolean enabled;
     private ZoomType type;
     private ZoomedArea zoomedArea;
+    private Boolean autoScaleYaxis;
 
     private ZoomBuilder() {
     }
@@ -31,11 +32,17 @@ public class ZoomBuilder {
         return this;
     }
 
+    public ZoomBuilder withAutoScaleYaxis(Boolean autoScaleYaxis) {
+        this.autoScaleYaxis = autoScaleYaxis;
+        return this;
+    }
+
     public Zoom build() {
         Zoom zoom = new Zoom();
         zoom.setEnabled(enabled);
         zoom.setType(type);
         zoom.setZoomedArea(zoomedArea);
+        zoom.setAutoScaleYaxis(autoScaleYaxis);
         return zoom;
     }
 }

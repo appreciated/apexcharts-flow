@@ -20,6 +20,7 @@ public class LabelsBuilder {
     private String format;
     private String formatter;
     private DatetimeFormatter datetimeFormatter;
+    private Boolean datetimeUTC;
 
     private LabelsBuilder() {
     }
@@ -103,6 +104,11 @@ public class LabelsBuilder {
         return this;
     }
 
+    public LabelsBuilder withDatetimeUTC(Boolean datetimeUTC) {
+        this.datetimeUTC = datetimeUTC;
+        return this;
+    }
+
     public Labels build() {
         Labels labels = new Labels();
         labels.setShow(show);
@@ -119,6 +125,7 @@ public class LabelsBuilder {
         labels.setFormat(format);
         labels.setFormatter(formatter);
         labels.setDatetimeFormatter(datetimeFormatter);
+        labels.setDatetimeUTC(datetimeUTC);
         return labels;
     }
 }

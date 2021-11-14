@@ -20,6 +20,7 @@ import com.github.appreciated.apexcharts.examples.formatter.SuffixFormatterExamp
 import com.github.appreciated.apexcharts.examples.heatmap.HeatmapChartExample;
 import com.github.appreciated.apexcharts.examples.heatmap.RangedHeatmapChartExample;
 import com.github.appreciated.apexcharts.examples.line.LineChartExample;
+import com.github.appreciated.apexcharts.examples.line.LineMultiYAxesChartExample;
 import com.github.appreciated.apexcharts.examples.locale.LocaleExampleView;
 import com.github.appreciated.apexcharts.examples.mixed.LineAndAreaChartExample;
 import com.github.appreciated.apexcharts.examples.mixed.LineAndColumnAndAreaChartExample;
@@ -61,6 +62,7 @@ public class ExampleChartGenerator {
                 new PieChartExample(),
                 new DonutChartExample(),
                 new LineChartExample(),
+                new LineMultiYAxesChartExample(),
                 new AreaChartExample(),
                 new SparkLineExample(),
                 new LineAndAreaChartExample(),
