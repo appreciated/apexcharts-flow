@@ -5,12 +5,12 @@
 
     <groupId>com.github.appreciated</groupId>
     <artifactId>apexcharts</artifactId>
-    <version>2.0.0-beta12</version>
+    <version>2.0.0-beta13</version>
     <name>ApexCharts.js</name>
     <description>Integration of ApexCharts.js for the Vaadin platform</description>
 
     <properties>
-        <vaadin.version>14.6.8</vaadin.version>
+        <vaadin.version>14.7.5</vaadin.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

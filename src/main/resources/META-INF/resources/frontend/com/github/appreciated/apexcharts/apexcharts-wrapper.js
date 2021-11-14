@@ -279,11 +279,13 @@ class ApexChartsWrapper extends PolymerElement {
         }
         if (this.yaxis) {
             this.config.yaxis = JSON.parse(this.yaxis);
-            if (this.config.yaxis.labels && this.config.yaxis.labels.formatter) {
-                this.config.yaxis.labels.formatter = this.evalFunction(this.config.yaxis.labels.formatter);
-            }
-            if (this.config.yaxis.title && this.config.yaxis.title.formatter) {
-                this.config.yaxis.title.formatter = this.evalFunction(this.config.yaxis.title.formatter);
+            for (let i = 0; i < this.config.yaxis.length; i++) {
+                if (this.config.yaxis[i].labels && this.config.yaxis[i].labels.formatter) {
+                    this.config.yaxis[i].labels.formatter = this.evalFunction(this.config.yaxis[i].labels.formatter);
+                }
+                if (this.config.yaxis[i].title && this.config.yaxis[i].title.formatter) {
+                    this.config.yaxis[i].title.formatter = this.evalFunction(this.config.yaxis[i].title.formatter);
+                }
             }
         }
         if (!this.config.chart) {
