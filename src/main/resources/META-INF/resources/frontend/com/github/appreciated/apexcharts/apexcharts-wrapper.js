@@ -2,6 +2,7 @@ import {PolymerElement} from '@polymer/polymer/polymer-element.js';
 import {html} from '@polymer/polymer/lib/utils/html-tag.js';
 import '@polymer/polymer/lib/utils/html-tag.js';
 import ApexCharts from 'apexcharts/dist/apexcharts.esm';
+import color from "onecolor";
 
 class ApexChartsWrapper extends PolymerElement {
     static get template() {
@@ -94,7 +95,6 @@ class ApexChartsWrapper extends PolymerElement {
 
     ready() {
         super.ready();
-        this.color = require('onecolor');
         const div = document.createElement('div');
         this.appendChild(div);
         this.updateConfig();
@@ -236,15 +236,15 @@ class ApexChartsWrapper extends PolymerElement {
         if (this.theme) {
             this.config.theme = JSON.parse(this.theme);
         } else if (!this.config.fill || !this.config.fill.type || !Array.isArray(this.config.fill.type) || this.config.fill.type[0] !== "gradient") {
-            if (backgroundColor && this.color(backgroundColor)) {
+            if (backgroundColor && color(backgroundColor)) {
                 this.config.theme = {
-                    mode: ((this.color(backgroundColor).lightness() > 0.5) ? 'light' : 'dark')
+                    mode: ((color(backgroundColor).lightness() > 0.5) ? 'light' : 'dark')
                 };
             }
-            if (!this.colors && primaryColor && this.color(primaryColor)) {
+            if (!this.colors && primaryColor && color(primaryColor)) {
                 this.config.theme.monochrome = {
                     enabled: true,
-                    color: this.color(primaryColor).hex(),
+                    color: color(primaryColor).hex(),
                     shadeTo: 'light',
                     shadeIntensity: 0.65
                 }
@@ -297,19 +297,19 @@ class ApexChartsWrapper extends PolymerElement {
         if (this.height) {
             this.config.chart.height = this.height;
         }
-        if (!this.config.chart.background && backgroundColor && this.color(backgroundColor)) {
+        if (!this.config.chart.background && backgroundColor && color(backgroundColor)) {
             this.config.chart.background = backgroundColor;
         }
         if (!this.config.stroke) {
             this.config.stroke = {};
         }
         if (this.config.chart && this.config.chart.type === "radar") {
-            if (!this.config.plotOptions && backgroundColor && this.color(backgroundColor)) {
+            if (!this.config.plotOptions && backgroundColor && color(backgroundColor)) {
                 this.config.plotOptions = {
                     radar: {
                         polygons: {
                             fill: {
-                                colors: [this.color(backgroundColor).hex()]
+                                colors: [color(backgroundColor).hex()]
                             }
                         }
                     }
