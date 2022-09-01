@@ -2,10 +2,24 @@ package com.github.appreciated.apexcharts;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.github.appreciated.apexcharts.config.*;
+import com.github.appreciated.apexcharts.config.Annotations;
+import com.github.appreciated.apexcharts.config.Chart;
+import com.github.appreciated.apexcharts.config.DataLabels;
+import com.github.appreciated.apexcharts.config.Fill;
+import com.github.appreciated.apexcharts.config.Grid;
+import com.github.appreciated.apexcharts.config.Legend;
+import com.github.appreciated.apexcharts.config.Markers;
+import com.github.appreciated.apexcharts.config.NoData;
+import com.github.appreciated.apexcharts.config.PlotOptions;
+import com.github.appreciated.apexcharts.config.Responsive;
+import com.github.appreciated.apexcharts.config.States;
+import com.github.appreciated.apexcharts.config.Stroke;
+import com.github.appreciated.apexcharts.config.Theme;
+import com.github.appreciated.apexcharts.config.TitleSubtitle;
+import com.github.appreciated.apexcharts.config.Tooltip;
+import com.github.appreciated.apexcharts.config.XAxis;
+import com.github.appreciated.apexcharts.config.YAxis;
 import com.github.appreciated.apexcharts.helper.Series;
-
-import java.util.List;
 
 public class ApexChartsBuilder {
 
@@ -158,11 +172,11 @@ public class ApexChartsBuilder {
         return this;
     }
 
-
-
     /**
-     * Method to set the data for all chart types except {@link com.github.appreciated.apexcharts.config.chart.Type#pie} and {@link com.github.appreciated.apexcharts.config.chart.Type#donut}.
+     * Method to set the data for all chart types except {@link com.github.appreciated.apexcharts.config.chart.Type#pie} and
+     * {@link com.github.appreciated.apexcharts.config.chart.Type#donut}.
      * For these both types use withSeries{@link #withSeries(Double[])}
+     * 
      * @param series the date series to assign to the Chart
      * @return the builder
      */
@@ -172,8 +186,10 @@ public class ApexChartsBuilder {
     }
 
     /**
-     * Method to set the data for {@link com.github.appreciated.apexcharts.config.chart.Type#pie} and {@link com.github.appreciated.apexcharts.config.chart.Type#donut}.
+     * Method to set the data for {@link com.github.appreciated.apexcharts.config.chart.Type#pie} and
+     * {@link com.github.appreciated.apexcharts.config.chart.Type#donut}.
      * For all other chart types use withSeries{@link #withSeries(Series[])}
+     * 
      * @param series the date series to assign to the Chart
      * @return the builder
      */
@@ -181,7 +197,6 @@ public class ApexChartsBuilder {
         doubleSeries = series;
         return this;
     }
-
 
     /**
      * Method to set a custom {@link ObjectMapper} used for customizing object serialization.
@@ -196,7 +211,7 @@ public class ApexChartsBuilder {
     }
 
     public ApexCharts build() {
-        ApexCharts apexCharts = new ApexCharts();
+        ApexCharts apexCharts = objectMapper == null ? new ApexCharts() : new ApexCharts(objectMapper);
         if (annotations != null) {
             apexCharts.setAnnotations(annotations);
         }
@@ -262,9 +277,6 @@ public class ApexChartsBuilder {
             apexCharts.setSeries(series);
         } else if (doubleSeries != null) {
             apexCharts.setSeries(doubleSeries);
-        }
-        if(objectMapper != null) {
-            apexCharts.setObjectMapper(objectMapper);
         }
         return apexCharts;
     }

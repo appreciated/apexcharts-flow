@@ -1,18 +1,15 @@
-import {PolymerElement} from '@polymer/polymer/polymer-element.js';
-import {html} from '@polymer/polymer/lib/utils/html-tag.js';
-import '@polymer/polymer/lib/utils/html-tag.js';
+import { html, LitElement } from 'lit';
+import { customElement } from 'lit/decorators.js';
+// @ts-ignore
 import ApexCharts from 'apexcharts/dist/apexcharts.esm';
 
-class ApexChartsWrapper extends PolymerElement {
-    static get template() {
+@customElement('apex-charts-wrapper')
+export class ApexChartsWrapper extends LitElement {
+    render() {
         return html`
             <style include="apex-charts-style"></style>
             <slot></slot>
         `;
-    }
-
-    static get is() {
-        return 'apex-charts-wrapper'
     }
 
     static get properties() {
@@ -92,8 +89,8 @@ class ApexChartsWrapper extends PolymerElement {
         }
     }
 
-    ready() {
-        super.ready();
+    firstUpdated() {
+        super.firstUpdated();
         this.color = require('onecolor');
         const div = document.createElement('div');
         this.appendChild(div);
@@ -352,7 +349,7 @@ class ApexChartsWrapper extends PolymerElement {
         }
     }
 
-    render() {
+    reRender() {
         if (this.chartComponent) {
             this.updateConfig();
             this.chartComponent.render();
@@ -394,7 +391,4 @@ class ApexChartsWrapper extends PolymerElement {
         }
     }
 
-}
-
-customElements.define(ApexChartsWrapper.is, ApexChartsWrapper);
-export {ApexChartsWrapper};
+};

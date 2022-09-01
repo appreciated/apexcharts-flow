@@ -10,12 +10,14 @@
     <description>Integration of ApexCharts.js for the Vaadin platform</description>
 
     <properties>
-        <vaadin.version>14.7.5</vaadin.version>
+        <vaadin.version>23.1.7</vaadin.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <jetty.version>9.4.15.v20190215</jetty.version>
+        <jackson-databind.verison>2.13.3</jackson-databind.verison>
+        <jandex-maven-plugin.version>1.2.3</jandex-maven-plugin.version>
     </properties>
     <organization>
         <name>appreciated</name>
@@ -100,6 +102,10 @@
                     <groupId>org.webjars.bowergithub.webcomponents</groupId>
                     <artifactId>*</artifactId>
                 </exclusion>
+                <exclusion>
+                    <groupId>com.vaadin</groupId>
+                    <artifactId>flow-polymer-template</artifactId>
+                </exclusion>
             </exclusions>
         </dependency>
         <dependency>
@@ -110,13 +116,29 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.11.3</version>
+            <version>${jackson-databind.verison}</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
     <build>
         <defaultGoal>jetty:run</defaultGoal>
         <plugins>
+            <plugin>
+                <!-- https://github.com/wildfly/jandex-maven-plugin -->
+                <groupId>org.jboss.jandex</groupId>
+                <artifactId>jandex-maven-plugin</artifactId>
+                <version>${jandex-maven-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>make-index</id>
+                        <goals>
+                            <!-- phase is 'process-classes by default' -->
+                            <goal>jandex</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -149,6 +171,18 @@
                         </goals>
                     </execution>
                 </executions>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.vaadin</groupId>
+                        <artifactId>flow-server</artifactId>
+                        <version>23.1.6</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>com.vaadin</groupId>
+                        <artifactId>flow-push</artifactId>
+                        <version>23.1.6</version>
+                    </dependency>
+                </dependencies>
             </plugin>
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
@@ -157,7 +191,7 @@
                 <configuration>
                     <scanIntervalSeconds>3</scanIntervalSeconds>
                     <!-- Use test scope because the UI/demo classes are in
-                            the test package. -->
+                    the test package. -->
                     <useTestScope>true</useTestScope>
                     <supportedPackagings>
                         <supportedPackaging>jar</supportedPackaging>
