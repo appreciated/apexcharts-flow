@@ -17,3 +17,4 @@ webpack.generated.js
 
 # intellij
 *.iml
+/frontend/generated
