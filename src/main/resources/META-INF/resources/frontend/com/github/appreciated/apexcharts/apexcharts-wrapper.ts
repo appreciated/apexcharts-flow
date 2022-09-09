@@ -2,6 +2,8 @@ import { html, LitElement } from 'lit';
 import { customElement } from 'lit/decorators.js';
 // @ts-ignore
 import ApexCharts from 'apexcharts/dist/apexcharts.esm';
+import '@webcomponents/shadycss/apply-shim.min.js';
+import color from "onecolor";
 
 @customElement('apex-charts-wrapper')
 export class ApexChartsWrapper extends LitElement {
@@ -91,7 +93,6 @@ export class ApexChartsWrapper extends LitElement {
 
     firstUpdated() {
         super.firstUpdated();
-        this.color = require('onecolor');
         const div = document.createElement('div');
         this.appendChild(div);
         this.updateConfig();
@@ -111,14 +112,14 @@ export class ApexChartsWrapper extends LitElement {
 
     updateConfig() {
         let primaryColor;
-        if (ShadyCSS) {
-            primaryColor = ShadyCSS.getComputedStyleValue(this, '--apex-charts-primary-color');
+        if (window.ShadyCSS) {
+            primaryColor = window.ShadyCSS.getComputedStyleValue(this, '--apex-charts-primary-color');
         } else {
             primaryColor = getComputedStyle(this).getPropertyValue('--apex-charts-primary-color');
         }
         var backgroundColor;
-        if (ShadyCSS) {
-            backgroundColor = ShadyCSS.getComputedStyleValue(this, '--apex-charts-background-color');
+        if (window.ShadyCSS) {
+            backgroundColor = window.ShadyCSS.getComputedStyleValue(this, '--apex-charts-background-color');
         } else {
             backgroundColor = getComputedStyle(this).getPropertyValue('--apex-charts-background-color');
         }
@@ -233,15 +234,15 @@ export class ApexChartsWrapper extends LitElement {
         if (this.theme) {
             this.config.theme = JSON.parse(this.theme);
         } else if (!this.config.fill || !this.config.fill.type || !Array.isArray(this.config.fill.type) || this.config.fill.type[0] !== "gradient") {
-            if (backgroundColor && this.color(backgroundColor)) {
+            if (backgroundColor && color(backgroundColor)) {
                 this.config.theme = {
-                    mode: ((this.color(backgroundColor).lightness() > 0.5) ? 'light' : 'dark')
+                    mode: ((color(backgroundColor).lightness() > 0.5) ? 'light' : 'dark')
                 };
             }
-            if (!this.colors && primaryColor && this.color(primaryColor)) {
+            if (!this.colors && primaryColor && color(primaryColor)) {
                 this.config.theme.monochrome = {
                     enabled: true,
-                    color: this.color(primaryColor).hex(),
+                    color: color(primaryColor).hex(),
                     shadeTo: 'light',
                     shadeIntensity: 0.65
                 }
@@ -294,19 +295,19 @@ export class ApexChartsWrapper extends LitElement {
         if (this.height) {
             this.config.chart.height = this.height;
         }
-        if (!this.config.chart.background && backgroundColor && this.color(backgroundColor)) {
+        if (!this.config.chart.background && backgroundColor && color(backgroundColor)) {
             this.config.chart.background = backgroundColor;
         }
         if (!this.config.stroke) {
             this.config.stroke = {};
         }
         if (this.config.chart && this.config.chart.type === "radar") {
-            if (!this.config.plotOptions && backgroundColor && this.color(backgroundColor)) {
+            if (!this.config.plotOptions && backgroundColor && color(backgroundColor)) {
                 this.config.plotOptions = {
                     radar: {
                         polygons: {
                             fill: {
-                                colors: [this.color(backgroundColor).hex()]
+                                colors: [color(backgroundColor).hex()]
                             }
                         }
                     }

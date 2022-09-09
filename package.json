@@ -351,6 +351,9 @@
     "@vaadin/common-frontend": "$@vaadin/common-frontend",
     "construct-style-sheets-polyfill": "$construct-style-sheets-polyfill",
     "lit": "$lit",
-    "@polymer/polymer": "$@polymer/polymer"
+    "@polymer/polymer": "$@polymer/polymer",
+    "apexcharts": "$apexcharts",
+    "date-fns": "$date-fns",
+    "onecolor": "$onecolor"
   }
 }
