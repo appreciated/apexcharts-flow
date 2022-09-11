@@ -1,11 +1,20 @@
 package com.github.appreciated.apexcharts.config.chart;
 
-public enum StackType {
-    normal("normal"),
-    full("100%");
-    private final String name;
+import com.fasterxml.jackson.annotation.JsonValue;
 
-    StackType(String name) {
-        this.name = name;
+public enum StackType {
+    NORMAL("normal"),
+    FULL("100%");
+
+    private final String value;
+
+    StackType(final String value) {
+        this.value = value;
     }
+
+    @JsonValue
+    public String getValue() {
+        return value;
+    }
+
 }

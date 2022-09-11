@@ -18,7 +18,7 @@ public class StackedBarChartExampleView extends ExampleHolderView {
     public StackedBarChartExampleView() {
         ApexCharts chart = ApexChartsBuilder.get()
                 .withChart(ChartBuilder.get()
-                        .withType(Type.bar)
+                        .withType(Type.BAR)
                         .withStacked(true)
                         .build())
                 .withColors("#ff0000", "#00ffff", "#00ff00")

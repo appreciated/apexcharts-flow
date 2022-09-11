@@ -17,7 +17,7 @@ import com.github.appreciated.apexcharts.config.stroke.LineCap;
 public class GradientRadialBarChartExample extends ApexChartsBuilder {
     public GradientRadialBarChartExample() {
         withChart(ChartBuilder.get()
-                .withType(Type.radialBar)
+                .withType(Type.RADIALBAR)
                 .withToolbar(ToolbarBuilder.get().withShow(true).build())
                 .build())
                 .withPlotOptions(PlotOptionsBuilder.get().withRadialBar(RadialBarBuilder.get()
@@ -27,7 +27,7 @@ public class GradientRadialBarChartExample extends ApexChartsBuilder {
                                 .withMargin(0.0)
                                 .withSize("70%")
                                 .withBackground("#fff")
-                                .withPosition(HollowPosition.front)
+                                .withPosition(HollowPosition.FRONT)
                                 .withDropShadow(DropShadowBuilder.get()
                                         .withEnabled(true)
                                         .withTop(3.0)
@@ -77,7 +77,7 @@ public class GradientRadialBarChartExample extends ApexChartsBuilder {
                         .build())
                 .withSeries(75.0)
                 .withStroke(StrokeBuilder.get()
-                        .withLineCap(LineCap.round)
+                        .withLineCap(LineCap.ROUND)
                         .build())
                 .withLabels("Percent");
     }

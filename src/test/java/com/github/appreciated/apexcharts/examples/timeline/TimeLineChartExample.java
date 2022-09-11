@@ -13,7 +13,7 @@ import java.time.LocalDate;
 public class TimeLineChartExample extends ApexChartsBuilder {
     public TimeLineChartExample() {
         withChart(ChartBuilder.get()
-                .withType(Type.rangeBar)
+                .withType(Type.RANGEBAR)
                 .build())
                 .withPlotOptions(PlotOptionsBuilder.get()
                         .withBar(BarBuilder.get()
@@ -42,7 +42,7 @@ public class TimeLineChartExample extends ApexChartsBuilder {
                         .withMax(LocalDate.of(2019, 3, 14))
                         .build())
                 .withXaxis(XAxisBuilder.get()
-                        .withType(XAxisType.datetime)
+                        .withType(XAxisType.DATETIME)
                         .build());
     }
 }

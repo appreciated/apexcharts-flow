@@ -1,12 +1,20 @@
 package com.github.appreciated.apexcharts.config.xaxis;
 
-public enum XAxisType {
-    categories("categories"),
-    datetime("datetime"),
-    numeric("numeric");
-    private final String name;
+import com.fasterxml.jackson.annotation.JsonValue;
 
-    XAxisType(String name) {
-        this.name = name;
+public enum XAxisType {
+    CATEGORIES("categories"),
+    DATETIME("datetime"),
+    NUMERIC("numeric");
+
+    private final String value;
+
+    XAxisType(final String value) {
+        this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+        return value;
     }
 }

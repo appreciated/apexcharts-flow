@@ -15,13 +15,13 @@ import com.github.appreciated.apexcharts.helper.Series;
 public class LineChartExample extends ApexChartsBuilder {
     public LineChartExample() {
         withChart(ChartBuilder.get()
-                .withType(Type.line)
+                .withType(Type.LINE)
                 .withZoom(ZoomBuilder.get()
                         .withEnabled(false)
                         .build())
                 .build())
                 .withStroke(StrokeBuilder.get()
-                        .withCurve(Curve.straight)
+                        .withCurve(Curve.STRAIGHT)
                         .build())
                 .withGrid(GridBuilder.get()
                         .withRow(RowBuilder.get()
@@ -30,7 +30,7 @@ public class LineChartExample extends ApexChartsBuilder {
                         ).build())
                 .withXaxis(XAxisBuilder.get()
                         .withCategories("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep")
-                        .withTickPlacement(TickPlacement.between)
+                        .withTickPlacement(TickPlacement.BETWEEN)
                         .build())
                 .withSeries(new Series<>("Desktops", 10.0, 41.0, 35.0, 51.0, 49.0, 62.0, 69.0, 91.0, 148.0));
     }

@@ -16,10 +16,10 @@ public class ScatterChartWithCustomTooltipsExample extends ApexChartsBuilder {
 
     public ScatterChartWithCustomTooltipsExample() {
        withChart(ChartBuilder.get()
-                .withType(Type.scatter)
+                .withType(Type.SCATTER)
                 .withZoom(ZoomBuilder.get()
                         .withEnabled(true)
-                        .withType(ZoomType.xy)
+                        .withType(ZoomType.XY)
                         .build())
                 .build())
                .withTooltip(TooltipBuilder.get().withCustom("function(struct) {\n" +

@@ -9,7 +9,7 @@ import com.github.appreciated.apexcharts.helper.Series;
 public class VerticalBarChartExample extends ApexChartsBuilder {
     public VerticalBarChartExample() {
         withChart(ChartBuilder.get()
-                .withType(Type.bar)
+                .withType(Type.BAR)
                 .build())
                 .withPlotOptions(PlotOptionsBuilder.get()
                         .withBar(BarBuilder.get()

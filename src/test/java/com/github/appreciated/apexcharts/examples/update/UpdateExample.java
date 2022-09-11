@@ -12,16 +12,14 @@ import com.github.appreciated.apexcharts.helper.Series;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
-import com.vaadin.flow.component.page.Push;
 import com.vaadin.flow.router.Route;
 
 @Route("update")
-@Push
 public class UpdateExample extends VerticalLayout {
 
     public UpdateExample() {
         ApexCharts chart = ApexChartsBuilder.get().withChart(ChartBuilder.get()
-                .withType(Type.bar)
+                .withType(Type.BAR)
                 .build())
                 .withPlotOptions(PlotOptionsBuilder.get()
                         .withBar(BarBuilder.get()

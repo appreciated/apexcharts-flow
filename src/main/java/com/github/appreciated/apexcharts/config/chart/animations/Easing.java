@@ -1,13 +1,21 @@
 package com.github.appreciated.apexcharts.config.chart.animations;
 
-public enum Easing {
-    linear("linear"),
-    easein("easein"),
-    easeout("easeout"),
-    easeinout("easeinout");
-    private final String name;
+import com.fasterxml.jackson.annotation.JsonValue;
 
-    Easing(String name) {
-        this.name = name;
+public enum Easing {
+    LINEAR("linear"),
+    EASEIN("easein"),
+    EASEOUT("easeout"),
+    EASEINOUT("easeinout");
+
+    private final String value;
+
+    Easing(final String value) {
+        this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+        return value;
     }
 }

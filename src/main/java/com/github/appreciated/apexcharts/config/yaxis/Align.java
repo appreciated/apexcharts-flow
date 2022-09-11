@@ -1,12 +1,20 @@
 package com.github.appreciated.apexcharts.config.yaxis;
 
-public enum Align {
-    left("left"),
-    center("center"),
-    right("right");
-    private final String name;
+import com.fasterxml.jackson.annotation.JsonValue;
 
-    Align(String name) {
-        this.name = name;
+public enum Align {
+    LEFT("left"),
+    CENTER("center"),
+    RIGHT("right");
+
+    private final String value;
+
+    Align(final String value) {
+        this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+        return value;
     }
 }

@@ -176,8 +176,8 @@ public class ApexCharts extends LitTemplate implements HasSize, HasStyle, HasThe
     }
 
     /**
-     * Method to set update the data for all chart types except {@link com.github.appreciated.apexcharts.config.chart.Type#pie} and
-     * {@link com.github.appreciated.apexcharts.config.chart.Type#donut}.
+     * Method to set update the data for all chart types except {@link com.github.appreciated.apexcharts.config.chart.Type#PIE} and
+     * {@link com.github.appreciated.apexcharts.config.chart.Type#DONUT}.
      * For these both types use setSeries{@link #setSeries(Double[])}
      *
      * @param series the data series to update to the Chart with
@@ -188,8 +188,8 @@ public class ApexCharts extends LitTemplate implements HasSize, HasStyle, HasThe
     }
 
     /**
-     * Method to set update the data for all chart types except {@link com.github.appreciated.apexcharts.config.chart.Type#pie} and
-     * {@link com.github.appreciated.apexcharts.config.chart.Type#donut}.
+     * Method to set update the data for all chart types except {@link com.github.appreciated.apexcharts.config.chart.Type#PIE} and
+     * {@link com.github.appreciated.apexcharts.config.chart.Type#DONUT}.
      * For all other chart types use setSeries{@link #setSeries(Series[])}
      *
      * @param series the data series to update to the Chart with
@@ -200,8 +200,8 @@ public class ApexCharts extends LitTemplate implements HasSize, HasStyle, HasThe
     }
 
     /**
-     * Method to set the data for all chart types except {@link com.github.appreciated.apexcharts.config.chart.Type#pie} and
-     * {@link com.github.appreciated.apexcharts.config.chart.Type#donut}.
+     * Method to set the data for all chart types except {@link com.github.appreciated.apexcharts.config.chart.Type#PIE} and
+     * {@link com.github.appreciated.apexcharts.config.chart.Type#DONUT}.
      * For these both types use setSeries{@link #setSeries(Double[])}
      *
      * @param series the data series to assign to the Chart
@@ -211,8 +211,8 @@ public class ApexCharts extends LitTemplate implements HasSize, HasStyle, HasThe
     }
 
     /**
-     * Method to set the data for {@link com.github.appreciated.apexcharts.config.chart.Type#pie} and
-     * {@link com.github.appreciated.apexcharts.config.chart.Type#donut}.
+     * Method to set the data for {@link com.github.appreciated.apexcharts.config.chart.Type#PIE} and
+     * {@link com.github.appreciated.apexcharts.config.chart.Type#DONUT}.
      * For all other chart types use setSeries{@link #setSeries(Series[])}
      *
      * @param series the data series to assign to the Chart

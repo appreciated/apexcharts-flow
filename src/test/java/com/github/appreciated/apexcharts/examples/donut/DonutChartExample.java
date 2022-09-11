@@ -10,16 +10,16 @@ import com.github.appreciated.apexcharts.config.responsive.builder.OptionsBuilde
 
 public class DonutChartExample extends ApexChartsBuilder {
     public DonutChartExample() {
-      withChart(ChartBuilder.get().withType(Type.donut).build())
+      withChart(ChartBuilder.get().withType(Type.DONUT).build())
                 .withLegend(LegendBuilder.get()
-                        .withPosition(Position.right)
+                        .withPosition(Position.RIGHT)
                         .build())
                 .withSeries(44.0, 55.0, 41.0, 17.0, 15.0)
                 .withResponsive(ResponsiveBuilder.get()
                         .withBreakpoint(480.0)
                         .withOptions(OptionsBuilder.get()
                                 .withLegend(LegendBuilder.get()
-                                        .withPosition(Position.bottom)
+                                        .withPosition(Position.BOTTOM)
                                         .build())
                                 .build())
                         .build());

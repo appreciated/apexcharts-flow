@@ -19,10 +19,10 @@ public class NumberFormatFormatterExample extends ApexChartsBuilder {
 
     public NumberFormatFormatterExample() {
         withChart(ChartBuilder.get()
-                .withType(Type.scatter)
+                .withType(Type.SCATTER)
                 .withZoom(ZoomBuilder.get()
                         .withEnabled(true)
-                        .withType(ZoomType.xy)
+                        .withType(ZoomType.XY)
                         .build())
                 .build())
                 .withSeries(

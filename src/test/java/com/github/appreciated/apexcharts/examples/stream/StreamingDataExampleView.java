@@ -15,14 +15,12 @@ import com.github.appreciated.apexcharts.config.chart.builder.ZoomBuilder;
 import com.github.appreciated.apexcharts.helper.Series;
 import com.vaadin.flow.component.AttachEvent;
 import com.vaadin.flow.component.DetachEvent;
-import com.vaadin.flow.component.page.Push;
 import com.vaadin.flow.router.Route;
 
 import java.security.SecureRandom;
 import java.util.ArrayList;
 
 @Route("stream")
-@Push
 public class StreamingDataExampleView extends ExampleHolderView {
 
     private final ApexCharts chart;
@@ -31,10 +29,10 @@ public class StreamingDataExampleView extends ExampleHolderView {
     public StreamingDataExampleView() {
 
         chart = ApexChartsBuilder.get().withChart(ChartBuilder.get()
-                .withType(Type.line)
+                .withType(Type.LINE)
                 .withAnimations(AnimationsBuilder.get()
                         .withEnabled(true)
-                        .withEasing(Easing.linear)
+                        .withEasing(Easing.LINEAR)
                         .withDynamicAnimation(DynamicAnimationBuilder.get()
                                 .withSpeed(1000)
                                 .build())

@@ -1,15 +1,22 @@
 package com.github.appreciated.apexcharts.config.series;
 
-public enum SeriesType {
-	line("line"),
-    area("area"),
-    column("column"),
-    scatter("scatter"),
-    boxPlot("boxPlot"),
-    ;
-    private final String name;
+import com.fasterxml.jackson.annotation.JsonValue;
 
-    SeriesType(String name) {
-        this.name = name;
+public enum SeriesType {
+    LINE("line"),
+    AREA("area"),
+    COLUMN("column"),
+    SCATTER("scatter"),
+    BOXPLOT("boxPlot");
+
+    private final String value;
+
+    SeriesType(final String value) {
+        this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+        return value;
     }
 }
