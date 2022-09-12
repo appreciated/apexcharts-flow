@@ -19,7 +19,7 @@ public class LineAndColumnChartExample extends ApexChartsBuilder {
     public LineAndColumnChartExample() {
         withChart(
                 ChartBuilder.get()
-                        .withType(Type.line)
+                        .withType(Type.LINE)
                         .withZoom(ZoomBuilder.get()
                                 .withEnabled(false)
                                 .build())
@@ -27,22 +27,22 @@ public class LineAndColumnChartExample extends ApexChartsBuilder {
                 .withDataLabels(DataLabelsBuilder.get()
                         .withEnabled(false)
                         .build())
-                .withStroke(StrokeBuilder.get().withCurve(Curve.straight).build())
+                .withStroke(StrokeBuilder.get().withCurve(Curve.STRAIGHT).build())
                 .withSeries(
-                        new Series<>("Sales", SeriesType.column, 11.0, 14.0, 7.0, 2.0, 7.0, 15.0, 26.0, 19.0, 36.0),
-                        new Series<>("INDEX XYZ", SeriesType.line, 30.0, 24.0, 28.0, 20.0, 32.0, 48.0, 88.0, 72.0, 68.0))
+                        new Series<>("Sales", SeriesType.COLUMN, 11.0, 14.0, 7.0, 2.0, 7.0, 15.0, 26.0, 19.0, 36.0),
+                        new Series<>("INDEX XYZ", SeriesType.LINE, 30.0, 24.0, 28.0, 20.0, 32.0, 48.0, 88.0, 72.0, 68.0))
                 .withFill(FillBuilder.get()
                         .withType("solid")
                         .withOpacity(1.0, 1.0)
                         .build())
                 .withSubtitle(TitleSubtitleBuilder.get()
                         .withText("Price Movements")
-                        .withAlign(Align.left).build())
+                        .withAlign(Align.LEFT).build())
                 .withLabels(IntStream.range(1, 10).boxed().map(day -> LocalDate.of(2000, 1, day).toString()).toArray(String[]::new))
                 .withXaxis(XAxisBuilder.get()
-                        .withType(XAxisType.datetime).build())
+                        .withType(XAxisType.DATETIME).build())
                 .withYaxis(YAxisBuilder.get()
                         .withOpposite(false).build())
-                .withLegend(LegendBuilder.get().withHorizontalAlign(HorizontalAlign.left).build());
+                .withLegend(LegendBuilder.get().withHorizontalAlign(HorizontalAlign.LEFT).build());
     }
 }

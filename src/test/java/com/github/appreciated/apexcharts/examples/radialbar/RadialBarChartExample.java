@@ -11,7 +11,7 @@ public class RadialBarChartExample extends ApexChartsBuilder {
 
     public RadialBarChartExample() {
         withChart(ChartBuilder.get()
-                .withType(Type.radialBar)
+                .withType(Type.RADIALBAR)
                 .build())
                 .withPlotOptions(PlotOptionsBuilder.get()
                         .withRadialBar(RadialBarBuilder.get()

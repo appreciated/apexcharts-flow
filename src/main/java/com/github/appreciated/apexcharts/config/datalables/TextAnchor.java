@@ -1,13 +1,20 @@
 package com.github.appreciated.apexcharts.config.datalables;
 
+import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum TextAnchor {
-    start("start"),
-    middle("middle"),
-    end("end");
-    private final String name;
+    START("start"),
+    MIDDLE("middle"),
+    END("end");
 
-    TextAnchor(String name) {
-        this.name = name;
+    private final String value;
+
+    TextAnchor(final String value) {
+        this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+        return value;
     }
 }

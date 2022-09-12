@@ -1,12 +1,20 @@
 package com.github.appreciated.apexcharts.config.chart.zoom;
 
-public enum ZoomType {
-    x("x"),
-    y("y"),
-    xy("xy");
-    private final String name;
+import com.fasterxml.jackson.annotation.JsonValue;
 
-    ZoomType(String name) {
-        this.name = name;
+public enum ZoomType {
+    X("x"),
+    Y("y"),
+    XY("xy");
+
+    private final String value;
+
+    ZoomType(final String value) {
+        this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+        return value;
     }
 }

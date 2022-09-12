@@ -1,11 +1,19 @@
 package com.github.appreciated.apexcharts.config.plotoptions.hollow;
 
-public enum HollowPosition {
-    front("front"),
-    back("back");
-    private final String name;
+import com.fasterxml.jackson.annotation.JsonValue;
 
-    HollowPosition(String name) {
-        this.name = name;
+public enum HollowPosition {
+    FRONT("front"),
+    BACK("back");
+
+    private final String value;
+
+    HollowPosition(final String value) {
+        this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+        return value;
     }
 }

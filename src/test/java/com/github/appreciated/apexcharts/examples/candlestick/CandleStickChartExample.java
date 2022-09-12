@@ -19,7 +19,7 @@ import java.time.format.DateTimeFormatter;
 public class CandleStickChartExample extends ApexChartsBuilder {
     public CandleStickChartExample() {
         withChart(ChartBuilder.get()
-                .withType(Type.candlestick)
+                .withType(Type.CANDLESTICK)
                 .build())
                 .withSeries(new Series<>(
                         new Coordinate<>(getISOString(1538778600000L), new BigDecimal("6629.81"), new BigDecimal("6650.5"), new BigDecimal("6623.04"), new BigDecimal("6633.33")),
@@ -44,7 +44,7 @@ public class CandleStickChartExample extends ApexChartsBuilder {
                         new Coordinate<>(getISOString(1538812800000L), new BigDecimal("6619.43"), new BigDecimal("6620.35"), new BigDecimal("6610.05"), new BigDecimal("6615.53"))
                 ))
                 .withXaxis(XAxisBuilder.get()
-                        .withType(XAxisType.datetime)
+                        .withType(XAxisType.DATETIME)
                         .build())
                 .withYaxis(YAxisBuilder.get()
                         .withTooltip(TooltipBuilder.get()

@@ -14,7 +14,7 @@ public class HeatmapChartExample extends ApexChartsBuilder {
     public HeatmapChartExample() {
         withChart(
                 ChartBuilder.get()
-                        .withType(Type.heatmap)
+                        .withType(Type.HEATMAP)
                         .build())
                 .withDataLabels(DataLabelsBuilder.get()
                         .withEnabled(false)
@@ -32,7 +32,7 @@ public class HeatmapChartExample extends ApexChartsBuilder {
                         new Coordinate<>("w4", 40.0), new Coordinate<>("w5", 50.0), new Coordinate<>("w6", 60.0),
                         new Coordinate<>("w7", 70.0), new Coordinate<>("w8", 80.0), new Coordinate<>("w9", 90.0)
                 ))
-                .withXaxis(XAxisBuilder.get().withType(XAxisType.numeric).build())
+                .withXaxis(XAxisBuilder.get().withType(XAxisType.NUMERIC).build())
                 .withYaxis(YAxisBuilder.get().withMax(70.0).build());
     }
 }

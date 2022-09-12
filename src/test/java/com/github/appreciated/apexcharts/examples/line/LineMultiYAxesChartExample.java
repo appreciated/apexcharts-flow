@@ -14,13 +14,13 @@ import com.github.appreciated.apexcharts.helper.Series;
 public class LineMultiYAxesChartExample extends ApexChartsBuilder {
     public LineMultiYAxesChartExample() {
         withChart(ChartBuilder.get()
-                .withType(Type.line)
+                .withType(Type.LINE)
                 .withZoom(ZoomBuilder.get()
                         .withEnabled(false)
                         .build())
                 .build())
                 .withStroke(StrokeBuilder.get()
-                        .withCurve(Curve.straight)
+                        .withCurve(Curve.STRAIGHT)
                         .build())
                 .withGrid(GridBuilder.get()
                         .withRow(RowBuilder.get()

@@ -27,7 +27,7 @@ public class RangedHeatmapChartExample extends ApexChartsBuilder {
         ranges.add(RangesBuilder.get().withFrom(75d).withTo(99d).withColor("#FF0000").withName("extreme").build());
         withChart(
                 ChartBuilder.get()
-                        .withType(Type.heatmap)
+                        .withType(Type.HEATMAP)
                         .build())
                 .withDataLabels(DataLabelsBuilder.get()
                         .withEnabled(false)
@@ -64,7 +64,7 @@ public class RangedHeatmapChartExample extends ApexChartsBuilder {
                                         .build())
                                 .build())
                         .build())
-                .withXaxis(XAxisBuilder.get().withType(XAxisType.categories).build())
+                .withXaxis(XAxisBuilder.get().withType(XAxisType.CATEGORIES).build())
                 .withYaxis(YAxisBuilder.get().build());
     }
 }

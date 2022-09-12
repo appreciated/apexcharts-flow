@@ -17,7 +17,7 @@ public class LineAndScatterChartExample extends ApexChartsBuilder {
     public LineAndScatterChartExample() {
         withChart(
                 ChartBuilder.get()
-                        .withType(Type.line)
+                        .withType(Type.LINE)
                         .withZoom(ZoomBuilder.get()
                                 .withEnabled(false)
                                 .build())
@@ -35,13 +35,13 @@ public class LineAndScatterChartExample extends ApexChartsBuilder {
                         .build())
                 .withLegend(LegendBuilder.get().withShow(false).build())
                 .withXaxis(XAxisBuilder.get()
-                        .withType(XAxisType.numeric)
+                        .withType(XAxisType.NUMERIC)
                         .withMin(0.0)
                         .withMax(12.0)
                         .withTickAmount(new BigDecimal("12"))
                         .build())
-                .withStroke(StrokeBuilder.get().withCurve(Curve.straight).build())
-                .withSeries(new Series<>("Points", SeriesType.scatter,
+                .withStroke(StrokeBuilder.get().withCurve(Curve.STRAIGHT).build())
+                .withSeries(new Series<>("Points", SeriesType.SCATTER,
                                 new Coordinate<>(new BigDecimal("1"), new BigDecimal("2.14")),
                                 new Coordinate<>(new BigDecimal("1.2"), new BigDecimal("2.19")),
                                 new Coordinate<>(new BigDecimal("1.8"), new BigDecimal("2.43")),
@@ -56,7 +56,7 @@ public class LineAndScatterChartExample extends ApexChartsBuilder {
                                 new Coordinate<>(new BigDecimal("7.1"), new BigDecimal("7.14")),
                                 new Coordinate<>(new BigDecimal("9.18"), new BigDecimal("8.4"))
                         ),
-                        new Series<>("Line", SeriesType.line,
+                        new Series<>("Line", SeriesType.LINE,
                                 new Coordinate<>(new BigDecimal("1"), new BigDecimal("2")),
                                 new Coordinate<>(new BigDecimal("2"), new BigDecimal("3")),
                                 new Coordinate<>(new BigDecimal("3"), new BigDecimal("4")),

@@ -1,12 +1,20 @@
 package com.github.appreciated.apexcharts.config.legend;
 
-public enum HorizontalAlign {
-    left("left"),
-    center("center"),
-    right("right");
-    private final String name;
+import com.fasterxml.jackson.annotation.JsonValue;
 
-    HorizontalAlign(String name) {
-        this.name = name;
+public enum HorizontalAlign {
+    LEFT("left"),
+    CENTER("center"),
+    RIGHT("right");
+
+    private final String value;
+
+    HorizontalAlign(final String value) {
+        this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+        return value;
     }
 }

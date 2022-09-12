@@ -5,9 +5,9 @@
 
     <groupId>com.github.appreciated</groupId>
     <artifactId>apexcharts</artifactId>
-    <version>2.0.0-beta14</version>
+    <version>23.0.0</version>
     <name>ApexCharts.js</name>
-    <description>Integration of ApexCharts.js for the Vaadin platform</description>
+    <description>Integration of ApexCharts.js for the Vaadin platform 23</description>
 
     <properties>
         <vaadin.version>23.2.0</vaadin.version>
@@ -203,6 +203,13 @@
                         </resourceBases>
                     </webApp>
                 </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.fasterxml.jackson.core</groupId>
+                        <artifactId>jackson-databind</artifactId>
+                        <version>${jackson-databind.verison}</version>
+                    </dependency>
+                </dependencies>
             </plugin>
             <plugin>
                 <artifactId>maven-clean-plugin</artifactId>

@@ -1,13 +1,21 @@
 package com.github.appreciated.apexcharts.config.legend;
 
-public enum Position {
-    top("top"),
-    right("right"),
-    bottom("bottom"),
-    left("left");
-    private final String name;
+import com.fasterxml.jackson.annotation.JsonValue;
 
-    Position(String name) {
-        this.name = name;
+public enum Position {
+    TOP("top"),
+    RIGHT("right"),
+    BOTTOM("bottom"),
+    LEFT("left");
+
+    private final String value;
+
+    Position(final String value) {
+        this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+        return value;
     }
 }

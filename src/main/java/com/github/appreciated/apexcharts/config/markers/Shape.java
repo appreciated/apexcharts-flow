@@ -1,11 +1,19 @@
 package com.github.appreciated.apexcharts.config.markers;
 
-public enum Shape {
-    circle("circle"),
-    square("square");
-    private final String name;
+import com.fasterxml.jackson.annotation.JsonValue;
 
-    Shape(String name) {
-        this.name = name;
+public enum Shape {
+    CIRCLE("circle"),
+    SQUARE("square");
+
+    private final String value;
+
+    Shape(final String value) {
+        this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+        return value;
     }
 }

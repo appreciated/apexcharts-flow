@@ -1,11 +1,19 @@
 package com.github.appreciated.apexcharts.config.theme;
 
-public enum ShadeTo {
-    light("light"),
-    dark("dark");
-    private final String name;
+import com.fasterxml.jackson.annotation.JsonValue;
 
-    ShadeTo(String name) {
-        this.name = name;
+public enum ShadeTo {
+    LIGHT("light"),
+    DARK("dark");
+
+    private final String value;
+
+    ShadeTo(final String value) {
+        this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+        return value;
     }
 }

@@ -16,7 +16,7 @@ public class ScatterChartWithEventsExample extends ApexChartsBuilder {
 
     public ScatterChartWithEventsExample() {
         withChart(ChartBuilder.get()
-                .withType(Type.scatter)
+                .withType(Type.SCATTER)
                 .withEvents(EventsBuilder.get()
                         .withMarkerClick("function(event, chartContext, seriesIndex) {" +
                                 "console.log(chartContext.w.config.series[seriesIndex.seriesIndex].data[seriesIndex.dataPointIndex]);" +
@@ -24,7 +24,7 @@ public class ScatterChartWithEventsExample extends ApexChartsBuilder {
                         .build())
                 .withZoom(ZoomBuilder.get()
                         .withEnabled(true)
-                        .withType(ZoomType.xy)
+                        .withType(ZoomType.XY)
                         .build())
                 .build())
                 .withSeries(

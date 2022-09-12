@@ -1,11 +1,19 @@
 package com.github.appreciated.apexcharts.config.xaxis;
 
-public enum TickPlacement {
-    between("between"),
-    on("on");
-    private final String name;
+import com.fasterxml.jackson.annotation.JsonValue;
 
-    TickPlacement(String name) {
-        this.name = name;
+public enum TickPlacement {
+    BETWEEN("between"),
+    ON("on");
+
+    private final String value;
+
+    TickPlacement(final String value) {
+        this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+        return value;
     }
 }

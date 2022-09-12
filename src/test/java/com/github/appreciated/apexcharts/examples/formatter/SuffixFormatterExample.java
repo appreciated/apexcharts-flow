@@ -19,10 +19,10 @@ public class SuffixFormatterExample extends ApexChartsBuilder {
 
     public SuffixFormatterExample() {
         withChart(ChartBuilder.get()
-                .withType(Type.scatter)
+                .withType(Type.SCATTER)
                 .withZoom(ZoomBuilder.get()
                         .withEnabled(true)
-                        .withType(ZoomType.xy)
+                        .withType(ZoomType.XY)
                         .build())
                 .build())
                 .withSeries(

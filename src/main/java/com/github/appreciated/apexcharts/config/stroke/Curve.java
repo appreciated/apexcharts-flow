@@ -1,12 +1,20 @@
 package com.github.appreciated.apexcharts.config.stroke;
 
-public enum Curve {
-    smooth("smooth"),
-    straight("straight"),
-    stepline("stepline");
-    private final String name;
+import com.fasterxml.jackson.annotation.JsonValue;
 
-    Curve(String name) {
-        this.name = name;
+public enum Curve {
+    SMOOTH("smooth"),
+    STRAIGHT("straight"),
+    STEPLINE("stepline");
+
+    private final String value;
+
+    Curve(final String value) {
+        this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+        return value;
     }
 }

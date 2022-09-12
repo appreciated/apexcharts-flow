@@ -15,7 +15,7 @@ public class SparkLineExample extends ApexChartsBuilder {
     public SparkLineExample() {
         withChart(
                 ChartBuilder.get()
-                        .withType(Type.area)
+                        .withType(Type.AREA)
                         .withZoom(ZoomBuilder.get()
                                 .withEnabled(false)
                                 .build())
@@ -24,7 +24,7 @@ public class SparkLineExample extends ApexChartsBuilder {
                 .withDataLabels(DataLabelsBuilder.get()
                         .withEnabled(false)
                         .build())
-                .withStroke(StrokeBuilder.get().withCurve(Curve.straight).build())
+                .withStroke(StrokeBuilder.get().withCurve(Curve.STRAIGHT).build())
                 .withSeries(new Series<>(10.0, 41.0, 35.0, 51.0, 49.0, 62.0, 69.0, 91.0, 148.0))
                 .withYaxis(YAxisBuilder.get()
                         .withMin(0.0).build());

@@ -16,7 +16,7 @@ import com.github.appreciated.apexcharts.helper.Series;
 public class RangedVerticalBarChartExample extends ApexChartsBuilder {
     public RangedVerticalBarChartExample() {
         withChart(ChartBuilder.get()
-                .withType(Type.bar)
+                .withType(Type.BAR)
                 .build())
                 // .withColors() // Empty call makes chart to not render
                 .withPlotOptions(PlotOptionsBuilder.get()

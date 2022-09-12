@@ -1,12 +1,20 @@
 package com.github.appreciated.apexcharts.config.nodata;
 
-public enum Align {
-    left("left"),
-    right("right"),
-    center("center");
-    private final String name;
+import com.fasterxml.jackson.annotation.JsonValue;
 
-    Align(String name) {
-        this.name = name;
+public enum Align {
+    LEFT("left"),
+    RIGHT("right"),
+    CENTER("center");
+
+    private final String value;
+
+    Align(final String value) {
+        this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+        return value;
     }
 }
