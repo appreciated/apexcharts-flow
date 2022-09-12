@@ -8,6 +8,7 @@ package-lock.json
 package.json
 webpack.config.ts
 webpack.generated.js
+vite.generated.ts
 /src/test/resources/apexcharts.d.ts
 
 # eclipse
