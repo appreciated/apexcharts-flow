@@ -30,13 +30,12 @@ To deploy to another port set **jetty.port** and/or **jetty.ssl.port** like
 mvn jetty:run -Djetty.port=8090 -Djetty.ssl.port=8555
 ```
 
-### Branching information
+### Version information
 
-* `master` the latest version of the starter, using latest platform snapshot
-* `v10` the version for Vaadin 10
-* `v11` the version for Vaadin 11
-* `v12` the version for Vaadin 12
-* `v13` the version for Vaadin 13
+Release version will follow Vaadin's versioning. eg `23.x.x` indicates it depends on Vaadin 23
+
+* `master` uses Vaadin 23.x.x
+* `v2.0.0-beta13` uses Vaadin 14.x.x
 
 ### License
 
