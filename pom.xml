@@ -5,7 +5,7 @@
 
     <groupId>com.github.appreciated</groupId>
     <artifactId>apexcharts</artifactId>
-    <version>23.0.0</version>
+    <version>23.0.1</version>
     <name>ApexCharts.js</name>
     <description>Integration of ApexCharts.js for the Vaadin platform 23</description>
 
