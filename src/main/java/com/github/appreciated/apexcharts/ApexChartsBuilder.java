@@ -6,7 +6,6 @@ import com.github.appreciated.apexcharts.config.Annotations;
 import com.github.appreciated.apexcharts.config.Chart;
 import com.github.appreciated.apexcharts.config.DataLabels;
 import com.github.appreciated.apexcharts.config.Fill;
-import com.github.appreciated.apexcharts.config.ForecastDataPoints;
 import com.github.appreciated.apexcharts.config.Grid;
 import com.github.appreciated.apexcharts.config.Legend;
 import com.github.appreciated.apexcharts.config.Markers;
@@ -29,7 +28,6 @@ public class ApexChartsBuilder {
     private String[] colors;
     private DataLabels dataLabels;
     private Fill fill;
-    private ForecastDataPoints forecastDataPoints;
     private Grid grid;
     private String[] labels;
     private Legend legend;
@@ -91,11 +89,6 @@ public class ApexChartsBuilder {
 
     public ApexChartsBuilder withFill(Fill fill) {
         this.fill = fill;
-        return this;
-    }
-
-    public ApexChartsBuilder withForecastDataPoints(ForecastDataPoints forecastDataPoints) {
-        this.forecastDataPoints = forecastDataPoints;
         return this;
     }
 
@@ -233,9 +226,6 @@ public class ApexChartsBuilder {
         }
         if (fill != null) {
             apexCharts.setFill(fill);
-        }
-        if (forecastDataPoints != null) {
-            apexCharts.setForecastDataPoints(forecastDataPoints);
         }
         if (grid != null) {
             apexCharts.setGrid(grid);

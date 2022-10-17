@@ -25,7 +25,6 @@ public class LineChartExample extends ApexChartsBuilder {
                                 .withColors("#f3f3f3", "transparent")
                                 .withOpacity(0.5).build()
                         ).build())
-                .withForecastDataPoints(ForecastDataPointsBuilder.get().withCount(2).build())
                 .withXaxis(XAxisBuilder.get()
                         .withCategories("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep")
                         .withTickPlacement(TickPlacement.BETWEEN)
