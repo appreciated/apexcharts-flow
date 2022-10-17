@@ -1,10 +1,7 @@
 package com.github.appreciated.apexcharts.examples.line;
 
 import com.github.appreciated.apexcharts.ApexChartsBuilder;
-import com.github.appreciated.apexcharts.config.builder.ChartBuilder;
-import com.github.appreciated.apexcharts.config.builder.GridBuilder;
-import com.github.appreciated.apexcharts.config.builder.StrokeBuilder;
-import com.github.appreciated.apexcharts.config.builder.XAxisBuilder;
+import com.github.appreciated.apexcharts.config.builder.*;
 import com.github.appreciated.apexcharts.config.chart.Type;
 import com.github.appreciated.apexcharts.config.chart.builder.ZoomBuilder;
 import com.github.appreciated.apexcharts.config.grid.builder.RowBuilder;

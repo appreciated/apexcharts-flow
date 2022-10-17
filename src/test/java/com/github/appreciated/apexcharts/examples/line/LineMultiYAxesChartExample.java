@@ -6,10 +6,11 @@ import com.github.appreciated.apexcharts.config.chart.Type;
 import com.github.appreciated.apexcharts.config.chart.builder.ZoomBuilder;
 import com.github.appreciated.apexcharts.config.grid.builder.RowBuilder;
 import com.github.appreciated.apexcharts.config.stroke.Curve;
-import com.github.appreciated.apexcharts.config.yaxis.AxisBorder;
 import com.github.appreciated.apexcharts.config.yaxis.builder.AxisBorderBuilder;
 import com.github.appreciated.apexcharts.config.yaxis.builder.TitleBuilder;
 import com.github.appreciated.apexcharts.helper.Series;
+
+import java.util.List;
 
 public class LineMultiYAxesChartExample extends ApexChartsBuilder {
     public LineMultiYAxesChartExample() {
@@ -21,6 +22,7 @@ public class LineMultiYAxesChartExample extends ApexChartsBuilder {
                 .build())
                 .withStroke(StrokeBuilder.get()
                         .withCurve(Curve.STRAIGHT)
+                        .withWidthArray(List.of(6.0, 3.0))
                         .build())
                 .withGrid(GridBuilder.get()
                         .withRow(RowBuilder.get()
