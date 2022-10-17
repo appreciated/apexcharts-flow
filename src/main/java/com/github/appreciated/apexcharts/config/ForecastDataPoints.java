@@ -2,7 +2,7 @@ package com.github.appreciated.apexcharts.config;
 
 
 public class ForecastDataPoints {
-    Integer count = 0;
+    private Integer count = 0;
 
     public Integer getCount() {
         return count;

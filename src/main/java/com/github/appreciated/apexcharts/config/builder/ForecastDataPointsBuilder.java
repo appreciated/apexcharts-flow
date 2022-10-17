@@ -3,7 +3,7 @@ package com.github.appreciated.apexcharts.config.builder;
 import com.github.appreciated.apexcharts.config.ForecastDataPoints;
 
 public class ForecastDataPointsBuilder {
-    Integer count;
+    private Integer count;
 
     public static ForecastDataPointsBuilder get() {
         return new ForecastDataPointsBuilder();
