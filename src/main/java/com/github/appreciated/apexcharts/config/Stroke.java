@@ -1,5 +1,7 @@
 package com.github.appreciated.apexcharts.config;
 
+import com.fasterxml.jackson.annotation.JsonGetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.github.appreciated.apexcharts.config.stroke.Curve;
 import com.github.appreciated.apexcharts.config.stroke.LineCap;
 
@@ -10,7 +12,10 @@ public class Stroke {
     private Curve curve;
     private LineCap lineCap;
     private List<String> colors;
+    @JsonIgnore
     private Double width;
+    @JsonIgnore
+    private List<Double> widthArray;
     private List<Double> dashArray;
 
 
@@ -37,6 +42,10 @@ public class Stroke {
         return width;
     }
 
+    public List<Double> getWidthArray() {
+        return widthArray;
+    }
+
     public List<Double> getDashArray() {
         return dashArray;
     }
@@ -61,8 +70,20 @@ public class Stroke {
         this.width = width;
     }
 
+    public void setWidthArray(List<Double> widthArray) {
+        this.widthArray = widthArray;
+    }
+
     public void setDashArray(List<Double> dashArray) {
         this.dashArray = dashArray;
+    }
+
+    @JsonGetter("width")
+    public Object serializeWidth() {
+        if (width != null) {
+            return width;
+        }
+        return widthArray;
     }
 
 }

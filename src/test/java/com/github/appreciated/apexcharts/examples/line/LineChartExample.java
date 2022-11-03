@@ -1,7 +1,6 @@
 package com.github.appreciated.apexcharts.examples.line;
 
 import com.github.appreciated.apexcharts.ApexChartsBuilder;
-import com.github.appreciated.apexcharts.config.ForecastDataPoints;
 import com.github.appreciated.apexcharts.config.builder.*;
 import com.github.appreciated.apexcharts.config.chart.Type;
 import com.github.appreciated.apexcharts.config.chart.builder.ZoomBuilder;
@@ -26,7 +25,6 @@ public class LineChartExample extends ApexChartsBuilder {
                                 .withColors("#f3f3f3", "transparent")
                                 .withOpacity(0.5).build()
                         ).build())
-                .withForecastDataPoints(ForecastDataPointsBuilder.get().withCount(2).build())
                 .withXaxis(XAxisBuilder.get()
                         .withCategories("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep")
                         .withTickPlacement(TickPlacement.BETWEEN)

@@ -13,6 +13,7 @@ public class StrokeBuilder {
     private LineCap lineCap;
     private List<String> colors;
     private Double width;
+    private List<Double> widthArray;
     private List<Double> dashArray;
 
     private StrokeBuilder() {
@@ -47,6 +48,16 @@ public class StrokeBuilder {
         return this;
     }
 
+    public StrokeBuilder withWidthArray(List<Double> widthArray) {
+        this.widthArray = widthArray;
+        return this;
+    }
+
+    public StrokeBuilder withWidthArray(Double... widths) {
+        this.widthArray = List.of(widths);
+        return this;
+    }
+
     public StrokeBuilder withDashArray(List<Double> dashArray) {
         this.dashArray = dashArray;
         return this;
@@ -59,6 +70,7 @@ public class StrokeBuilder {
         stroke.setLineCap(lineCap);
         stroke.setColors(colors);
         stroke.setWidth(width);
+        stroke.setWidthArray(widthArray);
         stroke.setDashArray(dashArray);
         return stroke;
     }
