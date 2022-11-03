@@ -107,6 +107,10 @@ public class ApexCharts extends LitTemplate implements HasSize, HasStyle, HasThe
         setPropertyObject("legend", legend);
     }
 
+    public void setForecastDataPoints(ForecastDataPoints forecastDataPoints) {
+        setPropertyObject("forecastDataPoints", forecastDataPoints);
+    }
+
     public void setMarkers(Markers markers) {
         setPropertyObject("markers", markers);
     }
