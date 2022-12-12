@@ -5,19 +5,20 @@
 
     <groupId>com.github.appreciated</groupId>
     <artifactId>apexcharts</artifactId>
-    <version>23.0.0</version>
+    <version>24.0.0-SNAPSHOT</version>
     <name>ApexCharts.js</name>
     <description>Integration of ApexCharts.js for the Vaadin platform 23</description>
 
     <properties>
-        <vaadin.version>23.2.0</vaadin.version>
+        <vaadin.version>24.0.0.alpha5</vaadin.version>
+        <vaadin-flow.version>24.0.0.alpha9</vaadin-flow.version>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <maven.compiler.release>11</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <jetty.version>9.4.15.v20190215</jetty.version>
-        <jackson-databind.verison>2.13.3</jackson-databind.verison>
+        <jetty.version>11.0.13</jetty.version>
+        <jackson-databind.verison>2.13.4.1</jackson-databind.verison>
         <jandex-maven-plugin.version>1.2.3</jandex-maven-plugin.version>
     </properties>
     <organization>
@@ -71,6 +72,10 @@
             <releases>
                 <enabled>false</enabled>
             </releases>
+        </pluginRepository>
+        <pluginRepository>
+            <id>apache-snapshots</id>
+            <url>https://repository.apache.org/content/repositories/snapshots</url>
         </pluginRepository>
     </pluginRepositories>
 
@@ -176,12 +181,12 @@
                     <dependency>
                         <groupId>com.vaadin</groupId>
                         <artifactId>flow-server</artifactId>
-                        <version>${vaadin.version}</version>
+                        <version>${vaadin-flow.version}</version>
                     </dependency>
                     <dependency>
                         <groupId>com.vaadin</groupId>
                         <artifactId>flow-push</artifactId>
-                        <version>${vaadin.version}</version>
+                        <version>${vaadin-flow.version}</version>
                     </dependency>
                 </dependencies>
             </plugin>
