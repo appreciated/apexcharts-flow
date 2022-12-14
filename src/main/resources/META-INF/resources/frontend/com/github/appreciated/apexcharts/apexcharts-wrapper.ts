@@ -23,6 +23,7 @@ export class ApexChartsWrapper extends LitElement {
     colors?: string;
     dataLabels?: string;
     fill?: string;
+    forecastDataPoints?: string;
     grid?: string;
     legend?: string;
     markers?: string;
@@ -65,6 +66,9 @@ export class ApexChartsWrapper extends LitElement {
             fill: {
                 type: Object
             }, // ApexFill;
+            forecastDataPoints: {
+                type: Object
+            }, // ApexForecastDataPoints;
             grid: {
                 type: Object
             }, // ApexGrid;
@@ -234,6 +238,9 @@ export class ApexChartsWrapper extends LitElement {
         }
         if (this.fill) {
             this.config.fill = JSON.parse(this.fill);
+        }
+        if (this.forecastDataPoints) {
+            this.config.forecastDataPoints = JSON.parse(this.forecastDataPoints);
         }
         if (this.grid) {
             this.config.grid = JSON.parse(this.grid);

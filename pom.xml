@@ -5,7 +5,7 @@
 
     <groupId>com.github.appreciated</groupId>
     <artifactId>apexcharts</artifactId>
-    <version>23.0.0</version>
+    <version>23.0.1</version>
     <name>ApexCharts.js</name>
     <description>Integration of ApexCharts.js for the Vaadin platform 23</description>
 
@@ -17,7 +17,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <jetty.version>9.4.15.v20190215</jetty.version>
-        <jackson-databind.verison>2.13.3</jackson-databind.verison>
+        <jackson-databind.verison>2.13.4.1</jackson-databind.verison>
         <jandex-maven-plugin.version>1.2.3</jandex-maven-plugin.version>
     </properties>
     <organization>

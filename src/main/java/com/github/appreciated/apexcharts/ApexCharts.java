@@ -21,7 +21,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 @Tag("apex-charts-wrapper")
-@NpmPackage(value = "apexcharts", version = "3.30.0")
+@NpmPackage(value = "apexcharts", version = "3.35.0")
 @NpmPackage(value = "onecolor", version = "3.1.0")
 @JsModule("./com/github/appreciated/apexcharts/apexcharts-wrapper.ts")
 @CssImport(value = "./com/github/appreciated/apexcharts/apexcharts-wrapper-styles.css", id = "apex-charts-style")
@@ -105,6 +105,10 @@ public class ApexCharts extends LitTemplate implements HasSize, HasStyle, HasThe
 
     public void setLegend(Legend legend) {
         setPropertyObject("legend", legend);
+    }
+
+    public void setForecastDataPoints(ForecastDataPoints forecastDataPoints) {
+        setPropertyObject("forecastDataPoints", forecastDataPoints);
     }
 
     public void setMarkers(Markers markers) {

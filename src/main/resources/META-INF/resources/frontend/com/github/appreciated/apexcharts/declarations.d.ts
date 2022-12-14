@@ -1,3 +1,3 @@
 declare module "onecolor" {
-    export default function (color: any);
+    export default function (color: any): any;
 }
