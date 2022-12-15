@@ -4,9 +4,44 @@ import { customElement } from 'lit/decorators.js';
 import ApexCharts from 'apexcharts/dist/apexcharts.esm';
 import '@webcomponents/shadycss/apply-shim.min.js';
 import color from "onecolor";
+import { PropertyValues } from "@lit/reactive-element/development/reactive-element";
+
+declare global {
+    interface Window {
+        ShadyCSS?: any;
+    }
+}
 
 @customElement('apex-charts-wrapper')
 export class ApexChartsWrapper extends LitElement {
+    config: any = {};
+    chartComponent?: ApexCharts;
+    annotations?: string;
+    chart?: string;
+    series?: string;
+    labels?: string;
+    colors?: string;
+    dataLabels?: string;
+    fill?: string;
+    forecastDataPoints?: string;
+    grid?: string;
+    legend?: string;
+    markers?: string;
+    noData?: string;
+    plotOptions?: string;
+    responsive?: string;
+    states?: string;
+    stroke?: string;
+    subtitle?: string;
+    theme?: string;
+    chartTitle?: string;
+    tooltip?: string;
+    xaxis?: string;
+    yaxis?: string;
+    width?: string;
+    height?: string;
+    debug?: string;
+
     render() {
         return html`
             <style include="apex-charts-style"></style>
@@ -91,11 +126,11 @@ export class ApexChartsWrapper extends LitElement {
             height: {
                 type: String
             }
-        }
+        };
     }
 
-    firstUpdated() {
-        super.firstUpdated();
+    firstUpdated(_changedProperties: PropertyValues) {
+        super.firstUpdated(_changedProperties);
         const div = document.createElement('div');
         this.appendChild(div);
         this.updateConfig();
@@ -120,7 +155,7 @@ export class ApexChartsWrapper extends LitElement {
         } else {
             primaryColor = getComputedStyle(this).getPropertyValue('--apex-charts-primary-color');
         }
-        var backgroundColor;
+        let backgroundColor;
         if (window.ShadyCSS) {
             backgroundColor = window.ShadyCSS.getComputedStyleValue(this, '--apex-charts-background-color');
         } else {
@@ -251,7 +286,7 @@ export class ApexChartsWrapper extends LitElement {
                     color: color(primaryColor).hex(),
                     shadeTo: 'light',
                     shadeIntensity: 0.65
-                }
+                };
             }
         }
         if (this.chartTitle) {
@@ -343,12 +378,12 @@ export class ApexChartsWrapper extends LitElement {
      * @param string for example "function (){return \"test\"}"
      * @returns {function} returns an actual JavaScript instance of the passed string function
      */
-    evalFunction(string) {
+    evalFunction(string: string) {
         return eval("(" + string + ")");
     }
 
     updateData() {
-        if (this.chartComponent) {
+        if (this.chartComponent && this.series) {
             this.chartComponent.updateSeries(JSON.parse(this.series));
         }
         if (this.debug) {
@@ -370,32 +405,32 @@ export class ApexChartsWrapper extends LitElement {
         }
     }
 
-    toggleSeries(seriesName) {
+    toggleSeries(seriesName: string) {
         if (this.chartComponent) {
             this.updateConfig();
             return this.chartComponent.toggleSeries(seriesName);
         }
     }
 
-    hideSeries(seriesName) {
+    hideSeries(seriesName: string) {
         if (this.chartComponent) {
             this.updateConfig();
             return this.chartComponent.hideSeries(seriesName);
         }
     }
 
-    showSeries(seriesName) {
+    showSeries(seriesName: string) {
         if (this.chartComponent) {
             this.updateConfig();
             return this.chartComponent.showSeries(seriesName);
         }
     }
 
-    resetSeries(shouldUpdateChart, shouldResetZoom) {
+    resetSeries(shouldUpdateChart: boolean, shouldResetZoom: boolean) {
         if (this.chartComponent) {
             this.updateConfig();
             return this.chartComponent.resetSeries(shouldUpdateChart, shouldResetZoom);
         }
     }
 
-};
+}
