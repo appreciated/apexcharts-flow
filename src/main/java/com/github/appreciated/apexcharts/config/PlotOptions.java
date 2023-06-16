@@ -7,6 +7,7 @@ public class PlotOptions {
     private Bar bar;
     private Candlestick candlestick;
     private Heatmap heatmap;
+    private Treemap treemap;
     private Pie pie;
     private Radar radar;
     private RadialBar radialBar;
@@ -50,6 +51,10 @@ public class PlotOptions {
 
     public void setHeatmap(Heatmap heatmap) {
         this.heatmap = heatmap;
+    }
+
+    public void setTreemap(Treemap treemap) {
+        this.treemap = treemap;
     }
 
     public void setPie(Pie pie) {

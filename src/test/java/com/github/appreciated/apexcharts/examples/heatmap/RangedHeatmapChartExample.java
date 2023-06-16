@@ -1,16 +1,12 @@
 package com.github.appreciated.apexcharts.examples.heatmap;
 
 import com.github.appreciated.apexcharts.ApexChartsBuilder;
-import com.github.appreciated.apexcharts.config.builder.ChartBuilder;
-import com.github.appreciated.apexcharts.config.builder.DataLabelsBuilder;
-import com.github.appreciated.apexcharts.config.builder.PlotOptionsBuilder;
-import com.github.appreciated.apexcharts.config.builder.XAxisBuilder;
-import com.github.appreciated.apexcharts.config.builder.YAxisBuilder;
+import com.github.appreciated.apexcharts.config.builder.*;
 import com.github.appreciated.apexcharts.config.chart.Type;
 import com.github.appreciated.apexcharts.config.plotoptions.builder.HeatmapBuilder;
-import com.github.appreciated.apexcharts.config.plotoptions.heatmap.Ranges;
-import com.github.appreciated.apexcharts.config.plotoptions.heatmap.builder.ColorScaleBuilder;
-import com.github.appreciated.apexcharts.config.plotoptions.heatmap.builder.RangesBuilder;
+import com.github.appreciated.apexcharts.config.plotoptions.xmap.Ranges;
+import com.github.appreciated.apexcharts.config.plotoptions.xmap.builder.ColorScaleBuilder;
+import com.github.appreciated.apexcharts.config.plotoptions.xmap.builder.RangesBuilder;
 import com.github.appreciated.apexcharts.config.xaxis.XAxisType;
 import com.github.appreciated.apexcharts.helper.Coordinate;
 import com.github.appreciated.apexcharts.helper.Series;

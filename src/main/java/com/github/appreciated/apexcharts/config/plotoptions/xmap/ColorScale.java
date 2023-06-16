@@ -1,4 +1,4 @@
-package com.github.appreciated.apexcharts.config.plotoptions.heatmap;
+package com.github.appreciated.apexcharts.config.plotoptions.xmap;
 
 import java.util.Arrays;
 import java.util.List;
