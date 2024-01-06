@@ -10,14 +10,13 @@
     <description>Integration of ApexCharts.js for the Vaadin platform 24</description>
 
     <properties>
-        <vaadin.version>24.0.4</vaadin.version>
+        <vaadin.version>24.3.2</vaadin.version>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <maven.compiler.release>17</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <jetty.version>9.4.15.v20190215</jetty.version>
-        <jackson-databind.verison>2.13.4.1</jackson-databind.verison>
+        <jetty.version>11.0.19</jetty.version>
         <jandex-maven-plugin.version>1.2.3</jandex-maven-plugin.version>
     </properties>
     <organization>
@@ -114,12 +113,6 @@
             <artifactId>slf4j-simple</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>${jackson-databind.verison}</version>
-            <scope>provided</scope>
-        </dependency>
     </dependencies>
 
     <build>
@@ -203,13 +196,6 @@
                         </resourceBases>
                     </webApp>
                 </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>com.fasterxml.jackson.core</groupId>
-                        <artifactId>jackson-databind</artifactId>
-                        <version>${jackson-databind.verison}</version>
-                    </dependency>
-                </dependencies>
             </plugin>
         </plugins>
     </build>

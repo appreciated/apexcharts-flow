@@ -19,3 +19,4 @@ vite.generated.ts
 # intellij
 *.iml
 /frontend/generated
+/.flow-node-tasks.lock
