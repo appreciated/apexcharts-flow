@@ -1,7 +1,7 @@
 package com.github.appreciated.apexcharts.config.plotoptions.builder;
 
 import com.github.appreciated.apexcharts.config.plotoptions.Heatmap;
-import com.github.appreciated.apexcharts.config.plotoptions.heatmap.ColorScale;
+import com.github.appreciated.apexcharts.config.plotoptions.xmap.ColorScale;
 
 public class HeatmapBuilder {
     private Double radius;

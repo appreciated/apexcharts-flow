@@ -1,4 +1,4 @@
-package com.github.appreciated.apexcharts.config.plotoptions.heatmap;
+package com.github.appreciated.apexcharts.config.plotoptions.xmap;
 
 public class Ranges {
     private Double from;

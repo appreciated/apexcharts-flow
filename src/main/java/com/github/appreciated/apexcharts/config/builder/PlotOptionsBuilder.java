@@ -7,6 +7,7 @@ public class PlotOptionsBuilder {
     private Bar bar;
     private Candlestick candlestick;
     private Heatmap heatmap;
+    private Treemap treemap;
     private Pie pie;
     private Radar radar;
     private RadialBar radialBar;
@@ -33,6 +34,11 @@ public class PlotOptionsBuilder {
         return this;
     }
 
+    public PlotOptionsBuilder withTreemap(Treemap treemap) {
+        this.treemap = treemap;
+        return this;
+    }
+
     public PlotOptionsBuilder withPie(Pie pie) {
         this.pie = pie;
         return this;
@@ -53,6 +59,7 @@ public class PlotOptionsBuilder {
         plotOptions.setBar(bar);
         plotOptions.setCandlestick(candlestick);
         plotOptions.setHeatmap(heatmap);
+        plotOptions.setTreemap(treemap);
         plotOptions.setPie(pie);
         plotOptions.setRadar(radar);
         plotOptions.setRadialBar(radialBar);

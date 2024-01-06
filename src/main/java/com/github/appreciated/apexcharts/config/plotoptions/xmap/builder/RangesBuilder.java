@@ -1,6 +1,6 @@
-package com.github.appreciated.apexcharts.config.plotoptions.heatmap.builder;
+package com.github.appreciated.apexcharts.config.plotoptions.xmap.builder;
 
-import com.github.appreciated.apexcharts.config.plotoptions.heatmap.Ranges;
+import com.github.appreciated.apexcharts.config.plotoptions.xmap.Ranges;
 
 public class RangesBuilder {
     private Double from;

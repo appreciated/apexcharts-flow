@@ -16,7 +16,8 @@ public enum Type {
     CANDLESTICK("candlestick"),
     RADAR("radar"),
     RANGEBAR("rangeBar"),
-    BOXPLOT("boxPlot");
+    BOXPLOT("boxPlot"),
+    TREEMAP("treemap");
 
     private final String value;
 

@@ -1,7 +1,7 @@
-package com.github.appreciated.apexcharts.config.plotoptions.heatmap.builder;
+package com.github.appreciated.apexcharts.config.plotoptions.xmap.builder;
 
-import com.github.appreciated.apexcharts.config.plotoptions.heatmap.ColorScale;
-import com.github.appreciated.apexcharts.config.plotoptions.heatmap.Ranges;
+import com.github.appreciated.apexcharts.config.plotoptions.xmap.ColorScale;
+import com.github.appreciated.apexcharts.config.plotoptions.xmap.Ranges;
 
 import java.util.Arrays;
 import java.util.List;
