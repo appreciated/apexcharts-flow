@@ -20,3 +20,4 @@ vite.generated.ts
 *.iml
 /frontend/generated
 /.flow-node-tasks.lock
+/src/main/bundles/
