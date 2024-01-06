@@ -5,15 +5,15 @@
 
     <groupId>com.github.appreciated</groupId>
     <artifactId>apexcharts</artifactId>
-    <version>23.0.1</version>
+    <version>24.0.0</version>
     <name>ApexCharts.js</name>
-    <description>Integration of ApexCharts.js for the Vaadin platform 23</description>
+    <description>Integration of ApexCharts.js for the Vaadin platform 24</description>
 
     <properties>
-        <vaadin.version>23.2.0</vaadin.version>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-        <maven.compiler.release>11</maven.compiler.release>
+        <vaadin.version>24.0.4</vaadin.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.release>17</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <jetty.version>9.4.15.v20190215</jetty.version>
