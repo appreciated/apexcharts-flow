@@ -355,17 +355,35 @@ export class ApexChartsWrapper extends LitElement {
                 };
             }
         }
-        if (this.config.plotoptions && this.config.plotoptions.radialbar && this.config.plotoptions.radialbar.datalabels && this.config.plotoptions.radialbar.datalabels.value && this.config.plotoptions.radialbar.datalabels.value.formatter) {
-            this.config.plotoptions.radialbar.datalabels.value.formatter = this.evalFunction(this.config.plotoptions.radialbar.datalabels.value.formatter);
+
+        // Check Radial Bar Chart plotOptions formatter:
+        if (this.config.plotOptions?.radialBar?.dataLabels?.value?.formatter) {
+            this.config.plotOptions.radialBar.dataLabels.value.formatter = this.evalFunction(this.config.plotOptions.radialBar.dataLabels.value.formatter);
         }
-        if (this.config.plotoptions && this.config.plotoptions.radialbar && this.config.plotoptions.radialbar.datalabels && this.config.plotoptions.radialbar.datalabels.total && this.config.plotoptions.radialbar.datalabels.total.formatter) {
-            this.config.plotoptions.radialbar.datalabels.total.formatter = this.evalFunction(this.config.plotoptions.radialbar.datalabels.total.formatter);
+        if (this.config.plotOptions?.radialBar?.dataLabels?.total?.formatter) {
+            this.config.plotOptions.radialBar.dataLabels.total.formatter = this.evalFunction(this.config.plotOptions.radialBar.dataLabels.total.formatter);
         }
-        if (this.config.plotoptions && this.config.plotoptions.pie && this.config.plotoptions.pie.datalabels && this.config.plotoptions.pie.datalabels.total && this.config.plotoptions.pie.datalabels.total.formatter) {
-            this.config.plotoptions.pie.datalabels.total.formatter = this.evalFunction(this.config.plotoptions.pie.datalabels.total.formatter);
+
+        // Check Bar Chart plotOptions formatter:
+        if (this.config.plotOptions?.bar?.dataLabels?.total?.formatter) {
+            this.config.plotOptions.bar.dataLabels.total.formatter = this.evalFunction(this.config.plotOptions.bar.dataLabels.total.formatter);
         }
-        if (this.config.plotoptions && this.config.plotoptions.pie && this.config.plotoptions.pie.datalabels && this.config.plotoptions.pie.datalabels.value && this.config.plotoptions.pie.datalabels.value.formatter) {
-            this.config.plotoptions.pie.datalabels.value.formatter = this.evalFunction(this.config.plotoptions.pie.datalabels.value.formatter);
+
+        // Check Pie Chart plotOptions formatter
+        if (this.config.plotOptions?.pie?.dataLabels?.total?.formatter) {
+            this.config.plotOptions.pie.dataLabels.total.formatter = this.evalFunction(this.config.plotOptions.pie.dataLabels.total.formatter);
+        }
+        if (this.config.plotOptions?.pie?.dataLabels?.value?.formatter) {
+            this.config.plotOptions.pie.dataLabels.value.formatter = this.evalFunction(this.config.plotOptions.pie.dataLabels.value.formatter);
+        }
+        if(this.config.plotOptions?.pie?.donut?.labels?.name?.formatter) {
+            this.config.plotOptions.pie.donut.labels.name.formatter = this.evalFunction(this.config.plotOptions.pie.donut.labels.name.formatter);
+        }
+        if(this.config.plotOptions?.pie?.donut?.labels?.value?.formatter) {
+            this.config.plotOptions.pie.donut.labels.value.formatter = this.evalFunction(this.config.plotOptions.pie.donut.labels.value.formatter);
+        }
+        if(this.config.plotOptions?.pie?.donut?.labels?.total?.formatter) {
+            this.config.plotOptions.pie.donut.labels.total.formatter = this.evalFunction(this.config.plotOptions.pie.donut.labels.total.formatter);
         }
     }
 
