@@ -21,7 +21,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 @Tag("apex-charts-wrapper")
-@NpmPackage(value = "apexcharts", version = "3.45.1")
+@NpmPackage(value = "apexcharts", version = "3.49.0")
 @NpmPackage(value = "onecolor", version = "4.1.0")
 @JsModule("./com/github/appreciated/apexcharts/apexcharts-wrapper.ts")
 @CssImport(value = "./com/github/appreciated/apexcharts/apexcharts-wrapper-styles.css", id = "apex-charts-style")
