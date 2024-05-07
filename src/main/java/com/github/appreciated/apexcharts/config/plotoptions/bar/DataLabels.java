@@ -50,4 +50,8 @@ public class DataLabels {
     public DataLabels(String position) {
         this.position = position;
     }
+
+    public DataLabels() {
+
+    }
 }
