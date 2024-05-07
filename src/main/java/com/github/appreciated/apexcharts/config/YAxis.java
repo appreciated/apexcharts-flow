@@ -5,15 +5,19 @@ import com.github.appreciated.apexcharts.config.yaxis.*;
 public class YAxis {
     private Boolean show;
     private Boolean showAlways;
+    private Boolean showForNullSeries;
     private String seriesName;
     private Boolean opposite;
+    private Boolean reversed;
     private Boolean logarithmic;
+    private Double logBase;
     private Double tickAmount;
     private Boolean forceNiceScale;
     private Object min;
     private Object max;
     private Boolean floating;
     private Double decimalsInFloat;
+    private Double stepSize;
     private Labels labels;
     private AxisBorder axisBorder;
     private AxisTicks axisTicks;
@@ -33,6 +37,10 @@ public class YAxis {
         return showAlways;
     }
 
+    public Boolean getShowForNullSeries() {
+        return showForNullSeries;
+    }
+
     public String getSeriesName() {
         return seriesName;
     }
@@ -41,8 +49,16 @@ public class YAxis {
         return opposite;
     }
 
+    public Boolean getReversed() {
+        return reversed;
+    }
+
     public Boolean getLogarithmic() {
         return logarithmic;
+    }
+
+    public Double getLogBase() {
+        return logBase;
     }
 
     public Double getTickAmount() {
@@ -67,6 +83,10 @@ public class YAxis {
 
     public Double getDecimalsInFloat() {
         return decimalsInFloat;
+    }
+
+    public Double getStepSize() {
+        return stepSize;
     }
 
     public Labels getLabels() {
@@ -101,6 +121,10 @@ public class YAxis {
         this.showAlways = showAlways;
     }
 
+    public void setShowForNullSeries(Boolean showForNullSeries) {
+        this.showForNullSeries = showForNullSeries;
+    }
+
     public void setSeriesName(String seriesName) {
         this.seriesName = seriesName;
     }
@@ -109,8 +133,16 @@ public class YAxis {
         this.opposite = opposite;
     }
 
+    public void setReversed(Boolean reversed) {
+        this.reversed = reversed;
+    }
+
     public void setLogarithmic(Boolean logarithmic) {
         this.logarithmic = logarithmic;
+    }
+
+    public void setLogBase(Double logBase) {
+        this.logBase = logBase;
     }
 
     public void setTickAmount(Double tickAmount) {
@@ -143,6 +175,10 @@ public class YAxis {
 
     public void setDecimalsInFloat(Double decimalsInFloat) {
         this.decimalsInFloat = decimalsInFloat;
+    }
+
+    public void setStepSize(Double stepSize) {
+        this.stepSize = stepSize;
     }
 
     public void setLabels(Labels labels) {

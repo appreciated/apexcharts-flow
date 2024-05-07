@@ -10,15 +10,19 @@ import java.time.ZoneId;
 public class YAxisBuilder {
     private Boolean show;
     private Boolean showAlways;
+    private Boolean showForNullSeries;
     private String seriesName;
     private Boolean opposite;
+    private Boolean reversed;
     private Boolean logarithmic;
+    private Double logBase;
     private Double tickAmount;
     private Boolean forceNiceScale;
     private Object min;
     private Object max;
     private Boolean floating;
     private Double decimalsInFloat;
+    private Double stepSize;
     private Labels labels;
     private AxisBorder axisBorder;
     private AxisTicks axisTicks;
@@ -43,6 +47,11 @@ public class YAxisBuilder {
         return this;
     }
 
+    public YAxisBuilder withShowForNullSeries(Boolean showForNullSeries) {
+        this.showForNullSeries = showForNullSeries;
+        return this;
+    }
+
     public YAxisBuilder withSeriesName(String seriesName) {
         this.seriesName = seriesName;
         return this;
@@ -53,8 +62,18 @@ public class YAxisBuilder {
         return this;
     }
 
+    public YAxisBuilder withReversed(Boolean reversed) {
+        this.reversed = reversed;
+        return this;
+    }
+
     public YAxisBuilder withLogarithmic(Boolean logarithmic) {
         this.logarithmic = logarithmic;
+        return this;
+    }
+
+    public YAxisBuilder withLogBase(Double logBase) {
+        this.logBase = logBase;
         return this;
     }
 
@@ -110,6 +129,11 @@ public class YAxisBuilder {
         return this;
     }
 
+    public YAxisBuilder withStepSize(Double stepSize) {
+        this.stepSize = stepSize;
+        return this;
+    }
+
     public YAxisBuilder withLabels(Labels labels) {
         this.labels = labels;
         return this;
@@ -144,15 +168,19 @@ public class YAxisBuilder {
         YAxis yAxis = new YAxis();
         yAxis.setShow(show);
         yAxis.setShowAlways(showAlways);
+        yAxis.setShowForNullSeries(showForNullSeries);
         yAxis.setSeriesName(seriesName);
         yAxis.setOpposite(opposite);
+        yAxis.setReversed(reversed);
         yAxis.setLogarithmic(logarithmic);
+        yAxis.setLogBase(logBase);
         yAxis.setTickAmount(tickAmount);
         yAxis.setForceNiceScale(forceNiceScale);
         yAxis.setMin(min);
         yAxis.setMax(max);
         yAxis.setFloating(floating);
         yAxis.setDecimalsInFloat(decimalsInFloat);
+        yAxis.setStepSize(stepSize);
         yAxis.setLabels(labels);
         yAxis.setAxisBorder(axisBorder);
         yAxis.setAxisTicks(axisTicks);
