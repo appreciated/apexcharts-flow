@@ -21,7 +21,7 @@ jobs:
       - name: Set version from tag
         run: |
           TAG_NAME=${GITHUB_REF#refs/tags/}
-          mvn versions:set -DnewVersion=${TAG_NAME#v}
+          mvn versions:set -B -DnewVersion=${TAG_NAME#v}
           mvn clean install -B -Pdirectory
 
       - name: Upload ApexChartsJS
