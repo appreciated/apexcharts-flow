@@ -1,0 +1,28 @@
+name: Build and Upload ApexCharts for Vaadin
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build-and-upload:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'
+
+      - name: Build with Maven
+        run: mvn clean package -Pproduction
+
+      - name: Upload ApexChartsJS
+        run: |
+          curl -X POST "https://vaadin.com/vaadincom/directory-service/upload/apexchartsjs?authKey=${{ secrets.VAADIN_AUTH_KEY }}" \
+            -H "accept: */*" \
+            -H "Content-Type: multipart/form-data" \
+            -F "file=@target/apexcharts-${{ github.ref_name }}.zip;type=application/zip"
