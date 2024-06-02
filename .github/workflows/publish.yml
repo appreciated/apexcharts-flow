@@ -2,7 +2,7 @@ name: Build and Upload ApexCharts for Vaadin
 
 on:
   release:
-    types: [created]
+    types: [published]
 
 jobs:
   build-and-upload:
@@ -20,12 +20,14 @@ jobs:
 
       - name: Set version from tag
         run: |
-          mvn versions:set -DnewVersion=${github.ref_name#v}
+          TAG_NAME=${GITHUB_REF#refs/tags/}
+          mvn versions:set -DnewVersion=${TAG_NAME#v}
           mvn clean package -Pproduction
 
       - name: Upload ApexChartsJS
         run: |
+          TAG_NAME=${GITHUB_REF#refs/tags/}
           curl -X POST "https://vaadin.com/vaadincom/directory-service/upload/apexchartsjs?authKey=${{ secrets.VAADIN_AUTH_KEY }}" \
             -H "accept: */*" \
             -H "Content-Type: multipart/form-data" \
-            -F "file=@target/apexcharts-${github.ref_name#v}.zip;type=application/zip"
+            -F "file=@target/apexcharts-${TAG_NAME#v}.zip;type=application/zip"
