@@ -17,13 +17,14 @@ jobs:
         with:
           java-version: '17'
 
-      - name: Build with Maven
-        run: mvn clean package -Pproduction
+      - name: Set version from tag
+        run: |
+          mvn versions:set -DnewVersion=${github.ref_name#v}
+          mvn clean package -Pproduction
 
       - name: Upload ApexChartsJS
         run: |
-          TAG_NAME=${github.ref_name#v}
           curl -X POST "https://vaadin.com/vaadincom/directory-service/upload/apexchartsjs?authKey=${{ secrets.VAADIN_AUTH_KEY }}" \
             -H "accept: */*" \
             -H "Content-Type: multipart/form-data" \
-            -F "file=@target/apexcharts--${TAG_NAME}.zip;type=application/zip"
+            -F "file=@target/apexcharts-${github.ref_name#v}.zip;type=application/zip"
