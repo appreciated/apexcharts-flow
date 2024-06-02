@@ -22,7 +22,7 @@ jobs:
         run: |
           TAG_NAME=${GITHUB_REF#refs/tags/}
           mvn versions:set -DnewVersion=${TAG_NAME#v}
-          mvn clean package -Pproduction
+          mvn clean install -B -Pdirectory
 
       - name: Upload ApexChartsJS
         run: |
