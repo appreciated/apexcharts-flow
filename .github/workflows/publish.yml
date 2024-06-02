@@ -2,7 +2,7 @@ name: Build and Upload ApexCharts for Vaadin
 
 on:
   release:
-    types: [published]
+    types: [created]
 
 jobs:
   build-and-upload:
