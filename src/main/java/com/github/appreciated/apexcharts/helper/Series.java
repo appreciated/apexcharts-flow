@@ -6,6 +6,7 @@ public class Series<T> {
 	private String name;
     private SeriesType type;
     private T[] data;
+    private String group;
 
     public Series() {
 
@@ -16,13 +17,22 @@ public class Series<T> {
     }
 
     public Series(String name, T... data) {
-    	this(name, null, data);
+    	this(name, null, null, data);
+    }
+
+    public Series(String name, String group, T... data) {
+        this(name, null, group, data);
     }
     
     public Series(String name, SeriesType type, T... data) {
+        this(name, type, null, data);
+    }
+
+    public Series(String name, SeriesType type, String group, T... data) {
         this.name = name;
         this.type = type;
         this.data = data;
+        this.group = group;
     }
 
     public String getName() {
@@ -47,5 +57,13 @@ public class Series<T> {
 
     public void setData(T[] data) {
         this.data = data;
+    }
+
+    public String getGroup() {
+        return group;
+    }
+
+    public void setGroup(String group) {
+        this.group = group;
     }
 }
