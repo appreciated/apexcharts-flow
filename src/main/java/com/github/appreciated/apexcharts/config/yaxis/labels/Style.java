@@ -1,7 +1,9 @@
 package com.github.appreciated.apexcharts.config.yaxis.labels;
 
+import java.util.List;
+
 public class Style {
-    private String color;
+    private List<String> colors;
     private String fontSize;
     private String fontFamily;
     private String cssClass;
@@ -10,8 +12,8 @@ public class Style {
     public Style() {
     }
 
-    public String getColor() {
-        return color;
+    public List<String> getColors() {
+        return colors;
     }
 
     public String getFontSize() {
@@ -26,8 +28,8 @@ public class Style {
         return cssClass;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public void setColors(List<String> colors) {
+        this.colors = colors;
     }
 
     public void setFontSize(String fontSize) {

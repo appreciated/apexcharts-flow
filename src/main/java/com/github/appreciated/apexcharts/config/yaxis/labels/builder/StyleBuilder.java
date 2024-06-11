@@ -2,8 +2,10 @@ package com.github.appreciated.apexcharts.config.yaxis.labels.builder;
 
 import com.github.appreciated.apexcharts.config.yaxis.labels.Style;
 
+import java.util.List;
+
 public class StyleBuilder {
-    private String color;
+    private List<String> colors;
     private String fontSize;
     private String fontFamily;
     private String cssClass;
@@ -15,8 +17,8 @@ public class StyleBuilder {
         return new StyleBuilder();
     }
 
-    public StyleBuilder withColor(String color) {
-        this.color = color;
+    public StyleBuilder withColors(List<String> colors) {
+        this.colors = colors;
         return this;
     }
 
@@ -37,7 +39,7 @@ public class StyleBuilder {
 
     public Style build() {
         Style style = new Style();
-        style.setColor(color);
+        style.setColors(colors);
         style.setFontSize(fontSize);
         style.setFontFamily(fontFamily);
         style.setCssClass(cssClass);
