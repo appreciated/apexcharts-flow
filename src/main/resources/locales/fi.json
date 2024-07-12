@@ -8,6 +8,7 @@
     "toolbar": {
       "exportToSVG": "Lataa SVG",
       "exportToPNG": "Lataa PNG",
+      "exportToCSV": "Lataa CSV",
       "menu": "Valikko",
       "selection": "Valinta",
       "selectionZoom": "Valinnan zoomaus",

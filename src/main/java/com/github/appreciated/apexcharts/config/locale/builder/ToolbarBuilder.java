@@ -5,6 +5,7 @@ import com.github.appreciated.apexcharts.config.locale.Toolbar;
 public class ToolbarBuilder {
     private String exportToSVG;
     private String exportToPNG;
+    private String exportToCSV;
     private String menu;
     private String selection;
     private String selectionZoom;
@@ -18,6 +19,11 @@ public class ToolbarBuilder {
 
     public static ToolbarBuilder get() {
         return new ToolbarBuilder();
+    }
+
+    public ToolbarBuilder withExportToCSV(String exportToCSV) {
+        this.exportToCSV = exportToCSV;
+        return this;
     }
 
     public ToolbarBuilder withExportToSVG(String exportToSVG) {
@@ -67,6 +73,7 @@ public class ToolbarBuilder {
 
     public Toolbar build() {
         Toolbar toolbar = new Toolbar();
+        toolbar.setExportToCSV(exportToCSV);
         toolbar.setExportToSVG(exportToSVG);
         toolbar.setExportToPNG(exportToPNG);
         toolbar.setMenu(menu);

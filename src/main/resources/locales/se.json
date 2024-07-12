@@ -8,6 +8,7 @@
     "toolbar": {
       "exportToSVG": "Ladda SVG",
       "exportToPNG": "Ladda PNG",
+      "exportToCSV": "Ladda CSV",
       "menu": "Meny",
       "selection": "Selektion",
       "selectionZoom": "Val av zoom",

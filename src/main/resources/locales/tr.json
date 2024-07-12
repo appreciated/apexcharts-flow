@@ -8,6 +8,7 @@
     "toolbar": {
       "exportToSVG": "SVG İndir",
       "exportToPNG": "PNG İndir",
+      "exportToCSV": "CSV İndir",
       "menu": "Menü",
       "selection": "Seçim",
       "selectionZoom": "Seçim Yakınlaştır",

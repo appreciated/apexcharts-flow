@@ -8,6 +8,7 @@
     "toolbar": {
       "exportToSVG": "Preuzmi SVG",
       "exportToPNG": "Preuzmi PNG",
+      "exportToCSV": "Preuzmi CSV",
       "menu": "Izbornik",
       "selection": "Odabir",
       "selectionZoom": "Odabirno povećanje",
