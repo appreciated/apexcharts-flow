@@ -11,8 +11,8 @@ public class SeriesBuilder<T> {
     private SeriesBuilder() {
     }
 
-    public static SeriesBuilder<?> get() {
-        return new SeriesBuilder();
+    public static <T> SeriesBuilder<T> get() {
+        return new SeriesBuilder<>();
     }
 
     public SeriesBuilder<T> withName(String name) {
