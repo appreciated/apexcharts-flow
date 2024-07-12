@@ -387,6 +387,11 @@ export class ApexChartsWrapper extends LitElement {
         }
     }
 
+    updateConfigAndApply() {
+        this.updateConfig();
+        this.chartComponent.updateOptions(this.config);
+    }
+
     /**
      * This is due to the way the eval function works eval("function (){return \"test\"}") will throw an
      * Uncaught SyntaxError: Function statements require a function name.

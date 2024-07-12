@@ -159,6 +159,10 @@ public class ApexCharts extends LitTemplate implements HasSize, HasStyle, HasThe
         setPropertyObject("yaxis", yaxis);
     }
 
+    public void updateConfig() {
+        getElement().callJsFunction("updateConfigAndApply");
+    }
+
     /**
      * This method will be called automatically and does not require to be called manually
      */
