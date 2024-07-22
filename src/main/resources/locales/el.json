@@ -8,6 +8,7 @@
     "toolbar": {
       "exportToSVG": "Λήψη SVG",
       "exportToPNG": "Λήψη PNG",
+      "exportToCSV": "Λήψη CSV",
       "menu": "Menu",
       "selection": "Επιλογή",
       "selectionZoom": "Μεγένθυση βάση επιλογής",

@@ -8,6 +8,7 @@
     "toolbar": {
       "exportToSVG": "निर्यात SVG",
       "exportToPNG": "निर्यात PNG",
+      "exportToCSV": "निर्यात CSV",
       "menu": "सूची",
       "selection": "चयन",
       "selectionZoom": "ज़ूम करना",

@@ -8,6 +8,7 @@
       "toolbar": {
         "exportToSVG": "Descargar SVG",
         "exportToPNG": "Descargar PNG",
+        "exportToCSV": "Descargar CSV",
         "menu": "Menu",
         "selection": "Seleccionar",
         "selectionZoom": "Seleccionar Zoom",

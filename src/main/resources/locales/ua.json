@@ -8,6 +8,7 @@
     "toolbar": {
       "exportToSVG": "Зберегти SVG",
       "exportToPNG": "Зберегти PNG",
+      "exportToCSV": "Зберегти CSV",
       "menu": "Меню",
       "selection": "Вибір",
       "selectionZoom": "Вибір із збільшенням",

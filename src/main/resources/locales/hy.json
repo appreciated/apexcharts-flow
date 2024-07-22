@@ -8,6 +8,7 @@
     "toolbar": {
       "exportToSVG": "Բեռնել SVG",
       "exportToPNG": "Բեռնել PNG",
+      "exportToCSV": "Բեռնել CSV",
       "menu": "Մենյու",
       "selection": "Ընտրված",
       "selectionZoom": "Ընտրված հատվածի խոշորացում",

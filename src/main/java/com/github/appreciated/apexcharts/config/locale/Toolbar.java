@@ -3,6 +3,7 @@ package com.github.appreciated.apexcharts.config.locale;
 public class Toolbar {
     private String exportToSVG;
     private String exportToPNG;
+    private String exportToCSV;
     private String menu;
     private String selection;
     private String selectionZoom;
@@ -13,6 +14,14 @@ public class Toolbar {
 
     public Toolbar() {
     }
+
+	public String getExportToCSV() {
+		return exportToCSV;
+	}
+
+	public void setExportToCSV(String exportToCSV) {
+		this.exportToCSV = exportToCSV;
+	}
 
 	public String getExportToSVG() {
 		return exportToSVG;
