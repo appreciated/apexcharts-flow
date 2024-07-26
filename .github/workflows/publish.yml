@@ -20,14 +20,15 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
+          cache: 'maven'
 
-      - name: Set version from tag
+      - name: Set version from tag and build
         run: |
           TAG_NAME=${GITHUB_REF#refs/tags/}
           mvn versions:set -B -DnewVersion=${TAG_NAME#v}
           mvn clean install -B -Pdirectory
 
-      - name: Create Release
+      - name: Create new Release
         id: create_release
         uses: actions/create-release@v1
         env:
@@ -38,7 +39,7 @@ jobs:
           draft: false
           prerelease: false
 
-      - name: Upload release assets
+      - name: Add assembled build artifact to GitHub Release
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -48,7 +49,7 @@ jobs:
           asset_name: apexcharts-${TAG_NAME#v}.zip
           asset_content_type: application/zip
 
-      - name: Upload ApexChartsJS
+      - name: Upload ApexChartsJS to Vaadin Add-on directory
         run: |
           TAG_NAME=${GITHUB_REF#refs/tags/}
           curl -X POST "https://vaadin.com/vaadincom/directory-service/upload/apexchartsjs?authKey=${{ secrets.VAADIN_AUTH_KEY }}" \
