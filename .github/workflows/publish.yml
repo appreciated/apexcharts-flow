@@ -28,7 +28,7 @@ jobs:
           mvn versions:set -B -DnewVersion=${TAG_NAME#v}
           mvn clean install -B -Pdirectory
 
-      - name: Create new Release
+      - name: Create new GitHub Release
         id: create_release
         uses: actions/create-release@v1
         env:
@@ -49,7 +49,7 @@ jobs:
           asset_name: apexcharts-${TAG_NAME#v}.zip
           asset_content_type: application/zip
 
-      - name: Upload ApexChartsJS to Vaadin Add-on directory
+      - name: Upload assembled build artifact to Vaadin Add-on directory
         run: |
           TAG_NAME=${GITHUB_REF#refs/tags/}
           curl -X POST "https://vaadin.com/vaadincom/directory-service/upload/apexchartsjs?authKey=${{ secrets.VAADIN_AUTH_KEY }}" \
