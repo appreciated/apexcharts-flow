@@ -1,14 +1,13 @@
 name: Build and Upload ApexCharts for Vaadin
 
-permissions:
-  contents: write
-
 on:
   push:
     tags:
       - 'v*.*.*'
 jobs:
   build-and-upload:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
 
     steps:
