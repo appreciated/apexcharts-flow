@@ -39,16 +39,6 @@ jobs:
           draft: false
           prerelease: false
 
-      - name: Add assembled build artifact to GitHub Release
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: target/apexcharts-${TAG_NAME#v}.zip
-          asset_name: apexcharts-${TAG_NAME#v}.zip
-          asset_content_type: application/zip
-
       - name: Upload assembled build artifact to Vaadin Add-on directory
         run: |
           TAG_NAME=${GITHUB_REF#refs/tags/}
