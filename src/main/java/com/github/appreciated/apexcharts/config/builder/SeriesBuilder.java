@@ -30,6 +30,11 @@ public class SeriesBuilder<T> {
         return this;
     }
 
+    public SeriesBuilder<T> withData(List<T> data) {
+        this.data = (T[]) data.toArray();
+        return this;
+    }
+
     public Series<T> build() {
         Series<T> series = new Series<T>();
         series.setName(name);
