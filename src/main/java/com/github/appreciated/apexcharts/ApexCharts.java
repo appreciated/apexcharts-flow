@@ -24,6 +24,7 @@ import java.util.logging.Logger;
 @Tag("apex-charts-wrapper")
 @NpmPackage(value = "apexcharts", version = "3.54.1")
 @NpmPackage(value = "onecolor", version = "4.1.0")
+@NpmPackage(value = "@webcomponents/shadycss", version = "1.11.2")
 @JsModule("./com/github/appreciated/apexcharts/apexcharts-wrapper.ts")
 @CssImport(value = "./com/github/appreciated/apexcharts/apexcharts-wrapper-styles.css", id = "apex-charts-style")
 public class ApexCharts extends LitTemplate implements HasSize, HasStyle, HasTheme {
