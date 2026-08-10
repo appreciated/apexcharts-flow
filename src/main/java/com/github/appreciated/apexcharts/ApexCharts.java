@@ -52,6 +52,7 @@ public class ApexCharts extends LitTemplate implements HasSize, HasStyle, HasThe
         assert objectMapper != null : "objectMapper may not be null";
         this.objectMapper = objectMapper;
         setWidth("100%");
+        setHeight("100%");
     }
 
     private void setPropertyObject(final String property, final Object value) {
